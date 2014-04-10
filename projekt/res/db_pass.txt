@@ -1,0 +1,6 @@
+Server Type: Database Engine
+Server Name: 31.147.204.119\PISERVER,1433
+Authentication: SQL Server Authentication
+Login: T33_User
+Password: L7fBbsJf
+Database: T33_DB

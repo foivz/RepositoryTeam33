@@ -1,0 +1,1 @@
+Ovo je folder gdje ide produkcijska verzija(završena do neke razine i funkcionalna) aplikacije
