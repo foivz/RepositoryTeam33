@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(840, 525);
             this.Controls.Add(this.btnLogin);
             this.Name = "frmDriveIT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DriveIT";
             this.ResumeLayout(false);
 
