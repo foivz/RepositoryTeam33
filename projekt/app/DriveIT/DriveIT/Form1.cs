@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace DriveIT
 {
-    public partial class Form1 : Form
+    public partial class frmDriveIT : Form
     {
-        public Form1()
+        public frmDriveIT()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            frmAplikacija app = new frmAplikacija();
+            app.Show();
 
         }
     }
