@@ -50,6 +50,8 @@
     <Compile Include="Aplikacija.Designer.cs">
       <DependentUpon>Aplikacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controler\ProvjeraUnos.cs" />
+    <Compile Include="Controler\ProvjeraUnosa.cs" />
     <Compile Include="Dobavljaci.cs">
       <SubType>Form</SubType>
     </Compile>
