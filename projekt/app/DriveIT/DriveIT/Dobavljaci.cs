@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveIT.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,18 @@ namespace DriveIT
 {
     public partial class frmDobavljaci : Form
     {
+
+        private void PrikaziDobavljace() { 
+        BindingList<dobavljac> listaDobavljaca= null;
+        using (var db = new T33_DBEntities2()) {
+            listaDobavljaca = new BindingList<dobavljac>(db.dobavljac.ToList());
+        }
+
+        dobavljacBindingSource.DataSource = listaDobavljaca;
+
+        }
+
+
         public frmDobavljaci()
         {
             InitializeComponent();
@@ -20,6 +33,12 @@ namespace DriveIT
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmDobavljaci_Load(object sender, EventArgs e)
+        {
+            PrikaziDobavljace();
+            
         }
     }
 }
