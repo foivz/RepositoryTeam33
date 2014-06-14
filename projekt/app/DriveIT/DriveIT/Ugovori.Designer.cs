@@ -28,23 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUgovori));
             this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblPretragaUgovori = new MetroFramework.Controls.MetroLabel();
-            this.txtPretragaUgovori = new MetroFramework.Controls.MetroTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnDodajUgovor = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-
-            this.components = new System.ComponentModel.Container();
-            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kupacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +40,16 @@
             this.dobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kupac1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vozilo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblPretragaUgovori = new MetroFramework.Controls.MetroLabel();
+            this.txtPretragaUgovori = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDodajUgovor = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
-
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIzlaz
@@ -74,13 +68,9 @@
             // 
             // dataGridView1
             // 
-
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 151);
-
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -93,13 +83,63 @@
             this.kupac1DataGridViewTextBoxColumn,
             this.vozilo1DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ugovorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 83);
-
+            this.dataGridView1.Location = new System.Drawing.Point(25, 151);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 396);
             this.dataGridView1.TabIndex = 1;
             // 
-
+            // idugovorDataGridViewTextBoxColumn
+            // 
+            this.idugovorDataGridViewTextBoxColumn.DataPropertyName = "id_ugovor";
+            this.idugovorDataGridViewTextBoxColumn.HeaderText = "id_ugovor";
+            this.idugovorDataGridViewTextBoxColumn.Name = "idugovorDataGridViewTextBoxColumn";
+            // 
+            // kupacDataGridViewTextBoxColumn
+            // 
+            this.kupacDataGridViewTextBoxColumn.DataPropertyName = "kupac";
+            this.kupacDataGridViewTextBoxColumn.HeaderText = "kupac";
+            this.kupacDataGridViewTextBoxColumn.Name = "kupacDataGridViewTextBoxColumn";
+            // 
+            // voziloDataGridViewTextBoxColumn
+            // 
+            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
+            // 
+            // datumDataGridViewTextBoxColumn
+            // 
+            this.datumDataGridViewTextBoxColumn.DataPropertyName = "datum";
+            this.datumDataGridViewTextBoxColumn.HeaderText = "datum";
+            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
+            // 
+            // dobavljaciddobavljacDataGridViewTextBoxColumn
+            // 
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac_iddobavljac";
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac_iddobavljac";
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.Name = "dobavljaciddobavljacDataGridViewTextBoxColumn";
+            // 
+            // dobavljacDataGridViewTextBoxColumn
+            // 
+            this.dobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac";
+            this.dobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac";
+            this.dobavljacDataGridViewTextBoxColumn.Name = "dobavljacDataGridViewTextBoxColumn";
+            // 
+            // kupac1DataGridViewTextBoxColumn
+            // 
+            this.kupac1DataGridViewTextBoxColumn.DataPropertyName = "kupac1";
+            this.kupac1DataGridViewTextBoxColumn.HeaderText = "kupac1";
+            this.kupac1DataGridViewTextBoxColumn.Name = "kupac1DataGridViewTextBoxColumn";
+            // 
+            // vozilo1DataGridViewTextBoxColumn
+            // 
+            this.vozilo1DataGridViewTextBoxColumn.DataPropertyName = "vozilo1";
+            this.vozilo1DataGridViewTextBoxColumn.HeaderText = "vozilo1";
+            this.vozilo1DataGridViewTextBoxColumn.Name = "vozilo1DataGridViewTextBoxColumn";
+            // 
+            // ugovorBindingSource
+            // 
+            this.ugovorBindingSource.DataSource = typeof(DriveIT.Database.ugovor);
+            // 
             // lblPretragaUgovori
             // 
             this.lblPretragaUgovori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -118,7 +158,6 @@
             this.lblPretragaUgovori.Text = "Pretraga ";
             this.lblPretragaUgovori.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblPretragaUgovori.UseStyleColors = false;
-            this.lblPretragaUgovori.Click += new System.EventHandler(this.lblPretragaUgovori_Click);
             // 
             // txtPretragaUgovori
             // 
@@ -174,59 +213,6 @@
             this.btnDodajUgovor.TabIndex = 8;
             this.btnDodajUgovor.Text = "Dodaj novi ugovor";
             this.btnDodajUgovor.Theme = MetroFramework.MetroThemeStyle.Light;
-
-            // ugovorBindingSource
-            // 
-            this.ugovorBindingSource.DataSource = typeof(DriveIT.Database.ugovor);
-            // 
-            // idugovorDataGridViewTextBoxColumn
-            // 
-            this.idugovorDataGridViewTextBoxColumn.DataPropertyName = "id_ugovor";
-            this.idugovorDataGridViewTextBoxColumn.HeaderText = "id_ugovor";
-            this.idugovorDataGridViewTextBoxColumn.Name = "idugovorDataGridViewTextBoxColumn";
-            // 
-            // kupacDataGridViewTextBoxColumn
-            // 
-            this.kupacDataGridViewTextBoxColumn.DataPropertyName = "kupac";
-            this.kupacDataGridViewTextBoxColumn.HeaderText = "kupac";
-            this.kupacDataGridViewTextBoxColumn.Name = "kupacDataGridViewTextBoxColumn";
-            // 
-            // voziloDataGridViewTextBoxColumn
-            // 
-            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
-            // 
-            // datumDataGridViewTextBoxColumn
-            // 
-            this.datumDataGridViewTextBoxColumn.DataPropertyName = "datum";
-            this.datumDataGridViewTextBoxColumn.HeaderText = "datum";
-            this.datumDataGridViewTextBoxColumn.Name = "datumDataGridViewTextBoxColumn";
-            // 
-            // dobavljaciddobavljacDataGridViewTextBoxColumn
-            // 
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac_iddobavljac";
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac_iddobavljac";
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.Name = "dobavljaciddobavljacDataGridViewTextBoxColumn";
-            // 
-            // dobavljacDataGridViewTextBoxColumn
-            // 
-            this.dobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac";
-            this.dobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac";
-            this.dobavljacDataGridViewTextBoxColumn.Name = "dobavljacDataGridViewTextBoxColumn";
-            // 
-            // kupac1DataGridViewTextBoxColumn
-            // 
-            this.kupac1DataGridViewTextBoxColumn.DataPropertyName = "kupac1";
-            this.kupac1DataGridViewTextBoxColumn.HeaderText = "kupac1";
-            this.kupac1DataGridViewTextBoxColumn.Name = "kupac1DataGridViewTextBoxColumn";
-            // 
-            // vozilo1DataGridViewTextBoxColumn
-            // 
-            this.vozilo1DataGridViewTextBoxColumn.DataPropertyName = "vozilo1";
-            this.vozilo1DataGridViewTextBoxColumn.HeaderText = "vozilo1";
-            this.vozilo1DataGridViewTextBoxColumn.Name = "vozilo1DataGridViewTextBoxColumn";
-
             // 
             // frmUgovori
             // 
@@ -245,12 +231,9 @@
             this.Text = "Ugovori";
             this.Load += new System.EventHandler(this.frmUgovori_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-
+            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-
-            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
-
             this.ResumeLayout(false);
             this.PerformLayout();
 

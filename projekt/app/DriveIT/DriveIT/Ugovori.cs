@@ -30,15 +30,12 @@ namespace DriveIT
             this.Close();
         }
 
-<<<<<<< HEAD
-        private void lblPretragaUgovori_Click(object sender, EventArgs e)
-        {
 
-=======
+ 
         private void frmUgovori_Load(object sender, EventArgs e)
         {
             PrikaziUgovore();
->>>>>>> d4c7402e4e1d3272130eabf9005d5b0eabb4a9e5
+
         }
     }
 }
