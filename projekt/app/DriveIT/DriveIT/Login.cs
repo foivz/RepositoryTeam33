@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveIT.Controler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,10 @@ namespace DriveIT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             frmAplikacija app = new frmAplikacija();
             app.Show();
+            
 
         }
 
@@ -41,7 +44,17 @@ namespace DriveIT
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Close();
+            bool valjan = Provjera.ProvjeraLogin(txtKorisnickoIme.Text, Lozinka.Text);
+            if (valjan == true)
+            {
+                
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Neuispravni podaci pri prijavi");
+            }
 
         }
     }
