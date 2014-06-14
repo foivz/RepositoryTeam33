@@ -27,20 +27,22 @@ namespace DriveIT
         private void btnKupciIInteresanti_Click(object sender, EventArgs e)
         {
             frmKupci kupci = new frmKupci();
-            kupci.Show();
+            kupci.ShowDialog();
         }
 
         private void btnVozila_Click(object sender, EventArgs e)
         {
             frmVozila vozila = new frmVozila();
-            vozila.Show();
+            vozila.ShowDialog();
         }
 
         private void btnUgovori_Click(object sender, EventArgs e)
         {
             frmUgovori ugovori = new frmUgovori();
-            ugovori.Show();
+            ugovori.ShowDialog();
 
-        }       
+        }
+
+             
     }
 }
