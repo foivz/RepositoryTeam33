@@ -37,5 +37,10 @@ namespace DriveIT
         {
             PrikaziDobavljace();
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -104,7 +104,7 @@
             this.btnTlocrt.Highlight = false;
             this.btnTlocrt.Location = new System.Drawing.Point(395, 84);
             this.btnTlocrt.Name = "btnTlocrt";
-            this.btnTlocrt.Size = new System.Drawing.Size(329, 403);
+            this.btnTlocrt.Size = new System.Drawing.Size(577, 578);
             this.btnTlocrt.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnTlocrt.StyleManager = null;
             this.btnTlocrt.TabIndex = 9;
@@ -120,7 +120,7 @@
             this.oNamaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(736, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 586);
+            this.ClientSize = new System.Drawing.Size(984, 761);
             this.Controls.Add(this.btnTlocrt);
             this.Controls.Add(this.btnUgovori);
             this.Controls.Add(this.btnKupciIInteresanti);
@@ -162,7 +162,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAplikacija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Aplikacija";
+            this.Text = "DriveIT";
+            this.Load += new System.EventHandler(this.frmAplikacija_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DriveIT
 {
-    public partial class frmDriveIT : Form
+    public partial class frmLogin : Form
     {
-        public frmDriveIT()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -41,9 +41,7 @@ namespace DriveIT
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmAplikacija frm = new frmAplikacija();
-            frm.ShowDialog();
-           
+            this.Close();
 
         }
     }

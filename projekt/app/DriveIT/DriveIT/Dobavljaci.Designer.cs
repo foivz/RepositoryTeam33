@@ -30,9 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDobavljaci));
-            this.btnIzlaz = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dobavljacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LblPretragaDobavljaci = new MetroFramework.Controls.MetroLabel();
+            this.txtPretragaDobavljaci = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDodajDobavljaca = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.iddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,24 +45,18 @@
             this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vozilo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dobavljacBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dobavljacBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.btnIzlaz, "btnIzlaz");
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.UseVisualStyleBackColor = true;
-            this.btnIzlaz.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -70,17 +68,71 @@
             this.telefonDataGridViewTextBoxColumn,
             this.faksDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.voziloDataGridViewTextBoxColumn,
-            this.vozilo1DataGridViewTextBoxColumn,
             this.dodatnaopremaDataGridViewTextBoxColumn,
             this.ugovorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dobavljacBindingSource;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             // 
-            // dobavljacBindingSource
+            // LblPretragaDobavljaci
             // 
-            this.dobavljacBindingSource.DataSource = typeof(DriveIT.Database.dobavljac);
+            resources.ApplyResources(this.LblPretragaDobavljaci, "LblPretragaDobavljaci");
+            this.LblPretragaDobavljaci.CustomBackground = true;
+            this.LblPretragaDobavljaci.CustomForeColor = false;
+            this.LblPretragaDobavljaci.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.LblPretragaDobavljaci.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.LblPretragaDobavljaci.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.LblPretragaDobavljaci.Name = "LblPretragaDobavljaci";
+            this.LblPretragaDobavljaci.Style = MetroFramework.MetroColorStyle.Blue;
+            this.LblPretragaDobavljaci.StyleManager = null;
+            this.LblPretragaDobavljaci.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.LblPretragaDobavljaci.UseStyleColors = false;
+            // 
+            // txtPretragaDobavljaci
+            // 
+            resources.ApplyResources(this.txtPretragaDobavljaci, "txtPretragaDobavljaci");
+            this.txtPretragaDobavljaci.CustomBackground = false;
+            this.txtPretragaDobavljaci.CustomForeColor = false;
+            this.txtPretragaDobavljaci.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtPretragaDobavljaci.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtPretragaDobavljaci.Multiline = false;
+            this.txtPretragaDobavljaci.Name = "txtPretragaDobavljaci";
+            this.txtPretragaDobavljaci.SelectedText = "";
+            this.txtPretragaDobavljaci.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPretragaDobavljaci.StyleManager = null;
+            this.txtPretragaDobavljaci.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPretragaDobavljaci.UseStyleColors = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnDodajDobavljaca
+            // 
+            this.btnDodajDobavljaca.Highlight = false;
+            resources.ApplyResources(this.btnDodajDobavljaca, "btnDodajDobavljaca");
+            this.btnDodajDobavljaca.Name = "btnDodajDobavljaca";
+            this.btnDodajDobavljaca.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnDodajDobavljaca.StyleManager = null;
+            this.btnDodajDobavljaca.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // metroButton2
+            // 
+            resources.ApplyResources(this.metroButton2, "metroButton2");
+            this.metroButton2.Highlight = false;
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton2.StyleManager = null;
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // iddobavljacDataGridViewTextBoxColumn
             // 
@@ -130,18 +182,6 @@
             resources.ApplyResources(this.emailDataGridViewTextBoxColumn, "emailDataGridViewTextBoxColumn");
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
-            // voziloDataGridViewTextBoxColumn
-            // 
-            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
-            resources.ApplyResources(this.voziloDataGridViewTextBoxColumn, "voziloDataGridViewTextBoxColumn");
-            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
-            // 
-            // vozilo1DataGridViewTextBoxColumn
-            // 
-            this.vozilo1DataGridViewTextBoxColumn.DataPropertyName = "vozilo1";
-            resources.ApplyResources(this.vozilo1DataGridViewTextBoxColumn, "vozilo1DataGridViewTextBoxColumn");
-            this.vozilo1DataGridViewTextBoxColumn.Name = "vozilo1DataGridViewTextBoxColumn";
-            // 
             // dodatnaopremaDataGridViewTextBoxColumn
             // 
             this.dodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "dodatna_oprema";
@@ -154,23 +194,34 @@
             resources.ApplyResources(this.ugovorDataGridViewTextBoxColumn, "ugovorDataGridViewTextBoxColumn");
             this.ugovorDataGridViewTextBoxColumn.Name = "ugovorDataGridViewTextBoxColumn";
             // 
+            // dobavljacBindingSource
+            // 
+            this.dobavljacBindingSource.DataSource = typeof(DriveIT.Database.dobavljac);
+            // 
             // frmDobavljaci
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btnDodajDobavljaca);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtPretragaDobavljaci);
+            this.Controls.Add(this.LblPretragaDobavljaci);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnIzlaz);
             this.Name = "frmDobavljaci";
             this.Load += new System.EventHandler(this.frmDobavljaci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dobavljacBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
@@ -185,5 +236,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dodatnaopremaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ugovorDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dobavljacBindingSource;
+        private MetroFramework.Controls.MetroLabel LblPretragaDobavljaci;
+        private MetroFramework.Controls.MetroTextBox txtPretragaDobavljaci;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private MetroFramework.Controls.MetroButton btnDodajDobavljaca;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
