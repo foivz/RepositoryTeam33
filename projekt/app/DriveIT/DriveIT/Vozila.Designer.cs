@@ -259,6 +259,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmVozila";
             this.Text = "Vozila";
+            this.Load += new System.EventHandler(this.frmVozila_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             this.ResumeLayout(false);
