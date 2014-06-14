@@ -28,24 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
-            this.SuspendLayout();
-            // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(374, 352);
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
-            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnIzlaz.StyleManager = null;
-            this.btnIzlaz.TabIndex = 0;
-            this.btnIzlaz.Text = "Izlaz";
-            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
-
             this.components = new System.ComponentModel.Container();
+            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sasijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,9 +57,24 @@
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblPretraga = new MetroFramework.Controls.MetroLabel();
+            this.txtPretragaVozila = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Highlight = false;
+            this.btnIzlaz.Location = new System.Drawing.Point(698, 432);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
+            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnIzlaz.StyleManager = null;
+            this.btnIzlaz.TabIndex = 0;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // dataGridView1
             // 
@@ -108,9 +107,9 @@
             this.ugovorDataGridViewTextBoxColumn,
             this.dodatnaopremaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.voziloBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 139);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 178);
+            this.dataGridView1.Size = new System.Drawing.Size(773, 255);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -267,19 +266,51 @@
             // voziloBindingSource
             // 
             this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
-
+            // 
+            // lblPretraga
+            // 
+            this.lblPretraga.AutoSize = true;
+            this.lblPretraga.CustomBackground = true;
+            this.lblPretraga.CustomForeColor = false;
+            this.lblPretraga.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblPretraga.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblPretraga.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblPretraga.Location = new System.Drawing.Point(582, 42);
+            this.lblPretraga.Name = "lblPretraga";
+            this.lblPretraga.Size = new System.Drawing.Size(60, 19);
+            this.lblPretraga.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblPretraga.StyleManager = null;
+            this.lblPretraga.TabIndex = 1;
+            this.lblPretraga.Text = "Pretraga";
+            this.lblPretraga.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblPretraga.UseStyleColors = false;
+            // 
+            // txtPretragaVozila
+            // 
+            this.txtPretragaVozila.CustomBackground = false;
+            this.txtPretragaVozila.CustomForeColor = false;
+            this.txtPretragaVozila.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtPretragaVozila.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtPretragaVozila.Location = new System.Drawing.Point(648, 38);
+            this.txtPretragaVozila.Multiline = false;
+            this.txtPretragaVozila.Name = "txtPretragaVozila";
+            this.txtPretragaVozila.SelectedText = "";
+            this.txtPretragaVozila.Size = new System.Drawing.Size(150, 23);
+            this.txtPretragaVozila.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPretragaVozila.StyleManager = null;
+            this.txtPretragaVozila.TabIndex = 2;
+            this.txtPretragaVozila.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPretragaVozila.UseStyleColors = false;
             // 
             // frmVozila
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(495, 402);
+            this.ClientSize = new System.Drawing.Size(829, 485);
+            this.Controls.Add(this.txtPretragaVozila);
+            this.Controls.Add(this.lblPretraga);
             this.Controls.Add(this.btnIzlaz);
-
-            this.ClientSize = new System.Drawing.Size(631, 261);
             this.Controls.Add(this.dataGridView1);
-
             this.Name = "frmVozila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Vozila";
@@ -287,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -322,6 +354,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ugovorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dodatnaopremaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource voziloBindingSource;
+        private MetroFramework.Controls.MetroLabel lblPretraga;
+        private MetroFramework.Controls.MetroTextBox txtPretragaVozila;
 
     }
 }
