@@ -28,9 +28,7 @@ namespace DriveIT.Database
         public string telefon { get; set; }
         public string faks { get; set; }
         public string email { get; set; }
-        public int vozilo { get; set; }
     
-        public virtual vozilo vozilo1 { get; set; }
         public virtual ICollection<dodatna_oprema> dodatna_oprema { get; set; }
         public virtual ICollection<ugovor> ugovor { get; set; }
     }

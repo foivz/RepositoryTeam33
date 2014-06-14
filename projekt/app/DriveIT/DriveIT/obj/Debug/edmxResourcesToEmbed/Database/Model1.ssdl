@@ -29,7 +29,6 @@
     <Property Name="telefon" Type="varchar" MaxLength="14" />
     <Property Name="faks" Type="varchar" MaxLength="14" />
     <Property Name="email" Type="varchar" MaxLength="45" />
-    <Property Name="vozilo" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="dodatna_oprema">
     <Key>
@@ -60,6 +59,13 @@
     </Key>
     <Property Name="id_kupac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="tip_kupca" Type="int" Nullable="false" />
+    <Property Name="ime" Type="varchar" MaxLength="50" />
+    <Property Name="prezime" Type="varchar" MaxLength="50" />
+    <Property Name="tvrtka" Type="varchar" MaxLength="50" />
+    <Property Name="adresa" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="telefon" Type="varchar" MaxLength="20" />
+    <Property Name="faks" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="marka_vozila">
     <Key>
@@ -154,10 +160,10 @@
       <PropertyRef Name="id_ugovor" />
     </Key>
     <Property Name="id_ugovor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="kupac" Type="int" Nullable="false" />
+    <Property Name="kupac" Type="int" />
     <Property Name="vozilo" Type="int" Nullable="false" />
     <Property Name="datum" Type="date" Nullable="false" />
-    <Property Name="dobavljac_iddobavljac" Type="int" Nullable="false" />
+    <Property Name="dobavljac_iddobavljac" Type="int" />
   </EntityType>
   <EntityType Name="vozilo">
     <Key>
@@ -218,18 +224,6 @@
         <PropertyRef Name="id_vozilo" />
       </Principal>
       <Dependent Role="cijena">
-        <PropertyRef Name="vozilo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="dobavljac_vozilo">
-    <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-    <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="vozilo">
-        <PropertyRef Name="id_vozilo" />
-      </Principal>
-      <Dependent Role="dobavljac">
         <PropertyRef Name="vozilo" />
       </Dependent>
     </ReferentialConstraint>
@@ -343,7 +337,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ugovor_dobavljac">
-    <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="1" />
+    <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="0..1" />
     <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dobavljac">
@@ -355,7 +349,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ugovor_kupac">
-    <End Role="kupac" Type="Self.kupac" Multiplicity="1" />
+    <End Role="kupac" Type="Self.kupac" Multiplicity="0..1" />
     <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="kupac">
@@ -445,10 +439,6 @@
     <AssociationSet Name="cijena_vozilo" Association="Self.cijena_vozilo">
       <End Role="vozilo" EntitySet="vozilo" />
       <End Role="cijena" EntitySet="cijena" />
-    </AssociationSet>
-    <AssociationSet Name="dobavljac_vozilo" Association="Self.dobavljac_vozilo">
-      <End Role="vozilo" EntitySet="vozilo" />
-      <End Role="dobavljac" EntitySet="dobavljac" />
     </AssociationSet>
     <AssociationSet Name="dodatna_oprema_dobavljac" Association="Self.dodatna_oprema_dobavljac">
       <End Role="dobavljac" EntitySet="dobavljac" />

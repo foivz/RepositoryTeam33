@@ -15,10 +15,10 @@ namespace DriveIT.Database
     public partial class ugovor
     {
         public int id_ugovor { get; set; }
-        public int kupac { get; set; }
+        public Nullable<int> kupac { get; set; }
         public int vozilo { get; set; }
         public System.DateTime datum { get; set; }
-        public int dobavljac_iddobavljac { get; set; }
+        public Nullable<int> dobavljac_iddobavljac { get; set; }
     
         public virtual dobavljac dobavljac { get; set; }
         public virtual kupac kupac1 { get; set; }

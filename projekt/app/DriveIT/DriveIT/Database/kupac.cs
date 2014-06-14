@@ -21,6 +21,13 @@ namespace DriveIT.Database
     
         public int id_kupac { get; set; }
         public int tip_kupca { get; set; }
+        public string ime { get; set; }
+        public string prezime { get; set; }
+        public string tvrtka { get; set; }
+        public string adresa { get; set; }
+        public string email { get; set; }
+        public string telefon { get; set; }
+        public string faks { get; set; }
     
         public virtual tip_kupca tip_kupca1 { get; set; }
         public virtual ICollection<ugovor> ugovor { get; set; }

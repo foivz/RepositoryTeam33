@@ -16,7 +16,6 @@ namespace DriveIT.Database
     {
         public vozilo()
         {
-            this.dobavljac = new HashSet<dobavljac>();
             this.nalog_za_servis = new HashSet<nalog_za_servis>();
             this.slika_vozilo = new HashSet<slika_vozilo>();
             this.ugovor = new HashSet<ugovor>();
@@ -41,7 +40,6 @@ namespace DriveIT.Database
         public int parking { get; set; }
     
         public virtual cijena cijena { get; set; }
-        public virtual ICollection<dobavljac> dobavljac { get; set; }
         public virtual model_vozila model_vozila1 { get; set; }
         public virtual ICollection<nalog_za_servis> nalog_za_servis { get; set; }
         public virtual parking parking1 { get; set; }

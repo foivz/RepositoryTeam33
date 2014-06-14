@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="T33_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="T33_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="cijena">
           <Key>
             <PropertyRef Name="vozilo" />
@@ -34,7 +34,6 @@
           <Property Name="telefon" Type="varchar" MaxLength="14" />
           <Property Name="faks" Type="varchar" MaxLength="14" />
           <Property Name="email" Type="varchar" MaxLength="45" />
-          <Property Name="vozilo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="dodatna_oprema">
           <Key>
@@ -65,6 +64,13 @@
           </Key>
           <Property Name="id_kupac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tip_kupca" Type="int" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="50" />
+          <Property Name="prezime" Type="varchar" MaxLength="50" />
+          <Property Name="tvrtka" Type="varchar" MaxLength="50" />
+          <Property Name="adresa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="telefon" Type="varchar" MaxLength="20" />
+          <Property Name="faks" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="marka_vozila">
           <Key>
@@ -159,10 +165,10 @@
             <PropertyRef Name="id_ugovor" />
           </Key>
           <Property Name="id_ugovor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="kupac" Type="int" Nullable="false" />
+          <Property Name="kupac" Type="int" />
           <Property Name="vozilo" Type="int" Nullable="false" />
           <Property Name="datum" Type="date" Nullable="false" />
-          <Property Name="dobavljac_iddobavljac" Type="int" Nullable="false" />
+          <Property Name="dobavljac_iddobavljac" Type="int" />
         </EntityType>
         <EntityType Name="vozilo">
           <Key>
@@ -223,18 +229,6 @@
               <PropertyRef Name="id_vozilo" />
             </Principal>
             <Dependent Role="cijena">
-              <PropertyRef Name="vozilo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="dobavljac_vozilo">
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-          <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="vozilo">
-              <PropertyRef Name="id_vozilo" />
-            </Principal>
-            <Dependent Role="dobavljac">
               <PropertyRef Name="vozilo" />
             </Dependent>
           </ReferentialConstraint>
@@ -348,7 +342,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ugovor_dobavljac">
-          <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="1" />
+          <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="0..1" />
           <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="dobavljac">
@@ -360,7 +354,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ugovor_kupac">
-          <End Role="kupac" Type="Self.kupac" Multiplicity="1" />
+          <End Role="kupac" Type="Self.kupac" Multiplicity="0..1" />
           <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="kupac">
@@ -451,10 +445,6 @@
             <End Role="vozilo" EntitySet="vozilo" />
             <End Role="cijena" EntitySet="cijena" />
           </AssociationSet>
-          <AssociationSet Name="dobavljac_vozilo" Association="Self.dobavljac_vozilo">
-            <End Role="vozilo" EntitySet="vozilo" />
-            <End Role="dobavljac" EntitySet="dobavljac" />
-          </AssociationSet>
           <AssociationSet Name="dodatna_oprema_dobavljac" Association="Self.dodatna_oprema_dobavljac">
             <End Role="dobavljac" EntitySet="dobavljac" />
             <End Role="dodatna_oprema" EntitySet="dodatna_oprema" />
@@ -516,30 +506,117 @@
             <End Role="vozilo" EntitySet="vozilo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="T33_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="T33_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cijena" EntityType="T33_DBModel.cijena" />
+          <EntitySet Name="dobavljac" EntityType="T33_DBModel.dobavljac" />
+          <EntitySet Name="dodatna_oprema" EntityType="T33_DBModel.dodatna_oprema" />
+          <EntitySet Name="korisnik" EntityType="T33_DBModel.korisnik" />
+          <EntitySet Name="kupac" EntityType="T33_DBModel.kupac" />
+          <EntitySet Name="marka_vozila" EntityType="T33_DBModel.marka_vozila" />
+          <EntitySet Name="model_vozila" EntityType="T33_DBModel.model_vozila" />
+          <EntitySet Name="nalog_za_servis" EntityType="T33_DBModel.nalog_za_servis" />
+          <EntitySet Name="parking" EntityType="T33_DBModel.parking" />
+          <EntitySet Name="slika_vozilo" EntityType="T33_DBModel.slika_vozilo" />
+          <EntitySet Name="sysdiagrams" EntityType="T33_DBModel.sysdiagrams" />
+          <EntitySet Name="tip_korisnika" EntityType="T33_DBModel.tip_korisnika" />
+          <EntitySet Name="tip_kupca" EntityType="T33_DBModel.tip_kupca" />
+          <EntitySet Name="tip_poreza" EntityType="T33_DBModel.tip_poreza" />
+          <EntitySet Name="tip_vozila" EntityType="T33_DBModel.tip_vozila" />
+          <EntitySet Name="ugovor" EntityType="T33_DBModel.ugovor" />
+          <EntitySet Name="vozilo" EntityType="T33_DBModel.vozilo" />
+          <EntitySet Name="zapisnik" EntityType="T33_DBModel.zapisnik" />
+          <AssociationSet Name="cijena_tip_poreza_nabavna" Association="T33_DBModel.cijena_tip_poreza_nabavna">
+            <End Role="tip_poreza" EntitySet="tip_poreza" />
+            <End Role="cijena" EntitySet="cijena" />
+          </AssociationSet>
+          <AssociationSet Name="cijena_tip_poreza_prodajna" Association="T33_DBModel.cijena_tip_poreza_prodajna">
+            <End Role="tip_poreza" EntitySet="tip_poreza" />
+            <End Role="cijena" EntitySet="cijena" />
+          </AssociationSet>
+          <AssociationSet Name="cijena_vozilo" Association="T33_DBModel.cijena_vozilo">
+            <End Role="vozilo" EntitySet="vozilo" />
+            <End Role="cijena" EntitySet="cijena" />
+          </AssociationSet>
+          <AssociationSet Name="dodatna_oprema_dobavljac" Association="T33_DBModel.dodatna_oprema_dobavljac">
+            <End Role="dobavljac" EntitySet="dobavljac" />
+            <End Role="dodatna_oprema" EntitySet="dodatna_oprema" />
+          </AssociationSet>
+          <AssociationSet Name="ugovor_dobavljac" Association="T33_DBModel.ugovor_dobavljac">
+            <End Role="dobavljac" EntitySet="dobavljac" />
+            <End Role="ugovor" EntitySet="ugovor" />
+          </AssociationSet>
+          <AssociationSet Name="korisnik_tip_korisnika" Association="T33_DBModel.korisnik_tip_korisnika">
+            <End Role="tip_korisnika" EntitySet="tip_korisnika" />
+            <End Role="korisnik" EntitySet="korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="naloz_za_servis_korisnik" Association="T33_DBModel.naloz_za_servis_korisnik">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="nalog_za_servis" EntitySet="nalog_za_servis" />
+          </AssociationSet>
+          <AssociationSet Name="kupac_tip_kupca" Association="T33_DBModel.kupac_tip_kupca">
+            <End Role="tip_kupca" EntitySet="tip_kupca" />
+            <End Role="kupac" EntitySet="kupac" />
+          </AssociationSet>
+          <AssociationSet Name="ugovor_kupac" Association="T33_DBModel.ugovor_kupac">
+            <End Role="kupac" EntitySet="kupac" />
+            <End Role="ugovor" EntitySet="ugovor" />
+          </AssociationSet>
+          <AssociationSet Name="model_vozila_marka_vozila" Association="T33_DBModel.model_vozila_marka_vozila">
+            <End Role="marka_vozila" EntitySet="marka_vozila" />
+            <End Role="model_vozila" EntitySet="model_vozila" />
+          </AssociationSet>
+          <AssociationSet Name="vozilo_model_vozila" Association="T33_DBModel.vozilo_model_vozila">
+            <End Role="model_vozila" EntitySet="model_vozila" />
+            <End Role="vozilo" EntitySet="vozilo" />
+          </AssociationSet>
+          <AssociationSet Name="naloz_za_servis_vozilo" Association="T33_DBModel.naloz_za_servis_vozilo">
+            <End Role="vozilo" EntitySet="vozilo" />
+            <End Role="nalog_za_servis" EntitySet="nalog_za_servis" />
+          </AssociationSet>
+          <AssociationSet Name="vozilo_parking" Association="T33_DBModel.vozilo_parking">
+            <End Role="parking" EntitySet="parking" />
+            <End Role="vozilo" EntitySet="vozilo" />
+          </AssociationSet>
+          <AssociationSet Name="slike_automobila_vozilo" Association="T33_DBModel.slike_automobila_vozilo">
+            <End Role="vozilo" EntitySet="vozilo" />
+            <End Role="slika_vozilo" EntitySet="slika_vozilo" />
+          </AssociationSet>
+          <AssociationSet Name="vozilo_tip_vozila" Association="T33_DBModel.vozilo_tip_vozila">
+            <End Role="tip_vozila" EntitySet="tip_vozila" />
+            <End Role="vozilo" EntitySet="vozilo" />
+          </AssociationSet>
+          <AssociationSet Name="ugovor_vozilo" Association="T33_DBModel.ugovor_vozilo">
+            <End Role="vozilo" EntitySet="vozilo" />
+            <End Role="ugovor" EntitySet="ugovor" />
+          </AssociationSet>
+          <AssociationSet Name="pripada" Association="T33_DBModel.pripada">
+            <End Role="dodatna_oprema" EntitySet="dodatna_oprema" />
+            <End Role="vozilo" EntitySet="vozilo" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="cijena">
           <Key>
             <PropertyRef Name="vozilo" />
           </Key>
           <Property Name="vozilo" Type="Int32" Nullable="false" />
-          <Property Name="nabavna_bez_pdv" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="nabavna_bez_pdv" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="nabavna_sa_pdv" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="osnovica" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="porez" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="prodajna_sa_pdv" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="marza" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="popravci_interni" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="popravci_ekterni" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="osnovica" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="porez" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="prodajna_sa_pdv" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="marza" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="popravci_interni" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="popravci_ekterni" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="datum_izracuna" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="tip_poreza_nabavna" Type="Int32" Nullable="false" />
           <Property Name="tip_poreza_prodajna" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tip_poreza" Relationship="Self.cijena_tip_poreza_nabavna" FromRole="cijena" ToRole="tip_poreza" />
-          <NavigationProperty Name="tip_poreza1" Relationship="Self.cijena_tip_poreza_prodajna" FromRole="cijena" ToRole="tip_poreza" />
-          <NavigationProperty Name="vozilo1" Relationship="Self.cijena_vozilo" FromRole="cijena" ToRole="vozilo" />
+          <NavigationProperty Name="tip_poreza" Relationship="T33_DBModel.cijena_tip_poreza_nabavna" FromRole="cijena" ToRole="tip_poreza" />
+          <NavigationProperty Name="tip_poreza1" Relationship="T33_DBModel.cijena_tip_poreza_prodajna" FromRole="cijena" ToRole="tip_poreza" />
+          <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.cijena_vozilo" FromRole="cijena" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="dobavljac">
           <Key>
@@ -549,14 +626,12 @@
           <Property Name="ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="tvrtka" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="adresa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adresa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="telefon" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
           <Property Name="faks" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="vozilo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="vozilo1" Relationship="Self.dobavljac_vozilo" FromRole="dobavljac" ToRole="vozilo" />
-          <NavigationProperty Name="dodatna_oprema" Relationship="Self.dodatna_oprema_dobavljac" FromRole="dobavljac" ToRole="dodatna_oprema" />
-          <NavigationProperty Name="ugovor" Relationship="Self.ugovor_dobavljac" FromRole="dobavljac" ToRole="ugovor" />
+          <NavigationProperty Name="dodatna_oprema" Relationship="T33_DBModel.dodatna_oprema_dobavljac" FromRole="dobavljac" ToRole="dodatna_oprema" />
+          <NavigationProperty Name="ugovor" Relationship="T33_DBModel.ugovor_dobavljac" FromRole="dobavljac" ToRole="ugovor" />
         </EntityType>
         <EntityType Name="dodatna_oprema">
           <Key>
@@ -570,20 +645,20 @@
           <Property Name="kolicina" Type="Int32" Nullable="false" />
           <Property Name="cijena" Type="Int32" Nullable="false" />
           <Property Name="raspoloživo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="dobavljac" Relationship="Self.dodatna_oprema_dobavljac" FromRole="dodatna_oprema" ToRole="dobavljac" />
-          <NavigationProperty Name="vozilo" Relationship="Self.pripada" FromRole="dodatna_oprema" ToRole="vozilo" />
+          <NavigationProperty Name="dobavljac" Relationship="T33_DBModel.dodatna_oprema_dobavljac" FromRole="dodatna_oprema" ToRole="dobavljac" />
+          <NavigationProperty Name="vozilo" Relationship="T33_DBModel.pripada" FromRole="dodatna_oprema" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="korisnik">
           <Key>
             <PropertyRef Name="id_korisnik" />
           </Key>
           <Property Name="id_korisnik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="korisnicko_ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="lozinka" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="korisnicko_ime" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="lozinka" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="tip_korisnika" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tip_korisnika1" Relationship="Self.korisnik_tip_korisnika" FromRole="korisnik" ToRole="tip_korisnika" />
-          <NavigationProperty Name="nalog_za_servis" Relationship="Self.naloz_za_servis_korisnik" FromRole="korisnik" ToRole="nalog_za_servis" />
+          <NavigationProperty Name="tip_korisnika1" Relationship="T33_DBModel.korisnik_tip_korisnika" FromRole="korisnik" ToRole="tip_korisnika" />
+          <NavigationProperty Name="nalog_za_servis" Relationship="T33_DBModel.naloz_za_servis_korisnik" FromRole="korisnik" ToRole="nalog_za_servis" />
         </EntityType>
         <EntityType Name="kupac">
           <Key>
@@ -591,62 +666,69 @@
           </Key>
           <Property Name="id_kupac" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tip_kupca" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tip_kupca1" Relationship="Self.kupac_tip_kupca" FromRole="kupac" ToRole="tip_kupca" />
-          <NavigationProperty Name="ugovor" Relationship="Self.ugovor_kupac" FromRole="kupac" ToRole="ugovor" />
+          <Property Name="ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tvrtka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="adresa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="faks" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tip_kupca1" Relationship="T33_DBModel.kupac_tip_kupca" FromRole="kupac" ToRole="tip_kupca" />
+          <NavigationProperty Name="ugovor" Relationship="T33_DBModel.ugovor_kupac" FromRole="kupac" ToRole="ugovor" />
         </EntityType>
         <EntityType Name="marka_vozila">
           <Key>
             <PropertyRef Name="id_marka_vozila" />
           </Key>
           <Property Name="id_marka_vozila" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="drzava" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="model_vozila" Relationship="Self.model_vozila_marka_vozila" FromRole="marka_vozila" ToRole="model_vozila" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="drzava" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="model_vozila" Relationship="T33_DBModel.model_vozila_marka_vozila" FromRole="marka_vozila" ToRole="model_vozila" />
         </EntityType>
         <EntityType Name="model_vozila">
           <Key>
             <PropertyRef Name="id_model_vozila" />
           </Key>
           <Property Name="id_model_vozila" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="marka_vozila" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="marka_vozila1" Relationship="Self.model_vozila_marka_vozila" FromRole="model_vozila" ToRole="marka_vozila" />
-          <NavigationProperty Name="vozilo" Relationship="Self.vozilo_model_vozila" FromRole="model_vozila" ToRole="vozilo" />
+          <NavigationProperty Name="marka_vozila1" Relationship="T33_DBModel.model_vozila_marka_vozila" FromRole="model_vozila" ToRole="marka_vozila" />
+          <NavigationProperty Name="vozilo" Relationship="T33_DBModel.vozilo_model_vozila" FromRole="model_vozila" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="nalog_za_servis">
           <Key>
             <PropertyRef Name="id_nalog_za_servis" />
           </Key>
           <Property Name="id_nalog_za_servis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="vozilo" Type="Int32" Nullable="false" />
           <Property Name="korisnik" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="korisnik1" Relationship="Self.naloz_za_servis_korisnik" FromRole="nalog_za_servis" ToRole="korisnik" />
-          <NavigationProperty Name="vozilo1" Relationship="Self.naloz_za_servis_vozilo" FromRole="nalog_za_servis" ToRole="vozilo" />
+          <NavigationProperty Name="korisnik1" Relationship="T33_DBModel.naloz_za_servis_korisnik" FromRole="nalog_za_servis" ToRole="korisnik" />
+          <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.naloz_za_servis_vozilo" FromRole="nalog_za_servis" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="parking">
           <Key>
             <PropertyRef Name="id_parking" />
           </Key>
           <Property Name="id_parking" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="kapacitet" Type="Int32" />
-          <NavigationProperty Name="vozilo" Relationship="Self.vozilo_parking" FromRole="parking" ToRole="vozilo" />
+          <NavigationProperty Name="vozilo" Relationship="T33_DBModel.vozilo_parking" FromRole="parking" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="slika_vozilo">
           <Key>
             <PropertyRef Name="idslika_vozilo" />
           </Key>
           <Property Name="idslika_vozilo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="vozilo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="vozilo1" Relationship="Self.slike_automobila_vozilo" FromRole="slika_vozilo" ToRole="vozilo" />
+          <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.slike_automobila_vozilo" FromRole="slika_vozilo" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
@@ -657,16 +739,16 @@
             <PropertyRef Name="id_tip_korisnika" />
           </Key>
           <Property Name="id_tip_korisnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="korisnik" Relationship="Self.korisnik_tip_korisnika" FromRole="tip_korisnika" ToRole="korisnik" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="korisnik" Relationship="T33_DBModel.korisnik_tip_korisnika" FromRole="tip_korisnika" ToRole="korisnik" />
         </EntityType>
         <EntityType Name="tip_kupca">
           <Key>
             <PropertyRef Name="id_tip_kupca" />
           </Key>
           <Property Name="id_tip_kupca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="kupac" Relationship="Self.kupac_tip_kupca" FromRole="tip_kupca" ToRole="kupac" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="kupac" Relationship="T33_DBModel.kupac_tip_kupca" FromRole="tip_kupca" ToRole="kupac" />
         </EntityType>
         <EntityType Name="tip_poreza">
           <Key>
@@ -674,30 +756,30 @@
           </Key>
           <Property Name="id_tip_poreza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="postotak" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="cijena" Relationship="Self.cijena_tip_poreza_nabavna" FromRole="tip_poreza" ToRole="cijena" />
-          <NavigationProperty Name="cijena1" Relationship="Self.cijena_tip_poreza_prodajna" FromRole="tip_poreza" ToRole="cijena" />
+          <NavigationProperty Name="cijena" Relationship="T33_DBModel.cijena_tip_poreza_nabavna" FromRole="tip_poreza" ToRole="cijena" />
+          <NavigationProperty Name="cijena1" Relationship="T33_DBModel.cijena_tip_poreza_prodajna" FromRole="tip_poreza" ToRole="cijena" />
         </EntityType>
         <EntityType Name="tip_vozila">
           <Key>
             <PropertyRef Name="id_tip_vozila" />
           </Key>
           <Property Name="id_tip_vozila" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="podtip" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="vozilo" Relationship="Self.vozilo_tip_vozila" FromRole="tip_vozila" ToRole="vozilo" />
+          <NavigationProperty Name="vozilo" Relationship="T33_DBModel.vozilo_tip_vozila" FromRole="tip_vozila" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="ugovor">
           <Key>
             <PropertyRef Name="id_ugovor" />
           </Key>
           <Property Name="id_ugovor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="kupac" Type="Int32" Nullable="false" />
+          <Property Name="kupac" Type="Int32" />
           <Property Name="vozilo" Type="Int32" Nullable="false" />
           <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="dobavljac_iddobavljac" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="dobavljac" Relationship="Self.ugovor_dobavljac" FromRole="ugovor" ToRole="dobavljac" />
-          <NavigationProperty Name="kupac1" Relationship="Self.ugovor_kupac" FromRole="ugovor" ToRole="kupac" />
-          <NavigationProperty Name="vozilo1" Relationship="Self.ugovor_vozilo" FromRole="ugovor" ToRole="vozilo" />
+          <Property Name="dobavljac_iddobavljac" Type="Int32" />
+          <NavigationProperty Name="dobavljac" Relationship="T33_DBModel.ugovor_dobavljac" FromRole="ugovor" ToRole="dobavljac" />
+          <NavigationProperty Name="kupac1" Relationship="T33_DBModel.ugovor_kupac" FromRole="ugovor" ToRole="kupac" />
+          <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.ugovor_vozilo" FromRole="ugovor" ToRole="vozilo" />
         </EntityType>
         <EntityType Name="vozilo">
           <Key>
@@ -706,7 +788,7 @@
           <Property Name="id_vozilo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="sasija" Type="String" MaxLength="17" FixedLength="true" Unicode="false" />
           <Property Name="datum_prve_registracije" Type="DateTime" Precision="0" />
-          <Property Name="boja" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="boja" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="godina_proizvodnje" Type="Int32" Nullable="false" />
           <Property Name="datum_nabavke" Type="DateTime" Precision="0" />
           <Property Name="snaga_kw" Type="Int32" Nullable="false" />
@@ -719,15 +801,14 @@
           <Property Name="tip_vozila" Type="Int32" Nullable="false" />
           <Property Name="model_vozila" Type="Int32" Nullable="false" />
           <Property Name="parking" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="cijena" Relationship="Self.cijena_vozilo" FromRole="vozilo" ToRole="cijena" />
-          <NavigationProperty Name="dobavljac" Relationship="Self.dobavljac_vozilo" FromRole="vozilo" ToRole="dobavljac" />
-          <NavigationProperty Name="model_vozila1" Relationship="Self.vozilo_model_vozila" FromRole="vozilo" ToRole="model_vozila" />
-          <NavigationProperty Name="nalog_za_servis" Relationship="Self.naloz_za_servis_vozilo" FromRole="vozilo" ToRole="nalog_za_servis" />
-          <NavigationProperty Name="parking1" Relationship="Self.vozilo_parking" FromRole="vozilo" ToRole="parking" />
-          <NavigationProperty Name="slika_vozilo" Relationship="Self.slike_automobila_vozilo" FromRole="vozilo" ToRole="slika_vozilo" />
-          <NavigationProperty Name="tip_vozila1" Relationship="Self.vozilo_tip_vozila" FromRole="vozilo" ToRole="tip_vozila" />
-          <NavigationProperty Name="ugovor" Relationship="Self.ugovor_vozilo" FromRole="vozilo" ToRole="ugovor" />
-          <NavigationProperty Name="dodatna_oprema" Relationship="Self.pripada" FromRole="vozilo" ToRole="dodatna_oprema" />
+          <NavigationProperty Name="cijena" Relationship="T33_DBModel.cijena_vozilo" FromRole="vozilo" ToRole="cijena" />
+          <NavigationProperty Name="model_vozila1" Relationship="T33_DBModel.vozilo_model_vozila" FromRole="vozilo" ToRole="model_vozila" />
+          <NavigationProperty Name="nalog_za_servis" Relationship="T33_DBModel.naloz_za_servis_vozilo" FromRole="vozilo" ToRole="nalog_za_servis" />
+          <NavigationProperty Name="parking1" Relationship="T33_DBModel.vozilo_parking" FromRole="vozilo" ToRole="parking" />
+          <NavigationProperty Name="slika_vozilo" Relationship="T33_DBModel.slike_automobila_vozilo" FromRole="vozilo" ToRole="slika_vozilo" />
+          <NavigationProperty Name="tip_vozila1" Relationship="T33_DBModel.vozilo_tip_vozila" FromRole="vozilo" ToRole="tip_vozila" />
+          <NavigationProperty Name="ugovor" Relationship="T33_DBModel.ugovor_vozilo" FromRole="vozilo" ToRole="ugovor" />
+          <NavigationProperty Name="dodatna_oprema" Relationship="T33_DBModel.pripada" FromRole="vozilo" ToRole="dodatna_oprema" />
         </EntityType>
         <EntityType Name="zapisnik">
           <Key>
@@ -736,8 +817,8 @@
           <Property Name="id_zapisnik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <Association Name="cijena_tip_poreza_nabavna">
-          <End Role="tip_poreza" Type="Self.tip_poreza" Multiplicity="1" />
-          <End Role="cijena" Type="Self.cijena" Multiplicity="*" />
+          <End Type="T33_DBModel.tip_poreza" Role="tip_poreza" Multiplicity="1" />
+          <End Type="T33_DBModel.cijena" Role="cijena" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tip_poreza">
               <PropertyRef Name="id_tip_poreza" />
@@ -748,8 +829,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="cijena_tip_poreza_prodajna">
-          <End Role="tip_poreza" Type="Self.tip_poreza" Multiplicity="1" />
-          <End Role="cijena" Type="Self.cijena" Multiplicity="*" />
+          <End Type="T33_DBModel.tip_poreza" Role="tip_poreza" Multiplicity="1" />
+          <End Type="T33_DBModel.cijena" Role="cijena" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tip_poreza">
               <PropertyRef Name="id_tip_poreza" />
@@ -760,8 +841,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="cijena_vozilo">
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-          <End Role="cijena" Type="Self.cijena" Multiplicity="0..1" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="1" />
+          <End Type="T33_DBModel.cijena" Role="cijena" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="vozilo">
               <PropertyRef Name="id_vozilo" />
@@ -771,21 +852,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="dobavljac_vozilo">
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-          <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="vozilo">
-              <PropertyRef Name="id_vozilo" />
-            </Principal>
-            <Dependent Role="dobavljac">
-              <PropertyRef Name="vozilo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="dodatna_oprema_dobavljac">
-          <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="1" />
-          <End Role="dodatna_oprema" Type="Self.dodatna_oprema" Multiplicity="*" />
+          <End Type="T33_DBModel.dobavljac" Role="dobavljac" Multiplicity="1" />
+          <End Type="T33_DBModel.dodatna_oprema" Role="dodatna_oprema" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="dobavljac">
               <PropertyRef Name="id_dobavljac" />
@@ -796,8 +865,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ugovor_dobavljac">
-          <End Role="dobavljac" Type="Self.dobavljac" Multiplicity="1" />
-          <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
+          <End Type="T33_DBModel.dobavljac" Role="dobavljac" Multiplicity="0..1" />
+          <End Type="T33_DBModel.ugovor" Role="ugovor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="dobavljac">
               <PropertyRef Name="id_dobavljac" />
@@ -808,8 +877,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="korisnik_tip_korisnika">
-          <End Role="tip_korisnika" Type="Self.tip_korisnika" Multiplicity="1" />
-          <End Role="korisnik" Type="Self.korisnik" Multiplicity="*" />
+          <End Type="T33_DBModel.tip_korisnika" Role="tip_korisnika" Multiplicity="1" />
+          <End Type="T33_DBModel.korisnik" Role="korisnik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tip_korisnika">
               <PropertyRef Name="id_tip_korisnika" />
@@ -820,8 +889,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="naloz_za_servis_korisnik">
-          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
-          <End Role="nalog_za_servis" Type="Self.nalog_za_servis" Multiplicity="*" />
+          <End Type="T33_DBModel.korisnik" Role="korisnik" Multiplicity="1" />
+          <End Type="T33_DBModel.nalog_za_servis" Role="nalog_za_servis" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="korisnik">
               <PropertyRef Name="id_korisnik" />
@@ -832,8 +901,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="kupac_tip_kupca">
-          <End Role="tip_kupca" Type="Self.tip_kupca" Multiplicity="1" />
-          <End Role="kupac" Type="Self.kupac" Multiplicity="*" />
+          <End Type="T33_DBModel.tip_kupca" Role="tip_kupca" Multiplicity="1" />
+          <End Type="T33_DBModel.kupac" Role="kupac" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tip_kupca">
               <PropertyRef Name="id_tip_kupca" />
@@ -844,8 +913,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ugovor_kupac">
-          <End Role="kupac" Type="Self.kupac" Multiplicity="1" />
-          <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
+          <End Type="T33_DBModel.kupac" Role="kupac" Multiplicity="0..1" />
+          <End Type="T33_DBModel.ugovor" Role="ugovor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="kupac">
               <PropertyRef Name="id_kupac" />
@@ -856,8 +925,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="model_vozila_marka_vozila">
-          <End Role="marka_vozila" Type="Self.marka_vozila" Multiplicity="1" />
-          <End Role="model_vozila" Type="Self.model_vozila" Multiplicity="*" />
+          <End Type="T33_DBModel.marka_vozila" Role="marka_vozila" Multiplicity="1" />
+          <End Type="T33_DBModel.model_vozila" Role="model_vozila" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="marka_vozila">
               <PropertyRef Name="id_marka_vozila" />
@@ -868,8 +937,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="vozilo_model_vozila">
-          <End Role="model_vozila" Type="Self.model_vozila" Multiplicity="1" />
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="*" />
+          <End Type="T33_DBModel.model_vozila" Role="model_vozila" Multiplicity="1" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="model_vozila">
               <PropertyRef Name="id_model_vozila" />
@@ -880,8 +949,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="naloz_za_servis_vozilo">
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-          <End Role="nalog_za_servis" Type="Self.nalog_za_servis" Multiplicity="*" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="1" />
+          <End Type="T33_DBModel.nalog_za_servis" Role="nalog_za_servis" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vozilo">
               <PropertyRef Name="id_vozilo" />
@@ -892,8 +961,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="vozilo_parking">
-          <End Role="parking" Type="Self.parking" Multiplicity="1" />
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="*" />
+          <End Type="T33_DBModel.parking" Role="parking" Multiplicity="1" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="parking">
               <PropertyRef Name="id_parking" />
@@ -904,8 +973,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="slike_automobila_vozilo">
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-          <End Role="slika_vozilo" Type="Self.slika_vozilo" Multiplicity="*" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="1" />
+          <End Type="T33_DBModel.slika_vozilo" Role="slika_vozilo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vozilo">
               <PropertyRef Name="id_vozilo" />
@@ -916,8 +985,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="vozilo_tip_vozila">
-          <End Role="tip_vozila" Type="Self.tip_vozila" Multiplicity="1" />
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="*" />
+          <End Type="T33_DBModel.tip_vozila" Role="tip_vozila" Multiplicity="1" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tip_vozila">
               <PropertyRef Name="id_tip_vozila" />
@@ -928,8 +997,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="ugovor_vozilo">
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="1" />
-          <End Role="ugovor" Type="Self.ugovor" Multiplicity="*" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="1" />
+          <End Type="T33_DBModel.ugovor" Role="ugovor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vozilo">
               <PropertyRef Name="id_vozilo" />
@@ -940,101 +1009,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="pripada">
-          <End Role="dodatna_oprema" Type="Self.dodatna_oprema" Multiplicity="*" />
-          <End Role="vozilo" Type="Self.vozilo" Multiplicity="*" />
+          <End Type="T33_DBModel.dodatna_oprema" Role="dodatna_oprema" Multiplicity="*" />
+          <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="T33_DBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="cijena" EntityType="Self.cijena" />
-          <EntitySet Name="dobavljac" EntityType="Self.dobavljac" />
-          <EntitySet Name="dodatna_oprema" EntityType="Self.dodatna_oprema" />
-          <EntitySet Name="korisnik" EntityType="Self.korisnik" />
-          <EntitySet Name="kupac" EntityType="Self.kupac" />
-          <EntitySet Name="marka_vozila" EntityType="Self.marka_vozila" />
-          <EntitySet Name="model_vozila" EntityType="Self.model_vozila" />
-          <EntitySet Name="nalog_za_servis" EntityType="Self.nalog_za_servis" />
-          <EntitySet Name="parking" EntityType="Self.parking" />
-          <EntitySet Name="slika_vozilo" EntityType="Self.slika_vozilo" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <EntitySet Name="tip_korisnika" EntityType="Self.tip_korisnika" />
-          <EntitySet Name="tip_kupca" EntityType="Self.tip_kupca" />
-          <EntitySet Name="tip_poreza" EntityType="Self.tip_poreza" />
-          <EntitySet Name="tip_vozila" EntityType="Self.tip_vozila" />
-          <EntitySet Name="ugovor" EntityType="Self.ugovor" />
-          <EntitySet Name="vozilo" EntityType="Self.vozilo" />
-          <EntitySet Name="zapisnik" EntityType="Self.zapisnik" />
-          <AssociationSet Name="cijena_tip_poreza_nabavna" Association="Self.cijena_tip_poreza_nabavna">
-            <End Role="tip_poreza" EntitySet="tip_poreza" />
-            <End Role="cijena" EntitySet="cijena" />
-          </AssociationSet>
-          <AssociationSet Name="cijena_tip_poreza_prodajna" Association="Self.cijena_tip_poreza_prodajna">
-            <End Role="tip_poreza" EntitySet="tip_poreza" />
-            <End Role="cijena" EntitySet="cijena" />
-          </AssociationSet>
-          <AssociationSet Name="cijena_vozilo" Association="Self.cijena_vozilo">
-            <End Role="vozilo" EntitySet="vozilo" />
-            <End Role="cijena" EntitySet="cijena" />
-          </AssociationSet>
-          <AssociationSet Name="dobavljac_vozilo" Association="Self.dobavljac_vozilo">
-            <End Role="vozilo" EntitySet="vozilo" />
-            <End Role="dobavljac" EntitySet="dobavljac" />
-          </AssociationSet>
-          <AssociationSet Name="dodatna_oprema_dobavljac" Association="Self.dodatna_oprema_dobavljac">
-            <End Role="dobavljac" EntitySet="dobavljac" />
-            <End Role="dodatna_oprema" EntitySet="dodatna_oprema" />
-          </AssociationSet>
-          <AssociationSet Name="ugovor_dobavljac" Association="Self.ugovor_dobavljac">
-            <End Role="dobavljac" EntitySet="dobavljac" />
-            <End Role="ugovor" EntitySet="ugovor" />
-          </AssociationSet>
-          <AssociationSet Name="korisnik_tip_korisnika" Association="Self.korisnik_tip_korisnika">
-            <End Role="tip_korisnika" EntitySet="tip_korisnika" />
-            <End Role="korisnik" EntitySet="korisnik" />
-          </AssociationSet>
-          <AssociationSet Name="naloz_za_servis_korisnik" Association="Self.naloz_za_servis_korisnik">
-            <End Role="korisnik" EntitySet="korisnik" />
-            <End Role="nalog_za_servis" EntitySet="nalog_za_servis" />
-          </AssociationSet>
-          <AssociationSet Name="kupac_tip_kupca" Association="Self.kupac_tip_kupca">
-            <End Role="tip_kupca" EntitySet="tip_kupca" />
-            <End Role="kupac" EntitySet="kupac" />
-          </AssociationSet>
-          <AssociationSet Name="ugovor_kupac" Association="Self.ugovor_kupac">
-            <End Role="kupac" EntitySet="kupac" />
-            <End Role="ugovor" EntitySet="ugovor" />
-          </AssociationSet>
-          <AssociationSet Name="model_vozila_marka_vozila" Association="Self.model_vozila_marka_vozila">
-            <End Role="marka_vozila" EntitySet="marka_vozila" />
-            <End Role="model_vozila" EntitySet="model_vozila" />
-          </AssociationSet>
-          <AssociationSet Name="vozilo_model_vozila" Association="Self.vozilo_model_vozila">
-            <End Role="model_vozila" EntitySet="model_vozila" />
-            <End Role="vozilo" EntitySet="vozilo" />
-          </AssociationSet>
-          <AssociationSet Name="naloz_za_servis_vozilo" Association="Self.naloz_za_servis_vozilo">
-            <End Role="vozilo" EntitySet="vozilo" />
-            <End Role="nalog_za_servis" EntitySet="nalog_za_servis" />
-          </AssociationSet>
-          <AssociationSet Name="vozilo_parking" Association="Self.vozilo_parking">
-            <End Role="parking" EntitySet="parking" />
-            <End Role="vozilo" EntitySet="vozilo" />
-          </AssociationSet>
-          <AssociationSet Name="slike_automobila_vozilo" Association="Self.slike_automobila_vozilo">
-            <End Role="vozilo" EntitySet="vozilo" />
-            <End Role="slika_vozilo" EntitySet="slika_vozilo" />
-          </AssociationSet>
-          <AssociationSet Name="vozilo_tip_vozila" Association="Self.vozilo_tip_vozila">
-            <End Role="tip_vozila" EntitySet="tip_vozila" />
-            <End Role="vozilo" EntitySet="vozilo" />
-          </AssociationSet>
-          <AssociationSet Name="ugovor_vozilo" Association="Self.ugovor_vozilo">
-            <End Role="vozilo" EntitySet="vozilo" />
-            <End Role="ugovor" EntitySet="ugovor" />
-          </AssociationSet>
-          <AssociationSet Name="pripada" Association="Self.pripada">
-            <End Role="dodatna_oprema" EntitySet="dodatna_oprema" />
-            <End Role="vozilo" EntitySet="vozilo" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1044,189 +1021,195 @@
           <EntitySetMapping Name="cijena">
             <EntityTypeMapping TypeName="T33_DBModel.cijena">
               <MappingFragment StoreEntitySet="cijena">
-                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
-                <ScalarProperty Name="nabavna_bez_pdv" ColumnName="nabavna_bez_pdv" />
-                <ScalarProperty Name="nabavna_sa_pdv" ColumnName="nabavna_sa_pdv" />
-                <ScalarProperty Name="osnovica" ColumnName="osnovica" />
-                <ScalarProperty Name="porez" ColumnName="porez" />
-                <ScalarProperty Name="prodajna_sa_pdv" ColumnName="prodajna_sa_pdv" />
-                <ScalarProperty Name="marza" ColumnName="marza" />
-                <ScalarProperty Name="popravci_interni" ColumnName="popravci_interni" />
-                <ScalarProperty Name="popravci_ekterni" ColumnName="popravci_ekterni" />
-                <ScalarProperty Name="datum_izracuna" ColumnName="datum_izracuna" />
-                <ScalarProperty Name="tip_poreza_nabavna" ColumnName="tip_poreza_nabavna" />
                 <ScalarProperty Name="tip_poreza_prodajna" ColumnName="tip_poreza_prodajna" />
+                <ScalarProperty Name="tip_poreza_nabavna" ColumnName="tip_poreza_nabavna" />
+                <ScalarProperty Name="datum_izracuna" ColumnName="datum_izracuna" />
+                <ScalarProperty Name="popravci_ekterni" ColumnName="popravci_ekterni" />
+                <ScalarProperty Name="popravci_interni" ColumnName="popravci_interni" />
+                <ScalarProperty Name="marza" ColumnName="marza" />
+                <ScalarProperty Name="prodajna_sa_pdv" ColumnName="prodajna_sa_pdv" />
+                <ScalarProperty Name="porez" ColumnName="porez" />
+                <ScalarProperty Name="osnovica" ColumnName="osnovica" />
+                <ScalarProperty Name="nabavna_sa_pdv" ColumnName="nabavna_sa_pdv" />
+                <ScalarProperty Name="nabavna_bez_pdv" ColumnName="nabavna_bez_pdv" />
+                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dobavljac">
             <EntityTypeMapping TypeName="T33_DBModel.dobavljac">
               <MappingFragment StoreEntitySet="dobavljac">
-                <ScalarProperty Name="id_dobavljac" ColumnName="id_dobavljac" />
-                <ScalarProperty Name="ime" ColumnName="ime" />
-                <ScalarProperty Name="prezime" ColumnName="prezime" />
-                <ScalarProperty Name="tvrtka" ColumnName="tvrtka" />
-                <ScalarProperty Name="adresa" ColumnName="adresa" />
-                <ScalarProperty Name="telefon" ColumnName="telefon" />
-                <ScalarProperty Name="faks" ColumnName="faks" />
                 <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
+                <ScalarProperty Name="faks" ColumnName="faks" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="tvrtka" ColumnName="tvrtka" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="id_dobavljac" ColumnName="id_dobavljac" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="dodatna_oprema">
             <EntityTypeMapping TypeName="T33_DBModel.dodatna_oprema">
               <MappingFragment StoreEntitySet="dodatna_oprema">
-                <ScalarProperty Name="id_dodatna_oprema" ColumnName="id_dodatna_oprema" />
-                <ScalarProperty Name="dobavljac_iddobavljac" ColumnName="dobavljac_iddobavljac" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
-                <ScalarProperty Name="model" ColumnName="model" />
-                <ScalarProperty Name="boja" ColumnName="boja" />
-                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
-                <ScalarProperty Name="cijena" ColumnName="cijena" />
                 <ScalarProperty Name="raspoloživo" ColumnName="raspoloživo" />
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+                <ScalarProperty Name="boja" ColumnName="boja" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="dobavljac_iddobavljac" ColumnName="dobavljac_iddobavljac" />
+                <ScalarProperty Name="id_dodatna_oprema" ColumnName="id_dodatna_oprema" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="korisnik">
             <EntityTypeMapping TypeName="T33_DBModel.korisnik">
               <MappingFragment StoreEntitySet="korisnik">
-                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
-                <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
-                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
-                <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="tip_korisnika" ColumnName="tip_korisnika" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="kupac">
             <EntityTypeMapping TypeName="T33_DBModel.kupac">
               <MappingFragment StoreEntitySet="kupac">
-                <ScalarProperty Name="id_kupac" ColumnName="id_kupac" />
+                <ScalarProperty Name="faks" ColumnName="faks" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="tvrtka" ColumnName="tvrtka" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
                 <ScalarProperty Name="tip_kupca" ColumnName="tip_kupca" />
+                <ScalarProperty Name="id_kupac" ColumnName="id_kupac" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="marka_vozila">
             <EntityTypeMapping TypeName="T33_DBModel.marka_vozila">
               <MappingFragment StoreEntitySet="marka_vozila">
-                <ScalarProperty Name="id_marka_vozila" ColumnName="id_marka_vozila" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="drzava" ColumnName="drzava" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_marka_vozila" ColumnName="id_marka_vozila" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="model_vozila">
             <EntityTypeMapping TypeName="T33_DBModel.model_vozila">
               <MappingFragment StoreEntitySet="model_vozila">
-                <ScalarProperty Name="id_model_vozila" ColumnName="id_model_vozila" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="marka_vozila" ColumnName="marka_vozila" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_model_vozila" ColumnName="id_model_vozila" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="nalog_za_servis">
             <EntityTypeMapping TypeName="T33_DBModel.nalog_za_servis">
               <MappingFragment StoreEntitySet="nalog_za_servis">
-                <ScalarProperty Name="id_nalog_za_servis" ColumnName="id_nalog_za_servis" />
-                <ScalarProperty Name="opis" ColumnName="opis" />
-                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
                 <ScalarProperty Name="korisnik" ColumnName="korisnik" />
+                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="id_nalog_za_servis" ColumnName="id_nalog_za_servis" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="parking">
             <EntityTypeMapping TypeName="T33_DBModel.parking">
               <MappingFragment StoreEntitySet="parking">
-                <ScalarProperty Name="id_parking" ColumnName="id_parking" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="kapacitet" ColumnName="kapacitet" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_parking" ColumnName="id_parking" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="slika_vozilo">
             <EntityTypeMapping TypeName="T33_DBModel.slika_vozilo">
               <MappingFragment StoreEntitySet="slika_vozilo">
-                <ScalarProperty Name="idslika_vozilo" ColumnName="idslika_vozilo" />
-                <ScalarProperty Name="path" ColumnName="path" />
                 <ScalarProperty Name="vozilo" ColumnName="vozilo" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="idslika_vozilo" ColumnName="idslika_vozilo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="T33_DBModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tip_korisnika">
             <EntityTypeMapping TypeName="T33_DBModel.tip_korisnika">
               <MappingFragment StoreEntitySet="tip_korisnika">
-                <ScalarProperty Name="id_tip_korisnika" ColumnName="id_tip_korisnika" />
                 <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_tip_korisnika" ColumnName="id_tip_korisnika" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tip_kupca">
             <EntityTypeMapping TypeName="T33_DBModel.tip_kupca">
               <MappingFragment StoreEntitySet="tip_kupca">
-                <ScalarProperty Name="id_tip_kupca" ColumnName="id_tip_kupca" />
                 <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_tip_kupca" ColumnName="id_tip_kupca" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tip_poreza">
             <EntityTypeMapping TypeName="T33_DBModel.tip_poreza">
               <MappingFragment StoreEntitySet="tip_poreza">
-                <ScalarProperty Name="id_tip_poreza" ColumnName="id_tip_poreza" />
                 <ScalarProperty Name="postotak" ColumnName="postotak" />
+                <ScalarProperty Name="id_tip_poreza" ColumnName="id_tip_poreza" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tip_vozila">
             <EntityTypeMapping TypeName="T33_DBModel.tip_vozila">
               <MappingFragment StoreEntitySet="tip_vozila">
-                <ScalarProperty Name="id_tip_vozila" ColumnName="id_tip_vozila" />
-                <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="podtip" ColumnName="podtip" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_tip_vozila" ColumnName="id_tip_vozila" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ugovor">
             <EntityTypeMapping TypeName="T33_DBModel.ugovor">
               <MappingFragment StoreEntitySet="ugovor">
-                <ScalarProperty Name="id_ugovor" ColumnName="id_ugovor" />
-                <ScalarProperty Name="kupac" ColumnName="kupac" />
-                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
-                <ScalarProperty Name="datum" ColumnName="datum" />
                 <ScalarProperty Name="dobavljac_iddobavljac" ColumnName="dobavljac_iddobavljac" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="vozilo" ColumnName="vozilo" />
+                <ScalarProperty Name="kupac" ColumnName="kupac" />
+                <ScalarProperty Name="id_ugovor" ColumnName="id_ugovor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="vozilo">
             <EntityTypeMapping TypeName="T33_DBModel.vozilo">
               <MappingFragment StoreEntitySet="vozilo">
-                <ScalarProperty Name="id_vozilo" ColumnName="id_vozilo" />
-                <ScalarProperty Name="sasija" ColumnName="sasija" />
-                <ScalarProperty Name="datum_prve_registracije" ColumnName="datum_prve_registracije" />
-                <ScalarProperty Name="boja" ColumnName="boja" />
-                <ScalarProperty Name="godina_proizvodnje" ColumnName="godina_proizvodnje" />
-                <ScalarProperty Name="datum_nabavke" ColumnName="datum_nabavke" />
-                <ScalarProperty Name="snaga_kw" ColumnName="snaga_kw" />
-                <ScalarProperty Name="sjedista" ColumnName="sjedista" />
-                <ScalarProperty Name="nosivost" ColumnName="nosivost" />
-                <ScalarProperty Name="registracija" ColumnName="registracija" />
-                <ScalarProperty Name="prometna" ColumnName="prometna" />
-                <ScalarProperty Name="servisna" ColumnName="servisna" />
-                <ScalarProperty Name="kilometri" ColumnName="kilometri" />
-                <ScalarProperty Name="tip_vozila" ColumnName="tip_vozila" />
-                <ScalarProperty Name="model_vozila" ColumnName="model_vozila" />
                 <ScalarProperty Name="parking" ColumnName="parking" />
+                <ScalarProperty Name="model_vozila" ColumnName="model_vozila" />
+                <ScalarProperty Name="tip_vozila" ColumnName="tip_vozila" />
+                <ScalarProperty Name="kilometri" ColumnName="kilometri" />
+                <ScalarProperty Name="servisna" ColumnName="servisna" />
+                <ScalarProperty Name="prometna" ColumnName="prometna" />
+                <ScalarProperty Name="registracija" ColumnName="registracija" />
+                <ScalarProperty Name="nosivost" ColumnName="nosivost" />
+                <ScalarProperty Name="sjedista" ColumnName="sjedista" />
+                <ScalarProperty Name="snaga_kw" ColumnName="snaga_kw" />
+                <ScalarProperty Name="datum_nabavke" ColumnName="datum_nabavke" />
+                <ScalarProperty Name="godina_proizvodnje" ColumnName="godina_proizvodnje" />
+                <ScalarProperty Name="boja" ColumnName="boja" />
+                <ScalarProperty Name="datum_prve_registracije" ColumnName="datum_prve_registracije" />
+                <ScalarProperty Name="sasija" ColumnName="sasija" />
+                <ScalarProperty Name="id_vozilo" ColumnName="id_vozilo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1238,11 +1221,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <AssociationSetMapping Name="pripada" TypeName="T33_DBModel.pripada" StoreEntitySet="pripada">
-            <EndProperty Name="dodatna_oprema">
-              <ScalarProperty Name="id_dodatna_oprema" ColumnName="dodatna_oprema" />
-            </EndProperty>
             <EndProperty Name="vozilo">
               <ScalarProperty Name="id_vozilo" ColumnName="vozilo" />
+            </EndProperty>
+            <EndProperty Name="dodatna_oprema">
+              <ScalarProperty Name="id_dodatna_oprema" ColumnName="dodatna_oprema" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

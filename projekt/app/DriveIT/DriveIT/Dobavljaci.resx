@@ -143,6 +143,45 @@
   <data name="&gt;&gt;btnIzlaz.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="iddobavljacDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>id_dobavljac</value>
+  </data>
+  <data name="imeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ime</value>
+  </data>
+  <data name="prezimeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>prezime</value>
+  </data>
+  <data name="tvrtkaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>tvrtka</value>
+  </data>
+  <data name="adresaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>adresa</value>
+  </data>
+  <data name="telefonDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>telefon</value>
+  </data>
+  <data name="faksDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>faks</value>
+  </data>
+  <data name="emailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="voziloDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>vozilo</value>
+  </data>
+  <data name="vozilo1DataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>vozilo1</value>
+  </data>
+  <data name="dodatnaopremaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>dodatna_oprema</value>
+  </data>
+  <data name="ugovorDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ugovor</value>
+  </data>
+  <metadata name="dobavljacBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 85</value>
   </data>
@@ -182,6 +221,84 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Dobavljači</value>
+  </data>
+  <data name="&gt;&gt;dobavljacBindingSource.Name" xml:space="preserve">
+    <value>dobavljacBindingSource</value>
+  </data>
+  <data name="&gt;&gt;dobavljacBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iddobavljacDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>iddobavljacDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;iddobavljacDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imeDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>imeDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;imeDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prezimeDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>prezimeDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;prezimeDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tvrtkaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>tvrtkaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;tvrtkaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adresaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>adresaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;adresaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;telefonDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>telefonDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;telefonDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;faksDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>faksDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;faksDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>emailDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;emailDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;voziloDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>voziloDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;voziloDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vozilo1DataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>vozilo1DataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;vozilo1DataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dodatnaopremaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>dodatnaopremaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;dodatnaopremaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ugovorDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>ugovorDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;ugovorDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmDobavljaci</value>
