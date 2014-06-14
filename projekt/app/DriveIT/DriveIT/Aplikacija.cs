@@ -17,30 +17,30 @@ namespace DriveIT
             InitializeComponent();
         }
 
-        private void btnDobavljaci_Click(object sender, EventArgs e)
+    
+        private void btnDobavljaci_Click_1(object sender, EventArgs e)
         {
             frmDobavljaci dobavljaci = new frmDobavljaci();
-            dobavljaci.Show();
+            dobavljaci.ShowDialog();
+        }
+
+        private void btnKupciIInteresanti_Click(object sender, EventArgs e)
+        {
+            frmKupci kupci = new frmKupci();
+            kupci.Show();
         }
 
         private void btnVozila_Click(object sender, EventArgs e)
         {
             frmVozila vozila = new frmVozila();
             vozila.Show();
-
-        }
-
-        private void btnKupci_Click(object sender, EventArgs e)
-        {
-            frmKupci kupci = new frmKupci();
-            kupci.Show();
-
         }
 
         private void btnUgovori_Click(object sender, EventArgs e)
         {
             frmUgovori ugovori = new frmUgovori();
             ugovori.Show();
-        }
+
+        }       
     }
 }
