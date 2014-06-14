@@ -36,3 +36,11 @@ D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt
 D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmUgovori.resources
 D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmVozila.resources
 D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.csproj.GenerateResource.Cache
+F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.dll
+F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.pdfa.dll
+F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.xtra.dll
+F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.xml
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.pdfa.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.xtra.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\itextsharp.xml
