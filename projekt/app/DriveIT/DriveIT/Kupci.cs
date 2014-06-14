@@ -16,10 +16,5 @@ namespace DriveIT
         {
             InitializeComponent();
         }
-
-        private void btnIzlaz_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

@@ -28,37 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
-            // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(374, 352);
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
-            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnIzlaz.StyleManager = null;
-            this.btnIzlaz.TabIndex = 0;
-            this.btnIzlaz.Text = "Izlaz";
-            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // frmVozila
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 402);
-            this.Controls.Add(this.btnIzlaz);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "frmVozila";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Vozila";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton btnIzlaz;
     }
 }
