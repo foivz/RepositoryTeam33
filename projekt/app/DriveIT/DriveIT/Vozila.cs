@@ -12,9 +12,33 @@ namespace DriveIT
 {
     public partial class frmVozila : Form
     {
+
+        private void PrikaziVozila()
+        {
+
+            BindingList<vozilo> listaVozila = null;
+            using (var db = new T33_DBEntities2())
+            {
+                listaVozila = new BindingList<vozilo>(db.vozilo.ToList<vozilo>());
+            }
+            voziloBindingSource1.DataSource = listaVozila;
+        }
+
+
         public frmVozila()
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmVozila_Load(object sender, EventArgs e)
+        {
+            PrikaziVozila();
+        }
+
     }
 }
