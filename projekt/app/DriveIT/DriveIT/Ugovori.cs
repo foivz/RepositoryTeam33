@@ -21,5 +21,10 @@ namespace DriveIT
         {
             this.Close();
         }
+
+        private void lblPretragaUgovori_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

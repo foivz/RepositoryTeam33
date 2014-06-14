@@ -43,6 +43,12 @@ namespace DriveIT
 
         }
 
-             
+        private void frmAplikacija_Load(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+        }
+
+      
     }
 }

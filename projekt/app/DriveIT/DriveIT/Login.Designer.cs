@@ -1,6 +1,6 @@
 ﻿namespace DriveIT
 {
-    partial class frmDriveIT
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDriveIT));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.lblKorisnickoIme = new MetroFramework.Controls.MetroLabel();
             this.txtKorisnickoIme = new MetroFramework.Controls.MetroTextBox();
@@ -136,7 +136,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // frmDriveIT
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,9 +149,9 @@
             this.Controls.Add(this.btnLogin);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmDriveIT";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DriveIT";
+            this.Text = "Prijava";
             this.Load += new System.EventHandler(this.frmDriveIT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
