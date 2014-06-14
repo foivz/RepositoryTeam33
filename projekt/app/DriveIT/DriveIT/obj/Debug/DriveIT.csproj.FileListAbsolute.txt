@@ -17,3 +17,22 @@ F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.Sql
 F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.xml
 F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.SqlServer.xml
 F:\Faks\TEKUĆI\GitHub\projekt\app\DriveIT\DriveIT\bin\Debug\MetroFramework.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\DriveIT.exe.config
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.exe
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.pdb
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\DriveIT.exe
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\DriveIT.pdb
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.SqlServer.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\MetroFramework.dll
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.xml
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\bin\Debug\EntityFramework.SqlServer.xml
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.csprojResolveAssemblyReference.cache
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmAplikacija.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmDobavljaci.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmDriveIT.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmKupci.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.Properties.Resources.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmUgovori.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.frmVozila.resources
+D:\F    O    I\Fakultet 6. semestar\Programsko inženjerstvo\Projekt\git\projekt\app\DriveIT\DriveIT\obj\Debug\DriveIT.csproj.GenerateResource.Cache

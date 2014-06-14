@@ -23,5 +23,27 @@ namespace DriveIT
             app.Show();
 
         }
+
+        private void lblKorisnickoIme_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLozinka_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDriveIT_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmAplikacija frm = new frmAplikacija();
+            frm.ShowDialog();
+
+        }
     }
 }

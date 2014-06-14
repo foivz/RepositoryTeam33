@@ -28,35 +28,145 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDriveIT));
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
+            this.lblKorisnickoIme = new MetroFramework.Controls.MetroLabel();
+            this.txtKorisnickoIme = new MetroFramework.Controls.MetroTextBox();
+            this.Lozinka = new MetroFramework.Controls.MetroTextBox();
+            this.lblLozinka = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(279, 354);
+            this.btnLogin.Highlight = false;
+            this.btnLogin.Location = new System.Drawing.Point(70, 401);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(207, 82);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Size = new System.Drawing.Size(207, 55);
+            this.btnLogin.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnLogin.StyleManager = null;
+            this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // lblKorisnickoIme
+            // 
+            this.lblKorisnickoIme.AutoSize = true;
+            this.lblKorisnickoIme.CustomBackground = true;
+            this.lblKorisnickoIme.CustomForeColor = false;
+            this.lblKorisnickoIme.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblKorisnickoIme.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblKorisnickoIme.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblKorisnickoIme.Location = new System.Drawing.Point(131, 160);
+            this.lblKorisnickoIme.Name = "lblKorisnickoIme";
+            this.lblKorisnickoIme.Size = new System.Drawing.Size(93, 19);
+            this.lblKorisnickoIme.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblKorisnickoIme.StyleManager = null;
+            this.lblKorisnickoIme.TabIndex = 2;
+            this.lblKorisnickoIme.Text = "Korisničko ime";
+            this.lblKorisnickoIme.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblKorisnickoIme.UseStyleColors = false;
+            this.lblKorisnickoIme.Click += new System.EventHandler(this.lblKorisnickoIme_Click);
+            // 
+            // txtKorisnickoIme
+            // 
+            this.txtKorisnickoIme.CustomBackground = false;
+            this.txtKorisnickoIme.CustomForeColor = false;
+            this.txtKorisnickoIme.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtKorisnickoIme.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(70, 182);
+            this.txtKorisnickoIme.Multiline = false;
+            this.txtKorisnickoIme.Name = "txtKorisnickoIme";
+            this.txtKorisnickoIme.SelectedText = "";
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(207, 30);
+            this.txtKorisnickoIme.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtKorisnickoIme.StyleManager = null;
+            this.txtKorisnickoIme.TabIndex = 3;
+            this.txtKorisnickoIme.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtKorisnickoIme.UseStyleColors = false;
+            // 
+            // Lozinka
+            // 
+            this.Lozinka.CustomBackground = false;
+            this.Lozinka.CustomForeColor = false;
+            this.Lozinka.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.Lozinka.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.Lozinka.Location = new System.Drawing.Point(70, 255);
+            this.Lozinka.Multiline = false;
+            this.Lozinka.Name = "Lozinka";
+            this.Lozinka.SelectedText = "";
+            this.Lozinka.Size = new System.Drawing.Size(207, 30);
+            this.Lozinka.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Lozinka.StyleManager = null;
+            this.Lozinka.TabIndex = 4;
+            this.Lozinka.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Lozinka.UseStyleColors = false;
+            // 
+            // lblLozinka
+            // 
+            this.lblLozinka.AutoSize = true;
+            this.lblLozinka.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLozinka.CustomBackground = true;
+            this.lblLozinka.CustomForeColor = false;
+            this.lblLozinka.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblLozinka.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblLozinka.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblLozinka.Location = new System.Drawing.Point(145, 233);
+            this.lblLozinka.Name = "lblLozinka";
+            this.lblLozinka.Size = new System.Drawing.Size(52, 19);
+            this.lblLozinka.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblLozinka.StyleManager = null;
+            this.lblLozinka.TabIndex = 5;
+            this.lblLozinka.Text = "Lozinka";
+            this.lblLozinka.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblLozinka.UseStyleColors = false;
+            this.lblLozinka.Click += new System.EventHandler(this.lblLozinka_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(358, 104);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDriveIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 525);
+            this.ClientSize = new System.Drawing.Size(359, 511);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblLozinka);
+            this.Controls.Add(this.Lozinka);
+            this.Controls.Add(this.txtKorisnickoIme);
+            this.Controls.Add(this.lblKorisnickoIme);
             this.Controls.Add(this.btnLogin);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDriveIT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DriveIT";
+            this.Load += new System.EventHandler(this.frmDriveIT_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
+        private MetroFramework.Controls.MetroButton btnLogin;
+        private MetroFramework.Controls.MetroLabel lblKorisnickoIme;
+        private MetroFramework.Controls.MetroTextBox txtKorisnickoIme;
+        private MetroFramework.Controls.MetroTextBox Lozinka;
+        private MetroFramework.Controls.MetroLabel lblLozinka;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
