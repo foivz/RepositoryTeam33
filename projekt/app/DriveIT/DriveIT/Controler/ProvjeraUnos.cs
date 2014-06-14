@@ -10,7 +10,17 @@ namespace DriveIT.Controler
     {
         public static bool ProvjeraIme(string unos)
         {
-            return true;
+            bool ispravno = false;
+
+            if(unos[0]!= Char.ToLower(unos[0]))
+            {
+                ispravno = true;
+            }
+                
+            else 
+
+
+            return ispravno;
         }
 
     }
