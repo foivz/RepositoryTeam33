@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DriveIT.Controler
 {
-    class ProvjeraUnosa
+    class Provjera
     {
-        public static bool ProvjeraImena(string unos)
+        public static bool ProvjeraNesto(string unos)
         {
             return true;
         }
