@@ -223,6 +223,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DriveIT.Database.dobavljac.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.ugovor.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.vozilo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
