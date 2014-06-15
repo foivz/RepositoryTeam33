@@ -30,7 +30,7 @@
         {
             this.btnOdustani = new System.Windows.Forms.Button();
             this.lblDodajVozilo = new System.Windows.Forms.Label();
-            this.btnDodajDobavljac = new System.Windows.Forms.Button();
+            this.btnDodajVozilo = new System.Windows.Forms.Button();
             this.lblSjedista = new System.Windows.Forms.Label();
             this.txtSjedista = new System.Windows.Forms.TextBox();
             this.lblSnaga = new System.Windows.Forms.Label();
@@ -77,21 +77,21 @@
             // lblDodajVozilo
             // 
             this.lblDodajVozilo.AutoSize = true;
-            this.lblDodajVozilo.Location = new System.Drawing.Point(187, 45);
+            this.lblDodajVozilo.Location = new System.Drawing.Point(447, 28);
             this.lblDodajVozilo.Name = "lblDodajVozilo";
             this.lblDodajVozilo.Size = new System.Drawing.Size(65, 13);
             this.lblDodajVozilo.TabIndex = 33;
             this.lblDodajVozilo.Text = "Dodaj vozilo";
             // 
-            // btnDodajDobavljac
+            // btnDodajVozilo
             // 
-            this.btnDodajDobavljac.Location = new System.Drawing.Point(190, 487);
-            this.btnDodajDobavljac.Name = "btnDodajDobavljac";
-            this.btnDodajDobavljac.Size = new System.Drawing.Size(250, 43);
-            this.btnDodajDobavljac.TabIndex = 32;
-            this.btnDodajDobavljac.Text = "Dodaj dobavljača";
-            this.btnDodajDobavljac.UseVisualStyleBackColor = true;
-            this.btnDodajDobavljac.Click += new System.EventHandler(this.btnDodajDobavljac_Click);
+            this.btnDodajVozilo.Location = new System.Drawing.Point(190, 487);
+            this.btnDodajVozilo.Name = "btnDodajVozilo";
+            this.btnDodajVozilo.Size = new System.Drawing.Size(250, 43);
+            this.btnDodajVozilo.TabIndex = 32;
+            this.btnDodajVozilo.Text = "Dodaj vozilo";
+            this.btnDodajVozilo.UseVisualStyleBackColor = true;
+            this.btnDodajVozilo.Click += new System.EventHandler(this.btnDodajDobavljac_Click);
             // 
             // lblSjedista
             // 
@@ -359,7 +359,7 @@
             this.Controls.Add(this.txtNosivost);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.lblDodajVozilo);
-            this.Controls.Add(this.btnDodajDobavljac);
+            this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.lblSjedista);
             this.Controls.Add(this.txtSjedista);
             this.Controls.Add(this.lblSnaga);
@@ -373,6 +373,7 @@
             this.Controls.Add(this.txtBrSasije);
             this.Name = "frmVozilaDodaj";
             this.Text = "VozilaDodaj";
+            this.Load += new System.EventHandler(this.frmVozilaDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +383,7 @@
 
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Label lblDodajVozilo;
-        private System.Windows.Forms.Button btnDodajDobavljac;
+        private System.Windows.Forms.Button btnDodajVozilo;
         private System.Windows.Forms.Label lblSjedista;
         private System.Windows.Forms.TextBox txtSjedista;
         private System.Windows.Forms.Label lblSnaga;

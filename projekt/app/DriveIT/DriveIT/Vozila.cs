@@ -16,7 +16,6 @@ namespace DriveIT
 
         private void PrikaziVozila()
         {
-
             T33_DBEntities db = new T33_DBEntities();
             //BindingList<vozilo> listaVozila = null;
             //var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == 2).First<vozilo>();
@@ -26,18 +25,29 @@ namespace DriveIT
 
         }
 
+
+        private void prikaziDetalje(string i) {
+
+            frmVozilaDetalji detalji_vozila = new frmVozilaDetalji();
+            detalji_vozila.getDetails(i);
+            detalji_vozila.ShowDialog();
+            
+        }
+
+
        
         
         public frmVozila()
         {
             InitializeComponent();
-
-            
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
+
 
         }
 
@@ -61,6 +71,8 @@ namespace DriveIT
             frmVozilaDodaj novo_vozilo = new frmVozilaDodaj();
             novo_vozilo.ShowDialog();
         }
+
+        
 
 
 
