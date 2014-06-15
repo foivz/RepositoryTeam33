@@ -31,9 +31,6 @@ namespace DriveIT
             T33_DBEntities db = new T33_DBEntities();
             dobavljac dobavljac = new dobavljac();
 
-
-
-
             dobavljac.ime = txtIme.Text;
             dobavljac.prezime = txtPrezime.Text;
             dobavljac.tvrtka = txtTvrtka.Text;
@@ -67,14 +64,6 @@ namespace DriveIT
         {
             this.Close();
         }
-
-       
-
-      
-
-       
-        
-
-        
+  
     }
 }
