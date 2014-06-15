@@ -213,6 +213,7 @@
             this.btnDodajUgovor.TabIndex = 8;
             this.btnDodajUgovor.Text = "Dodaj novi ugovor";
             this.btnDodajUgovor.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajUgovor.Click += new System.EventHandler(this.btnDodajUgovor_Click);
             // 
             // frmUgovori
             // 

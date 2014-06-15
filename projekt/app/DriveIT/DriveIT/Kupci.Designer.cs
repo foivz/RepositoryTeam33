@@ -28,15 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKupci));
             this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idkupacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipkupcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tvrtkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.faksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipkupca1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kupacBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblPretragaKupci = new MetroFramework.Controls.MetroLabel();
             this.txtPretragaKupci = new MetroFramework.Controls.MetroTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDodajNovogKupca = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +74,95 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idkupacDataGridViewTextBoxColumn,
+            this.tipkupcaDataGridViewTextBoxColumn,
+            this.imeDataGridViewTextBoxColumn,
+            this.prezimeDataGridViewTextBoxColumn,
+            this.tvrtkaDataGridViewTextBoxColumn,
+            this.adresaDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.telefonDataGridViewTextBoxColumn,
+            this.faksDataGridViewTextBoxColumn,
+            this.tipkupca1DataGridViewTextBoxColumn,
+            this.ugovorDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.kupacBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(25, 151);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 396);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // idkupacDataGridViewTextBoxColumn
+            // 
+            this.idkupacDataGridViewTextBoxColumn.DataPropertyName = "id_kupac";
+            this.idkupacDataGridViewTextBoxColumn.HeaderText = "id_kupac";
+            this.idkupacDataGridViewTextBoxColumn.Name = "idkupacDataGridViewTextBoxColumn";
+            // 
+            // tipkupcaDataGridViewTextBoxColumn
+            // 
+            this.tipkupcaDataGridViewTextBoxColumn.DataPropertyName = "tip_kupca";
+            this.tipkupcaDataGridViewTextBoxColumn.HeaderText = "tip_kupca";
+            this.tipkupcaDataGridViewTextBoxColumn.Name = "tipkupcaDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // tvrtkaDataGridViewTextBoxColumn
+            // 
+            this.tvrtkaDataGridViewTextBoxColumn.DataPropertyName = "tvrtka";
+            this.tvrtkaDataGridViewTextBoxColumn.HeaderText = "tvrtka";
+            this.tvrtkaDataGridViewTextBoxColumn.Name = "tvrtkaDataGridViewTextBoxColumn";
+            // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "adresa";
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "telefon";
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            // 
+            // faksDataGridViewTextBoxColumn
+            // 
+            this.faksDataGridViewTextBoxColumn.DataPropertyName = "faks";
+            this.faksDataGridViewTextBoxColumn.HeaderText = "faks";
+            this.faksDataGridViewTextBoxColumn.Name = "faksDataGridViewTextBoxColumn";
+            // 
+            // tipkupca1DataGridViewTextBoxColumn
+            // 
+            this.tipkupca1DataGridViewTextBoxColumn.DataPropertyName = "tip_kupca1";
+            this.tipkupca1DataGridViewTextBoxColumn.HeaderText = "tip_kupca1";
+            this.tipkupca1DataGridViewTextBoxColumn.Name = "tipkupca1DataGridViewTextBoxColumn";
+            // 
+            // ugovorDataGridViewTextBoxColumn
+            // 
+            this.ugovorDataGridViewTextBoxColumn.DataPropertyName = "ugovor";
+            this.ugovorDataGridViewTextBoxColumn.HeaderText = "ugovor";
+            this.ugovorDataGridViewTextBoxColumn.Name = "ugovorDataGridViewTextBoxColumn";
+            // 
+            // kupacBindingSource
+            // 
+            this.kupacBindingSource.DataSource = typeof(DriveIT.Database.kupac);
             // 
             // lblPretragaKupci
             // 
@@ -139,6 +237,7 @@
             this.btnDodajNovogKupca.TabIndex = 8;
             this.btnDodajNovogKupca.Text = "Dodaj novog kupca";
             this.btnDodajNovogKupca.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajNovogKupca.Click += new System.EventHandler(this.btnDodajNovogKupca_Click);
             // 
             // frmKupci
             // 
@@ -155,7 +254,9 @@
             this.Name = "frmKupci";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Kupci";
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -172,5 +273,17 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MetroFramework.Controls.MetroButton btnDodajNovogKupca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idkupacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipkupcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tvrtkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn faksDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipkupca1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ugovorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource kupacBindingSource;
     }
 }

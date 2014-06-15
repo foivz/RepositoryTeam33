@@ -37,5 +37,11 @@ namespace DriveIT
             PrikaziUgovore();
 
         }
+
+        private void btnDodajUgovor_Click(object sender, EventArgs e)
+        {
+            frmUgovoriDodaj novi_ugovor = new frmUgovoriDodaj();
+            novi_ugovor.ShowDialog();
+        }
     }
 }

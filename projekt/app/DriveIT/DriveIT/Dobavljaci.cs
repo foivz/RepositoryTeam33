@@ -42,5 +42,13 @@ namespace DriveIT
         {
             this.Close();
         }
+
+        private void btnDodajDobavljaca_Click(object sender, EventArgs e)
+        {
+            /*otvaranje nove forme za dodavanje dobavljaca*/
+            frmDobavljaciDodaj novi_dobavljac = new frmDobavljaciDodaj();
+            novi_dobavljac.ShowDialog();
+
+        }
     }
 }

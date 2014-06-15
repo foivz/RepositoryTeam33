@@ -123,6 +123,7 @@
             this.btnDodajDobavljaca.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnDodajDobavljaca.StyleManager = null;
             this.btnDodajDobavljaca.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajDobavljaca.Click += new System.EventHandler(this.btnDodajDobavljaca_Click);
             // 
             // metroButton2
             // 

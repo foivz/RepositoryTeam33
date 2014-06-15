@@ -151,6 +151,18 @@
     <Compile Include="Dobavljaci.Designer.cs">
       <DependentUpon>Dobavljaci.cs</DependentUpon>
     </Compile>
+    <Compile Include="DobavljačiDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DobavljačiDodaj.Designer.cs">
+      <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KupciDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KupciDodaj.Designer.cs">
+      <DependentUpon>KupciDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,17 +183,35 @@
     <Compile Include="Ugovori.Designer.cs">
       <DependentUpon>Ugovori.cs</DependentUpon>
     </Compile>
+    <Compile Include="UgovoriDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UgovoriDodaj.Designer.cs">
+      <DependentUpon>UgovoriDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vozila.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vozila.Designer.cs">
       <DependentUpon>Vozila.cs</DependentUpon>
     </Compile>
+    <Compile Include="VozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VozilaDodaj.Designer.cs">
+      <DependentUpon>VozilaDodaj.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Aplikacija.resx">
       <DependentUpon>Aplikacija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dobavljaci.resx">
       <DependentUpon>Dobavljaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DobavljačiDodaj.resx">
+      <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KupciDodaj.resx">
+      <DependentUpon>KupciDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -201,8 +231,14 @@
     <EmbeddedResource Include="Ugovori.resx">
       <DependentUpon>Ugovori.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UgovoriDodaj.resx">
+      <DependentUpon>UgovoriDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vozila.resx">
       <DependentUpon>Vozila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VozilaDodaj.resx">
+      <DependentUpon>VozilaDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -223,6 +259,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DriveIT.Database.dobavljac.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.kupac.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.ugovor.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.vozilo.datasource" />
     <None Include="Properties\Settings.settings">

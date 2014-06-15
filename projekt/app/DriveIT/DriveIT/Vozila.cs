@@ -56,6 +56,12 @@ namespace DriveIT
             PrikaziVozila();
         }
 
+        private void btnDodajVozilo_Click(object sender, EventArgs e)
+        {
+            frmVozilaDodaj novo_vozilo = new frmVozilaDodaj();
+            novo_vozilo.ShowDialog();
+        }
+
 
 
     }
