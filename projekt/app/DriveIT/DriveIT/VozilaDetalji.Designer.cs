@@ -42,7 +42,6 @@
             this.lblNosivost = new System.Windows.Forms.Label();
             this.txtNosivost = new System.Windows.Forms.TextBox();
             this.btnOdustani = new System.Windows.Forms.Button();
-            this.lblDetaljiVozilo = new System.Windows.Forms.Label();
             this.btnAzurirajVozilo = new System.Windows.Forms.Button();
             this.lblSjedista = new System.Windows.Forms.Label();
             this.txtSjedista = new System.Windows.Forms.TextBox();
@@ -57,7 +56,7 @@
             this.txtBrSasije = new System.Windows.Forms.TextBox();
             this.btnObrisiVozilo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtIdVozilo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dtPickerNabavka
@@ -170,15 +169,7 @@
             this.btnOdustani.TabStop = false;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
-            // 
-            // lblDetaljiVozilo
-            // 
-            this.lblDetaljiVozilo.AutoSize = true;
-            this.lblDetaljiVozilo.Location = new System.Drawing.Point(388, 9);
-            this.lblDetaljiVozilo.Name = "lblDetaljiVozilo";
-            this.lblDetaljiVozilo.Size = new System.Drawing.Size(71, 13);
-            this.lblDetaljiVozilo.TabIndex = 66;
-            this.lblDetaljiVozilo.Text = "Ažuriraj vozilo";
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnAzurirajVozilo
             // 
@@ -302,20 +293,20 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "ID vozila";
             // 
-            // txtId
+            // txtIdVozilo
             // 
-            this.txtId.Location = new System.Drawing.Point(156, 30);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(148, 20);
-            this.txtId.TabIndex = 88;
+            this.txtIdVozilo.Location = new System.Drawing.Point(156, 23);
+            this.txtIdVozilo.Name = "txtIdVozilo";
+            this.txtIdVozilo.Size = new System.Drawing.Size(148, 20);
+            this.txtIdVozilo.TabIndex = 90;
             // 
             // frmVozilaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 524);
+            this.Controls.Add(this.txtIdVozilo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnObrisiVozilo);
             this.Controls.Add(this.dtPickerNabavka);
             this.Controls.Add(this.txtGodinaProizvodnje);
@@ -331,7 +322,6 @@
             this.Controls.Add(this.lblNosivost);
             this.Controls.Add(this.txtNosivost);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.lblDetaljiVozilo);
             this.Controls.Add(this.btnAzurirajVozilo);
             this.Controls.Add(this.lblSjedista);
             this.Controls.Add(this.txtSjedista);
@@ -368,7 +358,6 @@
         private System.Windows.Forms.Label lblNosivost;
         private System.Windows.Forms.TextBox txtNosivost;
         private System.Windows.Forms.Button btnOdustani;
-        private System.Windows.Forms.Label lblDetaljiVozilo;
         private System.Windows.Forms.Button btnAzurirajVozilo;
         private System.Windows.Forms.Label lblSjedista;
         private System.Windows.Forms.TextBox txtSjedista;
@@ -383,6 +372,6 @@
         private System.Windows.Forms.TextBox txtBrSasije;
         private System.Windows.Forms.Button btnObrisiVozilo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtIdVozilo;
     }
 }
