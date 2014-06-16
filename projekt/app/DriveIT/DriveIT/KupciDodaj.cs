@@ -18,11 +18,19 @@ namespace DriveIT
         public frmKupciDodaj()
         {
             InitializeComponent();
+            /*generiranje tipa kupca*/
+            using (T33_DBEntities db = new T33_DBEntities())
+            {
+
+                txtId.DataSource = db.tip_kupca.ToList();
+                txtId.ValueMember = "id_tip_kupca";
+                txtId.DisplayMember = "naziv";
+            }
         }
 
         private void frmKupciDodaj_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -36,8 +44,8 @@ namespace DriveIT
             T33_DBEntities db = new T33_DBEntities();
             kupac kupac = new kupac();
 
-            kupac.tip_kupca = Convert.ToInt32(txtTipKupca.Text);
-            kupac.ime = txtTipKupca.Text;
+            kupac.tip_kupca = Convert.ToInt32(txtId.SelectedValue);
+            kupac.ime = txtIme.Text;
             kupac.prezime = txtPrezime.Text;
             kupac.tvrtka = txtTvrtka.Text;
             kupac.adresa = txtAdresa.Text;
@@ -46,7 +54,7 @@ namespace DriveIT
             kupac.faks = txtFaks.Text;
 
             db.kupac.Add(kupac);
-            MessageBox.Show(txtTipKupca.Text);
+            
             try
 
             {

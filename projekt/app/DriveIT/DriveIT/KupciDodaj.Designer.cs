@@ -44,9 +44,9 @@
             this.lblPrezime = new System.Windows.Forms.Label();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.lblTip = new System.Windows.Forms.Label();
-            this.txtTipKupca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -185,13 +185,6 @@
             this.lblTip.TabIndex = 19;
             this.lblTip.Text = "Tip kupca";
             // 
-            // txtTipKupca
-            // 
-            this.txtTipKupca.Location = new System.Drawing.Point(236, 69);
-            this.txtTipKupca.Name = "txtTipKupca";
-            this.txtTipKupca.Size = new System.Drawing.Size(250, 20);
-            this.txtTipKupca.TabIndex = 18;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -201,20 +194,29 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Ime";
             // 
-            // textBox1
+            // txtIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 35;
+            this.txtIme.Location = new System.Drawing.Point(236, 107);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(250, 20);
+            this.txtIme.TabIndex = 35;
+            // 
+            // txtId
+            // 
+            this.txtId.FormattingEnabled = true;
+            this.txtId.Location = new System.Drawing.Point(236, 60);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(250, 21);
+            this.txtId.TabIndex = 37;
             // 
             // frmKupciDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 568);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIme);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.lblDodajKupca);
             this.Controls.Add(this.btnDodajKupca);
@@ -231,7 +233,6 @@
             this.Controls.Add(this.lblPrezime);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.lblTip);
-            this.Controls.Add(this.txtTipKupca);
             this.Name = "frmKupciDodaj";
             this.Text = "KupciDodaj";
             this.Load += new System.EventHandler(this.frmKupciDodaj_Load);
@@ -258,9 +259,9 @@
         private System.Windows.Forms.Label lblPrezime;
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.Label lblTip;
-        private System.Windows.Forms.TextBox txtTipKupca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.ComboBox txtId;
 
     }
 }
