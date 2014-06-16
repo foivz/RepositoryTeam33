@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="LblPretragaDobavljaci.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LblPretragaDobavljaci.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtPretragaDobavljaci.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -232,7 +232,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPretragaDobavljaci.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -621,7 +621,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -629,7 +629,7 @@
   <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqoAAADiCAYAAACGEeVCAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAJYlSURBVHhe7Z0F
+        DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAJYlSURBVHhe7Z0F
         YFRX3va/3bbEk/GJQnB3l9LS0uJQqtS3tFRwSg1KhZYa0tIWlygJwd21uGtxd0lIgH331X3f/Z7nzJz0
         Mr1Agk2AP7u/3smZK+fK3Pu7/2P/71//+pcgCIIgCIIgFDhMEwVBEARBEATB35gmCoIgCIIgCIK/MU0U
         BEEQBEEQBH9jmigIgiAIgiAI/sY0URAEQRAEQRD8jWmiIAiCIAiCIPgb00RBEARBEARB8DemiYIg3Bkq
@@ -1282,7 +1282,7 @@
   <data name="pictureBox2.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqoAAADiCAYAAACGEeVCAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAJYlSURBVHhe7Z0F
+        DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAJYlSURBVHhe7Z0F
         YFRX3va/3bbEk/GJQnB3l9LS0uJQqtS3tFRwSg1KhZYa0tIWlygJwd21uGtxd0lIgH331X3f/Z7nzJz0
         Mr1Agk2AP7u/3smZK+fK3Pu7/2P/71//+pcgCIIgCIIgFDhMEwVBEARBEATB35gmCoIgCIIgCIK/MU0U
         BEEQBEEQBH9jmigIgiAIgiAI/sY0URAEQRAEQRD8jWmiIAiCIAiCIPgb00RBEARBEARB8DemiYIg3Bkq
@@ -1945,7 +1945,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnDodajDobavljaca.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 77</value>
@@ -1969,7 +1969,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDodajDobavljaca.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="metroButton2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -1996,6 +1996,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnOsvjezi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 77</value>
+  </data>
+  <data name="btnOsvjezi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 23</value>
+  </data>
+  <data name="btnOsvjezi.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnOsvjezi.Text" xml:space="preserve">
+    <value>Osvježi prikaz</value>
+  </data>
+  <data name="&gt;&gt;btnOsvjezi.Name" xml:space="preserve">
+    <value>btnOsvjezi</value>
+  </data>
+  <data name="&gt;&gt;btnOsvjezi.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnOsvjezi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnOsvjezi.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2009,6 +2033,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>984, 761</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

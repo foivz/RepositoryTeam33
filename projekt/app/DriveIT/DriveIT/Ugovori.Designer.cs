@@ -46,6 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDodajUgovor = new MetroFramework.Controls.MetroButton();
+            this.btnOsvjezi = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +88,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 396);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idugovorDataGridViewTextBoxColumn
             // 
@@ -215,11 +217,25 @@
             this.btnDodajUgovor.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnDodajUgovor.Click += new System.EventHandler(this.btnDodajUgovor_Click);
             // 
+            // btnOsvjezi
+            // 
+            this.btnOsvjezi.Highlight = false;
+            this.btnOsvjezi.Location = new System.Drawing.Point(331, 77);
+            this.btnOsvjezi.Name = "btnOsvjezi";
+            this.btnOsvjezi.Size = new System.Drawing.Size(160, 23);
+            this.btnOsvjezi.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnOsvjezi.StyleManager = null;
+            this.btnOsvjezi.TabIndex = 9;
+            this.btnOsvjezi.Text = "Osvježi";
+            this.btnOsvjezi.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
+            // 
             // frmUgovori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.btnOsvjezi);
             this.Controls.Add(this.btnDodajUgovor);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -260,6 +276,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kupac1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vozilo1DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ugovorBindingSource;
+        private MetroFramework.Controls.MetroButton btnOsvjezi;
 
     }
 }

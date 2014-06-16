@@ -32,6 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVozila));
             this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblPretraga = new MetroFramework.Controls.MetroLabel();
+            this.txtPretragaVozila = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDodajVozilo = new MetroFramework.Controls.MetroButton();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sasijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumprveregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,17 +63,10 @@
             this.tipvozila1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblPretraga = new MetroFramework.Controls.MetroLabel();
-            this.txtPretragaVozila = new MetroFramework.Controls.MetroTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnDodajVozilo = new MetroFramework.Controls.MetroButton();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIzlaz
@@ -123,6 +123,95 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // lblPretraga
+            // 
+            this.lblPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPretraga.AutoSize = true;
+            this.lblPretraga.CustomBackground = true;
+            this.lblPretraga.CustomForeColor = false;
+            this.lblPretraga.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblPretraga.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblPretraga.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblPretraga.Location = new System.Drawing.Point(685, 81);
+            this.lblPretraga.Name = "lblPretraga";
+            this.lblPretraga.Size = new System.Drawing.Size(60, 19);
+            this.lblPretraga.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblPretraga.StyleManager = null;
+            this.lblPretraga.TabIndex = 1;
+            this.lblPretraga.Text = "Pretraga";
+            this.lblPretraga.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblPretraga.UseStyleColors = false;
+            // 
+            // txtPretragaVozila
+            // 
+            this.txtPretragaVozila.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPretragaVozila.CustomBackground = false;
+            this.txtPretragaVozila.CustomForeColor = false;
+            this.txtPretragaVozila.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtPretragaVozila.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtPretragaVozila.Location = new System.Drawing.Point(751, 77);
+            this.txtPretragaVozila.Multiline = false;
+            this.txtPretragaVozila.Name = "txtPretragaVozila";
+            this.txtPretragaVozila.SelectedText = "";
+            this.txtPretragaVozila.Size = new System.Drawing.Size(150, 23);
+            this.txtPretragaVozila.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPretragaVozila.StyleManager = null;
+            this.txtPretragaVozila.TabIndex = 2;
+            this.txtPretragaVozila.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPretragaVozila.UseStyleColors = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(907, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(25, 701);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(358, 104);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnDodajVozilo
+            // 
+            this.btnDodajVozilo.Highlight = false;
+            this.btnDodajVozilo.Location = new System.Drawing.Point(67, 77);
+            this.btnDodajVozilo.Name = "btnDodajVozilo";
+            this.btnDodajVozilo.Size = new System.Drawing.Size(160, 23);
+            this.btnDodajVozilo.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnDodajVozilo.StyleManager = null;
+            this.btnDodajVozilo.TabIndex = 8;
+            this.btnDodajVozilo.Text = "Dodaj novo vozilo";
+            this.btnDodajVozilo.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajVozilo.Click += new System.EventHandler(this.btnDodajVozilo_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(293, 77);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "Osvježi";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // voziloBindingSource
+            // 
+            this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
             // 
             // idvoziloDataGridViewTextBoxColumn
             // 
@@ -231,131 +320,49 @@
             this.modelvozila1DataGridViewTextBoxColumn.DataPropertyName = "model_vozila1";
             this.modelvozila1DataGridViewTextBoxColumn.HeaderText = "model_vozila1";
             this.modelvozila1DataGridViewTextBoxColumn.Name = "modelvozila1DataGridViewTextBoxColumn";
+            this.modelvozila1DataGridViewTextBoxColumn.Visible = false;
             // 
             // nalogzaservisDataGridViewTextBoxColumn
             // 
             this.nalogzaservisDataGridViewTextBoxColumn.DataPropertyName = "nalog_za_servis";
             this.nalogzaservisDataGridViewTextBoxColumn.HeaderText = "nalog_za_servis";
             this.nalogzaservisDataGridViewTextBoxColumn.Name = "nalogzaservisDataGridViewTextBoxColumn";
+            this.nalogzaservisDataGridViewTextBoxColumn.Visible = false;
             // 
             // parking1DataGridViewTextBoxColumn
             // 
             this.parking1DataGridViewTextBoxColumn.DataPropertyName = "parking1";
             this.parking1DataGridViewTextBoxColumn.HeaderText = "parking1";
             this.parking1DataGridViewTextBoxColumn.Name = "parking1DataGridViewTextBoxColumn";
+            this.parking1DataGridViewTextBoxColumn.Visible = false;
             // 
             // slikavoziloDataGridViewTextBoxColumn
             // 
             this.slikavoziloDataGridViewTextBoxColumn.DataPropertyName = "slika_vozilo";
             this.slikavoziloDataGridViewTextBoxColumn.HeaderText = "slika_vozilo";
             this.slikavoziloDataGridViewTextBoxColumn.Name = "slikavoziloDataGridViewTextBoxColumn";
+            this.slikavoziloDataGridViewTextBoxColumn.Visible = false;
             // 
             // tipvozila1DataGridViewTextBoxColumn
             // 
             this.tipvozila1DataGridViewTextBoxColumn.DataPropertyName = "tip_vozila1";
             this.tipvozila1DataGridViewTextBoxColumn.HeaderText = "tip_vozila1";
             this.tipvozila1DataGridViewTextBoxColumn.Name = "tipvozila1DataGridViewTextBoxColumn";
+            this.tipvozila1DataGridViewTextBoxColumn.Visible = false;
             // 
             // ugovorDataGridViewTextBoxColumn
             // 
             this.ugovorDataGridViewTextBoxColumn.DataPropertyName = "ugovor";
             this.ugovorDataGridViewTextBoxColumn.HeaderText = "ugovor";
             this.ugovorDataGridViewTextBoxColumn.Name = "ugovorDataGridViewTextBoxColumn";
+            this.ugovorDataGridViewTextBoxColumn.Visible = false;
             // 
             // dodatnaopremaDataGridViewTextBoxColumn
             // 
             this.dodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "dodatna_oprema";
             this.dodatnaopremaDataGridViewTextBoxColumn.HeaderText = "dodatna_oprema";
             this.dodatnaopremaDataGridViewTextBoxColumn.Name = "dodatnaopremaDataGridViewTextBoxColumn";
-            // 
-            // voziloBindingSource
-            // 
-            this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
-            // 
-            // lblPretraga
-            // 
-            this.lblPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPretraga.AutoSize = true;
-            this.lblPretraga.CustomBackground = true;
-            this.lblPretraga.CustomForeColor = false;
-            this.lblPretraga.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.lblPretraga.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.lblPretraga.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblPretraga.Location = new System.Drawing.Point(685, 81);
-            this.lblPretraga.Name = "lblPretraga";
-            this.lblPretraga.Size = new System.Drawing.Size(60, 19);
-            this.lblPretraga.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblPretraga.StyleManager = null;
-            this.lblPretraga.TabIndex = 1;
-            this.lblPretraga.Text = "Pretraga";
-            this.lblPretraga.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblPretraga.UseStyleColors = false;
-            // 
-            // txtPretragaVozila
-            // 
-            this.txtPretragaVozila.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPretragaVozila.CustomBackground = false;
-            this.txtPretragaVozila.CustomForeColor = false;
-            this.txtPretragaVozila.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtPretragaVozila.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtPretragaVozila.Location = new System.Drawing.Point(751, 77);
-            this.txtPretragaVozila.Multiline = false;
-            this.txtPretragaVozila.Name = "txtPretragaVozila";
-            this.txtPretragaVozila.SelectedText = "";
-            this.txtPretragaVozila.Size = new System.Drawing.Size(150, 23);
-            this.txtPretragaVozila.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPretragaVozila.StyleManager = null;
-            this.txtPretragaVozila.TabIndex = 2;
-            this.txtPretragaVozila.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPretragaVozila.UseStyleColors = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(907, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 701);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(358, 104);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnDodajVozilo
-            // 
-            this.btnDodajVozilo.Highlight = false;
-            this.btnDodajVozilo.Location = new System.Drawing.Point(67, 77);
-            this.btnDodajVozilo.Name = "btnDodajVozilo";
-            this.btnDodajVozilo.Size = new System.Drawing.Size(160, 23);
-            this.btnDodajVozilo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnDodajVozilo.StyleManager = null;
-            this.btnDodajVozilo.TabIndex = 8;
-            this.btnDodajVozilo.Text = "Dodaj novo vozilo";
-            this.btnDodajVozilo.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnDodajVozilo.Click += new System.EventHandler(this.btnDodajVozilo_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(293, 77);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 9;
-            this.btnRefresh.Text = "Osvježi";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.dodatnaopremaDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmVozila
             // 
@@ -375,9 +382,9 @@
             this.Text = "Vozila";
             this.Load += new System.EventHandler(this.frmVozila_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,6 +396,14 @@
         private MetroFramework.Controls.MetroButton btnIzlaz;
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dobavljacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource voziloBindingSource;
+        private MetroFramework.Controls.MetroLabel lblPretraga;
+        private MetroFramework.Controls.MetroTextBox txtPretragaVozila;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private MetroFramework.Controls.MetroButton btnDodajVozilo;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn idvoziloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sasijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumprveregistracijeDataGridViewTextBoxColumn;
@@ -406,7 +421,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn modelvozilaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parkingDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelvozila1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nalogzaservisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parking1DataGridViewTextBoxColumn;
@@ -414,13 +428,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipvozila1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ugovorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dodatnaopremaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource voziloBindingSource;
-        private MetroFramework.Controls.MetroLabel lblPretraga;
-        private MetroFramework.Controls.MetroTextBox txtPretragaVozila;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private MetroFramework.Controls.MetroButton btnDodajVozilo;
-        private System.Windows.Forms.Button btnRefresh;
 
     }
 }

@@ -151,6 +151,12 @@
     <Compile Include="Dobavljaci.Designer.cs">
       <DependentUpon>Dobavljaci.cs</DependentUpon>
     </Compile>
+    <Compile Include="DobavljaciDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DobavljaciDetalji.Designer.cs">
+      <DependentUpon>DobavljaciDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="DobavljačiDodaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dobavljaci.resx">
       <DependentUpon>Dobavljaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DobavljaciDetalji.resx">
+      <DependentUpon>DobavljaciDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DobavljačiDodaj.resx">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>

@@ -20,6 +20,18 @@ namespace DriveIT
             ugovorBindingSource.DataSource = ugovori;
         }
 
+
+        /*private void prikaziDetalje(string i)
+        {
+
+            frmVozilaDetalji detalji_vozila = new frmVozilaDetalji();
+            detalji_vozila.getDetails(i);
+            detalji_vozila.ShowDialog();
+        }*/
+
+
+
+        /*Konstruktor*/
         public frmUgovori()
         {
             InitializeComponent();
@@ -42,6 +54,17 @@ namespace DriveIT
         {
             frmUgovoriDodaj novi_ugovor = new frmUgovoriDodaj();
             novi_ugovor.ShowDialog();
+        }
+
+        private void btnOsvjezi_Click(object sender, EventArgs e)
+        {
+            PrikaziUgovore();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           /* string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);*/
         }
     }
 }

@@ -25,18 +25,14 @@ namespace DriveIT
 
         }
 
-
         private void prikaziDetalje(string i) {
 
             frmVozilaDetalji detalji_vozila = new frmVozilaDetalji();
             detalji_vozila.getDetails(i);
             detalji_vozila.ShowDialog();
-            
         }
 
-
        
-        
         public frmVozila()
         {
             InitializeComponent();

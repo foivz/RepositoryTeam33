@@ -16,13 +16,20 @@ namespace DriveIT
         private void PrikaziDobavljace()
         {
             T33_DBEntities db = new T33_DBEntities();
-            //BindingList<vozilo> listaVozila = null;
-            //var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == 2).First<vozilo>();
-            //var vozila = db.vozilo.Where<vozilo>;
             var dobavljaci = db.dobavljac.ToList<dobavljac>();
             dobavljacBindingSource.DataSource = dobavljaci;
         }
-        
+
+
+        private void prikaziDetalje(string i)
+        {
+
+            frmDobavljaciDetalji detalji_dobavljac = new frmDobavljaciDetalji();
+            detalji_dobavljac.getDetails(i);
+            detalji_dobavljac.ShowDialog();
+        }
+
+        /*Konstruktor*/
         public frmDobavljaci()
         {
             InitializeComponent();
@@ -49,6 +56,17 @@ namespace DriveIT
             frmDobavljaciDodaj novi_dobavljac = new frmDobavljaciDodaj();
             novi_dobavljac.ShowDialog();
 
+        }
+
+        private void btnOsvjezi_Click(object sender, EventArgs e)
+        {
+            PrikaziDobavljace();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
     }
 }
