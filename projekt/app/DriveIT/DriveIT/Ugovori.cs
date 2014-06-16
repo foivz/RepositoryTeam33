@@ -21,13 +21,13 @@ namespace DriveIT
         }
 
 
-        /*private void prikaziDetalje(string i)
+        private void prikaziDetalje(string i)
         {
 
-            frmVozilaDetalji detalji_vozila = new frmVozilaDetalji();
-            detalji_vozila.getDetails(i);
-            detalji_vozila.ShowDialog();
-        }*/
+            frmUgovoriDetalji detalji_ugovora = new frmUgovoriDetalji();
+            detalji_ugovora.getDetails(i);
+            detalji_ugovora.ShowDialog();
+        }
 
 
 
@@ -63,8 +63,8 @@ namespace DriveIT
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            prikaziDetalje(i);*/
+           string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+           prikaziDetalje(i);
         }
     }
 }

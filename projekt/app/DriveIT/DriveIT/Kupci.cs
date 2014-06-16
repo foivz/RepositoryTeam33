@@ -20,7 +20,14 @@ namespace DriveIT
             T33_DBEntities db = new T33_DBEntities();
             var kupci = db.kupac.ToList<kupac>();
             kupacBindingSource.DataSource = kupci;
-        
+        }
+
+
+        private void prikaziDetalje(string i)
+        {
+            frmKupciDetalji detalji_kupca = new frmKupciDetalji();
+            detalji_kupca.getDetails(i);
+            detalji_kupca.ShowDialog();
         }
 
 
@@ -35,17 +42,28 @@ namespace DriveIT
             this.Close();
         }
 
-        private void frmKupci_Load(object sender, EventArgs e) {
-
-            prikaziKupce();
-
-         
-         }
+       
 
         private void btnDodajNovogKupca_Click(object sender, EventArgs e)
         {
             frmKupciDodaj novi_kupac = new frmKupciDodaj();
             novi_kupac.ShowDialog();
+        }
+
+        private void frmKupci_Load_1(object sender, EventArgs e)
+        {
+            prikaziKupce();
+        }
+
+        private void btnAzuriraj_Click(object sender, EventArgs e)
+        {
+            prikaziKupce();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
         
 

@@ -28,14 +28,16 @@ namespace DriveIT
             db.vozilo.Remove(vozilo);
             db.SaveChanges();
 
+            MessageBox.Show("Vozilo uspješno obrisano");
+            System.Threading.Thread.Sleep(700);
+            this.Close();
+
         }
 
         private void VozilaDetalji_Load(object sender, EventArgs e)
         {
             
         }
-
-
 
         public void getDetails(string i){
             

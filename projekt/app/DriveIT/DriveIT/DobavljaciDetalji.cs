@@ -81,6 +81,11 @@ namespace DriveIT
             db.dobavljac.Remove(dobavljac);
             db.SaveChanges();
 
+
+            MessageBox.Show("Dobavljač uspješno obrisan");
+            System.Threading.Thread.Sleep(700);
+            this.Close();
+
         }
 
        

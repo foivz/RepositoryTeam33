@@ -163,6 +163,12 @@
     <Compile Include="DobavljačiDodaj.Designer.cs">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="KupciDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KupciDetalji.Designer.cs">
+      <DependentUpon>KupciDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="KupciDodaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     </Compile>
     <Compile Include="Ugovori.Designer.cs">
       <DependentUpon>Ugovori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UgovoriDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UgovoriDetalji.Designer.cs">
+      <DependentUpon>UgovoriDetalji.cs</DependentUpon>
     </Compile>
     <Compile Include="UgovoriDodaj.cs">
       <SubType>Form</SubType>
@@ -225,6 +237,9 @@
     <EmbeddedResource Include="DobavljačiDodaj.resx">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KupciDetalji.resx">
+      <DependentUpon>KupciDetalji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KupciDodaj.resx">
       <DependentUpon>KupciDodaj.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +260,9 @@
     </Compile>
     <EmbeddedResource Include="Ugovori.resx">
       <DependentUpon>Ugovori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UgovoriDetalji.resx">
+      <DependentUpon>UgovoriDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UgovoriDodaj.resx">
       <DependentUpon>UgovoriDodaj.cs</DependentUpon>
