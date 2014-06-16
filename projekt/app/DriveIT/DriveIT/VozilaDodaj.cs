@@ -18,6 +18,32 @@ namespace DriveIT
         public frmVozilaDodaj()
         {
             InitializeComponent();
+
+            /*Tip vozila combobox*/
+            using (T33_DBEntities db = new T33_DBEntities())
+            {
+                txtTipVozila.DataSource = db.tip_vozila.ToList();
+                txtTipVozila.ValueMember = "id_tip_vozila";
+                txtTipVozila.DisplayMember = "naziv";
+                
+            }
+
+            /*Model vozila combobox*/
+            using (T33_DBEntities db = new T33_DBEntities())
+            {
+                txtModel.DataSource = db.model_vozila.ToList();
+                txtModel.ValueMember = "id_model_vozila";
+                txtModel.DisplayMember = "naziv";
+            }
+
+
+            /*Parking combobox*/
+            using (T33_DBEntities db = new T33_DBEntities())
+            {
+                txtParking.DataSource = db.parking.ToList();
+                txtParking.ValueMember = "id_parking";
+                txtParking.DisplayMember = "naziv";
+            }
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -45,9 +71,9 @@ namespace DriveIT
 
             /*Ove bi trebalo dinamički izgenerirati-TODO*/
             //items.add("")
-            vozilo.tip_vozila = Convert.ToInt32(txtTipVozila.Text);
-            vozilo.model_vozila = Convert.ToInt32(txtModel.Text);
-            vozilo.parking = Convert.ToInt32(txtParking.Text);
+            vozilo.tip_vozila = Convert.ToInt32(txtTipVozila.SelectedValue);
+            vozilo.model_vozila = Convert.ToInt32(txtModel.SelectedValue);
+            vozilo.parking = Convert.ToInt32(txtParking.SelectedValue);
 
             /*MessageBox.Show();*/
 
@@ -79,6 +105,8 @@ namespace DriveIT
         {
 
         }
+
+       
 
         
 

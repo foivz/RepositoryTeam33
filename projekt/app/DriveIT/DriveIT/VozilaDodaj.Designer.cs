@@ -43,9 +43,7 @@
             this.lblSasija = new System.Windows.Forms.Label();
             this.txtBrSasije = new System.Windows.Forms.TextBox();
             this.lblModel = new System.Windows.Forms.Label();
-            this.txtModel = new System.Windows.Forms.TextBox();
             this.lblTipVozila = new System.Windows.Forms.Label();
-            this.txtTipVozila = new System.Windows.Forms.TextBox();
             this.lblKilometri = new System.Windows.Forms.Label();
             this.txtKilometraza = new System.Windows.Forms.TextBox();
             this.lblServisna = new System.Windows.Forms.Label();
@@ -57,10 +55,12 @@
             this.lblNosivost = new System.Windows.Forms.Label();
             this.txtNosivost = new System.Windows.Forms.TextBox();
             this.lblParking = new System.Windows.Forms.Label();
-            this.txtParking = new System.Windows.Forms.TextBox();
             this.dtPickerPrvaRegistracija = new System.Windows.Forms.DateTimePicker();
             this.txtGodinaProizvodnje = new System.Windows.Forms.TextBox();
             this.dtPickerNabavka = new System.Windows.Forms.DateTimePicker();
+            this.txtParking = new System.Windows.Forms.ComboBox();
+            this.txtModel = new System.Windows.Forms.ComboBox();
+            this.txtTipVozila = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -193,13 +193,6 @@
             this.lblModel.TabIndex = 48;
             this.lblModel.Text = "Model vozila *";
             // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(564, 431);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(148, 20);
-            this.txtModel.TabIndex = 47;
-            // 
             // lblTipVozila
             // 
             this.lblTipVozila.AutoSize = true;
@@ -208,13 +201,6 @@
             this.lblTipVozila.Size = new System.Drawing.Size(59, 13);
             this.lblTipVozila.TabIndex = 46;
             this.lblTipVozila.Text = "Tip vozila *";
-            // 
-            // txtTipVozila
-            // 
-            this.txtTipVozila.Location = new System.Drawing.Point(564, 371);
-            this.txtTipVozila.Name = "txtTipVozila";
-            this.txtTipVozila.Size = new System.Drawing.Size(148, 20);
-            this.txtTipVozila.TabIndex = 45;
             // 
             // lblKilometri
             // 
@@ -305,13 +291,6 @@
             this.lblParking.TabIndex = 50;
             this.lblParking.Text = "Parking *";
             // 
-            // txtParking
-            // 
-            this.txtParking.Location = new System.Drawing.Point(849, 98);
-            this.txtParking.Name = "txtParking";
-            this.txtParking.Size = new System.Drawing.Size(148, 20);
-            this.txtParking.TabIndex = 49;
-            // 
             // dtPickerPrvaRegistracija
             // 
             this.dtPickerPrvaRegistracija.Location = new System.Drawing.Point(190, 138);
@@ -333,20 +312,44 @@
             this.dtPickerNabavka.Size = new System.Drawing.Size(148, 20);
             this.dtPickerNabavka.TabIndex = 53;
             // 
+            // txtParking
+            // 
+            this.txtParking.FormattingEnabled = true;
+            this.txtParking.Location = new System.Drawing.Point(863, 95);
+            this.txtParking.Name = "txtParking";
+            this.txtParking.Size = new System.Drawing.Size(121, 21);
+            this.txtParking.TabIndex = 54;
+            // 
+            // txtModel
+            // 
+            this.txtModel.FormattingEnabled = true;
+            this.txtModel.Location = new System.Drawing.Point(564, 428);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(148, 21);
+            this.txtModel.TabIndex = 55;
+            // 
+            // txtTipVozila
+            // 
+            this.txtTipVozila.FormattingEnabled = true;
+            this.txtTipVozila.Location = new System.Drawing.Point(564, 371);
+            this.txtTipVozila.Name = "txtTipVozila";
+            this.txtTipVozila.Size = new System.Drawing.Size(148, 21);
+            this.txtTipVozila.TabIndex = 56;
+            // 
             // frmVozilaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 576);
+            this.Controls.Add(this.txtTipVozila);
+            this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.txtParking);
             this.Controls.Add(this.dtPickerNabavka);
             this.Controls.Add(this.txtGodinaProizvodnje);
             this.Controls.Add(this.dtPickerPrvaRegistracija);
             this.Controls.Add(this.lblParking);
-            this.Controls.Add(this.txtParking);
             this.Controls.Add(this.lblModel);
-            this.Controls.Add(this.txtModel);
             this.Controls.Add(this.lblTipVozila);
-            this.Controls.Add(this.txtTipVozila);
             this.Controls.Add(this.lblKilometri);
             this.Controls.Add(this.txtKilometraza);
             this.Controls.Add(this.lblServisna);
@@ -396,9 +399,7 @@
         private System.Windows.Forms.Label lblSasija;
         private System.Windows.Forms.TextBox txtBrSasije;
         private System.Windows.Forms.Label lblModel;
-        private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.Label lblTipVozila;
-        private System.Windows.Forms.TextBox txtTipVozila;
         private System.Windows.Forms.Label lblKilometri;
         private System.Windows.Forms.TextBox txtKilometraza;
         private System.Windows.Forms.Label lblServisna;
@@ -410,9 +411,11 @@
         private System.Windows.Forms.Label lblNosivost;
         private System.Windows.Forms.TextBox txtNosivost;
         private System.Windows.Forms.Label lblParking;
-        private System.Windows.Forms.TextBox txtParking;
         private System.Windows.Forms.DateTimePicker dtPickerPrvaRegistracija;
         private System.Windows.Forms.TextBox txtGodinaProizvodnje;
         private System.Windows.Forms.DateTimePicker dtPickerNabavka;
+        private System.Windows.Forms.ComboBox txtParking;
+        private System.Windows.Forms.ComboBox txtModel;
+        private System.Windows.Forms.ComboBox txtTipVozila;
     }
 }
