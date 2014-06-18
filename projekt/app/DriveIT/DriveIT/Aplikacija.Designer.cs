@@ -37,17 +37,19 @@
             this.btnTlocrt = new MetroFramework.Controls.MetroButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postavkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parkiralištaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeliVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.markeVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vrstaVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodatnaOpremaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dijeloviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tim33NOTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroBtnNalozi = new MetroFramework.Controls.MetroButton();
+            this.metroButtnIzlaz = new MetroFramework.Controls.MetroButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,6 +142,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.fileToolStripMenuItem.Text = "Izbornik";
             // 
+            // izlazToolStripMenuItem
+            // 
+            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.izlazToolStripMenuItem.Text = "Izlaz";
+            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
+            // 
             // pomoćToolStripMenuItem
             // 
             this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
@@ -158,14 +167,6 @@
             this.postavkeToolStripMenuItem.Name = "postavkeToolStripMenuItem";
             this.postavkeToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.postavkeToolStripMenuItem.Text = "Postavke";
-            // 
-            // oNamaToolStripMenuItem
-            // 
-            this.oNamaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tim33NOTToolStripMenuItem});
-            this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
-            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.oNamaToolStripMenuItem.Text = "O nama";
             // 
             // parkiralištaToolStripMenuItem
             // 
@@ -209,25 +210,53 @@
             this.dijeloviToolStripMenuItem.Text = "Dijelovi";
             this.dijeloviToolStripMenuItem.Click += new System.EventHandler(this.dijeloviToolStripMenuItem_Click);
             // 
-            // izlazToolStripMenuItem
+            // oNamaToolStripMenuItem
             // 
-            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.izlazToolStripMenuItem.Text = "Izlaz";
-            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
+            this.oNamaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tim33NOTToolStripMenuItem});
+            this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
+            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.oNamaToolStripMenuItem.Text = "O nama";
             // 
             // tim33NOTToolStripMenuItem
             // 
             this.tim33NOTToolStripMenuItem.Name = "tim33NOTToolStripMenuItem";
-            this.tim33NOTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tim33NOTToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.tim33NOTToolStripMenuItem.Text = "Tim 33 .NOT";
             this.tim33NOTToolStripMenuItem.Click += new System.EventHandler(this.tim33NOTToolStripMenuItem_Click);
+            // 
+            // metroBtnNalozi
+            // 
+            this.metroBtnNalozi.Highlight = false;
+            this.metroBtnNalozi.Location = new System.Drawing.Point(62, 517);
+            this.metroBtnNalozi.Name = "metroBtnNalozi";
+            this.metroBtnNalozi.Size = new System.Drawing.Size(280, 80);
+            this.metroBtnNalozi.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroBtnNalozi.StyleManager = null;
+            this.metroBtnNalozi.TabIndex = 11;
+            this.metroBtnNalozi.Text = "Nalozi";
+            this.metroBtnNalozi.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // metroButtnIzlaz
+            // 
+            this.metroButtnIzlaz.Highlight = false;
+            this.metroButtnIzlaz.Location = new System.Drawing.Point(62, 641);
+            this.metroButtnIzlaz.Name = "metroButtnIzlaz";
+            this.metroButtnIzlaz.Size = new System.Drawing.Size(280, 80);
+            this.metroButtnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButtnIzlaz.StyleManager = null;
+            this.metroButtnIzlaz.TabIndex = 12;
+            this.metroButtnIzlaz.Text = "Izlaz";
+            this.metroButtnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButtnIzlaz.Click += new System.EventHandler(this.metroButtnIzlaz_Click);
             // 
             // frmAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.metroButtnIzlaz);
+            this.Controls.Add(this.metroBtnNalozi);
             this.Controls.Add(this.btnTlocrt);
             this.Controls.Add(this.btnUgovori);
             this.Controls.Add(this.btnKupciIInteresanti);
@@ -266,5 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem dodatnaOpremaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dijeloviToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tim33NOTToolStripMenuItem;
+        private MetroFramework.Controls.MetroButton metroBtnNalozi;
+        private MetroFramework.Controls.MetroButton metroButtnIzlaz;
     }
 }

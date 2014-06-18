@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnIzlaz = new System.Windows.Forms.Button();
             this.btnOsvjezi = new System.Windows.Forms.Button();
-            this.btnDodajVrstuVozila = new System.Windows.Forms.Button();
+            this.btnDodajDodatnuOpremu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iddodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljaciddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@
             // 
             // btnIzlaz
             // 
-            this.btnIzlaz.Location = new System.Drawing.Point(408, 137);
+            this.btnIzlaz.Location = new System.Drawing.Point(501, 137);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
             this.btnIzlaz.TabIndex = 14;
@@ -61,7 +61,7 @@
             // 
             // btnOsvjezi
             // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(197, 137);
+            this.btnOsvjezi.Location = new System.Drawing.Point(290, 137);
             this.btnOsvjezi.Name = "btnOsvjezi";
             this.btnOsvjezi.Size = new System.Drawing.Size(110, 23);
             this.btnOsvjezi.TabIndex = 13;
@@ -69,14 +69,15 @@
             this.btnOsvjezi.UseVisualStyleBackColor = true;
             this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
             // 
-            // btnDodajVrstuVozila
+            // btnDodajDodatnuOpremu
             // 
-            this.btnDodajVrstuVozila.Location = new System.Drawing.Point(90, 137);
-            this.btnDodajVrstuVozila.Name = "btnDodajVrstuVozila";
-            this.btnDodajVrstuVozila.Size = new System.Drawing.Size(75, 23);
-            this.btnDodajVrstuVozila.TabIndex = 12;
-            this.btnDodajVrstuVozila.Text = "Dodaj Vozilo";
-            this.btnDodajVrstuVozila.UseVisualStyleBackColor = true;
+            this.btnDodajDodatnuOpremu.Location = new System.Drawing.Point(90, 137);
+            this.btnDodajDodatnuOpremu.Name = "btnDodajDodatnuOpremu";
+            this.btnDodajDodatnuOpremu.Size = new System.Drawing.Size(143, 23);
+            this.btnDodajDodatnuOpremu.TabIndex = 12;
+            this.btnDodajDodatnuOpremu.Text = "Dodaj dodatnu opremu";
+            this.btnDodajDodatnuOpremu.UseVisualStyleBackColor = true;
+            this.btnDodajDodatnuOpremu.Click += new System.EventHandler(this.btnDodajDodatnuOpremu_Click);
             // 
             // dataGridView1
             // 
@@ -179,7 +180,7 @@
             this.ClientSize = new System.Drawing.Size(787, 507);
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnOsvjezi);
-            this.Controls.Add(this.btnDodajVrstuVozila);
+            this.Controls.Add(this.btnDodajDodatnuOpremu);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblVrsteVozila);
             this.Name = "frmDodatnaOprema";
@@ -196,7 +197,7 @@
 
         private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.Button btnOsvjezi;
-        private System.Windows.Forms.Button btnDodajVrstuVozila;
+        private System.Windows.Forms.Button btnDodajDodatnuOpremu;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblVrsteVozila;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddodatnaopremaDataGridViewTextBoxColumn;

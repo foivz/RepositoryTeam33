@@ -20,6 +20,12 @@ namespace DriveIT
             modelvozilaBindingSource.DataSource = model_vozila;
         }
 
+        private void prikaziDetalje(string i) {
+            frmModeliVozilaDetalji detaljiModela = new frmModeliVozilaDetalji();
+            detaljiModela.getDetails(i);
+            detaljiModela.ShowDialog();
+        }
+
 
         public frmModeliVozila()
         {
@@ -46,6 +52,14 @@ namespace DriveIT
         {
             frmModeliVozilaDodaj modeli_vozila = new frmModeliVozilaDodaj();
             modeli_vozila.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
+            
         }
     }
 }

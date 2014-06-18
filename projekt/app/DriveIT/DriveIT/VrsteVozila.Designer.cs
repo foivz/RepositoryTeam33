@@ -33,12 +33,12 @@
             this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnDodajVrstuVozila = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblVrsteVozila = new System.Windows.Forms.Label();
             this.idtipvozilaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.podtipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipvozilaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblVrsteVozila = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipvozilaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -87,15 +87,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(430, 220);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // lblVrsteVozila
-            // 
-            this.lblVrsteVozila.AutoSize = true;
-            this.lblVrsteVozila.Location = new System.Drawing.Point(52, 36);
-            this.lblVrsteVozila.Name = "lblVrsteVozila";
-            this.lblVrsteVozila.Size = new System.Drawing.Size(61, 13);
-            this.lblVrsteVozila.TabIndex = 5;
-            this.lblVrsteVozila.Text = "Vrste vozila";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idtipvozilaDataGridViewTextBoxColumn
             // 
@@ -125,6 +120,15 @@
             // tipvozilaBindingSource
             // 
             this.tipvozilaBindingSource.DataSource = typeof(DriveIT.Database.tip_vozila);
+            // 
+            // lblVrsteVozila
+            // 
+            this.lblVrsteVozila.AutoSize = true;
+            this.lblVrsteVozila.Location = new System.Drawing.Point(52, 36);
+            this.lblVrsteVozila.Name = "lblVrsteVozila";
+            this.lblVrsteVozila.Size = new System.Drawing.Size(61, 13);
+            this.lblVrsteVozila.TabIndex = 5;
+            this.lblVrsteVozila.Text = "Vrste vozila";
             // 
             // frmVrsteVozila
             // 

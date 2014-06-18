@@ -42,6 +42,11 @@ namespace DriveIT
             prikaziDodatnuOpremu();
         }
 
+        private void btnDodajDodatnuOpremu_Click(object sender, EventArgs e)
+        {
+
+        }
+
        
     }
 }

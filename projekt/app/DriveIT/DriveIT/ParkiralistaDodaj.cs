@@ -47,7 +47,7 @@ namespace DriveIT
 
 
             }
-            catch (DbEntityValidationException dbEx)
+            catch 
             {
                 MessageBox.Show("Greška !");
             }

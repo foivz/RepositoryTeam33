@@ -13,6 +13,13 @@ namespace DriveIT
 {
     public partial class frmVrsteVozila : Form
     {
+
+        public frmVrsteVozila()
+        {
+            InitializeComponent();
+        }
+
+
         private void prikaziVrsteVozila() {
             T33_DBEntities db = new T33_DBEntities();
             var vrste_vozila = db.tip_vozila.ToList<tip_vozila>();
@@ -20,10 +27,14 @@ namespace DriveIT
         }
 
 
-        public frmVrsteVozila()
-        {
-            InitializeComponent();
+        private void prikaziDetalje(string i) {
+            frmVrsteVozilaDetalji vrste_vozila_detalji = new frmVrsteVozilaDetalji();
+            vrste_vozila_detalji.getDetails(i);
+            vrste_vozila_detalji.ShowDialog();
+        
         }
+
+     
 
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
@@ -44,6 +55,12 @@ namespace DriveIT
         {
             frmVrsteVozilaDodaj vrsta_vozila = new frmVrsteVozilaDodaj();
             vrsta_vozila.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
     }
 }

@@ -123,6 +123,11 @@ namespace DriveIT
 
         }
 
+        private void metroButtnIzlaz_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
       
     }
 }

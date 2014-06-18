@@ -181,6 +181,12 @@
     <Compile Include="DodatnaOprema.Designer.cs">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodatnaOpremaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodatnaOpremaDodaj.Designer.cs">
+      <DependentUpon>DodatnaOpremaDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMehanicar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,7 +223,15 @@
     <Compile Include="MarkeVozila.Designer.cs">
       <DependentUpon>MarkeVozila.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarkeVozilaDodaj.cs" />
+    <Compile Include="MarkeVozilaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkeVozilaDetalji.Designer.cs">
+      <DependentUpon>MarkeVozilaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkeVozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MarkeVozilaDodaj.designer.cs">
       <DependentUpon>MarkeVozilaDodaj.cs</DependentUpon>
     </Compile>
@@ -227,7 +241,15 @@
     <Compile Include="ModeliVozila.Designer.cs">
       <DependentUpon>ModeliVozila.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModeliVozilaDodaj.cs" />
+    <Compile Include="ModeliVozilaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeliVozilaDetalji.Designer.cs">
+      <DependentUpon>ModeliVozilaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeliVozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModeliVozilaDodaj.designer.cs">
       <DependentUpon>ModeliVozilaDodaj.cs</DependentUpon>
     </Compile>
@@ -243,11 +265,15 @@
     <Compile Include="Parkiralista.Designer.cs">
       <DependentUpon>Parkiralista.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParkiralistaDetalji.cs" />
+    <Compile Include="ParkiralistaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ParkiralistaDetalji.designer.cs">
       <DependentUpon>ParkiralistaDetalji.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParkiralistaDodaj.cs" />
+    <Compile Include="ParkiralistaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ParkiralistaDodaj.designer.cs">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </Compile>
@@ -301,6 +327,12 @@
     <Compile Include="VrsteVozila.Designer.cs">
       <DependentUpon>VrsteVozila.cs</DependentUpon>
     </Compile>
+    <Compile Include="VrsteVozilaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VrsteVozilaDetalji.Designer.cs">
+      <DependentUpon>VrsteVozilaDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="VrsteVozilaDodaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +360,9 @@
     <EmbeddedResource Include="DodatnaOprema.resx">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DodatnaOpremaDodaj.resx">
+      <DependentUpon>DodatnaOpremaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMehanicar.resx">
       <DependentUpon>frmMehanicar.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,11 +381,17 @@
     <EmbeddedResource Include="MarkeVozila.resx">
       <DependentUpon>MarkeVozila.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarkeVozilaDetalji.resx">
+      <DependentUpon>MarkeVozilaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MarkeVozilaDodaj.resx">
       <DependentUpon>MarkeVozilaDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModeliVozila.resx">
       <DependentUpon>ModeliVozila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModeliVozilaDetalji.resx">
+      <DependentUpon>ModeliVozilaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NalogKreiraj.resx">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
@@ -393,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VrsteVozila.resx">
       <DependentUpon>VrsteVozila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VrsteVozilaDetalji.resx">
+      <DependentUpon>VrsteVozilaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

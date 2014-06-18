@@ -25,6 +25,14 @@ namespace DriveIT
             markavozilaBindingSource.DataSource = marka_vozila;
         }
 
+        private void prikaziDetalje(string i)
+        {
+            frmMarkeVozilaDetalji marka_detalji = new frmMarkeVozilaDetalji();
+            marka_detalji.getDetails(i);
+            marka_detalji.ShowDialog();
+        }
+
+
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,6 +52,12 @@ namespace DriveIT
         {
             frmMarkeVozilaDodaj marke_vozila = new frmMarkeVozilaDodaj();
             marke_vozila.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
     }
 }
