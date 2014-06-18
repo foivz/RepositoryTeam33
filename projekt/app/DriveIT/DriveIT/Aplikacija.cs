@@ -49,6 +49,56 @@ namespace DriveIT
             login.ShowDialog();
         }
 
+        private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void parkiralištaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmParkiralista parkiralista = new frmParkiralista();
+            parkiralista.Show();
+
+        }
+
+        private void modeliVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModeliVozila modeli = new frmModeliVozila();
+            modeli.Show();
+        }
+
+        private void markeVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarkeVozila marke = new frmMarkeVozila();
+            marke.Show();
+
+        }
+
+        private void vrstaVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVrsteVozila vrste = new frmVrsteVozila();
+            vrste.Show();
+
+        }
+
+        private void dodatnaOpremaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDodatnaOprema dodatnaOprema = new frmDodatnaOprema();
+            dodatnaOprema.Show();
+        }
+
+        private void dijeloviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDijeloviServis dijelovi = new frmDijeloviServis();
+            dijelovi.Show();
+        }
+
+        private void tim33NOTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAboutUs about = new frmAboutUs();
+            about.Show();
+        }
+
       
     }
 }

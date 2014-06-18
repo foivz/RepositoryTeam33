@@ -40,6 +40,14 @@
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postavkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parkiralištaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeliVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markeVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vrstaVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodatnaOpremaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dijeloviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tim33NOTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +134,8 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izlazToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.fileToolStripMenuItem.Text = "Izbornik";
@@ -138,15 +148,80 @@
             // 
             // postavkeToolStripMenuItem
             // 
+            this.postavkeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parkiralištaToolStripMenuItem,
+            this.modeliVozilaToolStripMenuItem,
+            this.markeVozilaToolStripMenuItem,
+            this.vrstaVozilaToolStripMenuItem,
+            this.dodatnaOpremaToolStripMenuItem,
+            this.dijeloviToolStripMenuItem});
             this.postavkeToolStripMenuItem.Name = "postavkeToolStripMenuItem";
             this.postavkeToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.postavkeToolStripMenuItem.Text = "Postavke";
             // 
             // oNamaToolStripMenuItem
             // 
+            this.oNamaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tim33NOTToolStripMenuItem});
             this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
             this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.oNamaToolStripMenuItem.Text = "O nama";
+            // 
+            // parkiralištaToolStripMenuItem
+            // 
+            this.parkiralištaToolStripMenuItem.Name = "parkiralištaToolStripMenuItem";
+            this.parkiralištaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.parkiralištaToolStripMenuItem.Text = "Parkirališta";
+            this.parkiralištaToolStripMenuItem.Click += new System.EventHandler(this.parkiralištaToolStripMenuItem_Click);
+            // 
+            // modeliVozilaToolStripMenuItem
+            // 
+            this.modeliVozilaToolStripMenuItem.Name = "modeliVozilaToolStripMenuItem";
+            this.modeliVozilaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.modeliVozilaToolStripMenuItem.Text = "Modeli vozila";
+            this.modeliVozilaToolStripMenuItem.Click += new System.EventHandler(this.modeliVozilaToolStripMenuItem_Click);
+            // 
+            // markeVozilaToolStripMenuItem
+            // 
+            this.markeVozilaToolStripMenuItem.Name = "markeVozilaToolStripMenuItem";
+            this.markeVozilaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.markeVozilaToolStripMenuItem.Text = "Marke vozila";
+            this.markeVozilaToolStripMenuItem.Click += new System.EventHandler(this.markeVozilaToolStripMenuItem_Click);
+            // 
+            // vrstaVozilaToolStripMenuItem
+            // 
+            this.vrstaVozilaToolStripMenuItem.Name = "vrstaVozilaToolStripMenuItem";
+            this.vrstaVozilaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.vrstaVozilaToolStripMenuItem.Text = "Vrsta vozila";
+            this.vrstaVozilaToolStripMenuItem.Click += new System.EventHandler(this.vrstaVozilaToolStripMenuItem_Click);
+            // 
+            // dodatnaOpremaToolStripMenuItem
+            // 
+            this.dodatnaOpremaToolStripMenuItem.Name = "dodatnaOpremaToolStripMenuItem";
+            this.dodatnaOpremaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.dodatnaOpremaToolStripMenuItem.Text = "Dodatna oprema";
+            this.dodatnaOpremaToolStripMenuItem.Click += new System.EventHandler(this.dodatnaOpremaToolStripMenuItem_Click);
+            // 
+            // dijeloviToolStripMenuItem
+            // 
+            this.dijeloviToolStripMenuItem.Name = "dijeloviToolStripMenuItem";
+            this.dijeloviToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.dijeloviToolStripMenuItem.Text = "Dijelovi";
+            this.dijeloviToolStripMenuItem.Click += new System.EventHandler(this.dijeloviToolStripMenuItem_Click);
+            // 
+            // izlazToolStripMenuItem
+            // 
+            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.izlazToolStripMenuItem.Text = "Izlaz";
+            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
+            // 
+            // tim33NOTToolStripMenuItem
+            // 
+            this.tim33NOTToolStripMenuItem.Name = "tim33NOTToolStripMenuItem";
+            this.tim33NOTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tim33NOTToolStripMenuItem.Text = "Tim 33 .NOT";
+            this.tim33NOTToolStripMenuItem.Click += new System.EventHandler(this.tim33NOTToolStripMenuItem_Click);
             // 
             // frmAplikacija
             // 
@@ -183,5 +258,13 @@
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem postavkeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izlazToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parkiralištaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modeliVozilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem markeVozilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vrstaVozilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodatnaOpremaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dijeloviToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tim33NOTToolStripMenuItem;
     }
 }

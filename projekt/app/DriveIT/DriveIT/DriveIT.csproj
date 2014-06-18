@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Aplikacija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="Database\zapisnik.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DijeloviServis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DijeloviServis.Designer.cs">
+      <DependentUpon>DijeloviServis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dobavljaci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,12 @@
     </Compile>
     <Compile Include="DobavljačiDodaj.Designer.cs">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodatnaOprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodatnaOprema.Designer.cs">
+      <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </Compile>
     <Compile Include="KupciDetalji.cs">
       <SubType>Form</SubType>
@@ -187,11 +205,29 @@
     <Compile Include="Kupci.Designer.cs">
       <DependentUpon>Kupci.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarkeVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkeVozila.Designer.cs">
+      <DependentUpon>MarkeVozila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeliVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeliVozila.Designer.cs">
+      <DependentUpon>ModeliVozila.cs</DependentUpon>
+    </Compile>
     <Compile Include="NalogKreiraj.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NalogKreiraj.Designer.cs">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parkiralista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parkiralista.Designer.cs">
+      <DependentUpon>Parkiralista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -231,8 +267,20 @@
     <Compile Include="VozilaDodaj.Designer.cs">
       <DependentUpon>VozilaDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="VrsteVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VrsteVozila.Designer.cs">
+      <DependentUpon>VrsteVozila.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplikacija.resx">
       <DependentUpon>Aplikacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DijeloviServis.resx">
+      <DependentUpon>DijeloviServis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dobavljaci.resx">
       <DependentUpon>Dobavljaci.cs</DependentUpon>
@@ -242,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DobavljačiDodaj.resx">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodatnaOprema.resx">
+      <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KupciDetalji.resx">
       <DependentUpon>KupciDetalji.cs</DependentUpon>
@@ -255,8 +306,17 @@
     <EmbeddedResource Include="Kupci.resx">
       <DependentUpon>Kupci.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarkeVozila.resx">
+      <DependentUpon>MarkeVozila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModeliVozila.resx">
+      <DependentUpon>ModeliVozila.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NalogKreiraj.resx">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parkiralista.resx">
+      <DependentUpon>Parkiralista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -284,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VozilaDodaj.resx">
       <DependentUpon>VozilaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VrsteVozila.resx">
+      <DependentUpon>VrsteVozila.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
