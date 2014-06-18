@@ -18,25 +18,6 @@ namespace DriveIT
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            frmAplikacija app = new frmAplikacija();
-            app.Show();
-            
-
-        }
-
-        private void lblKorisnickoIme_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLozinka_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmDriveIT_Load(object sender, EventArgs e)
         {
 
@@ -44,13 +25,31 @@ namespace DriveIT
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool valjan = Provjera.ProvjeraLogin(txtKorisnickoIme.Text, Lozinka.Text);
-            if (valjan == true)
+            int valjan = Provjera.ProvjeraLogin(txtKorisnickoIme.Text, Lozinka.Text);
+            if (valjan == 1 ||valjan==2)
             {
                 
-                this.Close();
+                
+
+                frmAplikacija app = new frmAplikacija();
+                app.Show();
+                
+                this.Hide();
+                
 
             }
+            else if (valjan == 3)
+            {
+                
+                
+
+                frmMehanicar app = new frmMehanicar();
+                app.Show();
+                
+                this.Hide();
+
+            }
+
             else
             {
                 MessageBox.Show("Neuispravni podaci pri prijavi");

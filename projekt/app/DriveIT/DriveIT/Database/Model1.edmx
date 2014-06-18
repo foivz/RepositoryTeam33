@@ -22,6 +22,16 @@
           <Property Name="tip_poreza_nabavna" Type="int" Nullable="false" />
           <Property Name="tip_poreza_prodajna" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="dio">
+          <Key>
+            <PropertyRef Name="id_dio" />
+          </Key>
+          <Property Name="id_dio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="nchar" MaxLength="10" />
+          <Property Name="opis" Type="text" />
+          <Property Name="kolicina" Type="int" />
+          <Property Name="cijena" Type="int" />
+        </EntityType>
         <EntityType Name="dobavljac">
           <Key>
             <PropertyRef Name="id_dobavljac" />
@@ -96,6 +106,10 @@
           <Property Name="opis" Type="text" Nullable="false" />
           <Property Name="vozilo" Type="int" Nullable="false" />
           <Property Name="korisnik" Type="int" Nullable="false" />
+          <Property Name="obavljen" Type="int" />
+          <Property Name="datum" Type="date" />
+          <Property Name="cijena" Type="money" />
+          <Property Name="sati_rada" Type="int" />
         </EntityType>
         <EntityType Name="parking">
           <Key>
@@ -120,16 +134,6 @@
           <Property Name="idslika_vozilo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="path" Type="text" Nullable="false" />
           <Property Name="vozilo" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="tip_korisnika">
           <Key>
@@ -190,6 +194,7 @@
           <Property Name="tip_vozila" Type="int" Nullable="false" />
           <Property Name="model_vozila" Type="int" Nullable="false" />
           <Property Name="parking" Type="int" Nullable="false" />
+          <Property Name="zadnje_paljenje" Type="date" />
         </EntityType>
         <EntityType Name="zapisnik">
           <Key>
@@ -242,6 +247,18 @@
             </Principal>
             <Dependent Role="dodatna_oprema">
               <PropertyRef Name="dobavljac_iddobavljac" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dio_nalog_za_servis">
+          <End Role="nalog_za_servis" Type="Self.nalog_za_servis" Multiplicity="1" />
+          <End Role="dio" Type="Self.dio" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="nalog_za_servis">
+              <PropertyRef Name="id_nalog_za_servis" />
+            </Principal>
+            <Dependent Role="dio">
+              <PropertyRef Name="id_dio" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -415,6 +432,7 @@
         </Association>
         <EntityContainer Name="T33_DBModelStoreContainer">
           <EntitySet Name="cijena" EntityType="Self.cijena" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dio" EntityType="Self.dio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dobavljac" EntityType="Self.dobavljac" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dodatna_oprema" EntityType="Self.dodatna_oprema" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="korisnik" EntityType="Self.korisnik" Schema="dbo" store:Type="Tables" />
@@ -425,7 +443,6 @@
           <EntitySet Name="parking" EntityType="Self.parking" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pripada" EntityType="Self.pripada" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="slika_vozilo" EntityType="Self.slika_vozilo" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tip_korisnika" EntityType="Self.tip_korisnika" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tip_kupca" EntityType="Self.tip_kupca" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tip_poreza" EntityType="Self.tip_poreza" Schema="dbo" store:Type="Tables" />
@@ -448,6 +465,10 @@
           <AssociationSet Name="dodatna_oprema_dobavljac" Association="Self.dodatna_oprema_dobavljac">
             <End Role="dobavljac" EntitySet="dobavljac" />
             <End Role="dodatna_oprema" EntitySet="dodatna_oprema" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dio_nalog_za_servis" Association="Self.FK_dio_nalog_za_servis">
+            <End Role="nalog_za_servis" EntitySet="nalog_za_servis" />
+            <End Role="dio" EntitySet="dio" />
           </AssociationSet>
           <AssociationSet Name="korisnik_tip_korisnika" Association="Self.korisnik_tip_korisnika">
             <End Role="tip_korisnika" EntitySet="tip_korisnika" />
@@ -512,6 +533,7 @@
       <Schema Namespace="T33_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="T33_DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="cijena" EntityType="T33_DBModel.cijena" />
+          <EntitySet Name="dio" EntityType="T33_DBModel.dio" />
           <EntitySet Name="dobavljac" EntityType="T33_DBModel.dobavljac" />
           <EntitySet Name="dodatna_oprema" EntityType="T33_DBModel.dodatna_oprema" />
           <EntitySet Name="korisnik" EntityType="T33_DBModel.korisnik" />
@@ -521,7 +543,6 @@
           <EntitySet Name="nalog_za_servis" EntityType="T33_DBModel.nalog_za_servis" />
           <EntitySet Name="parking" EntityType="T33_DBModel.parking" />
           <EntitySet Name="slika_vozilo" EntityType="T33_DBModel.slika_vozilo" />
-          <EntitySet Name="sysdiagrams" EntityType="T33_DBModel.sysdiagrams" />
           <EntitySet Name="tip_korisnika" EntityType="T33_DBModel.tip_korisnika" />
           <EntitySet Name="tip_kupca" EntityType="T33_DBModel.tip_kupca" />
           <EntitySet Name="tip_poreza" EntityType="T33_DBModel.tip_poreza" />
@@ -540,6 +561,10 @@
           <AssociationSet Name="cijena_vozilo" Association="T33_DBModel.cijena_vozilo">
             <End Role="vozilo" EntitySet="vozilo" />
             <End Role="cijena" EntitySet="cijena" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dio_nalog_za_servis" Association="T33_DBModel.FK_dio_nalog_za_servis">
+            <End Role="nalog_za_servis" EntitySet="nalog_za_servis" />
+            <End Role="dio" EntitySet="dio" />
           </AssociationSet>
           <AssociationSet Name="dodatna_oprema_dobavljac" Association="T33_DBModel.dodatna_oprema_dobavljac">
             <End Role="dobavljac" EntitySet="dobavljac" />
@@ -617,6 +642,17 @@
           <NavigationProperty Name="tip_poreza" Relationship="T33_DBModel.cijena_tip_poreza_nabavna" FromRole="cijena" ToRole="tip_poreza" />
           <NavigationProperty Name="tip_poreza1" Relationship="T33_DBModel.cijena_tip_poreza_prodajna" FromRole="cijena" ToRole="tip_poreza" />
           <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.cijena_vozilo" FromRole="cijena" ToRole="vozilo" />
+        </EntityType>
+        <EntityType Name="dio">
+          <Key>
+            <PropertyRef Name="id_dio" />
+          </Key>
+          <Property Name="id_dio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="kolicina" Type="Int32" />
+          <Property Name="cijena" Type="Int32" />
+          <NavigationProperty Name="nalog_za_servis" Relationship="T33_DBModel.FK_dio_nalog_za_servis" FromRole="dio" ToRole="nalog_za_servis" />
         </EntityType>
         <EntityType Name="dobavljac">
           <Key>
@@ -703,6 +739,11 @@
           <Property Name="opis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="vozilo" Type="Int32" Nullable="false" />
           <Property Name="korisnik" Type="Int32" Nullable="false" />
+          <Property Name="obavljen" Type="Int32" />
+          <Property Name="datum" Type="DateTime" Precision="0" />
+          <Property Name="cijena" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="sati_rada" Type="Int32" />
+          <NavigationProperty Name="dio" Relationship="T33_DBModel.FK_dio_nalog_za_servis" FromRole="nalog_za_servis" ToRole="dio" />
           <NavigationProperty Name="korisnik1" Relationship="T33_DBModel.naloz_za_servis_korisnik" FromRole="nalog_za_servis" ToRole="korisnik" />
           <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.naloz_za_servis_vozilo" FromRole="nalog_za_servis" ToRole="vozilo" />
         </EntityType>
@@ -723,16 +764,6 @@
           <Property Name="path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="vozilo" Type="Int32" Nullable="false" />
           <NavigationProperty Name="vozilo1" Relationship="T33_DBModel.slike_automobila_vozilo" FromRole="slika_vozilo" ToRole="vozilo" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="tip_korisnika">
           <Key>
@@ -801,6 +832,7 @@
           <Property Name="tip_vozila" Type="Int32" Nullable="false" />
           <Property Name="model_vozila" Type="Int32" Nullable="false" />
           <Property Name="parking" Type="Int32" Nullable="false" />
+          <Property Name="zadnje_paljenje" Type="DateTime" Precision="0" />
           <NavigationProperty Name="cijena" Relationship="T33_DBModel.cijena_vozilo" FromRole="vozilo" ToRole="cijena" />
           <NavigationProperty Name="model_vozila1" Relationship="T33_DBModel.vozilo_model_vozila" FromRole="vozilo" ToRole="model_vozila" />
           <NavigationProperty Name="nalog_za_servis" Relationship="T33_DBModel.naloz_za_servis_vozilo" FromRole="vozilo" ToRole="nalog_za_servis" />
@@ -849,6 +881,18 @@
             </Principal>
             <Dependent Role="cijena">
               <PropertyRef Name="vozilo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dio_nalog_za_servis">
+          <End Type="T33_DBModel.nalog_za_servis" Role="nalog_za_servis" Multiplicity="1" />
+          <End Type="T33_DBModel.dio" Role="dio" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="nalog_za_servis">
+              <PropertyRef Name="id_nalog_za_servis" />
+            </Principal>
+            <Dependent Role="dio">
+              <PropertyRef Name="id_dio" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1012,7 +1056,7 @@
           <End Type="T33_DBModel.dodatna_oprema" Role="dodatna_oprema" Multiplicity="*" />
           <End Type="T33_DBModel.vozilo" Role="vozilo" Multiplicity="*" />
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1033,6 +1077,17 @@
                 <ScalarProperty Name="nabavna_sa_pdv" ColumnName="nabavna_sa_pdv" />
                 <ScalarProperty Name="nabavna_bez_pdv" ColumnName="nabavna_bez_pdv" />
                 <ScalarProperty Name="vozilo" ColumnName="vozilo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dio">
+            <EntityTypeMapping TypeName="T33_DBModel.dio">
+              <MappingFragment StoreEntitySet="dio">
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="id_dio" ColumnName="id_dio" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1111,6 +1166,10 @@
           <EntitySetMapping Name="nalog_za_servis">
             <EntityTypeMapping TypeName="T33_DBModel.nalog_za_servis">
               <MappingFragment StoreEntitySet="nalog_za_servis">
+                <ScalarProperty Name="sati_rada" ColumnName="sati_rada" />
+                <ScalarProperty Name="cijena" ColumnName="cijena" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="obavljen" ColumnName="obavljen" />
                 <ScalarProperty Name="korisnik" ColumnName="korisnik" />
                 <ScalarProperty Name="vozilo" ColumnName="vozilo" />
                 <ScalarProperty Name="opis" ColumnName="opis" />
@@ -1133,17 +1192,6 @@
                 <ScalarProperty Name="vozilo" ColumnName="vozilo" />
                 <ScalarProperty Name="path" ColumnName="path" />
                 <ScalarProperty Name="idslika_vozilo" ColumnName="idslika_vozilo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="T33_DBModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1194,6 +1242,7 @@
           <EntitySetMapping Name="vozilo">
             <EntityTypeMapping TypeName="T33_DBModel.vozilo">
               <MappingFragment StoreEntitySet="vozilo">
+                <ScalarProperty Name="zadnje_paljenje" ColumnName="zadnje_paljenje" />
                 <ScalarProperty Name="parking" ColumnName="parking" />
                 <ScalarProperty Name="model_vozila" ColumnName="model_vozila" />
                 <ScalarProperty Name="tip_vozila" ColumnName="tip_vozila" />

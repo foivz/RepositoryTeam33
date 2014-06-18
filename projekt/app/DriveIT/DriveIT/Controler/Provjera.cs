@@ -9,7 +9,7 @@ namespace DriveIT.Controler
 {
     class Provjera
     {
-        public static bool ProvjeraLogin(string korIme,string lozinka)
+        public static int ProvjeraLogin(string korIme,string lozinka)
         {
             using (T33_DBEntities db = new T33_DBEntities()) 
             {
@@ -17,12 +17,12 @@ namespace DriveIT.Controler
                 foreach (korisnik kor in korisnici){
                     if(kor.korisnicko_ime==korIme)
                         if(kor.lozinka==lozinka)
-                            return true;
+                            return kor.tip_korisnika;
                 }
 
                 }
 
-            return false;
+            return 0;
         }
 
     }

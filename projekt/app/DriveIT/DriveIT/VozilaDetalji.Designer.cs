@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdVozilo = new System.Windows.Forms.TextBox();
             this.btnNalog = new System.Windows.Forms.Button();
+            this.prodajBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // dtPickerNabavka
@@ -163,9 +164,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(728, 476);
+            this.btnOdustani.Location = new System.Drawing.Point(834, 456);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(77, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(132, 43);
             this.btnOdustani.TabIndex = 67;
             this.btnOdustani.TabStop = false;
             this.btnOdustani.Text = "Odustani";
@@ -275,7 +276,7 @@
             // 
             // btnObrisiVozilo
             // 
-            this.btnObrisiVozilo.Location = new System.Drawing.Point(860, 476);
+            this.btnObrisiVozilo.Location = new System.Drawing.Point(891, 25);
             this.btnObrisiVozilo.Name = "btnObrisiVozilo";
             this.btnObrisiVozilo.Size = new System.Drawing.Size(75, 23);
             this.btnObrisiVozilo.TabIndex = 87;
@@ -311,11 +312,25 @@
             this.btnNalog.UseVisualStyleBackColor = true;
             this.btnNalog.Click += new System.EventHandler(this.btnNalog_Click);
             // 
+            // prodajBtn
+            // 
+            this.prodajBtn.Highlight = false;
+            this.prodajBtn.Location = new System.Drawing.Point(631, 456);
+            this.prodajBtn.Name = "prodajBtn";
+            this.prodajBtn.Size = new System.Drawing.Size(125, 43);
+            this.prodajBtn.Style = MetroFramework.MetroColorStyle.Blue;
+            this.prodajBtn.StyleManager = null;
+            this.prodajBtn.TabIndex = 92;
+            this.prodajBtn.Text = "PRODAJ";
+            this.prodajBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.prodajBtn.Click += new System.EventHandler(this.prodajBtn_Click);
+            // 
             // frmVozilaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 524);
+            this.Controls.Add(this.prodajBtn);
             this.Controls.Add(this.btnNalog);
             this.Controls.Add(this.txtIdVozilo);
             this.Controls.Add(this.label1);
@@ -386,5 +401,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIdVozilo;
         private System.Windows.Forms.Button btnNalog;
+        private MetroFramework.Controls.MetroButton prodajBtn;
     }
 }

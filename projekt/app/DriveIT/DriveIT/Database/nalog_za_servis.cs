@@ -18,7 +18,12 @@ namespace DriveIT.Database
         public string opis { get; set; }
         public int vozilo { get; set; }
         public int korisnik { get; set; }
+        public Nullable<int> obavljen { get; set; }
+        public Nullable<System.DateTime> datum { get; set; }
+        public Nullable<decimal> cijena { get; set; }
+        public Nullable<int> sati_rada { get; set; }
     
+        public virtual dio dio { get; set; }
         public virtual korisnik korisnik1 { get; set; }
         public virtual vozilo vozilo1 { get; set; }
     }

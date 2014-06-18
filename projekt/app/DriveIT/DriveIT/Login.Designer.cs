@@ -68,7 +68,6 @@
             this.lblKorisnickoIme.Text = "Korisničko ime";
             this.lblKorisnickoIme.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblKorisnickoIme.UseStyleColors = false;
-            this.lblKorisnickoIme.Click += new System.EventHandler(this.lblKorisnickoIme_Click);
             // 
             // txtKorisnickoIme
             // 
@@ -122,7 +121,6 @@
             this.lblLozinka.Text = "Lozinka";
             this.lblLozinka.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblLozinka.UseStyleColors = false;
-            this.lblLozinka.Click += new System.EventHandler(this.lblLozinka_Click);
             // 
             // pictureBox1
             // 

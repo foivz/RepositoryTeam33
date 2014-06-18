@@ -26,6 +26,7 @@ namespace DriveIT.Database
         }
     
         public virtual DbSet<cijena> cijena { get; set; }
+        public virtual DbSet<dio> dio { get; set; }
         public virtual DbSet<dobavljac> dobavljac { get; set; }
         public virtual DbSet<dodatna_oprema> dodatna_oprema { get; set; }
         public virtual DbSet<korisnik> korisnik { get; set; }
@@ -35,7 +36,6 @@ namespace DriveIT.Database
         public virtual DbSet<nalog_za_servis> nalog_za_servis { get; set; }
         public virtual DbSet<parking> parking { get; set; }
         public virtual DbSet<slika_vozilo> slika_vozilo { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tip_korisnika> tip_korisnika { get; set; }
         public virtual DbSet<tip_kupca> tip_kupca { get; set; }
         public virtual DbSet<tip_poreza> tip_poreza { get; set; }

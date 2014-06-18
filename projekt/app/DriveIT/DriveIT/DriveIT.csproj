@@ -85,6 +85,9 @@
     <Compile Include="Database\cijena.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\dio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\dobavljac.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -125,9 +128,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\slika_vozilo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\tip_korisnika.cs">
@@ -180,6 +180,12 @@
     </Compile>
     <Compile Include="DodatnaOprema.Designer.cs">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMehanicar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMehanicar.Designer.cs">
+      <DependentUpon>frmMehanicar.cs</DependentUpon>
     </Compile>
     <Compile Include="KupciDetalji.cs">
       <SubType>Form</SubType>
@@ -241,6 +247,7 @@
     <Compile Include="Parkiralista.Designer.cs">
       <DependentUpon>Parkiralista.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="ParkiralistaDetalji.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +259,13 @@
     </Compile>
     <Compile Include="ParkiralistaDodaj.Designer.cs">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
+=======
+    <Compile Include="Prodaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prodaja.Designer.cs">
+      <DependentUpon>Prodaja.cs</DependentUpon>
+>>>>>>> 8ef2925c1d3501dab3e9b3f2b81002e59fc03baa
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -324,6 +338,9 @@
     <EmbeddedResource Include="DodatnaOprema.resx">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMehanicar.resx">
+      <DependentUpon>frmMehanicar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KupciDetalji.resx">
       <DependentUpon>KupciDetalji.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,11 +371,16 @@
     <EmbeddedResource Include="Parkiralista.resx">
       <DependentUpon>Parkiralista.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="ParkiralistaDetalji.resx">
       <DependentUpon>ParkiralistaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParkiralistaDodaj.resx">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Prodaja.resx">
+      <DependentUpon>Prodaja.cs</DependentUpon>
+>>>>>>> 8ef2925c1d3501dab3e9b3f2b81002e59fc03baa
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
