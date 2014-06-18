@@ -43,16 +43,22 @@ namespace DriveIT
 
         }
 
+        
         private void frmAplikacija_Load(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.ShowDialog();
+            
         }
+         
 
         private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            Application.Exit();
+            
+
         }
+
+
 
         private void parkiralištaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -97,6 +103,24 @@ namespace DriveIT
         {
             frmAboutUs about = new frmAboutUs();
             about.Show();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            // Confirm user wants to close
+            switch (MessageBox.Show(this, "Jeste li sigurni za želite izaći?", "Zatvaranje", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default: Application.Exit();
+                    break;
+            }
+
         }
 
       
