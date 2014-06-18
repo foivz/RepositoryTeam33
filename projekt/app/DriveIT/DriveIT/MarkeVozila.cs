@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveIT.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,34 @@ namespace DriveIT
         public frmMarkeVozila()
         {
             InitializeComponent();
+        }
+
+        private void prikaziMarkeVozila()
+        {
+            T33_DBEntities db = new T33_DBEntities();
+            var marka_vozila = db.marka_vozila.ToList<marka_vozila>();
+            markavozilaBindingSource.DataSource = marka_vozila;
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnOsvjezi_Click(object sender, EventArgs e)
+        {
+            prikaziMarkeVozila();
+        }
+
+        private void frmMarkeVozila_Load(object sender, EventArgs e)
+        {
+            prikaziMarkeVozila();
+        }
+
+        private void btnDodajVrstuVozila_Click(object sender, EventArgs e)
+        {
+            frmMarkeVozilaDodaj marke_vozila = new frmMarkeVozilaDodaj();
+            marke_vozila.Show();
         }
     }
 }

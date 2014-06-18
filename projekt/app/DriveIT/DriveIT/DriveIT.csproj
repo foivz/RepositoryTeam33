@@ -211,11 +211,23 @@
     <Compile Include="MarkeVozila.Designer.cs">
       <DependentUpon>MarkeVozila.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarkeVozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkeVozilaDodaj.Designer.cs">
+      <DependentUpon>MarkeVozilaDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModeliVozila.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModeliVozila.Designer.cs">
       <DependentUpon>ModeliVozila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeliVozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeliVozilaDodaj.Designer.cs">
+      <DependentUpon>ModeliVozilaDodaj.cs</DependentUpon>
     </Compile>
     <Compile Include="NalogKreiraj.cs">
       <SubType>Form</SubType>
@@ -228,6 +240,18 @@
     </Compile>
     <Compile Include="Parkiralista.Designer.cs">
       <DependentUpon>Parkiralista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkiralistaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkiralistaDetalji.Designer.cs">
+      <DependentUpon>ParkiralistaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkiralistaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkiralistaDodaj.Designer.cs">
+      <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -273,6 +297,12 @@
     <Compile Include="VrsteVozila.Designer.cs">
       <DependentUpon>VrsteVozila.cs</DependentUpon>
     </Compile>
+    <Compile Include="VrsteVozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VrsteVozilaDodaj.Designer.cs">
+      <DependentUpon>VrsteVozilaDodaj.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,14 +339,26 @@
     <EmbeddedResource Include="MarkeVozila.resx">
       <DependentUpon>MarkeVozila.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarkeVozilaDodaj.resx">
+      <DependentUpon>MarkeVozilaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModeliVozila.resx">
       <DependentUpon>ModeliVozila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModeliVozilaDodaj.resx">
+      <DependentUpon>ModeliVozilaDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NalogKreiraj.resx">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parkiralista.resx">
       <DependentUpon>Parkiralista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkiralistaDetalji.resx">
+      <DependentUpon>ParkiralistaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkiralistaDodaj.resx">
+      <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -348,6 +390,9 @@
     <EmbeddedResource Include="VrsteVozila.resx">
       <DependentUpon>VrsteVozila.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VrsteVozilaDodaj.resx">
+      <DependentUpon>VrsteVozilaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Database\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -367,7 +412,12 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DriveIT.Database.dobavljac.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.dodatna_oprema.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.kupac.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.marka_vozila.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.model_vozila.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.parking.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.tip_vozila.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.ugovor.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.vozilo.datasource" />
     <None Include="Properties\Settings.settings">
