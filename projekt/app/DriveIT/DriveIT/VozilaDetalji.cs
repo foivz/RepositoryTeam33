@@ -13,6 +13,7 @@ namespace DriveIT
 {
     public partial class frmVozilaDetalji : Form
     {
+        private int idVozila;
         public frmVozilaDetalji()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace DriveIT
             
             T33_DBEntities db = new T33_DBEntities();
             int b = int.Parse(i);
+            this.idVozila = b;
 
             var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == b).First<vozilo>();
 
@@ -107,6 +109,14 @@ namespace DriveIT
             frmNalogZaPopravak popravak = new frmNalogZaPopravak();
             popravak.fillForm(txtIdVozilo.Text);
             popravak.Show();
+        }
+
+        private void prodajBtn_Click(object sender, EventArgs e)
+        {
+            frmProdaja prodaja = new frmProdaja(idVozila);
+            prodaja.Show();
+            /*prodaja.fillForm(txtIdVozilo.Text);
+            popravak.Show();*/
         }
 
     }
