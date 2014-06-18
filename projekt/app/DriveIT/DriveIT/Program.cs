@@ -16,7 +16,8 @@ namespace DriveIT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAplikacija());
+            frmLogin login = new frmLogin();
+            Application.Run(login);
         }
     }
 }

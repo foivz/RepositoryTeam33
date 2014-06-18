@@ -38,6 +38,7 @@ namespace DriveIT.Database
         public int tip_vozila { get; set; }
         public int model_vozila { get; set; }
         public int parking { get; set; }
+        public Nullable<System.DateTime> zadnje_paljenje { get; set; }
     
         public virtual cijena cijena { get; set; }
         public virtual model_vozila model_vozila1 { get; set; }
