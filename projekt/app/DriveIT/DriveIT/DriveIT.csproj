@@ -217,11 +217,19 @@
     <Compile Include="MarkeVozila.Designer.cs">
       <DependentUpon>MarkeVozila.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarkeVozilaDodaj.cs" />
+    <Compile Include="MarkeVozilaDodaj.designer.cs">
+      <DependentUpon>MarkeVozilaDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModeliVozila.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModeliVozila.Designer.cs">
       <DependentUpon>ModeliVozila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeliVozilaDodaj.cs" />
+    <Compile Include="ModeliVozilaDodaj.designer.cs">
+      <DependentUpon>ModeliVozilaDodaj.cs</DependentUpon>
     </Compile>
     <Compile Include="NalogKreiraj.cs">
       <SubType>Form</SubType>
@@ -234,6 +242,14 @@
     </Compile>
     <Compile Include="Parkiralista.Designer.cs">
       <DependentUpon>Parkiralista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkiralistaDetalji.cs" />
+    <Compile Include="ParkiralistaDetalji.designer.cs">
+      <DependentUpon>ParkiralistaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkiralistaDodaj.cs" />
+    <Compile Include="ParkiralistaDodaj.designer.cs">
+      <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </Compile>
     <Compile Include="Prodaja.cs">
       <SubType>Form</SubType>
@@ -285,6 +301,12 @@
     <Compile Include="VrsteVozila.Designer.cs">
       <DependentUpon>VrsteVozila.cs</DependentUpon>
     </Compile>
+    <Compile Include="VrsteVozilaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VrsteVozilaDodaj.designer.cs">
+      <DependentUpon>VrsteVozilaDodaj.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +346,9 @@
     <EmbeddedResource Include="MarkeVozila.resx">
       <DependentUpon>MarkeVozila.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarkeVozilaDodaj.resx">
+      <DependentUpon>MarkeVozilaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModeliVozila.resx">
       <DependentUpon>ModeliVozila.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Parkiralista.resx">
       <DependentUpon>Parkiralista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkiralistaDodaj.resx">
+      <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prodaja.resx">
       <DependentUpon>Prodaja.cs</DependentUpon>
