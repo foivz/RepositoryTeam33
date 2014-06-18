@@ -69,7 +69,7 @@ namespace DriveIT
             vozilo.servisna = txtServisna.Text;
             vozilo.kilometri = Convert.ToInt32(txtKilometraza.Text);
 
-            /*Ove bi trebalo dinamički izgenerirati-TODO*/
+           
             //items.add("")
             vozilo.tip_vozila = Convert.ToInt32(txtTipVozila.SelectedValue);
             vozilo.model_vozila = Convert.ToInt32(txtModel.SelectedValue);

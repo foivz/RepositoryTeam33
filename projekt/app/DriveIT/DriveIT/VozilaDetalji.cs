@@ -102,5 +102,12 @@ namespace DriveIT
             this.Close();
         }
 
+        private void btnNalog_Click(object sender, EventArgs e)
+        {
+            frmNalogZaPopravak popravak = new frmNalogZaPopravak();
+            popravak.fillForm(txtIdVozilo.Text);
+            popravak.Show();
+        }
+
     }
 }

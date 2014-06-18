@@ -18,6 +18,27 @@ namespace DriveIT
         public frmUgovoriDodaj()
         {
             InitializeComponent();
+            T33_DBEntities db = new T33_DBEntities();
+            /*Kupac combobox*/
+            
+                cbKupac.DataSource = db.kupac.ToList();
+                cbKupac.ValueMember = "id_kupac";
+                cbKupac.DisplayMember = string.Concat("ime","prezime");
+
+            /*Vozilo combobox*/
+           
+                cbVozilo.DataSource = db.vozilo.ToList();
+                cbVozilo.ValueMember = "id_vozilo";
+                cbVozilo.DisplayMember = "sasija";
+
+
+            /*Dobavljac combobox*/
+
+                cbDobavljac.DataSource = db.dobavljac.ToList();
+                cbDobavljac.ValueMember = "id_dobavljac";
+                cbDobavljac.DisplayMember = "tvrtka";
+
+
         }
 
         private void btnDodajDobavljac_Click(object sender, EventArgs e)
@@ -26,10 +47,10 @@ namespace DriveIT
             ugovor ugovor = new ugovor();
             
 
-            ugovor.kupac = Convert.ToInt32(txtKupac.Text);
-            ugovor.vozilo = Convert.ToInt32(txtVozilo.Text);
+            ugovor.kupac = Convert.ToInt32(cbKupac.SelectedValue);
+            ugovor.vozilo = Convert.ToInt32(cbVozilo.SelectedValue);
             ugovor.datum = dtPickerDatum.Value;
-            ugovor.dobavljac_iddobavljac = Convert.ToInt32(txtDobavljac.Text);
+            ugovor.dobavljac_iddobavljac = Convert.ToInt32(cbDobavljac.SelectedValue);
 
             db.ugovor.Add(ugovor);            
 
@@ -59,6 +80,13 @@ namespace DriveIT
         {
             this.Close();
         }
+
+        private void frmUgovoriDodaj_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
        
     }

@@ -32,13 +32,13 @@
             this.lblDodajUgovor = new System.Windows.Forms.Label();
             this.btnDodajUgovor = new System.Windows.Forms.Button();
             this.lblDobavljac = new System.Windows.Forms.Label();
-            this.txtDobavljac = new System.Windows.Forms.TextBox();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblVozilo = new System.Windows.Forms.Label();
-            this.txtVozilo = new System.Windows.Forms.TextBox();
             this.lblKupac = new System.Windows.Forms.Label();
-            this.txtKupac = new System.Windows.Forms.TextBox();
             this.dtPickerDatum = new System.Windows.Forms.DateTimePicker();
+            this.cbKupac = new System.Windows.Forms.ComboBox();
+            this.cbVozilo = new System.Windows.Forms.ComboBox();
+            this.cbDobavljac = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -81,13 +81,6 @@
             this.lblDobavljac.TabIndex = 25;
             this.lblDobavljac.Text = "Dobavljac";
             // 
-            // txtDobavljac
-            // 
-            this.txtDobavljac.Location = new System.Drawing.Point(234, 241);
-            this.txtDobavljac.Name = "txtDobavljac";
-            this.txtDobavljac.Size = new System.Drawing.Size(250, 20);
-            this.txtDobavljac.TabIndex = 24;
-            // 
             // lblDatum
             // 
             this.lblDatum.AutoSize = true;
@@ -106,13 +99,6 @@
             this.lblVozilo.TabIndex = 21;
             this.lblVozilo.Text = "Vozilo";
             // 
-            // txtVozilo
-            // 
-            this.txtVozilo.Location = new System.Drawing.Point(234, 134);
-            this.txtVozilo.Name = "txtVozilo";
-            this.txtVozilo.Size = new System.Drawing.Size(250, 20);
-            this.txtVozilo.TabIndex = 20;
-            // 
             // lblKupac
             // 
             this.lblKupac.AutoSize = true;
@@ -122,13 +108,6 @@
             this.lblKupac.TabIndex = 19;
             this.lblKupac.Text = "Kupac";
             // 
-            // txtKupac
-            // 
-            this.txtKupac.Location = new System.Drawing.Point(234, 86);
-            this.txtKupac.Name = "txtKupac";
-            this.txtKupac.Size = new System.Drawing.Size(250, 20);
-            this.txtKupac.TabIndex = 18;
-            // 
             // dtPickerDatum
             // 
             this.dtPickerDatum.Location = new System.Drawing.Point(234, 177);
@@ -136,25 +115,49 @@
             this.dtPickerDatum.Size = new System.Drawing.Size(250, 20);
             this.dtPickerDatum.TabIndex = 35;
             // 
+            // cbKupac
+            // 
+            this.cbKupac.FormattingEnabled = true;
+            this.cbKupac.Location = new System.Drawing.Point(234, 83);
+            this.cbKupac.Name = "cbKupac";
+            this.cbKupac.Size = new System.Drawing.Size(250, 21);
+            this.cbKupac.TabIndex = 36;
+            // 
+            // cbVozilo
+            // 
+            this.cbVozilo.FormattingEnabled = true;
+            this.cbVozilo.Location = new System.Drawing.Point(234, 131);
+            this.cbVozilo.Name = "cbVozilo";
+            this.cbVozilo.Size = new System.Drawing.Size(250, 21);
+            this.cbVozilo.TabIndex = 37;
+            // 
+            // cbDobavljac
+            // 
+            this.cbDobavljac.FormattingEnabled = true;
+            this.cbDobavljac.Location = new System.Drawing.Point(237, 233);
+            this.cbDobavljac.Name = "cbDobavljac";
+            this.cbDobavljac.Size = new System.Drawing.Size(247, 21);
+            this.cbDobavljac.TabIndex = 38;
+            // 
             // frmUgovoriDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 532);
+            this.ClientSize = new System.Drawing.Size(720, 412);
+            this.Controls.Add(this.cbDobavljac);
+            this.Controls.Add(this.cbVozilo);
+            this.Controls.Add(this.cbKupac);
             this.Controls.Add(this.dtPickerDatum);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.lblDodajUgovor);
             this.Controls.Add(this.btnDodajUgovor);
             this.Controls.Add(this.lblDobavljac);
-            this.Controls.Add(this.txtDobavljac);
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.lblVozilo);
-            this.Controls.Add(this.txtVozilo);
             this.Controls.Add(this.lblKupac);
-            this.Controls.Add(this.txtKupac);
             this.Name = "frmUgovoriDodaj";
             this.Text = "UgovoriDodaj";
-            
+            this.Load += new System.EventHandler(this.frmUgovoriDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,12 +169,12 @@
         private System.Windows.Forms.Label lblDodajUgovor;
         private System.Windows.Forms.Button btnDodajUgovor;
         private System.Windows.Forms.Label lblDobavljac;
-        private System.Windows.Forms.TextBox txtDobavljac;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblVozilo;
-        private System.Windows.Forms.TextBox txtVozilo;
         private System.Windows.Forms.Label lblKupac;
-        private System.Windows.Forms.TextBox txtKupac;
         private System.Windows.Forms.DateTimePicker dtPickerDatum;
+        private System.Windows.Forms.ComboBox cbKupac;
+        private System.Windows.Forms.ComboBox cbVozilo;
+        private System.Windows.Forms.ComboBox cbDobavljac;
     }
 }

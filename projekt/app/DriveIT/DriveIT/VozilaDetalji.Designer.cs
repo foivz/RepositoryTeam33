@@ -57,6 +57,7 @@
             this.btnObrisiVozilo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdVozilo = new System.Windows.Forms.TextBox();
+            this.btnNalog = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dtPickerNabavka
@@ -162,9 +163,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(603, 476);
+            this.btnOdustani.Location = new System.Drawing.Point(728, 476);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(77, 23);
             this.btnOdustani.TabIndex = 67;
             this.btnOdustani.TabStop = false;
             this.btnOdustani.Text = "Odustani";
@@ -175,7 +176,7 @@
             // 
             this.btnAzurirajVozilo.Location = new System.Drawing.Point(156, 456);
             this.btnAzurirajVozilo.Name = "btnAzurirajVozilo";
-            this.btnAzurirajVozilo.Size = new System.Drawing.Size(250, 43);
+            this.btnAzurirajVozilo.Size = new System.Drawing.Size(148, 43);
             this.btnAzurirajVozilo.TabIndex = 65;
             this.btnAzurirajVozilo.Text = "Ažuriraj vozilo";
             this.btnAzurirajVozilo.UseVisualStyleBackColor = true;
@@ -300,11 +301,22 @@
             this.txtIdVozilo.Size = new System.Drawing.Size(148, 20);
             this.txtIdVozilo.TabIndex = 90;
             // 
+            // btnNalog
+            // 
+            this.btnNalog.Location = new System.Drawing.Point(421, 456);
+            this.btnNalog.Name = "btnNalog";
+            this.btnNalog.Size = new System.Drawing.Size(148, 43);
+            this.btnNalog.TabIndex = 91;
+            this.btnNalog.Text = "Kreiraj nalog za popravak";
+            this.btnNalog.UseVisualStyleBackColor = true;
+            this.btnNalog.Click += new System.EventHandler(this.btnNalog_Click);
+            // 
             // frmVozilaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 524);
+            this.Controls.Add(this.btnNalog);
             this.Controls.Add(this.txtIdVozilo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnObrisiVozilo);
@@ -373,5 +385,6 @@
         private System.Windows.Forms.Button btnObrisiVozilo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIdVozilo;
+        private System.Windows.Forms.Button btnNalog;
     }
 }
