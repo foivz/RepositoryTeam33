@@ -12,12 +12,14 @@ namespace DriveIT.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class dio
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int id_dio { get; set; }
+        public string naziv { get; set; }
+        public string opis { get; set; }
+        public Nullable<int> kolicina { get; set; }
+        public Nullable<int> cijena { get; set; }
+    
+        public virtual nalog_za_servis nalog_za_servis { get; set; }
     }
 }
