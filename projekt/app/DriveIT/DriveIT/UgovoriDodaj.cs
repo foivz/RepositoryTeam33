@@ -1,4 +1,5 @@
-﻿using DriveIT.Database;
+﻿using DriveIT.Controler;
+using DriveIT.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,11 +53,17 @@ namespace DriveIT
             ugovor.datum = dtPickerDatum.Value;
             ugovor.dobavljac_iddobavljac = Convert.ToInt32(cbDobavljac.SelectedValue);
 
-            db.ugovor.Add(ugovor);            
+            db.ugovor.Add(ugovor);
+
+            
 
             try
             {
+                var vozilo1 = db.vozilo.Where<vozilo>(x => x.id_vozilo == ugovor.vozilo).First<vozilo>();
+                var kupac1 = db.kupac.Where<kupac>(x => x.id_kupac == ugovor.kupac).First<kupac>();
 
+                PdfUgovor.KupoprodajniUgovor(vozilo1, kupac1, ugovor);
+                
                 db.SaveChanges();
                 this.Close();
 

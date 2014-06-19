@@ -80,6 +80,7 @@
     <Compile Include="Aplikacija.Designer.cs">
       <DependentUpon>Aplikacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controler\PdfUgovor.cs" />
     <Compile Include="Controler\ProvjeraUnos.cs" />
     <Compile Include="Controler\Provjera.cs" />
     <Compile Include="Database\cijena.cs">
@@ -142,6 +143,7 @@
     <Compile Include="Database\tip_vozila.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\Tvrtka.cs" />
     <Compile Include="Database\ugovor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
