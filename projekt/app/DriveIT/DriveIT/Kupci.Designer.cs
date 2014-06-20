@@ -60,9 +60,9 @@
             // 
             this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(858, 649);
+            this.btnIzlaz.Location = new System.Drawing.Point(679, 593);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(101, 26);
+            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
             this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnIzlaz.StyleManager = null;
             this.btnIzlaz.TabIndex = 0;
@@ -90,7 +90,7 @@
             this.tipkupca1DataGridViewTextBoxColumn,
             this.ugovorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.kupacBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 151);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 180);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 331);
             this.dataGridView1.TabIndex = 1;
@@ -178,7 +178,7 @@
             this.lblPretragaKupci.FontSize = MetroFramework.MetroLabelSize.Medium;
             this.lblPretragaKupci.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblPretragaKupci.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblPretragaKupci.Location = new System.Drawing.Point(685, 81);
+            this.lblPretragaKupci.Location = new System.Drawing.Point(685, 85);
             this.lblPretragaKupci.Name = "lblPretragaKupci";
             this.lblPretragaKupci.Size = new System.Drawing.Size(60, 19);
             this.lblPretragaKupci.Style = MetroFramework.MetroColorStyle.Blue;
@@ -195,7 +195,7 @@
             this.txtPretragaKupci.CustomForeColor = false;
             this.txtPretragaKupci.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtPretragaKupci.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtPretragaKupci.Location = new System.Drawing.Point(751, 77);
+            this.txtPretragaKupci.Location = new System.Drawing.Point(751, 81);
             this.txtPretragaKupci.Multiline = false;
             this.txtPretragaKupci.Name = "txtPretragaKupci";
             this.txtPretragaKupci.SelectedText = "";
@@ -211,7 +211,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(907, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(907, 81);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,18 +225,18 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 636);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 606);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(358, 104);
+            this.pictureBox2.Size = new System.Drawing.Size(434, 140);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // btnDodajNovogKupca
             // 
             this.btnDodajNovogKupca.Highlight = false;
-            this.btnDodajNovogKupca.Location = new System.Drawing.Point(67, 77);
+            this.btnDodajNovogKupca.Location = new System.Drawing.Point(25, 54);
             this.btnDodajNovogKupca.Name = "btnDodajNovogKupca";
-            this.btnDodajNovogKupca.Size = new System.Drawing.Size(160, 23);
+            this.btnDodajNovogKupca.Size = new System.Drawing.Size(280, 80);
             this.btnDodajNovogKupca.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnDodajNovogKupca.StyleManager = null;
             this.btnDodajNovogKupca.TabIndex = 8;
@@ -247,9 +247,9 @@
             // btnAzuriraj
             // 
             this.btnAzuriraj.Highlight = false;
-            this.btnAzuriraj.Location = new System.Drawing.Point(284, 77);
+            this.btnAzuriraj.Location = new System.Drawing.Point(333, 54);
             this.btnAzuriraj.Name = "btnAzuriraj";
-            this.btnAzuriraj.Size = new System.Drawing.Size(160, 23);
+            this.btnAzuriraj.Size = new System.Drawing.Size(280, 80);
             this.btnAzuriraj.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnAzuriraj.StyleManager = null;
             this.btnAzuriraj.TabIndex = 9;

@@ -52,6 +52,7 @@
             // 
             // lblIme
             // 
+            this.lblIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIme.AutoSize = true;
             this.lblIme.CustomBackground = true;
             this.lblIme.CustomForeColor = false;
@@ -70,6 +71,7 @@
             // 
             // lblPrezime
             // 
+            this.lblPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrezime.AutoSize = true;
             this.lblPrezime.CustomBackground = true;
             this.lblPrezime.CustomForeColor = false;
@@ -88,6 +90,7 @@
             // 
             // lblTvrtka
             // 
+            this.lblTvrtka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTvrtka.AutoSize = true;
             this.lblTvrtka.CustomBackground = true;
             this.lblTvrtka.CustomForeColor = false;
@@ -106,6 +109,7 @@
             // 
             // lblAdresa
             // 
+            this.lblAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdresa.AutoSize = true;
             this.lblAdresa.CustomBackground = true;
             this.lblAdresa.CustomForeColor = false;
@@ -124,6 +128,7 @@
             // 
             // lblTelefon
             // 
+            this.lblTelefon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTelefon.AutoSize = true;
             this.lblTelefon.CustomBackground = true;
             this.lblTelefon.CustomForeColor = false;
@@ -142,6 +147,7 @@
             // 
             // lblFaks
             // 
+            this.lblFaks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFaks.AutoSize = true;
             this.lblFaks.CustomBackground = true;
             this.lblFaks.CustomForeColor = false;
@@ -160,6 +166,7 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
             this.lblEmail.CustomBackground = true;
             this.lblEmail.CustomForeColor = false;
@@ -178,6 +185,7 @@
             // 
             // txtIme
             // 
+            this.txtIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIme.CustomBackground = false;
             this.txtIme.CustomForeColor = false;
             this.txtIme.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -195,6 +203,7 @@
             // 
             // txtPrezime
             // 
+            this.txtPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrezime.CustomBackground = false;
             this.txtPrezime.CustomForeColor = false;
             this.txtPrezime.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -212,6 +221,7 @@
             // 
             // txtTvrtka
             // 
+            this.txtTvrtka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTvrtka.CustomBackground = false;
             this.txtTvrtka.CustomForeColor = false;
             this.txtTvrtka.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -229,6 +239,7 @@
             // 
             // txtAdresa
             // 
+            this.txtAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdresa.CustomBackground = false;
             this.txtAdresa.CustomForeColor = false;
             this.txtAdresa.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -246,6 +257,7 @@
             // 
             // txtTelefon
             // 
+            this.txtTelefon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefon.CustomBackground = false;
             this.txtTelefon.CustomForeColor = false;
             this.txtTelefon.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -263,6 +275,7 @@
             // 
             // txtFaks
             // 
+            this.txtFaks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFaks.CustomBackground = false;
             this.txtFaks.CustomForeColor = false;
             this.txtFaks.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -280,6 +293,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.CustomBackground = false;
             this.txtEmail.CustomForeColor = false;
             this.txtEmail.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -297,13 +311,16 @@
             // 
             // lblDodajDobavljacaa
             // 
+            this.lblDodajDobavljacaa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodajDobavljacaa.AutoSize = true;
             this.lblDodajDobavljacaa.CustomBackground = true;
             this.lblDodajDobavljacaa.CustomForeColor = false;
             this.lblDodajDobavljacaa.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblDodajDobavljacaa.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblDodajDobavljacaa.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblDodajDobavljacaa.Location = new System.Drawing.Point(282, 44);
+            this.lblDodajDobavljacaa.Location = new System.Drawing.Point(380, 41);
             this.lblDodajDobavljacaa.Name = "lblDodajDobavljacaa";
             this.lblDodajDobavljacaa.Size = new System.Drawing.Size(143, 25);
             this.lblDodajDobavljacaa.Style = MetroFramework.MetroColorStyle.Blue;
@@ -315,6 +332,7 @@
             // 
             // btnDodajDobavljaca
             // 
+            this.btnDodajDobavljaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajDobavljaca.Highlight = false;
             this.btnDodajDobavljaca.Location = new System.Drawing.Point(586, 291);
             this.btnDodajDobavljaca.Name = "btnDodajDobavljaca";
@@ -329,6 +347,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(586, 404);
             this.btnOdustani.Name = "btnOdustani";
@@ -342,6 +361,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 573);
             this.pictureBox1.Name = "pictureBox1";
@@ -374,6 +395,7 @@
             this.Controls.Add(this.lblPrezime);
             this.Controls.Add(this.lblIme);
             this.Name = "frmDobavljaciDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dodaj dobavljača";
             this.Load += new System.EventHandler(this.DobavljačiDodaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

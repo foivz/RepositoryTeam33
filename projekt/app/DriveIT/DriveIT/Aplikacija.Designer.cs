@@ -96,7 +96,7 @@
             // btnUgovori
             // 
             this.btnUgovori.Highlight = false;
-            this.btnUgovori.Location = new System.Drawing.Point(62, 407);
+            this.btnUgovori.Location = new System.Drawing.Point(62, 397);
             this.btnUgovori.Name = "btnUgovori";
             this.btnUgovori.Size = new System.Drawing.Size(280, 80);
             this.btnUgovori.Style = MetroFramework.MetroColorStyle.Blue;
@@ -123,6 +123,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.pomoćToolStripMenuItem,
@@ -228,7 +229,7 @@
             // metroBtnNalozi
             // 
             this.metroBtnNalozi.Highlight = false;
-            this.metroBtnNalozi.Location = new System.Drawing.Point(62, 517);
+            this.metroBtnNalozi.Location = new System.Drawing.Point(62, 500);
             this.metroBtnNalozi.Name = "metroBtnNalozi";
             this.metroBtnNalozi.Size = new System.Drawing.Size(280, 80);
             this.metroBtnNalozi.Style = MetroFramework.MetroColorStyle.Blue;
@@ -240,7 +241,7 @@
             // metroButtnIzlaz
             // 
             this.metroButtnIzlaz.Highlight = false;
-            this.metroButtnIzlaz.Location = new System.Drawing.Point(62, 623);
+            this.metroButtnIzlaz.Location = new System.Drawing.Point(62, 609);
             this.metroButtnIzlaz.Name = "metroButtnIzlaz";
             this.metroButtnIzlaz.Size = new System.Drawing.Size(280, 80);
             this.metroButtnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;

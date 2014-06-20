@@ -1927,10 +1927,10 @@
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 636</value>
+    <value>25, 613</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>358, 104</value>
+    <value>434, 140</value>
   </data>
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1948,10 +1948,10 @@
     <value>3</value>
   </data>
   <data name="btnDodajDobavljaca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 77</value>
+    <value>25, 48</value>
   </data>
   <data name="btnDodajDobavljaca.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>280, 80</value>
   </data>
   <data name="btnDodajDobavljaca.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1975,10 +1975,10 @@
     <value>Bottom, Right</value>
   </data>
   <data name="metroButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>858, 647</value>
+    <value>679, 604</value>
   </data>
   <data name="metroButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 26</value>
+    <value>280, 80</value>
   </data>
   <data name="metroButton2.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1999,10 +1999,10 @@
     <value>1</value>
   </data>
   <data name="btnOsvjezi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 77</value>
+    <value>326, 48</value>
   </data>
   <data name="btnOsvjezi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 23</value>
+    <value>280, 80</value>
   </data>
   <data name="btnOsvjezi.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -2033,6 +2033,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>984, 696</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

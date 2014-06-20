@@ -43,34 +43,24 @@ namespace DriveIT
 
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+     
+        
+
+       
+
+        private void btnOdustani_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            T33_DBEntities db = new T33_DBEntities();
-            int b = Convert.ToInt32(txtId.Text);
-            var kupac = db.kupac.Where<kupac>(x => x.id_kupac == b).First<kupac>();
-
-            db.kupac.Remove(kupac);
-            db.SaveChanges();
-
-            MessageBox.Show("Kupac uspješno obrisan");
-            System.Threading.Thread.Sleep(700);
-            this.Close();
-
         }
 
         private void btnAzurirajKupca_Click(object sender, EventArgs e)
         {
-
             T33_DBEntities db = new T33_DBEntities();
 
             int id = Convert.ToInt32(txtId.Text);
 
-            kupac kupac = db.kupac.First(x=>x.id_kupac == id );
+           
+            kupac kupac = db.kupac.First(x => x.id_kupac == id);
 
             kupac.tip_kupca = Convert.ToInt32(txtTipKupca.Text);
             kupac.ime = txtTipKupca.Text;
@@ -88,9 +78,20 @@ namespace DriveIT
 
             this.Close();
 
+        }
 
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            T33_DBEntities db = new T33_DBEntities();
+            int b = Convert.ToInt32(txtId.Text);
+            var kupac = db.kupac.Where<kupac>(x => x.id_kupac == b).First<kupac>();
 
+            db.kupac.Remove(kupac);
+            db.SaveChanges();
 
+            MessageBox.Show("Kupac uspješno obrisan");
+            System.Threading.Thread.Sleep(700);
+            this.Close();
         }
     }
 }
