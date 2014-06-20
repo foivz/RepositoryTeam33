@@ -27,7 +27,7 @@
             <PropertyRef Name="id_dio" />
           </Key>
           <Property Name="id_dio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="naziv" Type="nchar" MaxLength="10" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" />
           <Property Name="opis" Type="text" />
           <Property Name="kolicina" Type="int" />
           <Property Name="cijena" Type="int" />
@@ -648,7 +648,7 @@
             <PropertyRef Name="id_dio" />
           </Key>
           <Property Name="id_dio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="kolicina" Type="Int32" />
           <Property Name="cijena" Type="Int32" />

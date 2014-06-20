@@ -5,24 +5,24 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d27328e7008d471793ea671749ffd0fd" Name="Diagram1">
-        <EntityTypeShape EntityType="T33_DBModel.cijena" Width="1.5" PointX="7.5" PointY="2.375" />
-        <EntityTypeShape EntityType="T33_DBModel.dio" Width="1.5" PointX="12.75" PointY="7.25" />
-        <EntityTypeShape EntityType="T33_DBModel.dobavljac" Width="1.5" PointX="0.75" PointY="6.875" />
-        <EntityTypeShape EntityType="T33_DBModel.dodatna_oprema" Width="1.5" PointX="3" PointY="6.875" />
-        <EntityTypeShape EntityType="T33_DBModel.korisnik" Width="1.5" PointX="8.25" PointY="12.125" />
-        <EntityTypeShape EntityType="T33_DBModel.kupac" Width="1.5" PointX="5.25" PointY="16.75" />
-        <EntityTypeShape EntityType="T33_DBModel.marka_vozila" Width="1.5" PointX="0.75" PointY="14" />
-        <EntityTypeShape EntityType="T33_DBModel.model_vozila" Width="1.5" PointX="3" PointY="13.875" />
-        <EntityTypeShape EntityType="T33_DBModel.nalog_za_servis" Width="1.5" PointX="10.5" PointY="6.75" />
-        <EntityTypeShape EntityType="T33_DBModel.parking" Width="1.5" PointX="3" PointY="3.75" />
-        <EntityTypeShape EntityType="T33_DBModel.slika_vozilo" Width="1.5" PointX="7.5" PointY="19.25" />
-        <EntityTypeShape EntityType="T33_DBModel.tip_korisnika" Width="1.5" PointX="6" PointY="12.5" />
-        <EntityTypeShape EntityType="T33_DBModel.tip_kupca" Width="1.5" PointX="3" PointY="17.5" />
-        <EntityTypeShape EntityType="T33_DBModel.tip_poreza" Width="1.5" PointX="5.25" PointY="2.375" />
-        <EntityTypeShape EntityType="T33_DBModel.tip_vozila" Width="1.5" PointX="3" PointY="11.375" />
-        <EntityTypeShape EntityType="T33_DBModel.ugovor" Width="1.5" PointX="7.5" PointY="7" />
-        <EntityTypeShape EntityType="T33_DBModel.vozilo" Width="1.5" PointX="5.25" PointY="5.375" />
-        <EntityTypeShape EntityType="T33_DBModel.zapisnik" Width="1.5" PointX="1" PointY="1.25" />
+        <EntityTypeShape EntityType="T33_DBModel.cijena" Width="1.5" PointX="10.5" PointY="3" />
+        <EntityTypeShape EntityType="T33_DBModel.dio" Width="1.5" PointX="9.75" PointY="11.875" />
+        <EntityTypeShape EntityType="T33_DBModel.dobavljac" Width="1.5" PointX="0.75" PointY="7.5" />
+        <EntityTypeShape EntityType="T33_DBModel.dodatna_oprema" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="T33_DBModel.korisnik" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="T33_DBModel.kupac" Width="1.5" PointX="8.25" PointY="15.375" />
+        <EntityTypeShape EntityType="T33_DBModel.marka_vozila" Width="1.5" PointX="0.75" PointY="14.625" />
+        <EntityTypeShape EntityType="T33_DBModel.model_vozila" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="T33_DBModel.nalog_za_servis" Width="1.5" PointX="7.5" PointY="7.375" />
+        <EntityTypeShape EntityType="T33_DBModel.parking" Width="1.5" PointX="3" PointY="12" />
+        <EntityTypeShape EntityType="T33_DBModel.slika_vozilo" Width="1.5" PointX="7.5" PointY="19.875" />
+        <EntityTypeShape EntityType="T33_DBModel.tip_korisnika" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="T33_DBModel.tip_kupca" Width="1.5" PointX="6" PointY="16.125" />
+        <EntityTypeShape EntityType="T33_DBModel.tip_poreza" Width="1.5" PointX="8.25" PointY="4" />
+        <EntityTypeShape EntityType="T33_DBModel.tip_vozila" Width="1.5" PointX="3" PointY="4.375" />
+        <EntityTypeShape EntityType="T33_DBModel.ugovor" Width="1.5" PointX="10.5" PointY="7.625" />
+        <EntityTypeShape EntityType="T33_DBModel.vozilo" Width="1.5" PointX="5.25" PointY="6" />
+        <EntityTypeShape EntityType="T33_DBModel.zapisnik" Width="1.5" PointX="7.75" PointY="1.375" />
         <AssociationConnector Association="T33_DBModel.cijena_tip_poreza_nabavna" />
         <AssociationConnector Association="T33_DBModel.cijena_tip_poreza_prodajna" />
         <AssociationConnector Association="T33_DBModel.cijena_vozilo" />
