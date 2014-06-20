@@ -22,11 +22,11 @@ namespace DriveIT.Database
         public int id_dodatna_oprema { get; set; }
         public int dobavljac_iddobavljac { get; set; }
         public string naziv { get; set; }
-        public int model { get; set; }
-        public int boja { get; set; }
-        public int kolicina { get; set; }
-        public int cijena { get; set; }
-        public int raspoloživo { get; set; }
+        public string model { get; set; }
+        public string boja { get; set; }
+        public Nullable<int> kolicina { get; set; }
+        public Nullable<int> cijena { get; set; }
+        public Nullable<bool> raspoloživo { get; set; }
     
         public virtual dobavljac dobavljac { get; set; }
         public virtual ICollection<vozilo> vozilo { get; set; }
