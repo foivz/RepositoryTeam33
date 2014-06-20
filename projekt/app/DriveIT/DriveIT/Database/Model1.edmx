@@ -27,7 +27,7 @@
             <PropertyRef Name="id_dio" />
           </Key>
           <Property Name="id_dio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="naziv" Type="nchar" MaxLength="10" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" />
           <Property Name="opis" Type="text" />
           <Property Name="kolicina" Type="int" />
           <Property Name="cijena" Type="int" />
@@ -52,11 +52,11 @@
           <Property Name="id_dodatna_oprema" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="dobavljac_iddobavljac" Type="int" Nullable="false" />
           <Property Name="naziv" Type="varchar" MaxLength="50" />
-          <Property Name="model" Type="int" Nullable="false" />
-          <Property Name="boja" Type="int" Nullable="false" />
-          <Property Name="kolicina" Type="int" Nullable="false" />
-          <Property Name="cijena" Type="int" Nullable="false" />
-          <Property Name="raspoloživo" Type="int" Nullable="false" />
+          <Property Name="model" Type="varchar" MaxLength="50" />
+          <Property Name="boja" Type="varchar" MaxLength="50" />
+          <Property Name="kolicina" Type="int" />
+          <Property Name="cijena" Type="int" />
+          <Property Name="raspoloživo" Type="bit" />
         </EntityType>
         <EntityType Name="korisnik">
           <Key>
@@ -648,7 +648,7 @@
             <PropertyRef Name="id_dio" />
           </Key>
           <Property Name="id_dio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="kolicina" Type="Int32" />
           <Property Name="cijena" Type="Int32" />
@@ -676,11 +676,11 @@
           <Property Name="id_dodatna_oprema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="dobavljac_iddobavljac" Type="Int32" Nullable="false" />
           <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="model" Type="Int32" Nullable="false" />
-          <Property Name="boja" Type="Int32" Nullable="false" />
-          <Property Name="kolicina" Type="Int32" Nullable="false" />
-          <Property Name="cijena" Type="Int32" Nullable="false" />
-          <Property Name="raspoloživo" Type="Int32" Nullable="false" />
+          <Property Name="model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="boja" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kolicina" Type="Int32" />
+          <Property Name="cijena" Type="Int32" />
+          <Property Name="raspoloživo" Type="Boolean" />
           <NavigationProperty Name="dobavljac" Relationship="T33_DBModel.dodatna_oprema_dobavljac" FromRole="dodatna_oprema" ToRole="dobavljac" />
           <NavigationProperty Name="vozilo" Relationship="T33_DBModel.pripada" FromRole="dodatna_oprema" ToRole="vozilo" />
         </EntityType>
