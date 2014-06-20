@@ -25,9 +25,11 @@ namespace DriveIT
 
         }
 
-        private void btnDodajDobavljac_Click(object sender, EventArgs e)
-        {
+       
+       
 
+        private void btnDodajDobavljaca_Click(object sender, EventArgs e)
+        {
             T33_DBEntities db = new T33_DBEntities();
             dobavljac dobavljac = new dobavljac();
 
@@ -41,26 +43,29 @@ namespace DriveIT
 
             db.dobavljac.Add(dobavljac);
             MessageBox.Show(txtIme.Text);
-            try {
- 
-            db.SaveChanges();
-            this.Close();
-            
-            
+            try
+            {
+
+                db.SaveChanges();
+                this.Close();
+
+
             }
-            catch(DbEntityValidationException dbEx){
+            catch (DbEntityValidationException dbEx)
+            {
                 MessageBox.Show("Greška !");
-                foreach (var validaitonErrors in dbEx.EntityValidationErrors) {
-                    foreach (var validationError in validaitonErrors.ValidationErrors) {
-                        Trace.TraceInformation("Property: {0} Error:{1}",validationError.PropertyName,validationError.ErrorMessage);
+                foreach (var validaitonErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validaitonErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error:{1}", validationError.PropertyName, validationError.ErrorMessage);
                     }
                 }
-            
-            }
 
+            }
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+        private void btnOdustani_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 304);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.lblPodtip);
             this.Controls.Add(this.txtPodtip);
             this.Controls.Add(this.btnOdustani);

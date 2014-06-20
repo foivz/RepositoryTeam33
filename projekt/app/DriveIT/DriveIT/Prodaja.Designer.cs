@@ -175,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 307);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.option3txt);
             this.Controls.Add(this.option3lbl);
             this.Controls.Add(this.metroButton1);

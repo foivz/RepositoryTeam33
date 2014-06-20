@@ -73,7 +73,7 @@
             // 
             this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(858, 714);
+            this.btnIzlaz.Location = new System.Drawing.Point(858, 649);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(101, 26);
             this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
@@ -118,7 +118,7 @@
             this.dataGridView1.DataSource = this.voziloBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(25, 151);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(934, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(934, 331);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -335,7 +335,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 701);
+            this.pictureBox2.Location = new System.Drawing.Point(25, 636);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(358, 104);
             this.pictureBox2.TabIndex = 7;
@@ -368,7 +368,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.pictureBox2);

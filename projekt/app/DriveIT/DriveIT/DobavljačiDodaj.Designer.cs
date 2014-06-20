@@ -28,192 +28,355 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.lblIme = new System.Windows.Forms.Label();
-            this.lblPrezime = new System.Windows.Forms.Label();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.lblTvrtka = new System.Windows.Forms.Label();
-            this.txtTvrtka = new System.Windows.Forms.TextBox();
-            this.lblAdresa = new System.Windows.Forms.Label();
-            this.txtAdresa = new System.Windows.Forms.TextBox();
-            this.lblTelefon = new System.Windows.Forms.Label();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.lblFaks = new System.Windows.Forms.Label();
-            this.txtFaks = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnDodajDobavljac = new System.Windows.Forms.Button();
-            this.lblDodajDobavljaca = new System.Windows.Forms.Label();
-            this.btnOdustani = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDobavljaciDodaj));
+            this.lblIme = new MetroFramework.Controls.MetroLabel();
+            this.lblPrezime = new MetroFramework.Controls.MetroLabel();
+            this.lblTvrtka = new MetroFramework.Controls.MetroLabel();
+            this.lblAdresa = new MetroFramework.Controls.MetroLabel();
+            this.lblTelefon = new MetroFramework.Controls.MetroLabel();
+            this.lblFaks = new MetroFramework.Controls.MetroLabel();
+            this.lblEmail = new MetroFramework.Controls.MetroLabel();
+            this.txtIme = new MetroFramework.Controls.MetroTextBox();
+            this.txtPrezime = new MetroFramework.Controls.MetroTextBox();
+            this.txtTvrtka = new MetroFramework.Controls.MetroTextBox();
+            this.txtAdresa = new MetroFramework.Controls.MetroTextBox();
+            this.txtTelefon = new MetroFramework.Controls.MetroTextBox();
+            this.txtFaks = new MetroFramework.Controls.MetroTextBox();
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.lblDodajDobavljacaa = new MetroFramework.Controls.MetroLabel();
+            this.btnDodajDobavljaca = new MetroFramework.Controls.MetroButton();
+            this.btnOdustani = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtIme
-            // 
-            this.txtIme.Location = new System.Drawing.Point(186, 106);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(250, 20);
-            this.txtIme.TabIndex = 1;
             // 
             // lblIme
             // 
             this.lblIme.AutoSize = true;
-            this.lblIme.Location = new System.Drawing.Point(44, 106);
+            this.lblIme.CustomBackground = true;
+            this.lblIme.CustomForeColor = false;
+            this.lblIme.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblIme.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblIme.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblIme.Location = new System.Drawing.Point(168, 125);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(24, 13);
-            this.lblIme.TabIndex = 2;
+            this.lblIme.Size = new System.Drawing.Size(40, 25);
+            this.lblIme.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblIme.StyleManager = null;
+            this.lblIme.TabIndex = 18;
             this.lblIme.Text = "Ime";
+            this.lblIme.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblIme.UseStyleColors = false;
             // 
             // lblPrezime
             // 
             this.lblPrezime.AutoSize = true;
-            this.lblPrezime.Location = new System.Drawing.Point(44, 154);
+            this.lblPrezime.CustomBackground = true;
+            this.lblPrezime.CustomForeColor = false;
+            this.lblPrezime.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblPrezime.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblPrezime.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblPrezime.Location = new System.Drawing.Point(135, 182);
             this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(44, 13);
-            this.lblPrezime.TabIndex = 4;
+            this.lblPrezime.Size = new System.Drawing.Size(73, 25);
+            this.lblPrezime.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblPrezime.StyleManager = null;
+            this.lblPrezime.TabIndex = 19;
             this.lblPrezime.Text = "Prezime";
-            // 
-            // txtPrezime
-            // 
-            this.txtPrezime.Location = new System.Drawing.Point(186, 154);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(250, 20);
-            this.txtPrezime.TabIndex = 3;
+            this.lblPrezime.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblPrezime.UseStyleColors = false;
             // 
             // lblTvrtka
             // 
             this.lblTvrtka.AutoSize = true;
-            this.lblTvrtka.Location = new System.Drawing.Point(44, 205);
+            this.lblTvrtka.CustomBackground = true;
+            this.lblTvrtka.CustomForeColor = false;
+            this.lblTvrtka.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTvrtka.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblTvrtka.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblTvrtka.Location = new System.Drawing.Point(151, 234);
             this.lblTvrtka.Name = "lblTvrtka";
-            this.lblTvrtka.Size = new System.Drawing.Size(38, 13);
-            this.lblTvrtka.TabIndex = 6;
+            this.lblTvrtka.Size = new System.Drawing.Size(57, 25);
+            this.lblTvrtka.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblTvrtka.StyleManager = null;
+            this.lblTvrtka.TabIndex = 20;
             this.lblTvrtka.Text = "Tvrtka";
-            // 
-            // txtTvrtka
-            // 
-            this.txtTvrtka.Location = new System.Drawing.Point(186, 205);
-            this.txtTvrtka.Name = "txtTvrtka";
-            this.txtTvrtka.Size = new System.Drawing.Size(250, 20);
-            this.txtTvrtka.TabIndex = 5;
+            this.lblTvrtka.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblTvrtka.UseStyleColors = false;
             // 
             // lblAdresa
             // 
             this.lblAdresa.AutoSize = true;
-            this.lblAdresa.Location = new System.Drawing.Point(44, 261);
+            this.lblAdresa.CustomBackground = true;
+            this.lblAdresa.CustomForeColor = false;
+            this.lblAdresa.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblAdresa.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblAdresa.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblAdresa.Location = new System.Drawing.Point(144, 291);
             this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(40, 13);
-            this.lblAdresa.TabIndex = 8;
+            this.lblAdresa.Size = new System.Drawing.Size(64, 25);
+            this.lblAdresa.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblAdresa.StyleManager = null;
+            this.lblAdresa.TabIndex = 21;
             this.lblAdresa.Text = "Adresa";
-            // 
-            // txtAdresa
-            // 
-            this.txtAdresa.Location = new System.Drawing.Point(186, 261);
-            this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(250, 20);
-            this.txtAdresa.TabIndex = 7;
+            this.lblAdresa.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblAdresa.UseStyleColors = false;
             // 
             // lblTelefon
             // 
             this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(44, 320);
+            this.lblTelefon.CustomBackground = true;
+            this.lblTelefon.CustomForeColor = false;
+            this.lblTelefon.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblTelefon.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblTelefon.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblTelefon.Location = new System.Drawing.Point(143, 347);
             this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(43, 13);
-            this.lblTelefon.TabIndex = 10;
+            this.lblTelefon.Size = new System.Drawing.Size(65, 25);
+            this.lblTelefon.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblTelefon.StyleManager = null;
+            this.lblTelefon.TabIndex = 22;
             this.lblTelefon.Text = "Telefon";
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Location = new System.Drawing.Point(186, 320);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(250, 20);
-            this.txtTelefon.TabIndex = 9;
+            this.lblTelefon.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblTelefon.UseStyleColors = false;
             // 
             // lblFaks
             // 
             this.lblFaks.AutoSize = true;
-            this.lblFaks.Location = new System.Drawing.Point(44, 379);
+            this.lblFaks.CustomBackground = true;
+            this.lblFaks.CustomForeColor = false;
+            this.lblFaks.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblFaks.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblFaks.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblFaks.Location = new System.Drawing.Point(165, 402);
             this.lblFaks.Name = "lblFaks";
-            this.lblFaks.Size = new System.Drawing.Size(30, 13);
-            this.lblFaks.TabIndex = 12;
+            this.lblFaks.Size = new System.Drawing.Size(43, 25);
+            this.lblFaks.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblFaks.StyleManager = null;
+            this.lblFaks.TabIndex = 23;
             this.lblFaks.Text = "Faks";
-            // 
-            // txtFaks
-            // 
-            this.txtFaks.Location = new System.Drawing.Point(186, 379);
-            this.txtFaks.Name = "txtFaks";
-            this.txtFaks.Size = new System.Drawing.Size(250, 20);
-            this.txtFaks.TabIndex = 11;
+            this.lblFaks.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblFaks.UseStyleColors = false;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(44, 439);
+            this.lblEmail.CustomBackground = true;
+            this.lblEmail.CustomForeColor = false;
+            this.lblEmail.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblEmail.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblEmail.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblEmail.Location = new System.Drawing.Point(155, 454);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(31, 13);
-            this.lblEmail.TabIndex = 14;
-            this.lblEmail.Text = "email";
+            this.lblEmail.Size = new System.Drawing.Size(53, 25);
+            this.lblEmail.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblEmail.StyleManager = null;
+            this.lblEmail.TabIndex = 24;
+            this.lblEmail.Text = "Email";
+            this.lblEmail.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblEmail.UseStyleColors = false;
+            // 
+            // txtIme
+            // 
+            this.txtIme.CustomBackground = false;
+            this.txtIme.CustomForeColor = false;
+            this.txtIme.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtIme.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtIme.Location = new System.Drawing.Point(214, 127);
+            this.txtIme.Multiline = false;
+            this.txtIme.Name = "txtIme";
+            this.txtIme.SelectedText = "";
+            this.txtIme.Size = new System.Drawing.Size(280, 23);
+            this.txtIme.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtIme.StyleManager = null;
+            this.txtIme.TabIndex = 25;
+            this.txtIme.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtIme.UseStyleColors = false;
+            // 
+            // txtPrezime
+            // 
+            this.txtPrezime.CustomBackground = false;
+            this.txtPrezime.CustomForeColor = false;
+            this.txtPrezime.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtPrezime.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtPrezime.Location = new System.Drawing.Point(214, 184);
+            this.txtPrezime.Multiline = false;
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.SelectedText = "";
+            this.txtPrezime.Size = new System.Drawing.Size(280, 23);
+            this.txtPrezime.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPrezime.StyleManager = null;
+            this.txtPrezime.TabIndex = 26;
+            this.txtPrezime.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPrezime.UseStyleColors = false;
+            // 
+            // txtTvrtka
+            // 
+            this.txtTvrtka.CustomBackground = false;
+            this.txtTvrtka.CustomForeColor = false;
+            this.txtTvrtka.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtTvrtka.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtTvrtka.Location = new System.Drawing.Point(214, 236);
+            this.txtTvrtka.Multiline = false;
+            this.txtTvrtka.Name = "txtTvrtka";
+            this.txtTvrtka.SelectedText = "";
+            this.txtTvrtka.Size = new System.Drawing.Size(280, 23);
+            this.txtTvrtka.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTvrtka.StyleManager = null;
+            this.txtTvrtka.TabIndex = 27;
+            this.txtTvrtka.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTvrtka.UseStyleColors = false;
+            // 
+            // txtAdresa
+            // 
+            this.txtAdresa.CustomBackground = false;
+            this.txtAdresa.CustomForeColor = false;
+            this.txtAdresa.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtAdresa.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtAdresa.Location = new System.Drawing.Point(214, 293);
+            this.txtAdresa.Multiline = false;
+            this.txtAdresa.Name = "txtAdresa";
+            this.txtAdresa.SelectedText = "";
+            this.txtAdresa.Size = new System.Drawing.Size(280, 23);
+            this.txtAdresa.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAdresa.StyleManager = null;
+            this.txtAdresa.TabIndex = 28;
+            this.txtAdresa.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAdresa.UseStyleColors = false;
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.CustomBackground = false;
+            this.txtTelefon.CustomForeColor = false;
+            this.txtTelefon.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtTelefon.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtTelefon.Location = new System.Drawing.Point(214, 349);
+            this.txtTelefon.Multiline = false;
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.SelectedText = "";
+            this.txtTelefon.Size = new System.Drawing.Size(280, 23);
+            this.txtTelefon.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTelefon.StyleManager = null;
+            this.txtTelefon.TabIndex = 29;
+            this.txtTelefon.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTelefon.UseStyleColors = false;
+            // 
+            // txtFaks
+            // 
+            this.txtFaks.CustomBackground = false;
+            this.txtFaks.CustomForeColor = false;
+            this.txtFaks.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtFaks.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtFaks.Location = new System.Drawing.Point(214, 404);
+            this.txtFaks.Multiline = false;
+            this.txtFaks.Name = "txtFaks";
+            this.txtFaks.SelectedText = "";
+            this.txtFaks.Size = new System.Drawing.Size(280, 23);
+            this.txtFaks.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFaks.StyleManager = null;
+            this.txtFaks.TabIndex = 30;
+            this.txtFaks.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFaks.UseStyleColors = false;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(186, 439);
+            this.txtEmail.CustomBackground = false;
+            this.txtEmail.CustomForeColor = false;
+            this.txtEmail.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtEmail.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtEmail.Location = new System.Drawing.Point(214, 456);
+            this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(250, 20);
-            this.txtEmail.TabIndex = 13;
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(280, 23);
+            this.txtEmail.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtEmail.StyleManager = null;
+            this.txtEmail.TabIndex = 31;
+            this.txtEmail.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEmail.UseStyleColors = false;
             // 
-            // btnDodajDobavljac
+            // lblDodajDobavljacaa
             // 
-            this.btnDodajDobavljac.Location = new System.Drawing.Point(186, 495);
-            this.btnDodajDobavljac.Name = "btnDodajDobavljac";
-            this.btnDodajDobavljac.Size = new System.Drawing.Size(250, 43);
-            this.btnDodajDobavljac.TabIndex = 15;
-            this.btnDodajDobavljac.Text = "Dodaj dobavljača";
-            this.btnDodajDobavljac.UseVisualStyleBackColor = true;
-            this.btnDodajDobavljac.Click += new System.EventHandler(this.btnDodajDobavljac_Click);
+            this.lblDodajDobavljacaa.AutoSize = true;
+            this.lblDodajDobavljacaa.CustomBackground = true;
+            this.lblDodajDobavljacaa.CustomForeColor = false;
+            this.lblDodajDobavljacaa.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblDodajDobavljacaa.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblDodajDobavljacaa.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblDodajDobavljacaa.Location = new System.Drawing.Point(282, 44);
+            this.lblDodajDobavljacaa.Name = "lblDodajDobavljacaa";
+            this.lblDodajDobavljacaa.Size = new System.Drawing.Size(143, 25);
+            this.lblDodajDobavljacaa.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblDodajDobavljacaa.StyleManager = null;
+            this.lblDodajDobavljacaa.TabIndex = 32;
+            this.lblDodajDobavljacaa.Text = "Dodaj dobavljača";
+            this.lblDodajDobavljacaa.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblDodajDobavljacaa.UseStyleColors = false;
             // 
-            // lblDodajDobavljaca
+            // btnDodajDobavljaca
             // 
-            this.lblDodajDobavljaca.AutoSize = true;
-            this.lblDodajDobavljaca.Location = new System.Drawing.Point(186, 35);
-            this.lblDodajDobavljaca.Name = "lblDodajDobavljaca";
-            this.lblDodajDobavljaca.Size = new System.Drawing.Size(90, 13);
-            this.lblDodajDobavljaca.TabIndex = 16;
-            this.lblDodajDobavljaca.Text = "Dodaj dobavljača";
+            this.btnDodajDobavljaca.Highlight = false;
+            this.btnDodajDobavljaca.Location = new System.Drawing.Point(586, 291);
+            this.btnDodajDobavljaca.Name = "btnDodajDobavljaca";
+            this.btnDodajDobavljaca.Size = new System.Drawing.Size(280, 80);
+            this.btnDodajDobavljaca.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnDodajDobavljaca.StyleManager = null;
+            this.btnDodajDobavljaca.TabIndex = 33;
+            this.btnDodajDobavljaca.Text = "Dodaj ";
+            this.btnDodajDobavljaca.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajDobavljaca.UseWaitCursor = true;
+            this.btnDodajDobavljaca.Click += new System.EventHandler(this.btnDodajDobavljaca_Click);
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(521, 515);
+            this.btnOdustani.Highlight = false;
+            this.btnOdustani.Location = new System.Drawing.Point(586, 404);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
-            this.btnOdustani.TabIndex = 17;
-            this.btnOdustani.TabStop = false;
+            this.btnOdustani.Size = new System.Drawing.Size(280, 80);
+            this.btnOdustani.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnOdustani.StyleManager = null;
+            this.btnOdustani.TabIndex = 34;
             this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            this.btnOdustani.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(124, 573);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(682, 226);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDobavljaciDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 581);
+            this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.lblDodajDobavljaca);
-            this.Controls.Add(this.btnDodajDobavljac);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.btnDodajDobavljaca);
+            this.Controls.Add(this.lblDodajDobavljacaa);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblFaks);
             this.Controls.Add(this.txtFaks);
-            this.Controls.Add(this.lblTelefon);
             this.Controls.Add(this.txtTelefon);
-            this.Controls.Add(this.lblAdresa);
             this.Controls.Add(this.txtAdresa);
-            this.Controls.Add(this.lblTvrtka);
             this.Controls.Add(this.txtTvrtka);
-            this.Controls.Add(this.lblPrezime);
             this.Controls.Add(this.txtPrezime);
-            this.Controls.Add(this.lblIme);
             this.Controls.Add(this.txtIme);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblFaks);
+            this.Controls.Add(this.lblTelefon);
+            this.Controls.Add(this.lblAdresa);
+            this.Controls.Add(this.lblTvrtka);
+            this.Controls.Add(this.lblPrezime);
+            this.Controls.Add(this.lblIme);
             this.Name = "frmDobavljaciDodaj";
-            this.Text = "DobavljačiDodaj";
+            this.Text = "Dodaj dobavljača";
             this.Load += new System.EventHandler(this.DobavljačiDodaj_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,22 +384,23 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtIme;
-        private System.Windows.Forms.Label lblIme;
-        private System.Windows.Forms.Label lblPrezime;
-        private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.Label lblTvrtka;
-        private System.Windows.Forms.TextBox txtTvrtka;
-        private System.Windows.Forms.Label lblAdresa;
-        private System.Windows.Forms.TextBox txtAdresa;
-        private System.Windows.Forms.Label lblTelefon;
-        private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.Label lblFaks;
-        private System.Windows.Forms.TextBox txtFaks;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Button btnDodajDobavljac;
-        private System.Windows.Forms.Label lblDodajDobavljaca;
-        private System.Windows.Forms.Button btnOdustani;
+        private MetroFramework.Controls.MetroLabel lblIme;
+        private MetroFramework.Controls.MetroLabel lblPrezime;
+        private MetroFramework.Controls.MetroLabel lblTvrtka;
+        private MetroFramework.Controls.MetroLabel lblAdresa;
+        private MetroFramework.Controls.MetroLabel lblTelefon;
+        private MetroFramework.Controls.MetroLabel lblFaks;
+        private MetroFramework.Controls.MetroLabel lblEmail;
+        private MetroFramework.Controls.MetroTextBox txtIme;
+        private MetroFramework.Controls.MetroTextBox txtPrezime;
+        private MetroFramework.Controls.MetroTextBox txtTvrtka;
+        private MetroFramework.Controls.MetroTextBox txtAdresa;
+        private MetroFramework.Controls.MetroTextBox txtTelefon;
+        private MetroFramework.Controls.MetroTextBox txtFaks;
+        private MetroFramework.Controls.MetroTextBox txtEmail;
+        private MetroFramework.Controls.MetroLabel lblDodajDobavljacaa;
+        private MetroFramework.Controls.MetroButton btnDodajDobavljaca;
+        private MetroFramework.Controls.MetroButton btnOdustani;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

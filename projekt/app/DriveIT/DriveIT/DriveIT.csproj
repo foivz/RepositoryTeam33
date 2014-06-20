@@ -395,11 +395,17 @@
     <EmbeddedResource Include="ModeliVozilaDetalji.resx">
       <DependentUpon>ModeliVozilaDetalji.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModeliVozilaDodaj.resx">
+      <DependentUpon>ModeliVozilaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NalogKreiraj.resx">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parkiralista.resx">
       <DependentUpon>Parkiralista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkiralistaDetalji.resx">
+      <DependentUpon>ParkiralistaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParkiralistaDodaj.resx">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VrsteVozilaDetalji.resx">
       <DependentUpon>VrsteVozilaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VrsteVozilaDodaj.resx">
+      <DependentUpon>VrsteVozilaDodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

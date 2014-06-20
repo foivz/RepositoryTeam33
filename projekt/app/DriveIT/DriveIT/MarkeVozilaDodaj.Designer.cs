@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 311);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodajParking);
             this.Controls.Add(this.lblDodajMarkuVozila);

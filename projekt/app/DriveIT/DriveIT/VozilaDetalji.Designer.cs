@@ -329,7 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 524);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.prodajBtn);
             this.Controls.Add(this.btnNalog);
             this.Controls.Add(this.txtIdVozilo);

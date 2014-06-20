@@ -41,14 +41,61 @@ namespace DriveIT
             txtEmail.Text = dobavljac.email;
         }
 
-        private void btnAžurirajDobavljaca_Click(object sender, EventArgs e)
-        {
+        /* private void btnAžurirajDobavljaca_Click(object sender, EventArgs e)
+         {
 
+             T33_DBEntities db = new T33_DBEntities();
+
+             int id = Convert.ToInt32(txtId.Text);
+
+             dobavljac dobavljac = db.dobavljac.First(i=> i.id_dobavljac == id);
+
+             dobavljac.ime = txtIme.Text;
+             dobavljac.prezime = txtPrezime.Text;
+             dobavljac.tvrtka = txtTvrtka.Text;
+             dobavljac.adresa = txtAdresa.Text;
+             dobavljac.email = txtEmail.Text;
+             dobavljac.telefon = txtTelefon.Text;
+             dobavljac.faks = txtFaks.Text;
+
+             db.SaveChanges();
+
+             MessageBox.Show("Dobavljaci su  uspješno ažurirani !");
+             System.Threading.Thread.Sleep(700);
+             this.Close();
+
+          } 
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }  */
+
+       private void btnDeleteDobavljac_Click(object sender, EventArgs e)
+        {
             T33_DBEntities db = new T33_DBEntities();
 
             int id = Convert.ToInt32(txtId.Text);
 
-            dobavljac dobavljac = db.dobavljac.First(i=> i.id_dobavljac == id);
+            dobavljac dobavljac = db.dobavljac.First(i => i.id_dobavljac == id);
+            db.dobavljac.Remove(dobavljac);
+            db.SaveChanges();
+
+
+            MessageBox.Show("Dobavljač uspješno obrisan");
+            System.Threading.Thread.Sleep(700);
+            this.Close();
+
+        }
+        
+
+        private void btnAzurirajDobavljaca_Click(object sender, EventArgs e)
+        {
+            T33_DBEntities db = new T33_DBEntities();
+
+            int id = Convert.ToInt32(txtId.Text);
+
+            dobavljac dobavljac = db.dobavljac.First(i => i.id_dobavljac == id);
 
             dobavljac.ime = txtIme.Text;
             dobavljac.prezime = txtPrezime.Text;
@@ -63,28 +110,17 @@ namespace DriveIT
             MessageBox.Show("Dobavljaci su  uspješno ažurirani !");
             System.Threading.Thread.Sleep(700);
             this.Close();
-
         }
+
+       
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnDeleteDobavljac_Click(object sender, EventArgs e)
+        private void btnObrisi_Click(object sender, EventArgs e)
         {
-            T33_DBEntities db = new T33_DBEntities();
-
-            int id = Convert.ToInt32(txtId.Text);
-
-            dobavljac dobavljac = db.dobavljac.First(i => i.id_dobavljac == id);
-            db.dobavljac.Remove(dobavljac);
-            db.SaveChanges();
-
-
-            MessageBox.Show("Dobavljač uspješno obrisan");
-            System.Threading.Thread.Sleep(700);
-            this.Close();
 
         }
 

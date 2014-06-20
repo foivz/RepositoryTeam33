@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDobavljaci));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.LblPretragaDobavljaci = new MetroFramework.Controls.MetroLabel();
-            this.txtPretragaDobavljaci = new MetroFramework.Controls.MetroTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnDodajDobavljaca = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.btnOsvjezi = new MetroFramework.Controls.MetroButton();
             this.iddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +42,17 @@
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LblPretragaDobavljaci = new MetroFramework.Controls.MetroLabel();
+            this.txtPretragaDobavljaci = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDodajDobavljaca = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnOsvjezi = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dobavljacBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dobavljacBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -77,6 +77,70 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // iddobavljacDataGridViewTextBoxColumn
+            // 
+            this.iddobavljacDataGridViewTextBoxColumn.DataPropertyName = "id_dobavljac";
+            resources.ApplyResources(this.iddobavljacDataGridViewTextBoxColumn, "iddobavljacDataGridViewTextBoxColumn");
+            this.iddobavljacDataGridViewTextBoxColumn.Name = "iddobavljacDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            resources.ApplyResources(this.imeDataGridViewTextBoxColumn, "imeDataGridViewTextBoxColumn");
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            resources.ApplyResources(this.prezimeDataGridViewTextBoxColumn, "prezimeDataGridViewTextBoxColumn");
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // tvrtkaDataGridViewTextBoxColumn
+            // 
+            this.tvrtkaDataGridViewTextBoxColumn.DataPropertyName = "tvrtka";
+            resources.ApplyResources(this.tvrtkaDataGridViewTextBoxColumn, "tvrtkaDataGridViewTextBoxColumn");
+            this.tvrtkaDataGridViewTextBoxColumn.Name = "tvrtkaDataGridViewTextBoxColumn";
+            // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
+            resources.ApplyResources(this.adresaDataGridViewTextBoxColumn, "adresaDataGridViewTextBoxColumn");
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
+            resources.ApplyResources(this.telefonDataGridViewTextBoxColumn, "telefonDataGridViewTextBoxColumn");
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            // 
+            // faksDataGridViewTextBoxColumn
+            // 
+            this.faksDataGridViewTextBoxColumn.DataPropertyName = "faks";
+            resources.ApplyResources(this.faksDataGridViewTextBoxColumn, "faksDataGridViewTextBoxColumn");
+            this.faksDataGridViewTextBoxColumn.Name = "faksDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            resources.ApplyResources(this.emailDataGridViewTextBoxColumn, "emailDataGridViewTextBoxColumn");
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // dodatnaopremaDataGridViewTextBoxColumn
+            // 
+            this.dodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "dodatna_oprema";
+            resources.ApplyResources(this.dodatnaopremaDataGridViewTextBoxColumn, "dodatnaopremaDataGridViewTextBoxColumn");
+            this.dodatnaopremaDataGridViewTextBoxColumn.Name = "dodatnaopremaDataGridViewTextBoxColumn";
+            // 
+            // ugovorDataGridViewTextBoxColumn
+            // 
+            this.ugovorDataGridViewTextBoxColumn.DataPropertyName = "ugovor";
+            resources.ApplyResources(this.ugovorDataGridViewTextBoxColumn, "ugovorDataGridViewTextBoxColumn");
+            this.ugovorDataGridViewTextBoxColumn.Name = "ugovorDataGridViewTextBoxColumn";
+            // 
+            // dobavljacBindingSource
+            // 
+            this.dobavljacBindingSource.DataSource = typeof(DriveIT.Database.dobavljac);
             // 
             // LblPretragaDobavljaci
             // 
@@ -150,70 +214,6 @@
             this.btnOsvjezi.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
             // 
-            // iddobavljacDataGridViewTextBoxColumn
-            // 
-            this.iddobavljacDataGridViewTextBoxColumn.DataPropertyName = "id_dobavljac";
-            resources.ApplyResources(this.iddobavljacDataGridViewTextBoxColumn, "iddobavljacDataGridViewTextBoxColumn");
-            this.iddobavljacDataGridViewTextBoxColumn.Name = "iddobavljacDataGridViewTextBoxColumn";
-            // 
-            // imeDataGridViewTextBoxColumn
-            // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            resources.ApplyResources(this.imeDataGridViewTextBoxColumn, "imeDataGridViewTextBoxColumn");
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            resources.ApplyResources(this.prezimeDataGridViewTextBoxColumn, "prezimeDataGridViewTextBoxColumn");
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
-            // 
-            // tvrtkaDataGridViewTextBoxColumn
-            // 
-            this.tvrtkaDataGridViewTextBoxColumn.DataPropertyName = "tvrtka";
-            resources.ApplyResources(this.tvrtkaDataGridViewTextBoxColumn, "tvrtkaDataGridViewTextBoxColumn");
-            this.tvrtkaDataGridViewTextBoxColumn.Name = "tvrtkaDataGridViewTextBoxColumn";
-            // 
-            // adresaDataGridViewTextBoxColumn
-            // 
-            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
-            resources.ApplyResources(this.adresaDataGridViewTextBoxColumn, "adresaDataGridViewTextBoxColumn");
-            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
-            // 
-            // telefonDataGridViewTextBoxColumn
-            // 
-            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
-            resources.ApplyResources(this.telefonDataGridViewTextBoxColumn, "telefonDataGridViewTextBoxColumn");
-            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
-            // 
-            // faksDataGridViewTextBoxColumn
-            // 
-            this.faksDataGridViewTextBoxColumn.DataPropertyName = "faks";
-            resources.ApplyResources(this.faksDataGridViewTextBoxColumn, "faksDataGridViewTextBoxColumn");
-            this.faksDataGridViewTextBoxColumn.Name = "faksDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            resources.ApplyResources(this.emailDataGridViewTextBoxColumn, "emailDataGridViewTextBoxColumn");
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // dodatnaopremaDataGridViewTextBoxColumn
-            // 
-            this.dodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "dodatna_oprema";
-            resources.ApplyResources(this.dodatnaopremaDataGridViewTextBoxColumn, "dodatnaopremaDataGridViewTextBoxColumn");
-            this.dodatnaopremaDataGridViewTextBoxColumn.Name = "dodatnaopremaDataGridViewTextBoxColumn";
-            // 
-            // ugovorDataGridViewTextBoxColumn
-            // 
-            this.ugovorDataGridViewTextBoxColumn.DataPropertyName = "ugovor";
-            resources.ApplyResources(this.ugovorDataGridViewTextBoxColumn, "ugovorDataGridViewTextBoxColumn");
-            this.ugovorDataGridViewTextBoxColumn.Name = "ugovorDataGridViewTextBoxColumn";
-            // 
-            // dobavljacBindingSource
-            // 
-            this.dobavljacBindingSource.DataSource = typeof(DriveIT.Database.dobavljac);
-            // 
             // frmDobavljaci
             // 
             resources.ApplyResources(this, "$this");
@@ -229,9 +229,9 @@
             this.Name = "frmDobavljaci";
             this.Load += new System.EventHandler(this.frmDobavljaci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dobavljacBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dobavljacBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -32,12 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKupci));
             this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblPretragaKupci = new MetroFramework.Controls.MetroLabel();
-            this.txtPretragaKupci = new MetroFramework.Controls.MetroTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnDodajNovogKupca = new MetroFramework.Controls.MetroButton();
-            this.btnAzuriraj = new MetroFramework.Controls.MetroButton();
             this.idkupacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipkupcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,17 +44,23 @@
             this.tipkupca1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kupacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblPretragaKupci = new MetroFramework.Controls.MetroLabel();
+            this.txtPretragaKupci = new MetroFramework.Controls.MetroTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDodajNovogKupca = new MetroFramework.Controls.MetroButton();
+            this.btnAzuriraj = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIzlaz
             // 
             this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(858, 714);
+            this.btnIzlaz.Location = new System.Drawing.Point(858, 649);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(101, 26);
             this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
@@ -92,100 +92,12 @@
             this.dataGridView1.DataSource = this.kupacBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(25, 151);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(934, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(934, 331);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // lblPretragaKupci
-            // 
-            this.lblPretragaKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPretragaKupci.AutoSize = true;
-            this.lblPretragaKupci.CustomBackground = true;
-            this.lblPretragaKupci.CustomForeColor = false;
-            this.lblPretragaKupci.FontSize = MetroFramework.MetroLabelSize.Medium;
-            this.lblPretragaKupci.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.lblPretragaKupci.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblPretragaKupci.Location = new System.Drawing.Point(685, 81);
-            this.lblPretragaKupci.Name = "lblPretragaKupci";
-            this.lblPretragaKupci.Size = new System.Drawing.Size(60, 19);
-            this.lblPretragaKupci.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblPretragaKupci.StyleManager = null;
-            this.lblPretragaKupci.TabIndex = 2;
-            this.lblPretragaKupci.Text = "Pretraga";
-            this.lblPretragaKupci.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblPretragaKupci.UseStyleColors = false;
-            // 
-            // txtPretragaKupci
-            // 
-            this.txtPretragaKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPretragaKupci.CustomBackground = false;
-            this.txtPretragaKupci.CustomForeColor = false;
-            this.txtPretragaKupci.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.txtPretragaKupci.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtPretragaKupci.Location = new System.Drawing.Point(751, 77);
-            this.txtPretragaKupci.Multiline = false;
-            this.txtPretragaKupci.Name = "txtPretragaKupci";
-            this.txtPretragaKupci.SelectedText = "";
-            this.txtPretragaKupci.Size = new System.Drawing.Size(150, 23);
-            this.txtPretragaKupci.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPretragaKupci.StyleManager = null;
-            this.txtPretragaKupci.TabIndex = 3;
-            this.txtPretragaKupci.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPretragaKupci.UseStyleColors = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(907, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 701);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(358, 104);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnDodajNovogKupca
-            // 
-            this.btnDodajNovogKupca.Highlight = false;
-            this.btnDodajNovogKupca.Location = new System.Drawing.Point(67, 77);
-            this.btnDodajNovogKupca.Name = "btnDodajNovogKupca";
-            this.btnDodajNovogKupca.Size = new System.Drawing.Size(160, 23);
-            this.btnDodajNovogKupca.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnDodajNovogKupca.StyleManager = null;
-            this.btnDodajNovogKupca.TabIndex = 8;
-            this.btnDodajNovogKupca.Text = "Dodaj novog kupca";
-            this.btnDodajNovogKupca.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnDodajNovogKupca.Click += new System.EventHandler(this.btnDodajNovogKupca_Click);
-            // 
-            // btnAzuriraj
-            // 
-            this.btnAzuriraj.Highlight = false;
-            this.btnAzuriraj.Location = new System.Drawing.Point(284, 77);
-            this.btnAzuriraj.Name = "btnAzuriraj";
-            this.btnAzuriraj.Size = new System.Drawing.Size(160, 23);
-            this.btnAzuriraj.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnAzuriraj.StyleManager = null;
-            this.btnAzuriraj.TabIndex = 9;
-            this.btnAzuriraj.Text = "Osvježi prikaz";
-            this.btnAzuriraj.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
             // idkupacDataGridViewTextBoxColumn
             // 
@@ -257,11 +169,99 @@
             // 
             this.kupacBindingSource.DataSource = typeof(DriveIT.Database.kupac);
             // 
+            // lblPretragaKupci
+            // 
+            this.lblPretragaKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPretragaKupci.AutoSize = true;
+            this.lblPretragaKupci.CustomBackground = true;
+            this.lblPretragaKupci.CustomForeColor = false;
+            this.lblPretragaKupci.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblPretragaKupci.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblPretragaKupci.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblPretragaKupci.Location = new System.Drawing.Point(685, 81);
+            this.lblPretragaKupci.Name = "lblPretragaKupci";
+            this.lblPretragaKupci.Size = new System.Drawing.Size(60, 19);
+            this.lblPretragaKupci.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblPretragaKupci.StyleManager = null;
+            this.lblPretragaKupci.TabIndex = 2;
+            this.lblPretragaKupci.Text = "Pretraga";
+            this.lblPretragaKupci.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblPretragaKupci.UseStyleColors = false;
+            // 
+            // txtPretragaKupci
+            // 
+            this.txtPretragaKupci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPretragaKupci.CustomBackground = false;
+            this.txtPretragaKupci.CustomForeColor = false;
+            this.txtPretragaKupci.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtPretragaKupci.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtPretragaKupci.Location = new System.Drawing.Point(751, 77);
+            this.txtPretragaKupci.Multiline = false;
+            this.txtPretragaKupci.Name = "txtPretragaKupci";
+            this.txtPretragaKupci.SelectedText = "";
+            this.txtPretragaKupci.Size = new System.Drawing.Size(150, 23);
+            this.txtPretragaKupci.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPretragaKupci.StyleManager = null;
+            this.txtPretragaKupci.TabIndex = 3;
+            this.txtPretragaKupci.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPretragaKupci.UseStyleColors = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(907, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(25, 636);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(358, 104);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnDodajNovogKupca
+            // 
+            this.btnDodajNovogKupca.Highlight = false;
+            this.btnDodajNovogKupca.Location = new System.Drawing.Point(67, 77);
+            this.btnDodajNovogKupca.Name = "btnDodajNovogKupca";
+            this.btnDodajNovogKupca.Size = new System.Drawing.Size(160, 23);
+            this.btnDodajNovogKupca.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnDodajNovogKupca.StyleManager = null;
+            this.btnDodajNovogKupca.TabIndex = 8;
+            this.btnDodajNovogKupca.Text = "Dodaj novog kupca";
+            this.btnDodajNovogKupca.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajNovogKupca.Click += new System.EventHandler(this.btnDodajNovogKupca_Click);
+            // 
+            // btnAzuriraj
+            // 
+            this.btnAzuriraj.Highlight = false;
+            this.btnAzuriraj.Location = new System.Drawing.Point(284, 77);
+            this.btnAzuriraj.Name = "btnAzuriraj";
+            this.btnAzuriraj.Size = new System.Drawing.Size(160, 23);
+            this.btnAzuriraj.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnAzuriraj.StyleManager = null;
+            this.btnAzuriraj.TabIndex = 9;
+            this.btnAzuriraj.Text = "Osvježi prikaz";
+            this.btnAzuriraj.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
+            // 
             // frmKupci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.btnDodajNovogKupca);
             this.Controls.Add(this.pictureBox2);
@@ -275,9 +275,9 @@
             this.Text = "Kupci";
             this.Load += new System.EventHandler(this.frmKupci_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kupacBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

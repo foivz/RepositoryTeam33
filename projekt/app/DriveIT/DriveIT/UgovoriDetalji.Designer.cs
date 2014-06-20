@@ -161,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 478);
+            this.ClientSize = new System.Drawing.Size(984, 696);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtId);

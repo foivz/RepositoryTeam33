@@ -114,7 +114,7 @@
             this.btnTlocrt.Highlight = false;
             this.btnTlocrt.Location = new System.Drawing.Point(395, 84);
             this.btnTlocrt.Name = "btnTlocrt";
-            this.btnTlocrt.Size = new System.Drawing.Size(577, 578);
+            this.btnTlocrt.Size = new System.Drawing.Size(577, 518);
             this.btnTlocrt.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnTlocrt.StyleManager = null;
             this.btnTlocrt.TabIndex = 9;
@@ -240,7 +240,7 @@
             // metroButtnIzlaz
             // 
             this.metroButtnIzlaz.Highlight = false;
-            this.metroButtnIzlaz.Location = new System.Drawing.Point(62, 641);
+            this.metroButtnIzlaz.Location = new System.Drawing.Point(62, 623);
             this.metroButtnIzlaz.Name = "metroButtnIzlaz";
             this.metroButtnIzlaz.Size = new System.Drawing.Size(280, 80);
             this.metroButtnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
@@ -254,7 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(984, 701);
             this.Controls.Add(this.metroButtnIzlaz);
             this.Controls.Add(this.metroBtnNalozi);
             this.Controls.Add(this.btnTlocrt);
