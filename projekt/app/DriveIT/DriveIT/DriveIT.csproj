@@ -160,6 +160,12 @@
     <Compile Include="DijeloviServis.Designer.cs">
       <DependentUpon>DijeloviServis.cs</DependentUpon>
     </Compile>
+    <Compile Include="DioDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DioDodaj.Designer.cs">
+      <DependentUpon>DioDodaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dobavljaci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,12 @@
     <Compile Include="Nalozi.Designer.cs">
       <DependentUpon>Nalozi.cs</DependentUpon>
     </Compile>
+    <Compile Include="NaloziDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaloziDetalji.Designer.cs">
+      <DependentUpon>NaloziDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parkiralista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +381,9 @@
     <EmbeddedResource Include="DijeloviServis.resx">
       <DependentUpon>DijeloviServis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DioDodaj.resx">
+      <DependentUpon>DioDodaj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dobavljaci.resx">
       <DependentUpon>Dobavljaci.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nalozi.resx">
       <DependentUpon>Nalozi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaloziDetalji.resx">
+      <DependentUpon>NaloziDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parkiralista.resx">
       <DependentUpon>Parkiralista.cs</DependentUpon>
