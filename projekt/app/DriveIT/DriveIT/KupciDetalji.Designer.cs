@@ -76,14 +76,14 @@
             // 
             // lblTip
             // 
-            this.lblTip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTip.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTip.AutoSize = true;
             this.lblTip.CustomBackground = true;
             this.lblTip.CustomForeColor = false;
             this.lblTip.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblTip.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblTip.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblTip.Location = new System.Drawing.Point(295, 105);
+            this.lblTip.Location = new System.Drawing.Point(281, 103);
             this.lblTip.Name = "lblTip";
             this.lblTip.Size = new System.Drawing.Size(85, 25);
             this.lblTip.Style = MetroFramework.MetroColorStyle.Blue;
@@ -251,11 +251,11 @@
             this.txtTipKupca.CustomForeColor = false;
             this.txtTipKupca.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtTipKupca.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtTipKupca.Location = new System.Drawing.Point(400, 107);
+            this.txtTipKupca.Location = new System.Drawing.Point(362, 107);
             this.txtTipKupca.Multiline = false;
             this.txtTipKupca.Name = "txtTipKupca";
             this.txtTipKupca.SelectedText = "";
-            this.txtTipKupca.Size = new System.Drawing.Size(75, 23);
+            this.txtTipKupca.Size = new System.Drawing.Size(113, 23);
             this.txtTipKupca.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtTipKupca.StyleManager = null;
             this.txtTipKupca.TabIndex = 69;
@@ -398,7 +398,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel1.Location = new System.Drawing.Point(372, 23);
+            this.metroLabel1.Location = new System.Drawing.Point(385, 24);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(125, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;

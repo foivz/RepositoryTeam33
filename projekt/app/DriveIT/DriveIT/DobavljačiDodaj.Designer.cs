@@ -320,13 +320,13 @@
             this.lblDodajDobavljacaa.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblDodajDobavljacaa.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblDodajDobavljacaa.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblDodajDobavljacaa.Location = new System.Drawing.Point(380, 41);
+            this.lblDodajDobavljacaa.Location = new System.Drawing.Point(369, 44);
             this.lblDodajDobavljacaa.Name = "lblDodajDobavljacaa";
-            this.lblDodajDobavljacaa.Size = new System.Drawing.Size(143, 25);
+            this.lblDodajDobavljacaa.Size = new System.Drawing.Size(196, 25);
             this.lblDodajDobavljacaa.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblDodajDobavljacaa.StyleManager = null;
             this.lblDodajDobavljacaa.TabIndex = 32;
-            this.lblDodajDobavljacaa.Text = "Dodaj dobavljača";
+            this.lblDodajDobavljacaa.Text = "Dodaj novog dobavljača";
             this.lblDodajDobavljacaa.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblDodajDobavljacaa.UseStyleColors = false;
             // 
@@ -334,7 +334,7 @@
             // 
             this.btnDodajDobavljaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajDobavljaca.Highlight = false;
-            this.btnDodajDobavljaca.Location = new System.Drawing.Point(586, 291);
+            this.btnDodajDobavljaca.Location = new System.Drawing.Point(551, 293);
             this.btnDodajDobavljaca.Name = "btnDodajDobavljaca";
             this.btnDodajDobavljaca.Size = new System.Drawing.Size(280, 80);
             this.btnDodajDobavljaca.Style = MetroFramework.MetroColorStyle.Blue;
@@ -349,7 +349,7 @@
             // 
             this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.Highlight = false;
-            this.btnOdustani.Location = new System.Drawing.Point(586, 404);
+            this.btnOdustani.Location = new System.Drawing.Point(551, 399);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(280, 80);
             this.btnOdustani.Style = MetroFramework.MetroColorStyle.Blue;
@@ -364,7 +364,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(124, 573);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 575);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(682, 226);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

@@ -25,6 +25,7 @@ namespace DriveIT
                 txtId.DataSource = db.tip_kupca.ToList();
                 txtId.ValueMember = "id_tip_kupca";
                 txtId.DisplayMember = "naziv";
+                
             }
         }
 
@@ -33,14 +34,17 @@ namespace DriveIT
             
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+        
+
+    
+
+        private void btnOdustani_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnDodajKupca_Click(object sender, EventArgs e)
+        private void btnDodaj_Click(object sender, EventArgs e)
         {
-
             T33_DBEntities db = new T33_DBEntities();
             kupac kupac = new kupac();
 
@@ -54,9 +58,8 @@ namespace DriveIT
             kupac.faks = txtFaks.Text;
 
             db.kupac.Add(kupac);
-            
-            try
 
+            try
             {
 
                 db.SaveChanges();
@@ -76,8 +79,6 @@ namespace DriveIT
                 }
 
             }
-
-
 
 
 

@@ -16,6 +16,7 @@ namespace DriveIT
         public frmKupciDetalji()
         {
             InitializeComponent();
+           
         }
 
         private void frmKupciDetalji_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace DriveIT
             var kupac = db.kupac.Where<kupac>(x => x.id_kupac == b).First<kupac>();
 
             txtId.Text = Convert.ToString(kupac.id_kupac);
-            txtTipKupca.Text = Convert.ToString(kupac.tip_kupca);
+            txtTipKupca.Text = Convert.ToString(kupac.tip_kupca1.naziv);
             txtIme.Text = kupac.ime;
             txtPrezime.Text = kupac.prezime;
             txtTvrtka.Text = kupac.tvrtka;
