@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveIT.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,57 @@ namespace DriveIT
 {
     public partial class frmAplikacija : Form
     {
+        T33_DBEntities db = new T33_DBEntities();
+
         public frmAplikacija()
         {
             InitializeComponent();
+
+           
+                cbParkiralista.DataSource = db.parking.ToList();
+                cbParkiralista.ValueMember = "id_parking";
+                cbParkiralista.DisplayMember = "naziv";
+            
+
+        }
+
+
+        private void prikaziParking() {
+            //vozilo.parking = Convert.ToInt32(txtParking.SelectedValue);
+            int parking ;
+            bool park = Int32.TryParse(cbParkiralista.SelectedValue.ToString(),out parking);
+
+
+            BindingSource upit = new BindingSource();
+            upit.DataSource =
+                        (from v in db.vozilo
+                         join p in db.parking on v.parking equals p.id_parking
+                         join t in db.tip_vozila on v.tip_vozila equals t.id_tip_vozila
+                         join m in db.model_vozila on v.model_vozila equals m.id_model_vozila
+                         where p.id_parking == parking
+                         select new
+                         {
+                             v.id_vozilo,
+                             v.sasija,
+                             v.datum_prve_registracije,
+                             v.datum_nabavke,
+                             v.snaga_kw,
+                             v.kilometri,
+                             tip_vozila = t.naziv,
+                             model_vozila = m.naziv,
+                         }).ToList();
+            voziloBindingSource.DataSource = upit;
+
+        }
+
+
+
+        private void prikaziDetalje(string i)
+        {
+
+            frmVozilaDetalji detalji_vozila = new frmVozilaDetalji();
+            detalji_vozila.getDetails(i);
+            detalji_vozila.ShowDialog();
         }
 
     
@@ -46,6 +95,7 @@ namespace DriveIT
         
         private void frmAplikacija_Load(object sender, EventArgs e)
         {
+            prikaziParking();
             
         }
          
@@ -132,6 +182,17 @@ namespace DriveIT
         {
             frmNalozi nalozi = new frmNalozi();
             nalozi.Show();
+        }
+
+        private void cbParkiralista_SelectedValueChanged(object sender, EventArgs e)
+        {
+            prikaziParking();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
 
       
