@@ -16,6 +16,8 @@ namespace DriveIT
     {
         private BindingSource bs = new BindingSource();
         T33_DBEntities db;
+        int mj;
+
         public frmMehanicar()
         {
             InitializeComponent();
@@ -23,13 +25,39 @@ namespace DriveIT
 
         private void frmMehanicar_Load(object sender, EventArgs e)
         {
-             db = new T33_DBEntities();
-             DateTime vrijeme = DateTime.Now;
-             int mj = 5; /* MJESECI */
-             vrijeme = vrijeme.AddMonths(mj*-1);
 
-             //var vozila = db.vozilo.Where<vozilo>(x => x.zadnje_paljenje == null).ToList<vozilo>();
-             /*notifikacijeGrid.DataSource = vozila;*/
+            this.mj = 4; /* MJESECI */
+            dohvatiNeupaljenaVozila(mj);
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            db.SaveChanges();
+            MessageBox.Show("Ako nije izbacilo grešku, Spremljeno");
+           
+        }
+
+        private void upaliBtn_Click(object sender, EventArgs e)
+        {
+            //DataRow row = (notifikacijeGrid.SelectedRows[0].DataBoundItem as DataRowView).Row;
+            foreach (DataGridViewRow row in notifikacijeGrid.SelectedRows)
+            {
+                vozilo selektiranoVozilo = row.DataBoundItem as vozilo;
+                selektiranoVozilo.zadnje_paljenje = DateTime.Now.Date;
+                db.SaveChanges();
+                dohvatiNeupaljenaVozila(mj);
+                MessageBox.Show("Upalili ste vozilo registracije: "+selektiranoVozilo.registracija, "Poruka o paljenju vozila");
+            }
+
+        }
+        private void dohvatiNeupaljenaVozila(int mj)
+        {
+            db = new T33_DBEntities();
+            DateTime vrijeme = DateTime.Now;
+            vrijeme = vrijeme.AddMonths(mj * -1);
+
+            //var vozila = db.vozilo.Where<vozilo>(x => x.zadnje_paljenje == null).ToList<vozilo>();
+            /*notifikacijeGrid.DataSource = vozila;*/
 
             db.vozilo.Where<vozilo>(x => x.zadnje_paljenje <= vrijeme).Load();
             if (db.vozilo.Where<vozilo>(x => x.zadnje_paljenje <= vrijeme).Count() > 0)
@@ -40,6 +68,7 @@ namespace DriveIT
 
                 notifikacijeGrid.Columns["id_vozilo"].Visible = false;
                 notifikacijeGrid.Columns["sjedista"].Visible = false;
+                notifikacijeGrid.Columns["ugovor"].Visible = false;
                 notifikacijeGrid.Columns["nosivost"].Visible = false;
                 notifikacijeGrid.Columns["prometna"].Visible = false;
                 notifikacijeGrid.Columns["tip_vozila"].Visible = false;
@@ -56,17 +85,10 @@ namespace DriveIT
                 notifikacijeGrid.AllowUserToAddRows = true;
                 notifikacijeGrid.Columns.Add("status", "Status");
                 //notifikacijeGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                notifikacijeGrid.Columns[0].Width = (int) (notifikacijeGrid.Size.Width*0.92);
-                notifikacijeGrid.Rows[0].Cells[0].Value = "Ne postoji vozilo koje nije paljeno duže od "+mj+" mj";
+                notifikacijeGrid.Columns[0].Width = (int)(notifikacijeGrid.Size.Width * 0.92);
+                notifikacijeGrid.Rows[0].Cells[0].Value = "Ne postoji vozilo koje nije paljeno duže od " + mj + " mj";
 
             }
-
-             
-        }
-
-        private void saveBtn_Click(object sender, EventArgs e)
-        {
-            db.SaveChanges();
         }
     }
 }
