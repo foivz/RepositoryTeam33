@@ -68,6 +68,7 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -389,19 +390,29 @@
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Highlight = false;
+            this.metroButton2.Location = new System.Drawing.Point(863, 346);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton2.StyleManager = null;
+            this.metroButton2.TabIndex = 62;
+            this.metroButton2.Text = "Spremi";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // frmVozilaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 588);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.lblNabavna);
             this.Controls.Add(this.cbDobavljac);
@@ -490,5 +501,6 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

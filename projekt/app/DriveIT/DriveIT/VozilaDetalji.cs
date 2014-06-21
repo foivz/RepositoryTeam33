@@ -14,10 +14,41 @@ namespace DriveIT
     public partial class frmVozilaDetalji : Form
     {
         private int idVozila;
+        T33_DBEntities db = new T33_DBEntities();
+
+
         public frmVozilaDetalji()
         {
             InitializeComponent();
+            ucitajDodatnuOpremu();
+
         }
+
+        private void ucitajDodatnuOpremu() {
+
+            BindingSource upit = new BindingSource();
+            /*upit.DataSource =
+                        (from o in db.dodatna_oprema
+                         from pripada in o.vozilo.Where(x => x.id_vozilo == vozilo)
+                         select new
+                         {
+                             u.id_ugovor,
+                             kupac = k.ime + " " + k.prezime,
+                             vozilo = a.naziv + " " + m.naziv,
+                             u.datum,
+                             dobavljac_iddobavljac = d.tvrtka,
+                         }).ToList();*/
+
+            dodatnaopremaBindingSource.DataSource = upit;
+            
+        
+        
+        
+        }
+
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -42,7 +73,7 @@ namespace DriveIT
 
         public void getDetails(string i){
             
-            T33_DBEntities db = new T33_DBEntities();
+            
             int b = int.Parse(i);
             this.idVozila = b;
 
@@ -68,9 +99,6 @@ namespace DriveIT
 
         private void btnAzurirajVozilo_Click(object sender, EventArgs e)
         {
-
-            T33_DBEntities db = new T33_DBEntities();
-
             //vozilo vozilo = db.vozilo.Where<vozilo>(x => x.id_vozilo == b).First<vozilo>();
 
             int id = Convert.ToInt32(txtIdVozilo.Text);
@@ -118,6 +146,12 @@ namespace DriveIT
             frmProdaja prodaja = new frmProdaja(idVozila);
             prodaja.Show();
             
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+            PreglednikSlika.Ucitaj_sliku(txtIdVozilo.Text);
         }
 
     }

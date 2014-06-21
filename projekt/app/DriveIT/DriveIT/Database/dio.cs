@@ -19,6 +19,7 @@ namespace DriveIT.Database
         public string opis { get; set; }
         public Nullable<int> kolicina { get; set; }
         public Nullable<int> cijena { get; set; }
+        public int nalog { get; set; }
     
         public virtual nalog_za_servis nalog_za_servis { get; set; }
     }
