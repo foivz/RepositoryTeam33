@@ -1,6 +1,6 @@
 ﻿namespace DriveIT
 {
-    partial class DodatnaOpremaDodaj
+    partial class frmDodatnaOpremaDodaj
     {
         /// <summary>
         /// Required designer variable.
@@ -33,17 +33,17 @@
             this.lblnaziv = new System.Windows.Forms.Label();
             this.txtNaziv = new System.Windows.Forms.TextBox();
             this.lblModel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
             this.lblBoja = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBoja = new System.Windows.Forms.TextBox();
             this.lblKolicina = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtKolicina = new System.Windows.Forms.TextBox();
             this.lblCijena = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCijena = new System.Windows.Forms.TextBox();
             this.btnDodajDodatnuOpremu = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.lblRaspolozivo = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtRaspolozivo = new System.Windows.Forms.TextBox();
             this.cbDobavljac = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -90,12 +90,12 @@
             this.lblModel.TabIndex = 6;
             this.lblModel.Text = "Model";
             // 
-            // textBox3
+            // txtModel
             // 
-            this.textBox3.Location = new System.Drawing.Point(176, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtModel.Location = new System.Drawing.Point(176, 230);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(205, 20);
+            this.txtModel.TabIndex = 5;
             // 
             // lblBoja
             // 
@@ -106,12 +106,12 @@
             this.lblBoja.TabIndex = 8;
             this.lblBoja.Text = "Boja";
             // 
-            // textBox4
+            // txtBoja
             // 
-            this.textBox4.Location = new System.Drawing.Point(176, 292);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(205, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtBoja.Location = new System.Drawing.Point(176, 292);
+            this.txtBoja.Name = "txtBoja";
+            this.txtBoja.Size = new System.Drawing.Size(205, 20);
+            this.txtBoja.TabIndex = 7;
             // 
             // lblKolicina
             // 
@@ -122,12 +122,12 @@
             this.lblKolicina.TabIndex = 10;
             this.lblKolicina.Text = "Količina";
             // 
-            // textBox5
+            // txtKolicina
             // 
-            this.textBox5.Location = new System.Drawing.Point(176, 357);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(205, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtKolicina.Location = new System.Drawing.Point(176, 357);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(205, 20);
+            this.txtKolicina.TabIndex = 9;
             // 
             // lblCijena
             // 
@@ -138,12 +138,12 @@
             this.lblCijena.TabIndex = 12;
             this.lblCijena.Text = "Cijena";
             // 
-            // textBox6
+            // txtCijena
             // 
-            this.textBox6.Location = new System.Drawing.Point(176, 419);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(205, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtCijena.Location = new System.Drawing.Point(176, 419);
+            this.txtCijena.Name = "txtCijena";
+            this.txtCijena.Size = new System.Drawing.Size(205, 20);
+            this.txtCijena.TabIndex = 11;
             // 
             // btnDodajDodatnuOpremu
             // 
@@ -153,6 +153,7 @@
             this.btnDodajDodatnuOpremu.TabIndex = 13;
             this.btnDodajDodatnuOpremu.Text = "Dodaj ";
             this.btnDodajDodatnuOpremu.UseVisualStyleBackColor = true;
+            this.btnDodajDodatnuOpremu.Click += new System.EventHandler(this.btnDodajDodatnuOpremu_Click);
             // 
             // btnOdustani
             // 
@@ -173,12 +174,12 @@
             this.lblRaspolozivo.TabIndex = 16;
             this.lblRaspolozivo.Text = "Raspoloživo";
             // 
-            // textBox7
+            // txtRaspolozivo
             // 
-            this.textBox7.Location = new System.Drawing.Point(176, 461);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(205, 20);
-            this.textBox7.TabIndex = 15;
+            this.txtRaspolozivo.Location = new System.Drawing.Point(176, 461);
+            this.txtRaspolozivo.Name = "txtRaspolozivo";
+            this.txtRaspolozivo.Size = new System.Drawing.Size(205, 20);
+            this.txtRaspolozivo.TabIndex = 15;
             // 
             // cbDobavljac
             // 
@@ -188,29 +189,29 @@
             this.cbDobavljac.Size = new System.Drawing.Size(205, 21);
             this.cbDobavljac.TabIndex = 17;
             // 
-            // DodatnaOpremaDodaj
+            // frmDodatnaOpremaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 696);
+            this.ClientSize = new System.Drawing.Size(479, 596);
             this.Controls.Add(this.cbDobavljac);
             this.Controls.Add(this.lblRaspolozivo);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtRaspolozivo);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodajDodatnuOpremu);
             this.Controls.Add(this.lblCijena);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.lblKolicina);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.lblBoja);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBoja);
             this.Controls.Add(this.lblModel);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtModel);
             this.Controls.Add(this.lblnaziv);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.lblDobavljac);
             this.Controls.Add(this.lblDodajDodatnuOpremu);
-            this.Name = "DodatnaOpremaDodaj";
+            this.Name = "frmDodatnaOpremaDodaj";
             this.Text = "DodatnaOpremaDodaj";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,17 +225,17 @@
         private System.Windows.Forms.Label lblnaziv;
         private System.Windows.Forms.TextBox txtNaziv;
         private System.Windows.Forms.Label lblModel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.Label lblBoja;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBoja;
         private System.Windows.Forms.Label lblKolicina;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.Label lblCijena;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.Button btnDodajDodatnuOpremu;
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Label lblRaspolozivo;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtRaspolozivo;
         private System.Windows.Forms.ComboBox cbDobavljac;
     }
 }

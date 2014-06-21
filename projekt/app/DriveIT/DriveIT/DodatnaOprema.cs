@@ -25,6 +25,12 @@ namespace DriveIT
             dodatnaopremaBindingSource.DataSource = dodatna_oprema;
         }
 
+        private void prikaziDetalje(string i)
+        {
+            frmDodatnaOpremaDetalji detalji_opreme = new frmDodatnaOpremaDetalji();
+            detalji_opreme.getDetails(i);
+            detalji_opreme.ShowDialog();
+        }
 
 
         private void btnIzlaz_Click(object sender, EventArgs e)
@@ -44,7 +50,14 @@ namespace DriveIT
 
         private void btnDodajDodatnuOpremu_Click(object sender, EventArgs e)
         {
+            frmDodatnaOpremaDodaj dodaj_opremu = new frmDodatnaOpremaDodaj();
+            dodaj_opremu.Show();
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
 
        

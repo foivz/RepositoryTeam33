@@ -33,6 +33,8 @@
             this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnDodajDodatnuOpremu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblVrsteVozila = new System.Windows.Forms.Label();
+            this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iddodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljaciddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +45,6 @@
             this.raspoloživoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblVrsteVozila = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodatnaopremaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -95,74 +97,12 @@
             this.dobavljacDataGridViewTextBoxColumn,
             this.voziloDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dodatnaopremaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 193);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 198);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(743, 220);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // iddodatnaopremaDataGridViewTextBoxColumn
-            // 
-            this.iddodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "id_dodatna_oprema";
-            this.iddodatnaopremaDataGridViewTextBoxColumn.HeaderText = "id_dodatna_oprema";
-            this.iddodatnaopremaDataGridViewTextBoxColumn.Name = "iddodatnaopremaDataGridViewTextBoxColumn";
-            // 
-            // dobavljaciddobavljacDataGridViewTextBoxColumn
-            // 
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac_iddobavljac";
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac_iddobavljac";
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.Name = "dobavljaciddobavljacDataGridViewTextBoxColumn";
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            // 
-            // bojaDataGridViewTextBoxColumn
-            // 
-            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "boja";
-            this.bojaDataGridViewTextBoxColumn.HeaderText = "boja";
-            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
-            // 
-            // kolicinaDataGridViewTextBoxColumn
-            // 
-            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
-            // 
-            // cijenaDataGridViewTextBoxColumn
-            // 
-            this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
-            this.cijenaDataGridViewTextBoxColumn.HeaderText = "cijena";
-            this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
-            // 
-            // raspoloživoDataGridViewTextBoxColumn
-            // 
-            this.raspoloživoDataGridViewTextBoxColumn.DataPropertyName = "raspoloživo";
-            this.raspoloživoDataGridViewTextBoxColumn.HeaderText = "raspoloživo";
-            this.raspoloživoDataGridViewTextBoxColumn.Name = "raspoloživoDataGridViewTextBoxColumn";
-            // 
-            // dobavljacDataGridViewTextBoxColumn
-            // 
-            this.dobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac";
-            this.dobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac";
-            this.dobavljacDataGridViewTextBoxColumn.Name = "dobavljacDataGridViewTextBoxColumn";
-            // 
-            // voziloDataGridViewTextBoxColumn
-            // 
-            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
-            // 
-            // dodatnaopremaBindingSource
-            // 
-            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblVrsteVozila
             // 
@@ -172,6 +112,83 @@
             this.lblVrsteVozila.Size = new System.Drawing.Size(61, 13);
             this.lblVrsteVozila.TabIndex = 10;
             this.lblVrsteVozila.Text = "Vrste vozila";
+            // 
+            // dodatnaopremaBindingSource
+            // 
+            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
+            // 
+            // iddodatnaopremaDataGridViewTextBoxColumn
+            // 
+            this.iddodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "id_dodatna_oprema";
+            this.iddodatnaopremaDataGridViewTextBoxColumn.HeaderText = "id_dodatna_oprema";
+            this.iddodatnaopremaDataGridViewTextBoxColumn.MinimumWidth = 3;
+            this.iddodatnaopremaDataGridViewTextBoxColumn.Name = "iddodatnaopremaDataGridViewTextBoxColumn";
+            this.iddodatnaopremaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dobavljaciddobavljacDataGridViewTextBoxColumn
+            // 
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac_iddobavljac";
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac_iddobavljac";
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.Name = "dobavljaciddobavljacDataGridViewTextBoxColumn";
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bojaDataGridViewTextBoxColumn
+            // 
+            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "boja";
+            this.bojaDataGridViewTextBoxColumn.HeaderText = "boja";
+            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
+            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kolicinaDataGridViewTextBoxColumn
+            // 
+            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
+            this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cijenaDataGridViewTextBoxColumn
+            // 
+            this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
+            this.cijenaDataGridViewTextBoxColumn.HeaderText = "cijena";
+            this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
+            this.cijenaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // raspoloživoDataGridViewTextBoxColumn
+            // 
+            this.raspoloživoDataGridViewTextBoxColumn.DataPropertyName = "raspoloživo";
+            this.raspoloživoDataGridViewTextBoxColumn.HeaderText = "raspoloživo";
+            this.raspoloživoDataGridViewTextBoxColumn.Name = "raspoloživoDataGridViewTextBoxColumn";
+            this.raspoloživoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dobavljacDataGridViewTextBoxColumn
+            // 
+            this.dobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac";
+            this.dobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac";
+            this.dobavljacDataGridViewTextBoxColumn.Name = "dobavljacDataGridViewTextBoxColumn";
+            this.dobavljacDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dobavljacDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // voziloDataGridViewTextBoxColumn
+            // 
+            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
+            this.voziloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.voziloDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmDodatnaOprema
             // 
@@ -200,6 +217,7 @@
         private System.Windows.Forms.Button btnDodajDodatnuOpremu;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblVrsteVozila;
+        private System.Windows.Forms.BindingSource dodatnaopremaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddodatnaopremaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dobavljaciddobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
@@ -210,6 +228,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn raspoloživoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn voziloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dodatnaopremaBindingSource;
     }
 }

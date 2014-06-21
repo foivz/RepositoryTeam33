@@ -183,6 +183,12 @@
     <Compile Include="DodatnaOprema.Designer.cs">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodatnaOpremaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodatnaOpremaDetalji.Designer.cs">
+      <DependentUpon>DodatnaOpremaDetalji.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodatnaOpremaDodaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DodatnaOprema.resx">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodatnaOpremaDetalji.resx">
+      <DependentUpon>DodatnaOpremaDetalji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DodatnaOpremaDodaj.resx">
       <DependentUpon>DodatnaOpremaDodaj.cs</DependentUpon>
