@@ -349,8 +349,7 @@
             // 
             // lblDodaj
             // 
-            this.lblDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodaj.AutoSize = true;
             this.lblDodaj.CustomBackground = true;
             this.lblDodaj.CustomForeColor = false;
