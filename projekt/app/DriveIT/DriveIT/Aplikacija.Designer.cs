@@ -237,6 +237,7 @@
             this.metroBtnNalozi.TabIndex = 11;
             this.metroBtnNalozi.Text = "Nalozi";
             this.metroBtnNalozi.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroBtnNalozi.Click += new System.EventHandler(this.metroBtnNalozi_Click);
             // 
             // metroButtnIzlaz
             // 

@@ -268,6 +268,12 @@
     <Compile Include="NalogKreiraj.Designer.cs">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nalozi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nalozi.Designer.cs">
+      <DependentUpon>Nalozi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parkiralista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,6 +417,9 @@
     <EmbeddedResource Include="NalogKreiraj.resx">
       <DependentUpon>NalogKreiraj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nalozi.resx">
+      <DependentUpon>Nalozi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parkiralista.resx">
       <DependentUpon>Parkiralista.cs</DependentUpon>
     </EmbeddedResource>
@@ -479,6 +488,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DriveIT.Database.dobavljac.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.kupac.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.nalog_za_servis.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.ugovor.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.vozilo.datasource" />
     <None Include="Properties\Settings.settings">
