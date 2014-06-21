@@ -31,6 +31,7 @@
           <Property Name="opis" Type="text" />
           <Property Name="kolicina" Type="int" />
           <Property Name="cijena" Type="int" />
+          <Property Name="nalog" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="dobavljac">
           <Key>
@@ -121,11 +122,11 @@
         </EntityType>
         <EntityType Name="pripada">
           <Key>
-            <PropertyRef Name="vozilo" />
-            <PropertyRef Name="dodatna_oprema" />
+            <PropertyRef Name="pripada_vozilu" />
+            <PropertyRef Name="pripada_oprema" />
           </Key>
-          <Property Name="vozilo" Type="int" Nullable="false" />
-          <Property Name="dodatna_oprema" Type="int" Nullable="false" />
+          <Property Name="pripada_vozilu" Type="int" Nullable="false" />
+          <Property Name="pripada_oprema" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="slika_vozilo">
           <Key>
@@ -252,13 +253,13 @@
         </Association>
         <Association Name="FK_dio_nalog_za_servis">
           <End Role="nalog_za_servis" Type="Self.nalog_za_servis" Multiplicity="1" />
-          <End Role="dio" Type="Self.dio" Multiplicity="0..1" />
+          <End Role="dio" Type="Self.dio" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="nalog_za_servis">
               <PropertyRef Name="id_nalog_za_servis" />
             </Principal>
             <Dependent Role="dio">
-              <PropertyRef Name="id_dio" />
+              <PropertyRef Name="nalog" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -330,7 +331,7 @@
               <PropertyRef Name="id_dodatna_oprema" />
             </Principal>
             <Dependent Role="pripada">
-              <PropertyRef Name="dodatna_oprema" />
+              <PropertyRef Name="pripada_oprema" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -342,7 +343,7 @@
               <PropertyRef Name="id_vozilo" />
             </Principal>
             <Dependent Role="pripada">
-              <PropertyRef Name="vozilo" />
+              <PropertyRef Name="pripada_vozilu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -652,6 +653,7 @@
           <Property Name="opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="kolicina" Type="Int32" />
           <Property Name="cijena" Type="Int32" />
+          <Property Name="nalog" Type="Int32" Nullable="false" />
           <NavigationProperty Name="nalog_za_servis" Relationship="T33_DBModel.FK_dio_nalog_za_servis" FromRole="dio" ToRole="nalog_za_servis" />
         </EntityType>
         <EntityType Name="dobavljac">
@@ -886,13 +888,13 @@
         </Association>
         <Association Name="FK_dio_nalog_za_servis">
           <End Type="T33_DBModel.nalog_za_servis" Role="nalog_za_servis" Multiplicity="1" />
-          <End Type="T33_DBModel.dio" Role="dio" Multiplicity="0..1" />
+          <End Type="T33_DBModel.dio" Role="dio" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="nalog_za_servis">
               <PropertyRef Name="id_nalog_za_servis" />
             </Principal>
             <Dependent Role="dio">
-              <PropertyRef Name="id_dio" />
+              <PropertyRef Name="nalog" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1083,6 +1085,7 @@
           <EntitySetMapping Name="dio">
             <EntityTypeMapping TypeName="T33_DBModel.dio">
               <MappingFragment StoreEntitySet="dio">
+                <ScalarProperty Name="nalog" ColumnName="nalog" />
                 <ScalarProperty Name="cijena" ColumnName="cijena" />
                 <ScalarProperty Name="kolicina" ColumnName="kolicina" />
                 <ScalarProperty Name="opis" ColumnName="opis" />
@@ -1271,10 +1274,10 @@
           </EntitySetMapping>
           <AssociationSetMapping Name="pripada" TypeName="T33_DBModel.pripada" StoreEntitySet="pripada">
             <EndProperty Name="vozilo">
-              <ScalarProperty Name="id_vozilo" ColumnName="vozilo" />
+              <ScalarProperty Name="id_vozilo" ColumnName="pripada_vozilu" />
             </EndProperty>
             <EndProperty Name="dodatna_oprema">
-              <ScalarProperty Name="id_dodatna_oprema" ColumnName="dodatna_oprema" />
+              <ScalarProperty Name="id_dodatna_oprema" ColumnName="pripada_oprema" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

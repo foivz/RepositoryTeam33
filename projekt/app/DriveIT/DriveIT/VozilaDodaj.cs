@@ -23,29 +23,29 @@ namespace DriveIT
             InitializeComponent();
 
             /*Tip vozila combobox*/
-            
-            
-                txtTipVozila.DataSource = db.tip_vozila.ToList();
-                txtTipVozila.ValueMember = "id_tip_vozila";
-                txtTipVozila.DisplayMember = "naziv";
-           
-            /*Model vozila combobox*/
-            
-                txtModel.DataSource = db.model_vozila.ToList();
-                txtModel.ValueMember = "id_model_vozila";
-                txtModel.DisplayMember = "naziv";
 
-            /*Parking combobox*/        
-                txtParking.DataSource = db.parking.ToList();
-                txtParking.ValueMember = "id_parking";
-                txtParking.DisplayMember = "naziv";
+
+            txtTipVozila.DataSource = db.tip_vozila.ToList();
+            txtTipVozila.ValueMember = "id_tip_vozila";
+            txtTipVozila.DisplayMember = "naziv";
+
+            /*Model vozila combobox*/
+
+            txtModel.DataSource = db.model_vozila.ToList();
+            txtModel.ValueMember = "id_model_vozila";
+            txtModel.DisplayMember = "naziv";
+
+            /*Parking combobox*/
+            txtParking.DataSource = db.parking.ToList();
+            txtParking.ValueMember = "id_parking";
+            txtParking.DisplayMember = "naziv";
 
             /*Dobavljači combobox*/
-                cbDobavljac.DataSource = db.dobavljac.ToList();
-                cbDobavljac.ValueMember = "id_dobavljac";
-                cbDobavljac.DisplayMember = "tvrtka"; 
+            cbDobavljac.DataSource = db.dobavljac.ToList();
+            cbDobavljac.ValueMember = "id_dobavljac";
+            cbDobavljac.DisplayMember = "tvrtka";
 
-            
+
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace DriveIT
 
         private void btnDodajDobavljac_Click(object sender, EventArgs e)
         {
-            
+
             vozilo vozilo = new vozilo();
 
             /*Dodavanje u tablicu vozila*/
@@ -75,71 +75,77 @@ namespace DriveIT
             vozilo.model_vozila = Convert.ToInt32(txtModel.SelectedValue);
             vozilo.parking = Convert.ToInt32(txtParking.SelectedValue);
 
-            
-           try
+
+            try
             {
-                 db.vozilo.Add(vozilo);
-                 db.SaveChanges();   
-                 
-                 spremiCijene();
-                 spremiUgovore();
-                 db.SaveChanges();
+                db.vozilo.Add(vozilo);
+                db.SaveChanges();
+
+                spremiCijene();
+                spremiUgovore();
+                db.SaveChanges();
+
+                SpremiSlike();
 
                 MessageBox.Show("Vozilo je uspješno dodano !");
                 System.Threading.Thread.Sleep(700);
                 this.Close();
             }
-            catch {
+            catch
+            {
                 MessageBox.Show("Greška pri unosu vozila!");
                 this.Close();
             }
         }
 
-        private  vozilo vratiZadnjeUneseno(){
+        private vozilo vratiZadnjeUneseno()
+        {
             string broj_sasije = txtBrSasije.Text;
             vozilo zadnje_vozilo = db.vozilo.Where<vozilo>(x => x.sasija == broj_sasije).First<vozilo>();
             //var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == 2).First<vozilo>();
             return zadnje_vozilo;
-            
-        }
 
-           
-        private void spremiCijene(){
-
-                vozilo vozilo_uneseno = vratiZadnjeUneseno() ;
-                cijena cijena_vozila = new cijena();
-
-                MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
-
-                cijena_vozila.vozilo = vozilo_uneseno.id_vozilo;
-                cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text);
-                cijena_vozila.nabavna_sa_pdv = 0;
-                cijena_vozila.popravci_ekterni = 0;
-                cijena_vozila.porez = 0;
-                cijena_vozila.popravci_interni = 0;
-                cijena_vozila.datum_izracuna = DateTime.Now.Date;
-                cijena_vozila.tip_poreza_nabavna = 1;
-                cijena_vozila.tip_poreza_prodajna = 1;
-                
-                
-                db.cijena.Add(cijena_vozila);
-                db.SaveChanges();
-                
         }
 
 
-        private void spremiUgovore(){
-                vozilo vozilo_uneseno = vratiZadnjeUneseno();
-                ugovor ugovor_prvi_kupoprodajni = new ugovor();
+        private void spremiCijene()
+        {
 
-                ugovor_prvi_kupoprodajni.vozilo = vozilo_uneseno.id_vozilo;
-                ugovor_prvi_kupoprodajni.kupac = null;
-                ugovor_prvi_kupoprodajni.datum = DateTime.Now.Date;
-                ugovor_prvi_kupoprodajni.dobavljac_iddobavljac = Convert.ToInt32(cbDobavljac.SelectedValue);
+            vozilo vozilo_uneseno = vratiZadnjeUneseno();
+            cijena cijena_vozila = new cijena();
 
-                db.ugovor.Add(ugovor_prvi_kupoprodajni);
-                db.SaveChanges();
-                
+            MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
+
+            cijena_vozila.vozilo = vozilo_uneseno.id_vozilo;
+            cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text);
+            cijena_vozila.nabavna_sa_pdv = 0;
+            cijena_vozila.popravci_ekterni = 0;
+            cijena_vozila.porez = 0;
+            cijena_vozila.popravci_interni = 0;
+            cijena_vozila.datum_izracuna = DateTime.Now.Date;
+            cijena_vozila.tip_poreza_nabavna = 1;
+            cijena_vozila.tip_poreza_prodajna = 1;
+
+
+            db.cijena.Add(cijena_vozila);
+            db.SaveChanges();
+
+        }
+
+
+        private void spremiUgovore()
+        {
+            vozilo vozilo_uneseno = vratiZadnjeUneseno();
+            ugovor ugovor_prvi_kupoprodajni = new ugovor();
+
+            ugovor_prvi_kupoprodajni.vozilo = vozilo_uneseno.id_vozilo;
+            ugovor_prvi_kupoprodajni.kupac = null;
+            ugovor_prvi_kupoprodajni.datum = DateTime.Now.Date;
+            ugovor_prvi_kupoprodajni.dobavljac_iddobavljac = Convert.ToInt32(cbDobavljac.SelectedValue);
+
+            db.ugovor.Add(ugovor_prvi_kupoprodajni);
+            db.SaveChanges();
+
         }
 
 
@@ -153,35 +159,57 @@ namespace DriveIT
             openFileDialog1.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             openFileDialog1.Multiselect = true;
             this.openFileDialog1.Title = "Odaberite slike vozila";
-            string mapa = @"C:\Program Files\DriveIT\Slike\";
+            openFileDialog1.ShowDialog();
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                  foreach (String file in openFileDialog1.FileNames)
-                  {
-                      
-                      Image loadedImage = Image.FromFile(file);
-
-                      var bitovi = File.ReadAllBytes(file);
-                      File.WriteAllBytes(@"C:\Program Files\DriveIT\Slike\bla.jpg", bitovi);
-                     
-                      //await file.CopyAsync( @"C:\Program Files\DriveIT\Slike\");
-
-                  }
-            }
-            
-            
             //saveFileDialog1.InitialDirectory = @"C:\Program Files\DriveIT\Slike\";
             //saveFileDialog1.Filter = "JPEG files (*.jpg)|*.jpeg|PNG files (*.png)|*.png";
-            
-
-            
 
         }
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void SpremiSlike()
         {
-            MessageBox.Show("Spremljene slike");
+            vozilo vozilo_uneseno = vratiZadnjeUneseno();
+            bool isExists = System.IO.Directory.Exists("./Slike");
+            if (!isExists)
+                System.IO.Directory.CreateDirectory("./Slike");
+
+            int brojac = 1;
+
+
+            if (openFileDialog1.FileNames.Length!= 0)
+            {
+                foreach (String file in openFileDialog1.FileNames)
+                {
+
+                    Image loadedImage = Image.FromFile(file);
+
+                    var bitovi = File.ReadAllBytes(file);
+                    File.WriteAllBytes("./Slike/" + vozilo_uneseno.id_vozilo + "_" + brojac.ToString() + ".jpg", bitovi);
+                    //File.WriteAllBytes("./Slike/" + "111" + "_" + brojac.ToString() + ".jpg", bitovi);
+
+                    slika_vozilo slika = new slika_vozilo();
+                    slika.path = "./Slike/" + vozilo_uneseno.id_vozilo + "_" + brojac.ToString() + ".jpg";
+                    //slika.path = "./Slike/" + "111" + "_" + brojac.ToString() + ".jpg";
+                    //slika.vozilo = 11;
+                    slika.vozilo = vozilo_uneseno.id_vozilo;
+
+                    db.slika_vozilo.Add(slika);
+                    db.SaveChanges();
+
+                    brojac++;
+
+
+                    //await file.CopyAsync( @"C:\Program Files\DriveIT\Slike\");
+
+                }
+            }
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            SpremiSlike();
+        }
+
+
     }
 }
