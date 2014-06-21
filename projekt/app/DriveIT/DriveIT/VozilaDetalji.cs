@@ -16,38 +16,51 @@ namespace DriveIT
         private int idVozila;
         T33_DBEntities db = new T33_DBEntities();
 
+        
+
 
         public frmVozilaDetalji()
         {
             InitializeComponent();
-            ucitajDodatnuOpremu();
+            
 
         }
 
         private void ucitajDodatnuOpremu() {
 
             BindingSource upit = new BindingSource();
-            /*upit.DataSource =
-                        (from o in db.dodatna_oprema
-                         from pripada in o.vozilo.Where(x => x.id_vozilo == vozilo)
+
+
+            int id;
+            bool park = Int32.TryParse(txtIdVozilo.Text, out id);
+    
+            //upit.DataSource = db.dodatna_oprema.Where(x=> x.id_dodatna_oprema == id ).First().vozilo.ToList();
+
+            //upit.DataSource = db.vozilo.Where(x => x.id_vozilo == id).First().dodatna_oprema.ToList();
+
+            dataGridView1.DataSource = db.vozilo.Where(x => x.id_vozilo == id).First().dodatna_oprema.ToList();
+
+
+           /* upit.DataSource =
+                    (from t3 in db.dodatna_oprema
+                    from t2 in t3.vozilo.Where(x => x.id_vozilo == id )
+                    select{t3.naziv 
+                        }).ToList();
+                        
+            
+            
+            (from o in db.dodatna_oprema
+                         where o.vozilo.Any(x => x.id_vozilo == id )
                          select new
                          {
-                             u.id_ugovor,
-                             kupac = k.ime + " " + k.prezime,
-                             vozilo = a.naziv + " " + m.naziv,
-                             u.datum,
-                             dobavljac_iddobavljac = d.tvrtka,
-                         }).ToList();*/
-
-            dodatnaopremaBindingSource.DataSource = upit;
+                             o.naziv,
+                             o.cijena,
+                         }).ToList();
             
-        
-        
-        
+            dodatnaopremaBindingSource.DataSource = upit;
+            */
+                
         }
-
-
-
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,7 +68,6 @@ namespace DriveIT
             
             int id = Convert.ToInt32(txtIdVozilo.Text);
 
-            T33_DBEntities db = new T33_DBEntities();
             vozilo vozilo = db.vozilo.Where<vozilo>(x => x.id_vozilo == id ).First<vozilo>();
             db.vozilo.Remove(vozilo);
             db.SaveChanges();
@@ -94,6 +106,8 @@ namespace DriveIT
             txtNosivost.Text = Convert.ToString(vozila.nosivost);
             txtSjedista.Text =  Convert.ToString(vozila.sjedista);
             txtKilometraza.Text = Convert.ToString(vozila.kilometri);
+
+            ucitajDodatnuOpremu();
 
         }
 

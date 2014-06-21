@@ -13,11 +13,26 @@ namespace DriveIT
 {
     public partial class frmDobavljaci : Form
     {
+        private void filter()
+        {
+            
+            T33_DBEntities db = new T33_DBEntities();
+            var dobavljaci = db.dobavljac.ToList<dobavljac>();
+            dobavljacBindingSource.DataSource = dobavljaci;
+
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dobavljaci;
+            dataGridView1.DataSource = bs;
+
+            bs.Filter = string.Format("ime LIKE '%{0}%'",txtPretragaDobavljaci.Text );
+        }
+
         private void PrikaziDobavljace()
         {
             T33_DBEntities db = new T33_DBEntities();
             var dobavljaci = db.dobavljac.ToList<dobavljac>();
             dobavljacBindingSource.DataSource = dobavljaci;
+           
         }
 
 
@@ -43,6 +58,7 @@ namespace DriveIT
         private void frmDobavljaci_Load(object sender, EventArgs e)
         {
             PrikaziDobavljace();
+            
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
@@ -68,5 +84,18 @@ namespace DriveIT
             string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             prikaziDetalje(i);
         }
+
+        private void txtPretragaDobavljaci_TextChanged(object sender, EventArgs e)
+        {
+
+            filter();
+            PrikaziDobavljace();
+            MessageBox.Show("radi");
+
+
+
+        }
+
+       
     }
 }

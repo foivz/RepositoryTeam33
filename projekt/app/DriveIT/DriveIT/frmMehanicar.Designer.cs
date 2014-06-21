@@ -40,7 +40,7 @@
             this.notifikacijeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.notifikacijeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.notifikacijeGrid.Location = new System.Drawing.Point(404, 145);
+            this.notifikacijeGrid.Location = new System.Drawing.Point(166, 143);
             this.notifikacijeGrid.Name = "notifikacijeGrid";
             this.notifikacijeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.notifikacijeGrid.Size = new System.Drawing.Size(552, 210);
@@ -72,7 +72,7 @@
             this.lblDugoPaljenaVozila.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.lblDugoPaljenaVozila.Location = new System.Drawing.Point(404, 115);
             this.lblDugoPaljenaVozila.Name = "lblDugoPaljenaVozila";
-            this.lblDugoPaljenaVozila.Size = new System.Drawing.Size(235, 25);
+            this.lblDugoPaljenaVozila.Size = new System.Drawing.Size(233, 25);
             this.lblDugoPaljenaVozila.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblDugoPaljenaVozila.StyleManager = null;
             this.lblDugoPaljenaVozila.TabIndex = 3;
