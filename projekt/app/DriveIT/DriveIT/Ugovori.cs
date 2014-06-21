@@ -13,11 +13,35 @@ namespace DriveIT
 {
     public partial class frmUgovori : Form
     {
+        T33_DBEntities db = new T33_DBEntities();
+
         private void PrikaziUgovore()
         {
-            T33_DBEntities db = new T33_DBEntities();
-            var ugovori = db.ugovor.ToList<ugovor>();
-            ugovorBindingSource.DataSource = ugovori;
+
+            BindingSource upit = new BindingSource();
+            upit.DataSource =
+                        (from u in db.ugovor
+                         join v in db.vozilo on u.vozilo equals v.id_vozilo
+                         join m in db.model_vozila on v.model_vozila equals m.id_model_vozila
+                         join k in db.kupac on  u.kupac equals k.id_kupac
+                         join d in db.dobavljac on u.dobavljac_iddobavljac equals d.id_dobavljac
+                         select new
+                         {
+                             u.id_ugovor,
+                             kupac = k.ime +" "+ k.prezime,
+                             vozilo = m.naziv ,
+                             u.datum,
+                             dobavljac_iddobavljac = d.tvrtka
+                            
+                         }).ToList();
+
+            ugovorBindingSource.DataSource = upit;
+
+
+
+            
+           // var ugovori = db.ugovor.ToList<ugovor>();
+            //ugovorBindingSource.DataSource = ugovori;
         }
 
 

@@ -128,6 +128,12 @@ namespace DriveIT
             Application.Exit();
         }
 
+        private void metroBtnNalozi_Click(object sender, EventArgs e)
+        {
+            frmNalozi nalozi = new frmNalozi();
+            nalozi.Show();
+        }
+
       
     }
 }
