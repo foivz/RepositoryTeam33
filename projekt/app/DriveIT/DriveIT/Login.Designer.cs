@@ -78,6 +78,7 @@
             this.txtKorisnickoIme.Location = new System.Drawing.Point(70, 182);
             this.txtKorisnickoIme.Multiline = false;
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
+            this.txtKorisnickoIme.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtKorisnickoIme.SelectedText = "";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(207, 30);
             this.txtKorisnickoIme.Style = MetroFramework.MetroColorStyle.Blue;

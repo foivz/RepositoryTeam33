@@ -286,6 +286,7 @@
     <Compile Include="ParkiralistaDodaj.designer.cs">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordChar.cs" />
     <Compile Include="Prodaja.cs">
       <SubType>Form</SubType>
     </Compile>

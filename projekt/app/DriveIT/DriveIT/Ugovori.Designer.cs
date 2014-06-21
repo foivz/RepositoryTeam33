@@ -57,9 +57,9 @@
             // 
             this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(858, 649);
+            this.btnIzlaz.Location = new System.Drawing.Point(679, 604);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(101, 26);
+            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
             this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnIzlaz.StyleManager = null;
             this.btnIzlaz.TabIndex = 0;
@@ -84,7 +84,7 @@
             this.kupac1DataGridViewTextBoxColumn,
             this.vozilo1DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.ugovorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 151);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 331);
             this.dataGridView1.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(25, 636);
+            this.pictureBox2.Location = new System.Drawing.Point(25, 629);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(358, 104);
             this.pictureBox2.TabIndex = 7;
@@ -213,9 +213,9 @@
             // btnDodajUgovor
             // 
             this.btnDodajUgovor.Highlight = false;
-            this.btnDodajUgovor.Location = new System.Drawing.Point(67, 77);
+            this.btnDodajUgovor.Location = new System.Drawing.Point(25, 50);
             this.btnDodajUgovor.Name = "btnDodajUgovor";
-            this.btnDodajUgovor.Size = new System.Drawing.Size(160, 23);
+            this.btnDodajUgovor.Size = new System.Drawing.Size(280, 80);
             this.btnDodajUgovor.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnDodajUgovor.StyleManager = null;
             this.btnDodajUgovor.TabIndex = 8;
@@ -226,9 +226,9 @@
             // btnOsvjezi
             // 
             this.btnOsvjezi.Highlight = false;
-            this.btnOsvjezi.Location = new System.Drawing.Point(331, 77);
+            this.btnOsvjezi.Location = new System.Drawing.Point(323, 50);
             this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(160, 23);
+            this.btnOsvjezi.Size = new System.Drawing.Size(280, 80);
             this.btnOsvjezi.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnOsvjezi.StyleManager = null;
             this.btnOsvjezi.TabIndex = 9;

@@ -42,11 +42,17 @@ namespace DriveIT
 
         }
 
-        private void btnDodajDobavljac_Click(object sender, EventArgs e)
+        
+        private void frmUgovoriDodaj_Load(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNapraviKupoprodajni_Click(object sender, EventArgs e)
         {
             T33_DBEntities db = new T33_DBEntities();
             ugovor ugovor = new ugovor();
-            
+
 
             ugovor.kupac = Convert.ToInt32(cbKupac.SelectedValue);
             ugovor.vozilo = Convert.ToInt32(cbVozilo.SelectedValue);
@@ -55,7 +61,7 @@ namespace DriveIT
 
             db.ugovor.Add(ugovor);
 
-            
+
 
             try
             {
@@ -63,7 +69,7 @@ namespace DriveIT
                 var kupac1 = db.kupac.Where<kupac>(x => x.id_kupac == ugovor.kupac).First<kupac>();
 
                 PdfUgovor.KupoprodajniUgovor(vozilo1, kupac1, ugovor);
-                
+
                 db.SaveChanges();
                 this.Close();
 
@@ -81,16 +87,6 @@ namespace DriveIT
                 }
 
             }
-        }
-
-        private void btnOdustani_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void frmUgovoriDodaj_Load(object sender, EventArgs e)
-        {
-
         }
 
         

@@ -491,6 +491,7 @@
             this.Controls.Add(this.lblTip);
             this.Controls.Add(this.lblId);
             this.Name = "frmKupciDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KupciDetalji";
             this.Load += new System.EventHandler(this.frmKupciDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
