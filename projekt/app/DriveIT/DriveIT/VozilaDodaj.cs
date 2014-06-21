@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DriveIT
 {
@@ -145,6 +146,42 @@ namespace DriveIT
         private void frmVozilaDodaj_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            openFileDialog1.Multiselect = true;
+            this.openFileDialog1.Title = "Odaberite slike vozila";
+            string mapa = @"C:\Program Files\DriveIT\Slike\";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                  foreach (String file in openFileDialog1.FileNames)
+                  {
+                      
+                      Image loadedImage = Image.FromFile(file);
+
+                      var bitovi = File.ReadAllBytes(file);
+                      File.WriteAllBytes(@"C:\Program Files\DriveIT\Slike\bla.jpg", bitovi);
+                     
+                      //await file.CopyAsync( @"C:\Program Files\DriveIT\Slike\");
+
+                  }
+            }
+            
+            
+            //saveFileDialog1.InitialDirectory = @"C:\Program Files\DriveIT\Slike\";
+            //saveFileDialog1.Filter = "JPEG files (*.jpg)|*.jpeg|PNG files (*.png)|*.png";
+            
+
+            
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Spremljene slike");
         }
     }
 }
