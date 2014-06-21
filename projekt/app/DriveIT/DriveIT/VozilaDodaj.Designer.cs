@@ -65,6 +65,9 @@
             this.lblCijena = new System.Windows.Forms.Label();
             this.cbDobavljac = new System.Windows.Forms.ComboBox();
             this.lblNabavna = new System.Windows.Forms.Label();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -373,11 +376,33 @@
             this.lblNabavna.TabIndex = 60;
             this.lblNabavna.Text = "Dobavljač";
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Highlight = false;
+            this.metroButton1.Location = new System.Drawing.Point(863, 274);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(121, 51);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton1.StyleManager = null;
+            this.metroButton1.TabIndex = 61;
+            this.metroButton1.Text = "Učitaj slike";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmVozilaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 588);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.lblNabavna);
             this.Controls.Add(this.cbDobavljac);
             this.Controls.Add(this.lblCijena);
@@ -462,5 +487,8 @@
         private System.Windows.Forms.Label lblCijena;
         private System.Windows.Forms.ComboBox cbDobavljac;
         private System.Windows.Forms.Label lblNabavna;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

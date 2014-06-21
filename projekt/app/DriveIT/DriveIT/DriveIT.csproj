@@ -292,6 +292,12 @@
     <Compile Include="ParkiralistaDodaj.designer.cs">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="PreglednikSlika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreglednikSlika.Designer.cs">
+      <DependentUpon>PreglednikSlika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prodaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -428,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ParkiralistaDodaj.resx">
       <DependentUpon>ParkiralistaDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreglednikSlika.resx">
+      <DependentUpon>PreglednikSlika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prodaja.resx">
       <DependentUpon>Prodaja.cs</DependentUpon>
