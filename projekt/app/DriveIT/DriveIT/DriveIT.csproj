@@ -80,6 +80,7 @@
     <Compile Include="Aplikacija.Designer.cs">
       <DependentUpon>Aplikacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controler\KonacnaCijena.cs" />
     <Compile Include="Controler\PdfUgovor.cs" />
     <Compile Include="Controler\ProvjeraUnos.cs" />
     <Compile Include="Controler\Provjera.cs" />
