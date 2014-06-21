@@ -15,6 +15,7 @@ namespace DriveIT
     public partial class frmMehanicar : Form
     {
         private BindingSource bs = new BindingSource();
+        private BindingSource nalog = new BindingSource();
         T33_DBEntities db;
         int mj;
 
@@ -28,6 +29,7 @@ namespace DriveIT
 
             this.mj = 4; /* MJESECI */
             dohvatiNeupaljenaVozila(mj);
+            dohvatiNaloge();
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -90,5 +92,51 @@ namespace DriveIT
 
             }
         }
+        public void dohvatiNaloge()
+        {
+            
+            
+            /*nalog.DataSource =
+                        (from n in db.nalog_za_servis
+                         join v in db.vozilo on n.vozilo equals v.id_vozilo
+                         join m in db.model_vozila on v.model_vozila equals m.id_model_vozila
+                         join k in db.korisnik on n.korisnik equals k.id_korisnik
+                         where n.vozilo == v.id_vozilo
+                         select new
+                         {
+                             n.id_nalog_za_servis,
+                             n.opis,
+                             vozilo = m.naziv,
+                             korisnik = k.korisnicko_ime,
+                             n.obavljen,
+                             n.datum,
+                             n.cijena,
+                             n.sati_rada
+                         }).ToList();*/
+            db = new T33_DBEntities();
+            db.nalog_za_servis.Where<nalog_za_servis>(x => x.korisnik1.id_korisnik >=0).Load();
+            nalog.DataSource = db.nalog_za_servis.Local.ToBindingList();
+            nalogGrid.DataSource = nalog;
+            nalogGrid.Columns["id_nalog_za_servis"].Visible = false;
+            nalogGrid.Columns["korisnik"].Visible = false;
+            nalogGrid.Columns["cijena"].Visible = false;
+            nalogGrid.Columns["sati_rada"].Visible = false;
+            nalogGrid.Columns["korisnik1"].Visible = false;
+            nalogGrid.Columns["vozilo1"].Visible = false;
+            nalogGrid.Columns["dio"].Visible = false;
+            nalogGrid.Columns["opis"].Width = (int)(nalogGrid.Size.Width * 0.42);
+        }
+
+        private void otvoriNalogBtn_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in nalogGrid.SelectedRows)
+            {
+                nalog_za_servis selektiraniNalog = row.DataBoundItem as nalog_za_servis;
+                NaloziDetalji Detalji = new NaloziDetalji(selektiraniNalog.id_nalog_za_servis, this);
+                Detalji.Show();
+                //selektiraniNalog.id_nalog_za_servis;
+            }
+        }
+
     }
 }
