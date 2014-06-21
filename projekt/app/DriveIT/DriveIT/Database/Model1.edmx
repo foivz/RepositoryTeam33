@@ -121,11 +121,11 @@
         </EntityType>
         <EntityType Name="pripada">
           <Key>
-            <PropertyRef Name="vozilo" />
-            <PropertyRef Name="dodatna_oprema" />
+            <PropertyRef Name="pripada_vozilu" />
+            <PropertyRef Name="pripada_oprema" />
           </Key>
-          <Property Name="vozilo" Type="int" Nullable="false" />
-          <Property Name="dodatna_oprema" Type="int" Nullable="false" />
+          <Property Name="pripada_vozilu" Type="int" Nullable="false" />
+          <Property Name="pripada_oprema" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="slika_vozilo">
           <Key>
@@ -330,7 +330,7 @@
               <PropertyRef Name="id_dodatna_oprema" />
             </Principal>
             <Dependent Role="pripada">
-              <PropertyRef Name="dodatna_oprema" />
+              <PropertyRef Name="pripada_oprema" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -342,7 +342,7 @@
               <PropertyRef Name="id_vozilo" />
             </Principal>
             <Dependent Role="pripada">
-              <PropertyRef Name="vozilo" />
+              <PropertyRef Name="pripada_vozilu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1271,10 +1271,10 @@
           </EntitySetMapping>
           <AssociationSetMapping Name="pripada" TypeName="T33_DBModel.pripada" StoreEntitySet="pripada">
             <EndProperty Name="vozilo">
-              <ScalarProperty Name="id_vozilo" ColumnName="vozilo" />
+              <ScalarProperty Name="id_vozilo" ColumnName="pripada_vozilu" />
             </EndProperty>
             <EndProperty Name="dodatna_oprema">
-              <ScalarProperty Name="id_dodatna_oprema" ColumnName="dodatna_oprema" />
+              <ScalarProperty Name="id_dodatna_oprema" ColumnName="pripada_oprema" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
