@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nalogzaservisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnIzlaz = new System.Windows.Forms.Button();
             this.btnDodajNalog = new System.Windows.Forms.Button();
             this.idnalogzaservisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@
             this.dioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnik1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vozilo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nalogzaservisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nalogzaservisBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,10 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(603, 300);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nalogzaservisBindingSource
+            // 
+            this.nalogzaservisBindingSource.DataSource = typeof(DriveIT.Database.nalog_za_servis);
             // 
             // btnIzlaz
             // 
@@ -154,6 +158,7 @@
             this.dioDataGridViewTextBoxColumn.HeaderText = "dio";
             this.dioDataGridViewTextBoxColumn.Name = "dioDataGridViewTextBoxColumn";
             this.dioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dioDataGridViewTextBoxColumn.Visible = false;
             // 
             // korisnik1DataGridViewTextBoxColumn
             // 
@@ -161,6 +166,7 @@
             this.korisnik1DataGridViewTextBoxColumn.HeaderText = "korisnik1";
             this.korisnik1DataGridViewTextBoxColumn.Name = "korisnik1DataGridViewTextBoxColumn";
             this.korisnik1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnik1DataGridViewTextBoxColumn.Visible = false;
             // 
             // vozilo1DataGridViewTextBoxColumn
             // 
@@ -168,10 +174,7 @@
             this.vozilo1DataGridViewTextBoxColumn.HeaderText = "vozilo1";
             this.vozilo1DataGridViewTextBoxColumn.Name = "vozilo1DataGridViewTextBoxColumn";
             this.vozilo1DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nalogzaservisBindingSource
-            // 
-            this.nalogzaservisBindingSource.DataSource = typeof(DriveIT.Database.nalog_za_servis);
+            this.vozilo1DataGridViewTextBoxColumn.Visible = false;
             // 
             // frmNalozi
             // 
@@ -193,6 +196,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource nalogzaservisBindingSource;
+        private System.Windows.Forms.Button btnIzlaz;
+        private System.Windows.Forms.Button btnDodajNalog;
         private System.Windows.Forms.DataGridViewTextBoxColumn idnalogzaservisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn voziloDataGridViewTextBoxColumn;
@@ -204,8 +210,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnik1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vozilo1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource nalogzaservisBindingSource;
-        private System.Windows.Forms.Button btnIzlaz;
-        private System.Windows.Forms.Button btnDodajNalog;
     }
 }
