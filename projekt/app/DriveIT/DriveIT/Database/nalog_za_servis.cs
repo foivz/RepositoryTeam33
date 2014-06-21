@@ -14,6 +14,11 @@ namespace DriveIT.Database
     
     public partial class nalog_za_servis
     {
+        public nalog_za_servis()
+        {
+            this.dio = new HashSet<dio>();
+        }
+    
         public int id_nalog_za_servis { get; set; }
         public string opis { get; set; }
         public int vozilo { get; set; }
@@ -23,7 +28,7 @@ namespace DriveIT.Database
         public Nullable<decimal> cijena { get; set; }
         public Nullable<int> sati_rada { get; set; }
     
-        public virtual dio dio { get; set; }
+        public virtual ICollection<dio> dio { get; set; }
         public virtual korisnik korisnik1 { get; set; }
         public virtual vozilo vozilo1 { get; set; }
     }
