@@ -93,6 +93,8 @@ namespace DriveIT
 
             db.SaveChanges();
             MessageBox.Show("Vozilo uspješno ažurirano !");
+
+
             System.Threading.Thread.Sleep(700);
 
             this.Close();
@@ -115,8 +117,7 @@ namespace DriveIT
         {
             frmProdaja prodaja = new frmProdaja(idVozila);
             prodaja.Show();
-            /*prodaja.fillForm(txtIdVozilo.Text);
-            popravak.Show();*/
+            
         }
 
     }

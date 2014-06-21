@@ -61,6 +61,10 @@
             this.txtParking = new System.Windows.Forms.ComboBox();
             this.txtModel = new System.Windows.Forms.ComboBox();
             this.txtTipVozila = new System.Windows.Forms.ComboBox();
+            this.txtCijena = new System.Windows.Forms.TextBox();
+            this.lblCijena = new System.Windows.Forms.Label();
+            this.cbDobavljac = new System.Windows.Forms.ComboBox();
+            this.lblNabavna = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOdustani
@@ -336,11 +340,48 @@
             this.txtTipVozila.Size = new System.Drawing.Size(148, 21);
             this.txtTipVozila.TabIndex = 56;
             // 
+            // txtCijena
+            // 
+            this.txtCijena.Location = new System.Drawing.Point(863, 145);
+            this.txtCijena.Name = "txtCijena";
+            this.txtCijena.Size = new System.Drawing.Size(121, 20);
+            this.txtCijena.TabIndex = 57;
+            // 
+            // lblCijena
+            // 
+            this.lblCijena.AutoSize = true;
+            this.lblCijena.Location = new System.Drawing.Point(764, 152);
+            this.lblCijena.Name = "lblCijena";
+            this.lblCijena.Size = new System.Drawing.Size(82, 13);
+            this.lblCijena.TabIndex = 58;
+            this.lblCijena.Text = "Nabavna cijena";
+            // 
+            // cbDobavljac
+            // 
+            this.cbDobavljac.FormattingEnabled = true;
+            this.cbDobavljac.Location = new System.Drawing.Point(863, 195);
+            this.cbDobavljac.Name = "cbDobavljac";
+            this.cbDobavljac.Size = new System.Drawing.Size(121, 21);
+            this.cbDobavljac.TabIndex = 59;
+            // 
+            // lblNabavna
+            // 
+            this.lblNabavna.AutoSize = true;
+            this.lblNabavna.Location = new System.Drawing.Point(764, 203);
+            this.lblNabavna.Name = "lblNabavna";
+            this.lblNabavna.Size = new System.Drawing.Size(55, 13);
+            this.lblNabavna.TabIndex = 60;
+            this.lblNabavna.Text = "Dobavljač";
+            // 
             // frmVozilaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 696);
+            this.ClientSize = new System.Drawing.Size(1033, 588);
+            this.Controls.Add(this.lblNabavna);
+            this.Controls.Add(this.cbDobavljac);
+            this.Controls.Add(this.lblCijena);
+            this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.txtTipVozila);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtParking);
@@ -417,5 +458,9 @@
         private System.Windows.Forms.ComboBox txtParking;
         private System.Windows.Forms.ComboBox txtModel;
         private System.Windows.Forms.ComboBox txtTipVozila;
+        private System.Windows.Forms.TextBox txtCijena;
+        private System.Windows.Forms.Label lblCijena;
+        private System.Windows.Forms.ComboBox cbDobavljac;
+        private System.Windows.Forms.Label lblNabavna;
     }
 }

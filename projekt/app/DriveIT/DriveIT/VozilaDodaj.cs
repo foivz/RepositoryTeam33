@@ -15,35 +15,36 @@ namespace DriveIT
 {
     public partial class frmVozilaDodaj : Form
     {
+        T33_DBEntities db = new T33_DBEntities();
+
         public frmVozilaDodaj()
         {
             InitializeComponent();
 
             /*Tip vozila combobox*/
-            using (T33_DBEntities db = new T33_DBEntities())
-            {
+            
+            
                 txtTipVozila.DataSource = db.tip_vozila.ToList();
                 txtTipVozila.ValueMember = "id_tip_vozila";
                 txtTipVozila.DisplayMember = "naziv";
-                
-            }
-
+           
             /*Model vozila combobox*/
-            using (T33_DBEntities db = new T33_DBEntities())
-            {
+            
                 txtModel.DataSource = db.model_vozila.ToList();
                 txtModel.ValueMember = "id_model_vozila";
                 txtModel.DisplayMember = "naziv";
-            }
 
-
-            /*Parking combobox*/
-            using (T33_DBEntities db = new T33_DBEntities())
-            {
+            /*Parking combobox*/        
                 txtParking.DataSource = db.parking.ToList();
                 txtParking.ValueMember = "id_parking";
                 txtParking.DisplayMember = "naziv";
-            }
+
+            /*Dobavljači combobox*/
+                cbDobavljac.DataSource = db.dobavljac.ToList();
+                cbDobavljac.ValueMember = "id_dobavljac";
+                cbDobavljac.DisplayMember = "tvrtka"; 
+
+            
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -53,9 +54,10 @@ namespace DriveIT
 
         private void btnDodajDobavljac_Click(object sender, EventArgs e)
         {
-            T33_DBEntities db = new T33_DBEntities();
+            
             vozilo vozilo = new vozilo();
 
+            /*Dodavanje u tablicu vozila*/
             vozilo.sasija = txtBrSasije.Text;
             vozilo.datum_prve_registracije = dtPickerPrvaRegistracija.Value;
             vozilo.boja = txtBoja.Text;
@@ -68,48 +70,81 @@ namespace DriveIT
             vozilo.prometna = txtPrometna.Text;
             vozilo.servisna = txtServisna.Text;
             vozilo.kilometri = Convert.ToInt32(txtKilometraza.Text);
-
-           
-            //items.add("")
             vozilo.tip_vozila = Convert.ToInt32(txtTipVozila.SelectedValue);
             vozilo.model_vozila = Convert.ToInt32(txtModel.SelectedValue);
             vozilo.parking = Convert.ToInt32(txtParking.SelectedValue);
 
-            /*MessageBox.Show();*/
-
-            db.vozilo.Add(vozilo);
             
-            try
+           try
             {
+                 db.vozilo.Add(vozilo);
+                 db.SaveChanges();   
+                 
+                 spremiCijene();
+                 spremiUgovore();
+                 db.SaveChanges();
 
-                db.SaveChanges();
+                MessageBox.Show("Vozilo je uspješno dodano !");
+                System.Threading.Thread.Sleep(700);
                 this.Close();
-
-
             }
-            catch (DbEntityValidationException dbEx)
-            {
-                MessageBox.Show("Greška !");
-                foreach (var validaitonErrors in dbEx.EntityValidationErrors)
-                {
-                    foreach (var validationError in validaitonErrors.ValidationErrors)
-                    {
-                        Trace.TraceInformation("Property: {0} Error:{1}", validationError.PropertyName, validationError.ErrorMessage);
-                    }
-                }
-
+            catch {
+                MessageBox.Show("Greška pri unosu vozila!");
+                this.Close();
             }
         }
+
+        private  vozilo vratiZadnjeUneseno(){
+            string broj_sasije = txtBrSasije.Text;
+            vozilo zadnje_vozilo = db.vozilo.Where<vozilo>(x => x.sasija == broj_sasije).First<vozilo>();
+            //var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == 2).First<vozilo>();
+            return zadnje_vozilo;
+            
+        }
+
+           
+        private void spremiCijene(){
+
+                vozilo vozilo_uneseno = vratiZadnjeUneseno() ;
+                cijena cijena_vozila = new cijena();
+
+                MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
+
+                cijena_vozila.vozilo = vozilo_uneseno.id_vozilo;
+                cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text);
+                cijena_vozila.nabavna_sa_pdv = 0;
+                cijena_vozila.popravci_ekterni = 0;
+                cijena_vozila.porez = 0;
+                cijena_vozila.popravci_interni = 0;
+                cijena_vozila.datum_izracuna = DateTime.Now.Date;
+                cijena_vozila.tip_poreza_nabavna = 1;
+                cijena_vozila.tip_poreza_prodajna = 1;
+                
+                
+                db.cijena.Add(cijena_vozila);
+                db.SaveChanges();
+                
+        }
+
+
+        private void spremiUgovore(){
+                vozilo vozilo_uneseno = vratiZadnjeUneseno();
+                ugovor ugovor_prvi_kupoprodajni = new ugovor();
+
+                ugovor_prvi_kupoprodajni.vozilo = vozilo_uneseno.id_vozilo;
+                ugovor_prvi_kupoprodajni.kupac = null;
+                ugovor_prvi_kupoprodajni.datum = DateTime.Now.Date;
+                ugovor_prvi_kupoprodajni.dobavljac_iddobavljac = Convert.ToInt32(cbDobavljac.SelectedValue);
+
+                db.ugovor.Add(ugovor_prvi_kupoprodajni);
+                db.SaveChanges();
+                
+        }
+
 
         private void frmVozilaDodaj_Load(object sender, EventArgs e)
         {
 
         }
-
-       
-
-        
-
-       
     }
 }

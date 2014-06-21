@@ -13,10 +13,17 @@ namespace DriveIT
 {
     public partial class frmVozila : Form
     {
+        T33_DBEntities db = new T33_DBEntities();
 
+        public frmVozila()
+        {
+            InitializeComponent();
+        }
+
+       
         private void PrikaziVozila()
         {
-            T33_DBEntities db = new T33_DBEntities();
+            
             //BindingList<vozilo> listaVozila = null;
             //var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == 2).First<vozilo>();
             //var vozila = db.vozilo.Where<vozilo>;
@@ -33,10 +40,6 @@ namespace DriveIT
         }
 
        
-        public frmVozila()
-        {
-            InitializeComponent();
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
