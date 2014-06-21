@@ -63,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblDodatna = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iddodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljaciddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +73,8 @@
             this.raspoloživoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodatnaopremaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -384,10 +385,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(335, 186);
             this.dataGridView1.TabIndex = 95;
             // 
-            // dodatnaopremaBindingSource
-            // 
-            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
-            // 
             // iddodatnaopremaDataGridViewTextBoxColumn
             // 
             this.iddodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "id_dodatna_oprema";
@@ -458,11 +455,29 @@
             this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
             this.voziloDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // dodatnaopremaBindingSource
+            // 
+            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Highlight = false;
+            this.metroButton1.Location = new System.Drawing.Point(57, 478);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(148, 47);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton1.StyleManager = null;
+            this.metroButton1.TabIndex = 96;
+            this.metroButton1.Text = "Slike";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // frmVozilaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblDodatna);
             this.Controls.Add(this.label2);
@@ -554,5 +569,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn voziloDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dodatnaopremaBindingSource;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
