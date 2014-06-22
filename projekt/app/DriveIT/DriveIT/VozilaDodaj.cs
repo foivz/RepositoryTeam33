@@ -69,7 +69,7 @@ namespace DriveIT
             vozilo vozilo_uneseno = vratiZadnjeUneseno();
             cijena cijena_vozila = new cijena();
 
-            MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
+            //MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
 
             cijena_vozila.vozilo = vozilo_uneseno.id_vozilo;
             cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text);

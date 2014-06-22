@@ -28,6 +28,8 @@ namespace DriveIT
                 metroComboBox1.DataSource = db.kupac.ToList();
                 metroComboBox1.ValueMember = "id_kupac";
                 metroComboBox1.DisplayMember = "email";
+                 
+                
                 
 
             }
