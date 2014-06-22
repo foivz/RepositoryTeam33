@@ -13,7 +13,13 @@ namespace DriveIT.Controler
     class PdfUgovor
     {
 
-
+        /// <summary>
+        /// Metoda koja kreira kupoprodajni ugovor te generira pdf iz njih.
+        /// Na temelju zadanih parametara vozilo,kupac i ugovor popunjava template ugovora
+        /// </summary>
+        /// <param name="vozilo"></param>
+        /// <param name="kupac"></param>
+        /// <param name="ugovor"></param>
         public static void KupoprodajniUgovor(vozilo vozilo, kupac kupac, ugovor ugovor)
         {
 
@@ -171,7 +177,13 @@ namespace DriveIT.Controler
 
 
         }
-
+        /// <summary>
+        /// Metoda koja kreira kupoprodajni ugovor od dobavljača te generira pdf iz njih.
+        /// Na temelju zadanih parametara vozilo,kupac i ugovor popunjava template ugovora
+        /// </summary>
+        /// <param name="vozilo"></param>
+        /// <param name="dobavljac"></param>
+        /// <param name="ugovor"></param>
         public static void KupoprodajniUgovorOdDobavljaca(vozilo vozilo, dobavljac dobavljac, ugovor ugovor)
         {
 
@@ -332,6 +344,13 @@ namespace DriveIT.Controler
 
         }
 
+
+        /// <summary>
+        /// Metoda koja kreira predračun te popunjava template na temelju parametara koje prima.
+        /// Kao parametre prima vozilo i kupca koji kupuje vozilo
+        /// </summary>
+        /// <param name="vozilo"></param>
+        /// <param name="kupac"></param>
         public static void KreirajPredracun(vozilo vozilo, kupac kupac)
         {
             string FONT = "c:/windows/fonts/arial.ttf";
