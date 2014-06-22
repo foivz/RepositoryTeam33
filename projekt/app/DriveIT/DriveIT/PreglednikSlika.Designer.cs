@@ -38,33 +38,33 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(92, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(777, 542);
+            this.pictureBox1.Size = new System.Drawing.Size(777, 488);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // metroButton1
             // 
             this.metroButton1.Highlight = false;
-            this.metroButton1.Location = new System.Drawing.Point(92, 636);
+            this.metroButton1.Location = new System.Drawing.Point(92, 579);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.Size = new System.Drawing.Size(280, 80);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButton1.StyleManager = null;
             this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "prethodna";
+            this.metroButton1.Text = "Prethodna";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
             this.metroButton2.Highlight = false;
-            this.metroButton2.Location = new System.Drawing.Point(794, 636);
+            this.metroButton2.Location = new System.Drawing.Point(589, 579);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.Size = new System.Drawing.Size(280, 80);
             this.metroButton2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButton2.StyleManager = null;
             this.metroButton2.TabIndex = 2;
-            this.metroButton2.Text = "sljedeca";
+            this.metroButton2.Text = "Sljedeća";
             this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
@@ -77,6 +77,7 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "PreglednikSlika";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PreglednikSlika";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -71,7 +71,7 @@ namespace DriveIT
             novo_vozilo.ShowDialog();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnoOsvjezi_Click(object sender, EventArgs e)
         {
             PrikaziVozila();
         }

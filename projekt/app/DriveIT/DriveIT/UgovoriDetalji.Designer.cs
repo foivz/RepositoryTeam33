@@ -280,6 +280,7 @@
             this.Controls.Add(this.lblSifra);
             this.Controls.Add(this.dtPickerDatum);
             this.Name = "frmUgovoriDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UgovoriDetalji";
             this.Load += new System.EventHandler(this.frmUgovoriDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

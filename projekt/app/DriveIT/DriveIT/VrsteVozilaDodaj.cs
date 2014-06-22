@@ -18,14 +18,22 @@ namespace DriveIT
             InitializeComponent();
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+       
+      
+
+        private void frmVrsteVozilaDodaj_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnOdustani_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnDodajModelVozila_Click(object sender, EventArgs e)
+        private void btnDodajModeleVozila_Click(object sender, EventArgs e)
         {
-            T33_DBEntities db = new T33_DBEntities();
+              T33_DBEntities db = new T33_DBEntities();
             tip_vozila tip_vozilo = new tip_vozila();
 
             tip_vozilo.naziv = txtNaziv.Text;
@@ -48,10 +56,6 @@ namespace DriveIT
                 MessageBox.Show("Greška !");
             }
         }
-
-        private void frmVrsteVozilaDodaj_Load(object sender, EventArgs e)
-        {
-           
         }
     }
-}
+
