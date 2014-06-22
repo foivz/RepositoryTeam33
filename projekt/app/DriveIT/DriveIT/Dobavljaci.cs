@@ -13,19 +13,7 @@ namespace DriveIT
 {
     public partial class frmDobavljaci : Form
     {
-        private void filter()
-        {
-            
-            T33_DBEntities db = new T33_DBEntities();
-            var dobavljaci = db.dobavljac.ToList<dobavljac>();
-            dobavljacBindingSource.DataSource = dobavljaci;
-
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dobavljaci;
-            dataGridView1.DataSource = bs;
-
-            bs.Filter = string.Format("ime LIKE '%{0}%'",txtPretragaDobavljaci.Text );
-        }
+       
 
         private void PrikaziDobavljace()
         {
@@ -85,17 +73,7 @@ namespace DriveIT
             prikaziDetalje(i);
         }
 
-        private void txtPretragaDobavljaci_TextChanged(object sender, EventArgs e)
-        {
-
-            filter();
-            PrikaziDobavljace();
-            MessageBox.Show("radi");
-
-
-
-        }
-
+        
        
     }
 }
