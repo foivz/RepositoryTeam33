@@ -161,15 +161,18 @@ namespace DriveIT
             base.OnFormClosing(e);
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
-
-            // Confirm user wants to close
-            switch (MessageBox.Show(this, "Jeste li sigurni za želite izaći?", "Zatvaranje", MessageBoxButtons.YesNo))
+            if (e.CloseReason == CloseReason.UserClosing) Application.Exit();
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
             {
-                case DialogResult.No:
-                    e.Cancel = true;
-                    break;
-                default: Application.Exit();
-                    break;
+
+                switch (MessageBox.Show(this, "Jeste li sigurni za želite izaći?", "Zatvaranje", MessageBoxButtons.YesNo))
+                {
+                    case DialogResult.No:
+                        e.Cancel = true;
+                        break;
+                    default: Application.Exit();
+                        break;
+                }
             }
 
         }
