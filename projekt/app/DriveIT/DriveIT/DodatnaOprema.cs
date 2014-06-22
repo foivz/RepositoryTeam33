@@ -44,20 +44,15 @@ namespace DriveIT
             detalji_opreme.ShowDialog();
         }
 
-
-        private void btnIzlaz_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnOsvjezi_Click(object sender, EventArgs e)
-        {
-            prikaziDodatnuOpremu();
-        }
-
         private void frmDodatnaOprema_Load(object sender, EventArgs e)
         {
             prikaziDodatnuOpremu();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
         }
 
         private void btnDodajDodatnuOpremu_Click(object sender, EventArgs e)
@@ -66,10 +61,14 @@ namespace DriveIT
             dodaj_opremu.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnOsvjeziPrikaz_Click(object sender, EventArgs e)
         {
-            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            prikaziDetalje(i);
+            prikaziDodatnuOpremu();
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
        

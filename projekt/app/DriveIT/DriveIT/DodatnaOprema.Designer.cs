@@ -29,12 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnIzlaz = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
-            this.btnDodajDodatnuOpremu = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDodatnaOprema));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblVrsteVozila = new System.Windows.Forms.Label();
             this.iddodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljaciddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,39 +41,16 @@
             this.raspoloživoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblVrsteDodatneOpreme = new MetroFramework.Controls.MetroLabel();
+            this.btnDodajDodatnuOpremu = new MetroFramework.Controls.MetroButton();
+            this.btnOsvjeziPrikaz = new MetroFramework.Controls.MetroButton();
+            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodatnaopremaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.Location = new System.Drawing.Point(501, 137);
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(75, 23);
-            this.btnIzlaz.TabIndex = 14;
-            this.btnIzlaz.Text = "Izlaz";
-            this.btnIzlaz.UseVisualStyleBackColor = true;
-            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(290, 137);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(110, 23);
-            this.btnOsvjezi.TabIndex = 13;
-            this.btnOsvjezi.Text = "Osvježi prikaz";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
-            // btnDodajDodatnuOpremu
-            // 
-            this.btnDodajDodatnuOpremu.Location = new System.Drawing.Point(90, 137);
-            this.btnDodajDodatnuOpremu.Name = "btnDodajDodatnuOpremu";
-            this.btnDodajDodatnuOpremu.Size = new System.Drawing.Size(143, 23);
-            this.btnDodajDodatnuOpremu.TabIndex = 12;
-            this.btnDodajDodatnuOpremu.Text = "Dodaj dodatnu opremu";
-            this.btnDodajDodatnuOpremu.UseVisualStyleBackColor = true;
-            this.btnDodajDodatnuOpremu.Click += new System.EventHandler(this.btnDodajDodatnuOpremu_Click);
             // 
             // dataGridView1
             // 
@@ -97,25 +70,12 @@
             this.dobavljacDataGridViewTextBoxColumn,
             this.voziloDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dodatnaopremaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 198);
+            this.dataGridView1.Location = new System.Drawing.Point(57, 222);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(824, 308);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dodatnaopremaBindingSource
-            // 
-            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
-            // 
-            // lblVrsteVozila
-            // 
-            this.lblVrsteVozila.AutoSize = true;
-            this.lblVrsteVozila.Location = new System.Drawing.Point(87, 103);
-            this.lblVrsteVozila.Name = "lblVrsteVozila";
-            this.lblVrsteVozila.Size = new System.Drawing.Size(61, 13);
-            this.lblVrsteVozila.TabIndex = 10;
-            this.lblVrsteVozila.Text = "Vrste vozila";
             // 
             // iddodatnaopremaDataGridViewTextBoxColumn
             // 
@@ -191,21 +151,94 @@
             this.voziloDataGridViewTextBoxColumn.ReadOnly = true;
             this.voziloDataGridViewTextBoxColumn.Visible = false;
             // 
+            // dodatnaopremaBindingSource
+            // 
+            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
+            // 
+            // lblVrsteDodatneOpreme
+            // 
+            this.lblVrsteDodatneOpreme.AutoSize = true;
+            this.lblVrsteDodatneOpreme.CustomBackground = true;
+            this.lblVrsteDodatneOpreme.CustomForeColor = false;
+            this.lblVrsteDodatneOpreme.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblVrsteDodatneOpreme.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblVrsteDodatneOpreme.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblVrsteDodatneOpreme.Location = new System.Drawing.Point(358, 26);
+            this.lblVrsteDodatneOpreme.Name = "lblVrsteDodatneOpreme";
+            this.lblVrsteDodatneOpreme.Size = new System.Drawing.Size(181, 25);
+            this.lblVrsteDodatneOpreme.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblVrsteDodatneOpreme.StyleManager = null;
+            this.lblVrsteDodatneOpreme.TabIndex = 15;
+            this.lblVrsteDodatneOpreme.Text = "Vrste dodatne opreme";
+            this.lblVrsteDodatneOpreme.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblVrsteDodatneOpreme.UseStyleColors = false;
+            // 
+            // btnDodajDodatnuOpremu
+            // 
+            this.btnDodajDodatnuOpremu.Highlight = false;
+            this.btnDodajDodatnuOpremu.Location = new System.Drawing.Point(78, 114);
+            this.btnDodajDodatnuOpremu.Name = "btnDodajDodatnuOpremu";
+            this.btnDodajDodatnuOpremu.Size = new System.Drawing.Size(280, 80);
+            this.btnDodajDodatnuOpremu.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnDodajDodatnuOpremu.StyleManager = null;
+            this.btnDodajDodatnuOpremu.TabIndex = 16;
+            this.btnDodajDodatnuOpremu.Text = "Dodaj dodatnu opremu";
+            this.btnDodajDodatnuOpremu.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodajDodatnuOpremu.Click += new System.EventHandler(this.btnDodajDodatnuOpremu_Click);
+            // 
+            // btnOsvjeziPrikaz
+            // 
+            this.btnOsvjeziPrikaz.Highlight = false;
+            this.btnOsvjeziPrikaz.Location = new System.Drawing.Point(389, 114);
+            this.btnOsvjeziPrikaz.Name = "btnOsvjeziPrikaz";
+            this.btnOsvjeziPrikaz.Size = new System.Drawing.Size(280, 80);
+            this.btnOsvjeziPrikaz.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnOsvjeziPrikaz.StyleManager = null;
+            this.btnOsvjeziPrikaz.TabIndex = 17;
+            this.btnOsvjeziPrikaz.Text = "Osvježi";
+            this.btnOsvjeziPrikaz.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOsvjeziPrikaz.Click += new System.EventHandler(this.btnOsvjeziPrikaz_Click);
+            // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Highlight = false;
+            this.btnIzlaz.Location = new System.Drawing.Point(663, 604);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
+            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnIzlaz.StyleManager = null;
+            this.btnIzlaz.TabIndex = 18;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 613);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(434, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDodatnaOprema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnIzlaz);
-            this.Controls.Add(this.btnOsvjezi);
+            this.Controls.Add(this.btnOsvjeziPrikaz);
             this.Controls.Add(this.btnDodajDodatnuOpremu);
+            this.Controls.Add(this.lblVrsteDodatneOpreme);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblVrsteVozila);
             this.Name = "frmDodatnaOprema";
             this.Text = "DodatnaOprema";
             this.Load += new System.EventHandler(this.frmDodatnaOprema_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodatnaopremaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,11 +246,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnIzlaz;
-        private System.Windows.Forms.Button btnOsvjezi;
-        private System.Windows.Forms.Button btnDodajDodatnuOpremu;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblVrsteVozila;
         private System.Windows.Forms.BindingSource dodatnaopremaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddodatnaopremaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dobavljaciddobavljacDataGridViewTextBoxColumn;
@@ -229,5 +258,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn raspoloživoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn voziloDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroLabel lblVrsteDodatneOpreme;
+        private MetroFramework.Controls.MetroButton btnDodajDodatnuOpremu;
+        private MetroFramework.Controls.MetroButton btnOsvjeziPrikaz;
+        private MetroFramework.Controls.MetroButton btnIzlaz;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
