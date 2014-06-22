@@ -110,6 +110,9 @@ namespace DriveIT
             vozilo vozilo = db.vozilo.First(i => i.id_vozilo == identifikator);
            
             vozilo.parking = 5;
+            decimal vrijednost;
+            decimal.TryParse(option3txt.Text, out vrijednost);
+            vozilo.cijena.prodajna_sa_pdv = vrijednost;
 
             int id_kupca;
             Int32.TryParse(metroComboBox1.SelectedValue.ToString(), out id_kupca);

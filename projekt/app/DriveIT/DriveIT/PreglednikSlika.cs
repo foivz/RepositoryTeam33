@@ -27,7 +27,17 @@ namespace DriveIT
             PreglednikSlika preglednik = new PreglednikSlika();
             preglednik.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             preglednik.pictureBox1.Load("./Slike/nema_slike.jpg");
-            string url = "./Slike/" + id_vozila + "_1.jpg";
+           
+
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
+            string[] polje = userName.Split('\\');
+            userName = polje[1];
+
+            string FolderMjesto = @"C:/Users/" + userName + "/DriveIT/Slike";
+
+           
+            string url = FolderMjesto+"/" + id_vozila + "_1.jpg";
             if (File.Exists(url))
             {
                 preglednik.pictureBox1.Load(url);
@@ -43,6 +53,7 @@ namespace DriveIT
         /// <param name="e"></param>
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            
             if(pictureBox1.ImageLocation!= "./Slike/nema_slike.jpg")
             { 
             string[] putanja = pictureBox1.ImageLocation.Split('_');
