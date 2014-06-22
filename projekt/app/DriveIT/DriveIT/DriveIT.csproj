@@ -85,6 +85,7 @@
     <Compile Include="Controler\Pretraživanje.cs" />
     <Compile Include="Controler\ProvjeraUnos.cs" />
     <Compile Include="Controler\Provjera.cs" />
+    <Compile Include="Controler\Sat.cs" />
     <Compile Include="Controler\Tlocrt.cs" />
     <Compile Include="Database\cijena.cs">
       <DependentUpon>Model1.tt</DependentUpon>
