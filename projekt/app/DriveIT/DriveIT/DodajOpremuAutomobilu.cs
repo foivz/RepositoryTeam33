@@ -13,7 +13,7 @@ namespace DriveIT
 {
     public partial class frmDodajOpremuAutomobilu : Form
     {
-        private static int identifikator;
+        private static int identifikator { get; set; }
         T33_DBEntities db = new T33_DBEntities();
 
         public frmDodajOpremuAutomobilu()
@@ -52,19 +52,25 @@ namespace DriveIT
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-           /* int odabrana_oprema ;
+            int odabrana_oprema ;
             bool prolazi = Int32.TryParse(cbOprema.SelectedValue.ToString(),out odabrana_oprema );
 
             //var vozilo_oprema = new dodatna_oprema();
-            var vozilo_oprema = new dodatna_oprema();
-
-            vozilo_oprema.vozilo.Add(new vozilo {dodatna_oprema = odabrana_oprema });
+            //var vozilo_oprema = new dodatna_oprema();
+            
+            //vozilo_oprema.vozilo.Add(new vozilo {dodatna_oprema = odabrana_oprema });
             //vozilo_oprema.vozilo.Add(new vozilo {id_vozilo = identifikator });
 
+            
 
-            db.vozilo.Add(vozilo_oprema);
+            db.vozilo.Where(z => z.id_vozilo == identifikator).First().dodatna_oprema.Add(
+
+                db.dodatna_oprema.Where(xy => xy.id_dodatna_oprema == odabrana_oprema).First<dodatna_oprema>());
+
+            //db.vozilo.Add(vozilo_oprema);
 
             db.SaveChanges();
+
 
 
             //dataGridView1.DataSource = db.vozilo.Where(x => x.id_vozilo == identifikator)..First().dodatna_oprema.ToList();*/
