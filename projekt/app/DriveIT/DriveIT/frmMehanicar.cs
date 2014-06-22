@@ -148,7 +148,9 @@ namespace DriveIT
             base.OnFormClosing(e);
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
-
+            if (e.CloseReason == CloseReason.UserClosing) Application.Exit();
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            { 
             
             switch (MessageBox.Show(this, "Jeste li sigurni za želite izaći?", "Zatvaranje", MessageBoxButtons.YesNo))
             {
@@ -157,6 +159,7 @@ namespace DriveIT
                     break;
                 default: Application.Exit();
                     break;
+            }
             }
 
         }

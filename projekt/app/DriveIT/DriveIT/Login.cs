@@ -29,6 +29,13 @@ namespace DriveIT
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Ulaz();
+        }
+
+
+
+        private void Ulaz()
+        {
             if (ImaInterneta())
             {
 
@@ -63,7 +70,6 @@ namespace DriveIT
             }
             else
                 MessageBox.Show("Provjerite internet vezu pa pokušajte ponovo.");
-
         }
 
         private bool ImaInterneta()
@@ -85,6 +91,16 @@ namespace DriveIT
         private void Lozinka_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void Lozinka_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Ulaz();
+            }
         }
     }
 }
