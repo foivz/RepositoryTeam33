@@ -78,6 +78,8 @@
             // 
             // lblDodajMarku
             // 
+            this.lblDodajMarku.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodajMarku.AutoSize = true;
             this.lblDodajMarku.CustomBackground = true;
             this.lblDodajMarku.CustomForeColor = false;
@@ -130,6 +132,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(526, 407);
             this.btnOdustani.Name = "btnOdustani";
@@ -143,6 +146,7 @@
             // 
             // btnDodaj
             // 
+            this.btnDodaj.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDodaj.Highlight = false;
             this.btnDodaj.Location = new System.Drawing.Point(124, 407);
             this.btnDodaj.Name = "btnDodaj";
@@ -156,6 +160,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 575);
             this.pictureBox1.Name = "pictureBox1";
@@ -178,7 +184,8 @@
             this.Controls.Add(this.lblDrzPorijekla);
             this.Controls.Add(this.lblNaziv);
             this.Name = "frmMarkeVozilaDodaj";
-            this.Text = "MarkeVozilaDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj marku vozila";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

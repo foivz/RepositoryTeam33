@@ -36,6 +36,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(92, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(777, 488);
@@ -44,6 +45,7 @@
             // 
             // metroButton1
             // 
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroButton1.Highlight = false;
             this.metroButton1.Location = new System.Drawing.Point(92, 579);
             this.metroButton1.Name = "metroButton1";
@@ -57,6 +59,7 @@
             // 
             // metroButton2
             // 
+            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButton2.Highlight = false;
             this.metroButton2.Location = new System.Drawing.Point(589, 579);
             this.metroButton2.Name = "metroButton2";
@@ -78,7 +81,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "PreglednikSlika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "PreglednikSlika";
+            this.Text = "Preglednik slika";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

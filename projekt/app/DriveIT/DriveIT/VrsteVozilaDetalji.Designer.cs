@@ -55,11 +55,11 @@
             this.lblAzuriraj.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.lblAzuriraj.Location = new System.Drawing.Point(362, 47);
             this.lblAzuriraj.Name = "lblAzuriraj";
-            this.lblAzuriraj.Size = new System.Drawing.Size(159, 25);
+            this.lblAzuriraj.Size = new System.Drawing.Size(157, 25);
             this.lblAzuriraj.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblAzuriraj.StyleManager = null;
             this.lblAzuriraj.TabIndex = 70;
-            this.lblAzuriraj.Text = "Ažuriraj vrstu vozila";
+            this.lblAzuriraj.Text = "Detalji o vrsti vozila";
             this.lblAzuriraj.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblAzuriraj.UseStyleColors = false;
             // 
@@ -125,6 +125,7 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
             this.txtId.CustomForeColor = false;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.txtId.Location = new System.Drawing.Point(202, 199);
@@ -246,7 +247,7 @@
             this.Controls.Add(this.lblAzuriraj);
             this.Name = "frmVrsteVozilaDetalji";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "VrsteVozilaDetalji";
+            this.Text = "Detalji o vrsti vozila";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,6 +15,12 @@ namespace DriveIT
     {
         int id_nalog;
         NaloziDetalji parent;
+
+        /// <summary>
+        /// Metoda za dodavanje dijela 
+        /// </summary>
+        /// <param name="id_nalog"></param>
+        /// <param name="parent"></param>
         public DioDodaj(int id_nalog, NaloziDetalji parent)
         {
             InitializeComponent();
@@ -22,6 +28,11 @@ namespace DriveIT
             this.parent = parent;
         }
 
+        /// <summary>
+        /// Metoda za dodavanje novog dijela,uzima korisničke unose i sprema ih u objekt koji spremamo u bazu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addBtn_Click(object sender, EventArgs e)
         {
   
@@ -42,6 +53,11 @@ namespace DriveIT
 
         }
 
+        /// <summary>
+        /// Metoda koja zatvara formu na odabir gumba odustani
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();

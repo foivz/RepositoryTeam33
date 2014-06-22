@@ -78,6 +78,7 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
             this.txtId.CustomForeColor = false;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.txtId.Location = new System.Drawing.Point(177, 102);

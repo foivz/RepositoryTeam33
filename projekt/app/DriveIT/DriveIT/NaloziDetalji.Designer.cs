@@ -304,8 +304,8 @@
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.lblDugoPaljenaVozila);
             this.Name = "NaloziDetalji";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "NaloziDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalji o nalozima";
             this.Load += new System.EventHandler(this.NaloziDetalji_Load);
             this.Leave += new System.EventHandler(this.NaloziDetalji_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.djeloviGrid)).EndInit();

@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNalozi));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblPreglednaloga = new MetroFramework.Controls.MetroLabel();
             this.idnalogzaservisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,12 +46,9 @@
             this.korisnik1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vozilo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nalogzaservisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnIzlaz = new MetroFramework.Controls.MetroButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblPreglednaloga = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nalogzaservisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nalogzaservisBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,6 +75,49 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(774, 300);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzlaz.Highlight = false;
+            this.btnIzlaz.Location = new System.Drawing.Point(655, 604);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
+            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnIzlaz.StyleManager = null;
+            this.btnIzlaz.TabIndex = 2;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 613);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(434, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblPreglednaloga
+            // 
+            this.lblPreglednaloga.AutoSize = true;
+            this.lblPreglednaloga.CustomBackground = true;
+            this.lblPreglednaloga.CustomForeColor = false;
+            this.lblPreglednaloga.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblPreglednaloga.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblPreglednaloga.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblPreglednaloga.Location = new System.Drawing.Point(379, 59);
+            this.lblPreglednaloga.Name = "lblPreglednaloga";
+            this.lblPreglednaloga.Size = new System.Drawing.Size(127, 25);
+            this.lblPreglednaloga.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblPreglednaloga.StyleManager = null;
+            this.lblPreglednaloga.TabIndex = 4;
+            this.lblPreglednaloga.Text = "Pregled naloga";
+            this.lblPreglednaloga.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblPreglednaloga.UseStyleColors = false;
             // 
             // idnalogzaservisDataGridViewTextBoxColumn
             // 
@@ -161,46 +204,6 @@
             // 
             this.nalogzaservisBindingSource.DataSource = typeof(DriveIT.Database.nalog_za_servis);
             // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(655, 604);
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
-            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnIzlaz.StyleManager = null;
-            this.btnIzlaz.TabIndex = 2;
-            this.btnIzlaz.Text = "Izlaz";
-            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 613);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(434, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblPreglednaloga
-            // 
-            this.lblPreglednaloga.AutoSize = true;
-            this.lblPreglednaloga.CustomBackground = true;
-            this.lblPreglednaloga.CustomForeColor = false;
-            this.lblPreglednaloga.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblPreglednaloga.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.lblPreglednaloga.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblPreglednaloga.Location = new System.Drawing.Point(379, 59);
-            this.lblPreglednaloga.Name = "lblPreglednaloga";
-            this.lblPreglednaloga.Size = new System.Drawing.Size(127, 25);
-            this.lblPreglednaloga.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblPreglednaloga.StyleManager = null;
-            this.lblPreglednaloga.TabIndex = 4;
-            this.lblPreglednaloga.Text = "Pregled naloga";
-            this.lblPreglednaloga.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblPreglednaloga.UseStyleColors = false;
-            // 
             // frmNalozi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,12 +214,12 @@
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmNalozi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nalozi";
             this.Load += new System.EventHandler(this.Nalozi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nalogzaservisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nalogzaservisBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

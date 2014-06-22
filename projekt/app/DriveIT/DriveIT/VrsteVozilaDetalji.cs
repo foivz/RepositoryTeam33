@@ -59,14 +59,27 @@ namespace DriveIT
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtId.Text);
-            tip_vozila vrsta_vozila = db.tip_vozila.First(i => i.id_tip_vozila == id);
 
-            db.tip_vozila.Remove(vrsta_vozila);
-            db.SaveChanges();
+            try
+            {
+                int id = Convert.ToInt32(txtId.Text);
+                tip_vozila vrsta_vozila = db.tip_vozila.First(i => i.id_tip_vozila == id);
+
+                 db.tip_vozila.Remove(vrsta_vozila);
+                db.SaveChanges();
+                MessageBox.Show("Vrsta vozila uspješno obrisana");
+            }
+            catch 
+            {
+                MessageBox.Show("Ne možete obrisati vozilo. Došlo je do greške! ");
+              
+            }
+
+            
 
 
-            MessageBox.Show("Vrsta vozila uspješno obrisana");
+
+            
             System.Threading.Thread.Sleep(700);
             this.Close();
 

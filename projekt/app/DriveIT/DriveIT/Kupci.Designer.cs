@@ -288,7 +288,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnIzlaz);
             this.Name = "frmKupci";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kupci";
             this.Load += new System.EventHandler(this.frmKupci_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

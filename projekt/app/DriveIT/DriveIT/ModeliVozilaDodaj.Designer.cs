@@ -33,10 +33,10 @@
             this.lblNaziv = new MetroFramework.Controls.MetroLabel();
             this.lblMarka = new MetroFramework.Controls.MetroLabel();
             this.txtNaziv = new MetroFramework.Controls.MetroTextBox();
-            this.cbMarka = new MetroFramework.Controls.MetroComboBox();
             this.btnOdustani = new MetroFramework.Controls.MetroButton();
             this.btnDodaj = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbMarka = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,33 +105,16 @@
             this.txtNaziv.CustomForeColor = false;
             this.txtNaziv.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtNaziv.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtNaziv.Location = new System.Drawing.Point(316, 170);
+            this.txtNaziv.Location = new System.Drawing.Point(316, 176);
             this.txtNaziv.Multiline = false;
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.SelectedText = "";
-            this.txtNaziv.Size = new System.Drawing.Size(280, 29);
+            this.txtNaziv.Size = new System.Drawing.Size(280, 23);
             this.txtNaziv.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtNaziv.StyleManager = null;
             this.txtNaziv.TabIndex = 55;
             this.txtNaziv.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNaziv.UseStyleColors = false;
-            // 
-            // cbMarka
-            // 
-            this.cbMarka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbMarka.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMarka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMarka.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbMarka.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbMarka.FormattingEnabled = true;
-            this.cbMarka.ItemHeight = 23;
-            this.cbMarka.Location = new System.Drawing.Point(316, 237);
-            this.cbMarka.Name = "cbMarka";
-            this.cbMarka.Size = new System.Drawing.Size(280, 29);
-            this.cbMarka.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbMarka.StyleManager = null;
-            this.cbMarka.TabIndex = 56;
-            this.cbMarka.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // btnOdustani
             // 
@@ -173,15 +156,24 @@
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;
             // 
+            // cbMarka
+            // 
+            this.cbMarka.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbMarka.FormattingEnabled = true;
+            this.cbMarka.Location = new System.Drawing.Point(317, 244);
+            this.cbMarka.Name = "cbMarka";
+            this.cbMarka.Size = new System.Drawing.Size(279, 21);
+            this.cbMarka.TabIndex = 60;
+            // 
             // frmModeliVozilaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.cbMarka);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.cbMarka);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.lblMarka);
             this.Controls.Add(this.lblNaziv);
@@ -201,9 +193,9 @@
         private MetroFramework.Controls.MetroLabel lblNaziv;
         private MetroFramework.Controls.MetroLabel lblMarka;
         private MetroFramework.Controls.MetroTextBox txtNaziv;
-        private MetroFramework.Controls.MetroComboBox cbMarka;
         private MetroFramework.Controls.MetroButton btnOdustani;
         private MetroFramework.Controls.MetroButton btnDodaj;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbMarka;
     }
 }

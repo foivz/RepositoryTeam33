@@ -270,8 +270,8 @@
             this.Controls.Add(this.lblKorisnickoIme);
             this.Controls.Add(this.addBtn);
             this.Name = "DioDodaj";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DioDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj dio";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

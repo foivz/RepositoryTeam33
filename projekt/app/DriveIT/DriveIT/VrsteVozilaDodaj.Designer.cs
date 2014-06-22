@@ -155,7 +155,7 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOdustani.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(526, 383);
             this.btnOdustani.Name = "btnOdustani";
@@ -169,7 +169,7 @@
             // 
             // btnDodajModeleVozila
             // 
-            this.btnDodajModeleVozila.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDodajModeleVozila.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDodajModeleVozila.Highlight = false;
             this.btnDodajModeleVozila.Location = new System.Drawing.Point(124, 383);
             this.btnDodajModeleVozila.Name = "btnDodajModeleVozila";
@@ -196,7 +196,7 @@
             this.Controls.Add(this.lblDodajVrstu);
             this.Name = "frmVrsteVozilaDodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "VrsteVozilaDodaj";
+            this.Text = "Dodaj vrstu vozila";
             this.Load += new System.EventHandler(this.frmVrsteVozilaDodaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tipvozilaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

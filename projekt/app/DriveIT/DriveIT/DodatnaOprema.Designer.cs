@@ -241,6 +241,7 @@
             this.Controls.Add(this.lblVrsteDodatneOpreme);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmDodatnaOprema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DodatnaOprema";
             this.Load += new System.EventHandler(this.frmDodatnaOprema_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

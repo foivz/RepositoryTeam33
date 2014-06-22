@@ -58,36 +58,39 @@
             this.txtPrometna = new MetroFramework.Controls.MetroTextBox();
             this.txtServisna = new MetroFramework.Controls.MetroTextBox();
             this.txtKilometraza = new MetroFramework.Controls.MetroTextBox();
-            this.txtTipVozila = new MetroFramework.Controls.MetroComboBox();
-            this.txtModel = new MetroFramework.Controls.MetroComboBox();
             this.lblParking = new MetroFramework.Controls.MetroLabel();
             this.lblCijena = new MetroFramework.Controls.MetroLabel();
             this.lblDobavljac = new MetroFramework.Controls.MetroLabel();
-            this.txtParking = new MetroFramework.Controls.MetroComboBox();
             this.txtCijena = new MetroFramework.Controls.MetroTextBox();
-            this.cbDobavljac = new MetroFramework.Controls.MetroComboBox();
             this.btnOdustani = new MetroFramework.Controls.MetroButton();
             this.btnDodajVozilo = new MetroFramework.Controls.MetroButton();
+            this.txtTipVozila = new System.Windows.Forms.ComboBox();
+            this.txtModel = new System.Windows.Forms.ComboBox();
+            this.txtParking = new System.Windows.Forms.ComboBox();
+            this.cbDobavljac = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dtPickerPrvaRegistracija
             // 
+            this.dtPickerPrvaRegistracija.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dtPickerPrvaRegistracija.Location = new System.Drawing.Point(190, 144);
             this.dtPickerPrvaRegistracija.Name = "dtPickerPrvaRegistracija";
-            this.dtPickerPrvaRegistracija.Size = new System.Drawing.Size(148, 20);
+            this.dtPickerPrvaRegistracija.Size = new System.Drawing.Size(220, 20);
             this.dtPickerPrvaRegistracija.TabIndex = 51;
             // 
             // dtPickerNabavka
             // 
+            this.dtPickerNabavka.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dtPickerNabavka.Location = new System.Drawing.Point(190, 299);
             this.dtPickerNabavka.Name = "dtPickerNabavka";
-            this.dtPickerNabavka.Size = new System.Drawing.Size(148, 20);
+            this.dtPickerNabavka.Size = new System.Drawing.Size(220, 20);
             this.dtPickerNabavka.TabIndex = 53;
             // 
             // metroButton1
             // 
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroButton1.Highlight = false;
-            this.metroButton1.Location = new System.Drawing.Point(761, 186);
+            this.metroButton1.Location = new System.Drawing.Point(61, 589);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(223, 80);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
@@ -237,7 +240,7 @@
             this.txtBrSasije.Multiline = false;
             this.txtBrSasije.Name = "txtBrSasije";
             this.txtBrSasije.SelectedText = "";
-            this.txtBrSasije.Size = new System.Drawing.Size(148, 23);
+            this.txtBrSasije.Size = new System.Drawing.Size(220, 23);
             this.txtBrSasije.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBrSasije.StyleManager = null;
             this.txtBrSasije.TabIndex = 70;
@@ -254,7 +257,7 @@
             this.txtBoja.Multiline = false;
             this.txtBoja.Name = "txtBoja";
             this.txtBoja.SelectedText = "";
-            this.txtBoja.Size = new System.Drawing.Size(148, 23);
+            this.txtBoja.Size = new System.Drawing.Size(220, 23);
             this.txtBoja.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBoja.StyleManager = null;
             this.txtBoja.TabIndex = 71;
@@ -271,7 +274,7 @@
             this.txtGodinaProizvodnje.Multiline = false;
             this.txtGodinaProizvodnje.Name = "txtGodinaProizvodnje";
             this.txtGodinaProizvodnje.SelectedText = "";
-            this.txtGodinaProizvodnje.Size = new System.Drawing.Size(148, 23);
+            this.txtGodinaProizvodnje.Size = new System.Drawing.Size(220, 23);
             this.txtGodinaProizvodnje.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtGodinaProizvodnje.StyleManager = null;
             this.txtGodinaProizvodnje.TabIndex = 72;
@@ -288,7 +291,7 @@
             this.txtSnaga.Multiline = false;
             this.txtSnaga.Name = "txtSnaga";
             this.txtSnaga.SelectedText = "";
-            this.txtSnaga.Size = new System.Drawing.Size(148, 23);
+            this.txtSnaga.Size = new System.Drawing.Size(220, 23);
             this.txtSnaga.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSnaga.StyleManager = null;
             this.txtSnaga.TabIndex = 73;
@@ -305,7 +308,7 @@
             this.txtSjedista.Multiline = false;
             this.txtSjedista.Name = "txtSjedista";
             this.txtSjedista.SelectedText = "";
-            this.txtSjedista.Size = new System.Drawing.Size(148, 23);
+            this.txtSjedista.Size = new System.Drawing.Size(220, 23);
             this.txtSjedista.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSjedista.StyleManager = null;
             this.txtSjedista.TabIndex = 74;
@@ -314,6 +317,8 @@
             // 
             // lblDodajVozilo
             // 
+            this.lblDodajVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodajVozilo.AutoSize = true;
             this.lblDodajVozilo.CustomBackground = true;
             this.lblDodajVozilo.CustomForeColor = false;
@@ -368,13 +373,14 @@
             // 
             // lblPrometna
             // 
+            this.lblPrometna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrometna.AutoSize = true;
             this.lblPrometna.CustomBackground = true;
             this.lblPrometna.CustomForeColor = false;
             this.lblPrometna.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblPrometna.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblPrometna.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblPrometna.Location = new System.Drawing.Point(401, 91);
+            this.lblPrometna.Location = new System.Drawing.Point(479, 106);
             this.lblPrometna.Name = "lblPrometna";
             this.lblPrometna.Size = new System.Drawing.Size(146, 25);
             this.lblPrometna.Style = MetroFramework.MetroColorStyle.Blue;
@@ -386,13 +392,14 @@
             // 
             // lblServisna
             // 
+            this.lblServisna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblServisna.AutoSize = true;
             this.lblServisna.CustomBackground = true;
             this.lblServisna.CustomForeColor = false;
             this.lblServisna.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblServisna.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblServisna.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblServisna.Location = new System.Drawing.Point(412, 139);
+            this.lblServisna.Location = new System.Drawing.Point(490, 154);
             this.lblServisna.Name = "lblServisna";
             this.lblServisna.Size = new System.Drawing.Size(135, 25);
             this.lblServisna.Style = MetroFramework.MetroColorStyle.Blue;
@@ -404,13 +411,14 @@
             // 
             // lblKilometri
             // 
+            this.lblKilometri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKilometri.AutoSize = true;
             this.lblKilometri.CustomBackground = true;
             this.lblKilometri.CustomForeColor = false;
             this.lblKilometri.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblKilometri.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblKilometri.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblKilometri.Location = new System.Drawing.Point(409, 191);
+            this.lblKilometri.Location = new System.Drawing.Point(487, 206);
             this.lblKilometri.Name = "lblKilometri";
             this.lblKilometri.Size = new System.Drawing.Size(138, 25);
             this.lblKilometri.Style = MetroFramework.MetroColorStyle.Blue;
@@ -422,13 +430,14 @@
             // 
             // lblTipVozila
             // 
+            this.lblTipVozila.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipVozila.AutoSize = true;
             this.lblTipVozila.CustomBackground = true;
             this.lblTipVozila.CustomForeColor = false;
             this.lblTipVozila.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblTipVozila.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblTipVozila.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblTipVozila.Location = new System.Drawing.Point(452, 242);
+            this.lblTipVozila.Location = new System.Drawing.Point(530, 257);
             this.lblTipVozila.Name = "lblTipVozila";
             this.lblTipVozila.Size = new System.Drawing.Size(95, 25);
             this.lblTipVozila.Style = MetroFramework.MetroColorStyle.Blue;
@@ -440,13 +449,14 @@
             // 
             // lblModel
             // 
+            this.lblModel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblModel.AutoSize = true;
             this.lblModel.CustomBackground = true;
             this.lblModel.CustomForeColor = false;
             this.lblModel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblModel.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblModel.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblModel.Location = new System.Drawing.Point(427, 294);
+            this.lblModel.Location = new System.Drawing.Point(505, 309);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(120, 25);
             this.lblModel.Style = MetroFramework.MetroColorStyle.Blue;
@@ -466,7 +476,7 @@
             this.txtNosivost.Multiline = false;
             this.txtNosivost.Name = "txtNosivost";
             this.txtNosivost.SelectedText = "";
-            this.txtNosivost.Size = new System.Drawing.Size(148, 23);
+            this.txtNosivost.Size = new System.Drawing.Size(220, 23);
             this.txtNosivost.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtNosivost.StyleManager = null;
             this.txtNosivost.TabIndex = 83;
@@ -483,7 +493,7 @@
             this.txtRegistracija.Multiline = false;
             this.txtRegistracija.Name = "txtRegistracija";
             this.txtRegistracija.SelectedText = "";
-            this.txtRegistracija.Size = new System.Drawing.Size(148, 23);
+            this.txtRegistracija.Size = new System.Drawing.Size(220, 23);
             this.txtRegistracija.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtRegistracija.StyleManager = null;
             this.txtRegistracija.TabIndex = 84;
@@ -492,15 +502,16 @@
             // 
             // txtPrometna
             // 
+            this.txtPrometna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrometna.CustomBackground = false;
             this.txtPrometna.CustomForeColor = false;
             this.txtPrometna.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtPrometna.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtPrometna.Location = new System.Drawing.Point(553, 93);
+            this.txtPrometna.Location = new System.Drawing.Point(631, 108);
             this.txtPrometna.Multiline = false;
             this.txtPrometna.Name = "txtPrometna";
             this.txtPrometna.SelectedText = "";
-            this.txtPrometna.Size = new System.Drawing.Size(148, 23);
+            this.txtPrometna.Size = new System.Drawing.Size(220, 23);
             this.txtPrometna.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPrometna.StyleManager = null;
             this.txtPrometna.TabIndex = 85;
@@ -509,15 +520,16 @@
             // 
             // txtServisna
             // 
+            this.txtServisna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtServisna.CustomBackground = false;
             this.txtServisna.CustomForeColor = false;
             this.txtServisna.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtServisna.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtServisna.Location = new System.Drawing.Point(553, 141);
+            this.txtServisna.Location = new System.Drawing.Point(631, 156);
             this.txtServisna.Multiline = false;
             this.txtServisna.Name = "txtServisna";
             this.txtServisna.SelectedText = "";
-            this.txtServisna.Size = new System.Drawing.Size(148, 23);
+            this.txtServisna.Size = new System.Drawing.Size(220, 23);
             this.txtServisna.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtServisna.StyleManager = null;
             this.txtServisna.TabIndex = 86;
@@ -526,62 +538,32 @@
             // 
             // txtKilometraza
             // 
+            this.txtKilometraza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKilometraza.CustomBackground = false;
             this.txtKilometraza.CustomForeColor = false;
             this.txtKilometraza.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtKilometraza.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtKilometraza.Location = new System.Drawing.Point(553, 193);
+            this.txtKilometraza.Location = new System.Drawing.Point(631, 208);
             this.txtKilometraza.Multiline = false;
             this.txtKilometraza.Name = "txtKilometraza";
             this.txtKilometraza.SelectedText = "";
-            this.txtKilometraza.Size = new System.Drawing.Size(148, 23);
+            this.txtKilometraza.Size = new System.Drawing.Size(220, 23);
             this.txtKilometraza.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtKilometraza.StyleManager = null;
             this.txtKilometraza.TabIndex = 87;
             this.txtKilometraza.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtKilometraza.UseStyleColors = false;
             // 
-            // txtTipVozila
-            // 
-            this.txtTipVozila.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtTipVozila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTipVozila.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.txtTipVozila.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.txtTipVozila.FormattingEnabled = true;
-            this.txtTipVozila.ItemHeight = 23;
-            this.txtTipVozila.Location = new System.Drawing.Point(553, 238);
-            this.txtTipVozila.Name = "txtTipVozila";
-            this.txtTipVozila.Size = new System.Drawing.Size(148, 29);
-            this.txtTipVozila.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtTipVozila.StyleManager = null;
-            this.txtTipVozila.TabIndex = 88;
-            this.txtTipVozila.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // txtModel
-            // 
-            this.txtModel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtModel.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.txtModel.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.txtModel.FormattingEnabled = true;
-            this.txtModel.ItemHeight = 23;
-            this.txtModel.Location = new System.Drawing.Point(553, 290);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(148, 29);
-            this.txtModel.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtModel.StyleManager = null;
-            this.txtModel.TabIndex = 89;
-            this.txtModel.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // lblParking
             // 
+            this.lblParking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblParking.AutoSize = true;
             this.lblParking.CustomBackground = true;
             this.lblParking.CustomForeColor = false;
             this.lblParking.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblParking.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblParking.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblParking.Location = new System.Drawing.Point(467, 351);
+            this.lblParking.Location = new System.Drawing.Point(545, 366);
             this.lblParking.Name = "lblParking";
             this.lblParking.Size = new System.Drawing.Size(80, 25);
             this.lblParking.Style = MetroFramework.MetroColorStyle.Blue;
@@ -593,13 +575,14 @@
             // 
             // lblCijena
             // 
+            this.lblCijena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCijena.AutoSize = true;
             this.lblCijena.CustomBackground = true;
             this.lblCijena.CustomForeColor = false;
             this.lblCijena.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblCijena.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblCijena.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblCijena.Location = new System.Drawing.Point(418, 406);
+            this.lblCijena.Location = new System.Drawing.Point(496, 421);
             this.lblCijena.Name = "lblCijena";
             this.lblCijena.Size = new System.Drawing.Size(129, 25);
             this.lblCijena.Style = MetroFramework.MetroColorStyle.Blue;
@@ -611,13 +594,14 @@
             // 
             // lblDobavljac
             // 
+            this.lblDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDobavljac.AutoSize = true;
             this.lblDobavljac.CustomBackground = true;
             this.lblDobavljac.CustomForeColor = false;
             this.lblDobavljac.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblDobavljac.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblDobavljac.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblDobavljac.Location = new System.Drawing.Point(461, 458);
+            this.lblDobavljac.Location = new System.Drawing.Point(539, 473);
             this.lblDobavljac.Name = "lblDobavljac";
             this.lblDobavljac.Size = new System.Drawing.Size(86, 25);
             this.lblDobavljac.Style = MetroFramework.MetroColorStyle.Blue;
@@ -627,59 +611,29 @@
             this.lblDobavljac.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblDobavljac.UseStyleColors = false;
             // 
-            // txtParking
-            // 
-            this.txtParking.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtParking.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtParking.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.txtParking.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.txtParking.FormattingEnabled = true;
-            this.txtParking.ItemHeight = 23;
-            this.txtParking.Location = new System.Drawing.Point(553, 345);
-            this.txtParking.Name = "txtParking";
-            this.txtParking.Size = new System.Drawing.Size(148, 29);
-            this.txtParking.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtParking.StyleManager = null;
-            this.txtParking.TabIndex = 93;
-            this.txtParking.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // txtCijena
             // 
+            this.txtCijena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCijena.CustomBackground = false;
             this.txtCijena.CustomForeColor = false;
             this.txtCijena.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtCijena.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtCijena.Location = new System.Drawing.Point(553, 404);
+            this.txtCijena.Location = new System.Drawing.Point(631, 419);
             this.txtCijena.Multiline = false;
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.SelectedText = "";
-            this.txtCijena.Size = new System.Drawing.Size(148, 23);
+            this.txtCijena.Size = new System.Drawing.Size(220, 23);
             this.txtCijena.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCijena.StyleManager = null;
             this.txtCijena.TabIndex = 94;
             this.txtCijena.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCijena.UseStyleColors = false;
             // 
-            // cbDobavljac
-            // 
-            this.cbDobavljac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDobavljac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDobavljac.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbDobavljac.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbDobavljac.FormattingEnabled = true;
-            this.cbDobavljac.ItemHeight = 23;
-            this.cbDobavljac.Location = new System.Drawing.Point(553, 454);
-            this.cbDobavljac.Name = "cbDobavljac";
-            this.cbDobavljac.Size = new System.Drawing.Size(148, 29);
-            this.cbDobavljac.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbDobavljac.StyleManager = null;
-            this.cbDobavljac.TabIndex = 95;
-            this.cbDobavljac.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.Highlight = false;
-            this.btnOdustani.Location = new System.Drawing.Point(761, 453);
+            this.btnOdustani.Location = new System.Drawing.Point(673, 589);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(223, 80);
             this.btnOdustani.Style = MetroFramework.MetroColorStyle.Blue;
@@ -691,8 +645,9 @@
             // 
             // btnDodajVozilo
             // 
+            this.btnDodajVozilo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDodajVozilo.Highlight = false;
-            this.btnDodajVozilo.Location = new System.Drawing.Point(761, 314);
+            this.btnDodajVozilo.Location = new System.Drawing.Point(363, 589);
             this.btnDodajVozilo.Name = "btnDodajVozilo";
             this.btnDodajVozilo.Size = new System.Drawing.Size(223, 80);
             this.btnDodajVozilo.Style = MetroFramework.MetroColorStyle.Blue;
@@ -702,21 +657,61 @@
             this.btnDodajVozilo.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnDodajVozilo.Click += new System.EventHandler(this.btnDodajVozilo_Click);
             // 
+            // txtTipVozila
+            // 
+            this.txtTipVozila.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTipVozila.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtTipVozila.FormattingEnabled = true;
+            this.txtTipVozila.Location = new System.Drawing.Point(631, 261);
+            this.txtTipVozila.Name = "txtTipVozila";
+            this.txtTipVozila.Size = new System.Drawing.Size(220, 21);
+            this.txtTipVozila.TabIndex = 98;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtModel.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtModel.FormattingEnabled = true;
+            this.txtModel.Location = new System.Drawing.Point(632, 312);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(219, 21);
+            this.txtModel.TabIndex = 99;
+            // 
+            // txtParking
+            // 
+            this.txtParking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtParking.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtParking.FormattingEnabled = true;
+            this.txtParking.Location = new System.Drawing.Point(632, 369);
+            this.txtParking.Name = "txtParking";
+            this.txtParking.Size = new System.Drawing.Size(219, 21);
+            this.txtParking.TabIndex = 100;
+            // 
+            // cbDobavljac
+            // 
+            this.cbDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbDobavljac.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbDobavljac.FormattingEnabled = true;
+            this.cbDobavljac.Location = new System.Drawing.Point(631, 476);
+            this.cbDobavljac.Name = "cbDobavljac";
+            this.cbDobavljac.Size = new System.Drawing.Size(220, 21);
+            this.cbDobavljac.TabIndex = 101;
+            // 
             // frmVozilaDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 588);
+            this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.cbDobavljac);
+            this.Controls.Add(this.txtParking);
+            this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.txtTipVozila);
             this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.cbDobavljac);
             this.Controls.Add(this.txtCijena);
-            this.Controls.Add(this.txtParking);
             this.Controls.Add(this.lblDobavljac);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.lblParking);
-            this.Controls.Add(this.txtModel);
-            this.Controls.Add(this.txtTipVozila);
             this.Controls.Add(this.txtKilometraza);
             this.Controls.Add(this.txtServisna);
             this.Controls.Add(this.txtPrometna);
@@ -747,7 +742,7 @@
             this.Controls.Add(this.dtPickerPrvaRegistracija);
             this.Name = "frmVozilaDodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "s";
+            this.Text = "Dodaj vozilo";
             this.Load += new System.EventHandler(this.frmVozilaDodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -786,15 +781,15 @@
         private MetroFramework.Controls.MetroTextBox txtPrometna;
         private MetroFramework.Controls.MetroTextBox txtServisna;
         private MetroFramework.Controls.MetroTextBox txtKilometraza;
-        private MetroFramework.Controls.MetroComboBox txtTipVozila;
-        private MetroFramework.Controls.MetroComboBox txtModel;
         private MetroFramework.Controls.MetroLabel lblParking;
         private MetroFramework.Controls.MetroLabel lblCijena;
         private MetroFramework.Controls.MetroLabel lblDobavljac;
-        private MetroFramework.Controls.MetroComboBox txtParking;
         private MetroFramework.Controls.MetroTextBox txtCijena;
-        private MetroFramework.Controls.MetroComboBox cbDobavljac;
         private MetroFramework.Controls.MetroButton btnOdustani;
         private MetroFramework.Controls.MetroButton btnDodajVozilo;
+        private System.Windows.Forms.ComboBox txtTipVozila;
+        private System.Windows.Forms.ComboBox txtModel;
+        private System.Windows.Forms.ComboBox txtParking;
+        private System.Windows.Forms.ComboBox cbDobavljac;
     }
 }

@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUgovoriDodaj));
             this.lblDodajUgovor = new MetroFramework.Controls.MetroLabel();
-            this.cbKupac = new MetroFramework.Controls.MetroComboBox();
-            this.cbVozilo = new MetroFramework.Controls.MetroComboBox();
-            this.cbDobavljac = new MetroFramework.Controls.MetroComboBox();
             this.dtPickerDatum = new System.Windows.Forms.DateTimePicker();
             this.lblKupac = new MetroFramework.Controls.MetroLabel();
             this.lblVozilo = new MetroFramework.Controls.MetroLabel();
@@ -42,7 +40,12 @@
             this.btnOdustani = new MetroFramework.Controls.MetroButton();
             this.btnKreirajProdajni = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbVozilo = new System.Windows.Forms.ComboBox();
+            this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbKupac = new System.Windows.Forms.ComboBox();
+            this.cbDobavljac = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDodajUgovor
@@ -65,60 +68,10 @@
             this.lblDodajUgovor.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblDodajUgovor.UseStyleColors = false;
             // 
-            // cbKupac
-            // 
-            this.cbKupac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbKupac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbKupac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKupac.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbKupac.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbKupac.FormattingEnabled = true;
-            this.cbKupac.ItemHeight = 23;
-            this.cbKupac.Location = new System.Drawing.Point(197, 201);
-            this.cbKupac.Name = "cbKupac";
-            this.cbKupac.Size = new System.Drawing.Size(280, 29);
-            this.cbKupac.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbKupac.StyleManager = null;
-            this.cbKupac.TabIndex = 40;
-            this.cbKupac.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // cbVozilo
-            // 
-            this.cbVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbVozilo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVozilo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVozilo.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbVozilo.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbVozilo.FormattingEnabled = true;
-            this.cbVozilo.ItemHeight = 23;
-            this.cbVozilo.Location = new System.Drawing.Point(197, 278);
-            this.cbVozilo.Name = "cbVozilo";
-            this.cbVozilo.Size = new System.Drawing.Size(280, 29);
-            this.cbVozilo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbVozilo.StyleManager = null;
-            this.cbVozilo.TabIndex = 41;
-            this.cbVozilo.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // cbDobavljac
-            // 
-            this.cbDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDobavljac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDobavljac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDobavljac.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbDobavljac.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbDobavljac.FormattingEnabled = true;
-            this.cbDobavljac.ItemHeight = 23;
-            this.cbDobavljac.Location = new System.Drawing.Point(197, 419);
-            this.cbDobavljac.Name = "cbDobavljac";
-            this.cbDobavljac.Size = new System.Drawing.Size(280, 29);
-            this.cbDobavljac.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbDobavljac.StyleManager = null;
-            this.cbDobavljac.TabIndex = 43;
-            this.cbDobavljac.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // dtPickerDatum
             // 
             this.dtPickerDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtPickerDatum.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dtPickerDatum.Location = new System.Drawing.Point(197, 356);
             this.dtPickerDatum.Name = "dtPickerDatum";
             this.dtPickerDatum.Size = new System.Drawing.Size(280, 20);
@@ -171,7 +124,7 @@
             this.lblDatum.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblDatum.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblDatum.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblDatum.Location = new System.Drawing.Point(128, 351);
+            this.lblDatum.Location = new System.Drawing.Point(124, 351);
             this.lblDatum.Name = "lblDatum";
             this.lblDatum.Size = new System.Drawing.Size(63, 25);
             this.lblDatum.Style = MetroFramework.MetroColorStyle.Blue;
@@ -254,11 +207,45 @@
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
             // 
+            // cbVozilo
+            // 
+            this.cbVozilo.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbVozilo.FormattingEnabled = true;
+            this.cbVozilo.Location = new System.Drawing.Point(197, 282);
+            this.cbVozilo.Name = "cbVozilo";
+            this.cbVozilo.Size = new System.Drawing.Size(280, 21);
+            this.cbVozilo.TabIndex = 53;
+            // 
+            // voziloBindingSource
+            // 
+            this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
+            // 
+            // cbKupac
+            // 
+            this.cbKupac.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbKupac.FormattingEnabled = true;
+            this.cbKupac.Location = new System.Drawing.Point(197, 209);
+            this.cbKupac.Name = "cbKupac";
+            this.cbKupac.Size = new System.Drawing.Size(280, 21);
+            this.cbKupac.TabIndex = 54;
+            // 
+            // cbDobavljac
+            // 
+            this.cbDobavljac.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbDobavljac.FormattingEnabled = true;
+            this.cbDobavljac.Location = new System.Drawing.Point(197, 427);
+            this.cbDobavljac.Name = "cbDobavljac";
+            this.cbDobavljac.Size = new System.Drawing.Size(280, 21);
+            this.cbDobavljac.TabIndex = 55;
+            // 
             // frmUgovoriDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 696);
+            this.Controls.Add(this.cbDobavljac);
+            this.Controls.Add(this.cbKupac);
+            this.Controls.Add(this.cbVozilo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnKreirajProdajni);
             this.Controls.Add(this.btnOdustani);
@@ -268,15 +255,13 @@
             this.Controls.Add(this.lblVozilo);
             this.Controls.Add(this.lblKupac);
             this.Controls.Add(this.dtPickerDatum);
-            this.Controls.Add(this.cbDobavljac);
-            this.Controls.Add(this.cbVozilo);
-            this.Controls.Add(this.cbKupac);
             this.Controls.Add(this.lblDodajUgovor);
             this.Name = "frmUgovoriDodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UgovoriDodaj";
             this.Load += new System.EventHandler(this.frmUgovoriDodaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,9 +270,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel lblDodajUgovor;
-        private MetroFramework.Controls.MetroComboBox cbKupac;
-        private MetroFramework.Controls.MetroComboBox cbVozilo;
-        private MetroFramework.Controls.MetroComboBox cbDobavljac;
         private System.Windows.Forms.DateTimePicker dtPickerDatum;
         private MetroFramework.Controls.MetroLabel lblKupac;
         private MetroFramework.Controls.MetroLabel lblVozilo;
@@ -297,5 +279,9 @@
         private MetroFramework.Controls.MetroButton btnOdustani;
         private MetroFramework.Controls.MetroButton btnKreirajProdajni;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource voziloBindingSource;
+        private System.Windows.Forms.ComboBox cbVozilo;
+        private System.Windows.Forms.ComboBox cbKupac;
+        private System.Windows.Forms.ComboBox cbDobavljac;
     }
 }

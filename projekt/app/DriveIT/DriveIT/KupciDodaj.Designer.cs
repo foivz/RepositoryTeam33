@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKupciDodaj));
-            this.txtId = new MetroFramework.Controls.MetroComboBox();
             this.txtIme = new MetroFramework.Controls.MetroTextBox();
             this.txtPrezime = new MetroFramework.Controls.MetroTextBox();
             this.txtTvrtka = new MetroFramework.Controls.MetroTextBox();
@@ -49,25 +48,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDodaj = new MetroFramework.Controls.MetroButton();
             this.btnOdustani = new MetroFramework.Controls.MetroButton();
+            this.txtId = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtId
-            // 
-            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtId.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.txtId.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.txtId.FormattingEnabled = true;
-            this.txtId.ItemHeight = 23;
-            this.txtId.Location = new System.Drawing.Point(173, 120);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(280, 29);
-            this.txtId.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtId.StyleManager = null;
-            this.txtId.TabIndex = 38;
-            this.txtId.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // txtIme
             // 
@@ -349,7 +332,8 @@
             // 
             // lblDodaj
             // 
-            this.lblDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodaj.AutoSize = true;
             this.lblDodaj.CustomBackground = true;
             this.lblDodaj.CustomForeColor = false;
@@ -406,11 +390,22 @@
             this.btnOdustani.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click_1);
             // 
+            // txtId
+            // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtId.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtId.FormattingEnabled = true;
+            this.txtId.Location = new System.Drawing.Point(174, 127);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(279, 21);
+            this.txtId.TabIndex = 58;
+            // 
             // frmKupciDodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.pictureBox1);
@@ -430,10 +425,9 @@
             this.Controls.Add(this.txtTvrtka);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtIme);
-            this.Controls.Add(this.txtId);
             this.Name = "frmKupciDodaj";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "KupciDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj kupca";
             this.Load += new System.EventHandler(this.frmKupciDodaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -443,7 +437,6 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroComboBox txtId;
         private MetroFramework.Controls.MetroTextBox txtIme;
         private MetroFramework.Controls.MetroTextBox txtPrezime;
         private MetroFramework.Controls.MetroTextBox txtTvrtka;
@@ -463,6 +456,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton btnDodaj;
         private MetroFramework.Controls.MetroButton btnOdustani;
+        private System.Windows.Forms.ComboBox txtId;
 
     }
 }
