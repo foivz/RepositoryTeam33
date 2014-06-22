@@ -14,28 +14,34 @@ namespace DriveIT
 {
     public partial class frmLogin : Form
     {
-
-        string lozinkaZaSlanje;
-        
+ 
         public frmLogin()
         {
             InitializeComponent();
+            
+           
         }
 
         private void frmDriveIT_Load(object sender, EventArgs e)
         {
             Lozinka.PasswordChar = '*';
+            //progressBar1.Hide();
+            progressBar1.Value = 0;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //progressBar1.Show();
+            progressBar1.Value = 50;
             Ulaz();
+            
         }
 
 
 
         private void Ulaz()
         {
+            
             if (ImaInterneta())
             {
 
@@ -79,6 +85,7 @@ namespace DriveIT
                 using (var client = new WebClient())
                 using (var stream = client.OpenRead("http://www.google.com"))
                 {
+                    
                     return true;
                 }
             }
@@ -88,10 +95,7 @@ namespace DriveIT
             }
         }
 
-        private void Lozinka_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
 
@@ -99,6 +103,8 @@ namespace DriveIT
         {
             if (e.KeyCode == Keys.Enter)
             {
+                //progressBar1.Show();
+                progressBar1.Value = 50;
                 Ulaz();
             }
         }

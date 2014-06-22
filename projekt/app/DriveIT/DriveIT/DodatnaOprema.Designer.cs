@@ -56,6 +56,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -157,6 +158,8 @@
             // 
             // lblVrsteDodatneOpreme
             // 
+            this.lblVrsteDodatneOpreme.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVrsteDodatneOpreme.AutoSize = true;
             this.lblVrsteDodatneOpreme.CustomBackground = true;
             this.lblVrsteDodatneOpreme.CustomForeColor = false;
@@ -175,6 +178,7 @@
             // 
             // btnDodajDodatnuOpremu
             // 
+            this.btnDodajDodatnuOpremu.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDodajDodatnuOpremu.Highlight = false;
             this.btnDodajDodatnuOpremu.Location = new System.Drawing.Point(78, 114);
             this.btnDodajDodatnuOpremu.Name = "btnDodajDodatnuOpremu";
@@ -188,6 +192,7 @@
             // 
             // btnOsvjeziPrikaz
             // 
+            this.btnOsvjeziPrikaz.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnOsvjeziPrikaz.Highlight = false;
             this.btnOsvjeziPrikaz.Location = new System.Drawing.Point(389, 114);
             this.btnOsvjeziPrikaz.Name = "btnOsvjeziPrikaz";
@@ -201,6 +206,7 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Highlight = false;
             this.btnIzlaz.Location = new System.Drawing.Point(663, 604);
             this.btnIzlaz.Name = "btnIzlaz";
@@ -214,6 +220,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 613);
             this.pictureBox1.Name = "pictureBox1";

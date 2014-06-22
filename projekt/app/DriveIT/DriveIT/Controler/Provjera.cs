@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 
 namespace DriveIT.Controler
 {
+    /// <summary>
+    /// Klasa koju koristimo kod provjere logina korisnika
+    /// </summary>
     class Provjera
     {
+
+        /// <summary>
+        /// Metoda koja provjerava postoji li korisnik u bazi korisnika te 
+        /// ukoliko postoji tada vraća tip korisnika
+        /// </summary>
+        /// <param name="korIme"></param>
+        /// <param name="lozinka"></param>
+        /// <returns></returns>
         public static int ProvjeraLogin(string korIme,string lozinka)
         {
             using (T33_DBEntities db = new T33_DBEntities()) 

@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace DriveIT.Database
 {
+    /// <summary>
+    /// Klasa koja sadrži opće podatke o tvrtci koja koristi aplikaciju odnosno je vlasnik aplikacije
+    /// Koristimo je prilikom kreiranja računa i izvještaja u PDF-u
+    /// </summary>
+
     class Tvrtka
     {
-
-
         public string imeTvrtke { get; set; }
         public string adresa { get; set; }
         public string telefon { get; set; }

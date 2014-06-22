@@ -20,14 +20,24 @@ namespace DriveIT
             InitializeComponent();
         }
 
+        public void getDetails(string i)
+        {
+            int b = int.Parse(i);
+
+            var marka = db.marka_vozila.Where<marka_vozila>(x => x.id_marka_vozila == b).First<marka_vozila>();
+
+            txtId.Text = Convert.ToString(marka.id_marka_vozila);
+            txtNaziv.Text = marka.naziv;
+            txtDrzava.Text = marka.drzava;
+        }
+
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnObrisi_Click(object sender, EventArgs e)
+        private void btnObriši_Click(object sender, EventArgs e)
         {
-            
 
             int id = Convert.ToInt32(txtId.Text);
 
@@ -41,18 +51,7 @@ namespace DriveIT
             this.Close();
         }
 
-        public void getDetails(string i)
-        {
-            int b = int.Parse(i);
-
-            var marka = db.marka_vozila.Where<marka_vozila>(x => x.id_marka_vozila == b).First<marka_vozila>();
-
-            txtId.Text = Convert.ToString(marka.id_marka_vozila);
-            txtNaziv.Text = marka.naziv;
-            txtDrzava.Text = marka.drzava;
-        }
-
-        private void btnAzurirajMarku_Click(object sender, EventArgs e)
+        private void btnAzuriraj_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtId.Text);
 

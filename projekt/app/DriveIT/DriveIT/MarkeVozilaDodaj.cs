@@ -25,14 +25,14 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnDodajParking_Click(object sender, EventArgs e)
+        private void btnDodaj_Click(object sender, EventArgs e)
         {
             T33_DBEntities db = new T33_DBEntities();
             marka_vozila marka = new marka_vozila();
 
             marka.naziv = txtNaziv.Text;
             marka.drzava = txtDrzava.Text;
-          
+
 
             db.marka_vozila.Add(marka);
 
@@ -48,7 +48,7 @@ namespace DriveIT
 
 
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Greška !");
 
