@@ -31,7 +31,7 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnDodajModelVozila_Click(object sender, EventArgs e)
+        private void btnDodaj_Click(object sender, EventArgs e)
         {
             T33_DBEntities db = new T33_DBEntities();
             model_vozila model = new model_vozila();
@@ -40,10 +40,10 @@ namespace DriveIT
             model.marka_vozila = Convert.ToInt32(cbMarka.SelectedValue);
 
             db.model_vozila.Add(model);
-            
+
             try
             {
-    
+
                 db.SaveChanges();
 
                 MessageBox.Show("Uspješno je dodan model vozila !");
@@ -52,7 +52,8 @@ namespace DriveIT
 
 
             }
-            catch {
+            catch
+            {
 
                 MessageBox.Show("Pogreška pri dodavanju novog modela !");
                 System.Threading.Thread.Sleep(700);

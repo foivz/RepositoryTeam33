@@ -226,6 +226,7 @@
             this.btnOdustani.TabIndex = 50;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnKreirajProdajni
             // 
@@ -239,6 +240,7 @@
             this.btnKreirajProdajni.TabIndex = 51;
             this.btnKreirajProdajni.Text = "Kreiraj prodajni ugovor";
             this.btnKreirajProdajni.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnKreirajProdajni.Click += new System.EventHandler(this.btnKreirajProdajni_Click);
             // 
             // pictureBox1
             // 

@@ -687,6 +687,7 @@
             this.btnOdustani.TabIndex = 96;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnDodajVozilo
             // 
