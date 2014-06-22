@@ -58,6 +58,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -162,6 +163,7 @@
             // 
             // lblOprema
             // 
+            this.lblOprema.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOprema.AutoSize = true;
             this.lblOprema.CustomBackground = true;
             this.lblOprema.CustomForeColor = false;
@@ -180,6 +182,7 @@
             // 
             // cbOprema
             // 
+            this.cbOprema.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOprema.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbOprema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOprema.FontSize = MetroFramework.MetroLinkSize.Medium;
@@ -196,6 +199,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(654, 447);
             this.btnOdustani.Name = "btnOdustani";
@@ -208,6 +212,7 @@
             // 
             // btnOsvjezi
             // 
+            this.btnOsvjezi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOsvjezi.Highlight = false;
             this.btnOsvjezi.Location = new System.Drawing.Point(358, 447);
             this.btnOsvjezi.Name = "btnOsvjezi";
@@ -220,6 +225,7 @@
             // 
             // btnDodaj
             // 
+            this.btnDodaj.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDodaj.Highlight = false;
             this.btnDodaj.Location = new System.Drawing.Point(51, 447);
             this.btnDodaj.Name = "btnDodaj";
@@ -243,6 +249,7 @@
             // 
             // lblDodajOpremuAutomobilu
             // 
+            this.lblDodajOpremuAutomobilu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodajOpremuAutomobilu.AutoSize = true;
             this.lblDodajOpremuAutomobilu.CustomBackground = true;
             this.lblDodajOpremuAutomobilu.CustomForeColor = false;

@@ -32,17 +32,6 @@ namespace DriveIT
             marka_detalji.ShowDialog();
         }
 
-
-        private void btnIzlaz_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnOsvjezi_Click(object sender, EventArgs e)
-        {
-            prikaziMarkeVozila();
-        }
-
         private void frmMarkeVozila_Load(object sender, EventArgs e)
         {
             prikaziMarkeVozila();
@@ -58,6 +47,22 @@ namespace DriveIT
         {
             string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             prikaziDetalje(i);
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            frmMarkeVozilaDodaj marke_vozila = new frmMarkeVozilaDodaj();
+            marke_vozila.Show();
+        }
+
+        private void btnOsvjezi_Click(object sender, EventArgs e)
+        {
+            prikaziMarkeVozila();
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
