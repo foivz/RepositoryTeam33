@@ -14,7 +14,9 @@ namespace DriveIT
     public partial class frmDobavljaci : Form
     {
        
-
+        /// <summary>
+        /// Metoda za popunjavanje datagrida s podacima dobavljača
+        /// </summary>
         private void PrikaziDobavljace()
         {
             T33_DBEntities db = new T33_DBEntities();
@@ -23,7 +25,10 @@ namespace DriveIT
            
         }
 
-
+        /// <summary>
+        /// Metoda koja poziva formu s detaljima dobavljača i šalje joj id trenutnog dobavljača
+        /// </summary>
+        /// <param name="i"></param>
         private void prikaziDetalje(string i)
         {
 
@@ -38,11 +43,21 @@ namespace DriveIT
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda koja zatvara formu na odabir gumba za odustajanje
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Metoda koja sadrži poziv metode za popunjanje datagrida s dobavljačima
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmDobavljaci_Load(object sender, EventArgs e)
         {
             PrikaziDobavljace();
@@ -54,6 +69,11 @@ namespace DriveIT
             this.Close();
         }
 
+        /// <summary>
+        /// Metoda koja poziva formu za dodavanje novog dobavljača
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDodajDobavljaca_Click(object sender, EventArgs e)
         {
             /*otvaranje nove forme za dodavanje dobavljaca*/
@@ -62,11 +82,23 @@ namespace DriveIT
 
         }
 
+       /// <summary>
+       /// Metoda za osvježavanje liste dobavljača nakon dodavanja novog dobavljača
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void btnOsvjezi_Click(object sender, EventArgs e)
         {
             PrikaziDobavljace();
         }
 
+        /// <summary>
+        /// Metoda koja nakon klika na određeni element na listu dobavljača proslijeđuje metodi za prikaz detalja 
+        /// koja poziva formu za prikaz detalja.
+        /// Hvata korisnički id na početku retka kao string i proslijeđuje ga
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();

@@ -24,6 +24,11 @@ namespace DriveIT
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda koja pri paljenju vozila 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMehanicar_Load(object sender, EventArgs e)
         {
 
@@ -32,6 +37,11 @@ namespace DriveIT
             dohvatiNaloge();
         }
 
+        /// <summary>
+        /// Metoda koja sprema podatke o promjenama koje je napravio mehaničar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveBtn_Click(object sender, EventArgs e)
         {
             try
@@ -49,6 +59,11 @@ namespace DriveIT
            
         }
 
+        /// <summary>
+        /// Metoda koja simulira paljenje automobila i javlja poruku o paljenju vozilas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void upaliBtn_Click(object sender, EventArgs e)
         {
             //DataRow row = (notifikacijeGrid.SelectedRows[0].DataBoundItem as DataRowView).Row;
@@ -62,14 +77,18 @@ namespace DriveIT
             }
 
         }
+
+
+        /// <summary>
+        /// Metoda koja dohvaća vozila koja nisu upaljena određeni period vremena i na temelju provjere
+        /// podiže notifikaciju mehaničaru da vozilo nije paljeno
+        /// </summary>
+        /// <param name="mj"></param>
         private void dohvatiNeupaljenaVozila(int mj)
         {
             db = new T33_DBEntities();
             DateTime vrijeme = DateTime.Now;
             vrijeme = vrijeme.AddMonths(mj * -1);
-
-            //var vozila = db.vozilo.Where<vozilo>(x => x.zadnje_paljenje == null).ToList<vozilo>();
-            /*notifikacijeGrid.DataSource = vozila;*/
 
             db.vozilo.Where<vozilo>(x => x.zadnje_paljenje <= vrijeme).Load();
             if (db.vozilo.Where<vozilo>(x => x.zadnje_paljenje <= vrijeme).Count() > 0)
@@ -102,27 +121,13 @@ namespace DriveIT
 
             }
         }
+
+        /// <summary>
+        /// Metoda koja dohvaća sve naloge i sprema ih u datagrid 
+        /// </summary>
         public void dohvatiNaloge()
         {
-            
-            
-            /*nalog.DataSource =
-                        (from n in db.nalog_za_servis
-                         join v in db.vozilo on n.vozilo equals v.id_vozilo
-                         join m in db.model_vozila on v.model_vozila equals m.id_model_vozila
-                         join k in db.korisnik on n.korisnik equals k.id_korisnik
-                         where n.vozilo == v.id_vozilo
-                         select new
-                         {
-                             n.id_nalog_za_servis,
-                             n.opis,
-                             vozilo = m.naziv,
-                             korisnik = k.korisnicko_ime,
-                             n.obavljen,
-                             n.datum,
-                             n.cijena,
-                             n.sati_rada
-                         }).ToList();*/
+     
             db = new T33_DBEntities();
             db.nalog_za_servis.Where<nalog_za_servis>(x => x.korisnik1.id_korisnik >=0).Load();
             nalog.DataSource = db.nalog_za_servis.Local.ToBindingList();
@@ -137,6 +142,11 @@ namespace DriveIT
             nalogGrid.Columns["opis"].Width = (int)(nalogGrid.Size.Width * 0.42);
         }
 
+        /// <summary>
+        /// Metoda koja na odabir gumba za otvaranje naloga izabire određeni nalog
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void otvoriNalogBtn_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in nalogGrid.SelectedRows)
@@ -148,11 +158,21 @@ namespace DriveIT
             }
         }
 
+        /// <summary>
+        /// Metoda koja zatvara aplikaciju za mehaničara
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+
+        /// <summary>
+        /// Metoda koja pita mehaničara da li je siguran da želi ugasiti aplikaciju
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);

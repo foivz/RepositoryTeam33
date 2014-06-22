@@ -19,6 +19,10 @@ namespace DriveIT
     {
         T33_DBEntities db = new T33_DBEntities();
 
+
+        /// <summary>
+        /// Konstruktor forme koji sadrži kod za popunjavanje comboboxova prilikom inicijalizacije forme
+        /// </summary>
         public frmVozilaDodaj()
         {
             InitializeComponent();
@@ -52,7 +56,11 @@ namespace DriveIT
        
 
         
-
+        /// <summary>
+        /// Metoda koja vraća vozilo kojem broj šasije odgovara zadnje unesenom vozilu
+        /// vraća objekt vozila koji je zadnji unesen
+        /// </summary>
+        /// <returns></returns>
         private vozilo vratiZadnjeUneseno()
         {
             string broj_sasije = txtBrSasije.Text;
@@ -62,14 +70,16 @@ namespace DriveIT
 
         }
 
-
+        /// <summary>
+        /// Metoda koja sprema cijene u tablicu cijena za odgovarajuće vozilo
+        /// </summary>
         private void spremiCijene()
         {
 
             vozilo vozilo_uneseno = vratiZadnjeUneseno();
             cijena cijena_vozila = new cijena();
 
-            MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
+            //MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
 
             cijena_vozila.vozilo = vozilo_uneseno.id_vozilo;
             cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text);
@@ -87,7 +97,9 @@ namespace DriveIT
 
         }
 
-
+        /// <summary>
+        /// Metoda koja za dodavanje vozila kreira ugovor na vozilu
+        /// </summary>
         private void spremiUgovore()
         {
             vozilo vozilo_uneseno = vratiZadnjeUneseno();
@@ -118,6 +130,11 @@ namespace DriveIT
 
         }
 
+        /// <summary>
+        /// Metoda koja omogućava upload slike/a vozila
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
@@ -130,6 +147,11 @@ namespace DriveIT
 
         }
 
+
+        /// <summary>
+        /// Metoda koja služi za spremanje slika vozila u direktorij na disku kojeg kreira ukoliko ne postoji
+        /// ili koristi postojeći ako postoji
+        /// </summary>
         private void SpremiSlike()
         {
             vozilo vozilo_uneseno = vratiZadnjeUneseno();
@@ -169,11 +191,23 @@ namespace DriveIT
             }
         }
 
+        /// <summary>
+        /// Metoda koja poziva metodu za spremanje označenih slika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton2_Click(object sender, EventArgs e)
         {
             SpremiSlike();
         }
 
+
+        /// <summary>
+        /// Metoda koja služi da dodavanje novog vozila,
+        /// koristi korisnički unešene vrijednosti ili javlja grešku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDodajVozilo_Click(object sender, EventArgs e)
         {
             vozilo vozilo = new vozilo();
@@ -219,6 +253,11 @@ namespace DriveIT
             }
         }
 
+        /// <summary>
+        /// Metoda za zatvaranje forme na odabir gumba za zatvaranje
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
