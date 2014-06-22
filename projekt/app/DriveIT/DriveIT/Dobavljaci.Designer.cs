@@ -186,7 +186,7 @@
             this.txtPretragaDobavljaci.StyleManager = null;
             this.txtPretragaDobavljaci.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPretragaDobavljaci.UseStyleColors = false;
-            this.txtPretragaDobavljaci.TextChanged += new System.EventHandler(this.txtPretragaDobavljaci_TextChanged);
+           
             // 
             // pictureBox1
             // 
