@@ -41,6 +41,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -53,6 +55,7 @@
             // 
             // lblTeam
             // 
+            this.lblTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTeam.AutoSize = true;
             this.lblTeam.CustomBackground = true;
             this.lblTeam.CustomForeColor = false;
@@ -71,6 +74,7 @@
             // 
             // lblPrvi
             // 
+            this.lblPrvi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrvi.AutoSize = true;
             this.lblPrvi.CustomBackground = true;
             this.lblPrvi.CustomForeColor = false;
@@ -89,6 +93,7 @@
             // 
             // lblDrugi
             // 
+            this.lblDrugi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDrugi.AutoSize = true;
             this.lblDrugi.CustomBackground = true;
             this.lblDrugi.CustomForeColor = false;
@@ -107,6 +112,7 @@
             // 
             // lblTreci
             // 
+            this.lblTreci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTreci.AutoSize = true;
             this.lblTreci.CustomBackground = true;
             this.lblTreci.CustomForeColor = false;
@@ -125,6 +131,7 @@
             // 
             // lblCetvrta
             // 
+            this.lblCetvrta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCetvrta.AutoSize = true;
             this.lblCetvrta.CustomBackground = true;
             this.lblCetvrta.CustomForeColor = false;
@@ -143,6 +150,7 @@
             // 
             // lblPet
             // 
+            this.lblPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPet.AutoSize = true;
             this.lblPet.CustomBackground = true;
             this.lblPet.CustomForeColor = false;
@@ -171,9 +179,13 @@
             this.Controls.Add(this.lblPrvi);
             this.Controls.Add(this.lblTeam);
             this.Controls.Add(this.pictureBox1);
+<<<<<<< HEAD
             this.MaximizeBox = false;
+=======
+            this.MinimizeBox = false;
+>>>>>>> 6843666f653191b33a6e80b876b3a597d6c42ece
             this.Name = "frmAboutUs";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "O nama";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
