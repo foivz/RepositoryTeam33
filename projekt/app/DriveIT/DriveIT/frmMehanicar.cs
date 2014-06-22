@@ -138,5 +138,31 @@ namespace DriveIT
             }
         }
 
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            if (e.CloseReason == CloseReason.UserClosing) Application.Exit();
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            { 
+            
+            switch (MessageBox.Show(this, "Jeste li sigurni za želite izaći?", "Zatvaranje", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default: Application.Exit();
+                    break;
+            }
+            }
+
+        }
+
     }
 }

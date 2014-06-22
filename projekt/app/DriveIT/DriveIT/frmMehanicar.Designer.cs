@@ -35,6 +35,7 @@
             this.nalogGrid = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.otvoriNalogBtn = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.notifikacijeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nalogGrid)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +76,7 @@
             this.lblDugoPaljenaVozila.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.lblDugoPaljenaVozila.Location = new System.Drawing.Point(404, 115);
             this.lblDugoPaljenaVozila.Name = "lblDugoPaljenaVozila";
-            this.lblDugoPaljenaVozila.Size = new System.Drawing.Size(235, 25);
+            this.lblDugoPaljenaVozila.Size = new System.Drawing.Size(233, 25);
             this.lblDugoPaljenaVozila.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblDugoPaljenaVozila.StyleManager = null;
             this.lblDugoPaljenaVozila.TabIndex = 3;
@@ -142,11 +143,25 @@
             this.otvoriNalogBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.otvoriNalogBtn.Click += new System.EventHandler(this.otvoriNalogBtn_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Highlight = false;
+            this.metroButton1.Location = new System.Drawing.Point(163, 392);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton1.StyleManager = null;
+            this.metroButton1.TabIndex = 8;
+            this.metroButton1.Text = "Izlaz";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // frmMehanicar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 462);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.otvoriNalogBtn);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.nalogGrid);
@@ -173,5 +188,6 @@
         private System.Windows.Forms.DataGridView nalogGrid;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton otvoriNalogBtn;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
