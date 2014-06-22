@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DriveIT
 {
@@ -25,8 +26,13 @@ namespace DriveIT
         {
             PreglednikSlika preglednik = new PreglednikSlika();
             preglednik.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            preglednik.pictureBox1.Load("./Slike/nema_slike.jpg");
             string url = "./Slike/" + id_vozila + "_1.jpg";
-            preglednik.pictureBox1.Load(url);
+            if (File.Exists(url))
+            {
+                preglednik.pictureBox1.Load(url);
+                
+            }
             preglednik.Show();
         }
 
@@ -37,6 +43,8 @@ namespace DriveIT
         /// <param name="e"></param>
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            if(pictureBox1.ImageLocation!= "./Slike/nema_slike.jpg")
+            { 
             string[] putanja = pictureBox1.ImageLocation.Split('_');
 
             string nova_putanja;
@@ -58,6 +66,7 @@ namespace DriveIT
                 pictureBox1.Load(nova_putanja);
                 
             }
+            }
 
         }
 
@@ -69,6 +78,8 @@ namespace DriveIT
         /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
+           if(pictureBox1.ImageLocation!= "./Slike/nema_slike.jpg")
+            { 
             string[] putanja = pictureBox1.ImageLocation.Split('_');
 
             string nova_putanja;
@@ -84,7 +95,7 @@ namespace DriveIT
                 pictureBox1.Load(nova_putanja);
             }
 
-
+            }
 
         }
 
