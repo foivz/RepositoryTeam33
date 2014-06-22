@@ -31,6 +31,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAplikacija));
             this.btnDobavljaci = new MetroFramework.Controls.MetroButton();
             this.btnVozila = new MetroFramework.Controls.MetroButton();
             this.btnKupciIInteresanti = new MetroFramework.Controls.MetroButton();
@@ -55,6 +56,9 @@
             this.cbParkiralista = new System.Windows.Forms.ComboBox();
             this.lblParking = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.satTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.idvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sasijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumprveregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,10 +85,9 @@
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTime = new System.Windows.Forms.Label();
-            this.satTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -285,6 +288,7 @@
             // 
             // metroButtnIzlaz
             // 
+            this.metroButtnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroButtnIzlaz.Highlight = false;
             this.metroButtnIzlaz.Location = new System.Drawing.Point(62, 609);
             this.metroButtnIzlaz.Name = "metroButtnIzlaz";
@@ -322,7 +326,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -358,6 +363,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(577, 289);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(62, 43);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(0, 13);
+            this.lblTime.TabIndex = 16;
+            // 
+            // satTimer
+            // 
+            this.satTimer.Enabled = true;
+            this.satTimer.Interval = 1000;
+            this.satTimer.Tick += new System.EventHandler(this.satTimer_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(384, 397);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(577, 292);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // idvoziloDataGridViewTextBoxColumn
             // 
@@ -557,25 +589,12 @@
             // 
             this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
             // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(62, 43);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(0, 13);
-            this.lblTime.TabIndex = 16;
-            // 
-            // satTimer
-            // 
-            this.satTimer.Enabled = true;
-            this.satTimer.Interval = 1000;
-            this.satTimer.Tick += new System.EventHandler(this.satTimer_Tick);
-            // 
             // frmAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 701);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblParking);
@@ -596,6 +615,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -656,5 +676,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dodatnaopremaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer satTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -31,6 +31,8 @@ namespace DriveIT
                 cbParkiralista.DataSource = db.parking.ToList();
                 cbParkiralista.ValueMember = "id_parking";
                 cbParkiralista.DisplayMember = "naziv";
+                //pictureBox1.Load("./Slike/parking.jpg");
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             
 
         }

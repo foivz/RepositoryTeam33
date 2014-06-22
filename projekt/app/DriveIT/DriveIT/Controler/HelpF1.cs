@@ -16,7 +16,7 @@ namespace DriveIT.Controler
         /// </summary>
         public static void getHelp(){
 
-            System.Diagnostics.Process.Start("http://arka.foi.hr/~lpredova/driveIT/DriveITHelp.pdf");
+            System.Diagnostics.Process.Start("http://arka.foi.hr/~lpredova/driveIT/driveIT-help.pdf");
         }
 
     }
