@@ -25,11 +25,6 @@ namespace DriveIT
             cbOprema.DisplayMember = "naziv";
         }
 
-        private void btnIzlaz_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void prikaziDetalje() {
             dataGridView1.DataSource = db.vozilo.Where(x => x.id_vozilo == identifikator).First().dodatna_oprema.ToList();
         }
@@ -45,23 +40,23 @@ namespace DriveIT
             prikaziDetalje();
         }
 
-        private void btnOsvjezi_Click(object sender, EventArgs e)
-        {
-            prikaziDetalje();
-        }
-
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            int odabrana_oprema ;
-            bool prolazi = Int32.TryParse(cbOprema.SelectedValue.ToString(),out odabrana_oprema );
+
+        }
+
+        private void btnDodaj_Click_1(object sender, EventArgs e)
+        {
+            int odabrana_oprema;
+            bool prolazi = Int32.TryParse(cbOprema.SelectedValue.ToString(), out odabrana_oprema);
 
             //var vozilo_oprema = new dodatna_oprema();
             //var vozilo_oprema = new dodatna_oprema();
-            
+
             //vozilo_oprema.vozilo.Add(new vozilo {dodatna_oprema = odabrana_oprema });
             //vozilo_oprema.vozilo.Add(new vozilo {id_vozilo = identifikator });
 
-            
+
 
             db.vozilo.Where(z => z.id_vozilo == identifikator).First().dodatna_oprema.Add(
 
@@ -70,10 +65,11 @@ namespace DriveIT
             //db.vozilo.Add(vozilo_oprema);
 
             db.SaveChanges();
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-            //dataGridView1.DataSource = db.vozilo.Where(x => x.id_vozilo == identifikator)..First().dodatna_oprema.ToList();*/
         }
 
 

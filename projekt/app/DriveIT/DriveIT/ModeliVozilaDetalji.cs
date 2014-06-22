@@ -49,10 +49,28 @@ namespace DriveIT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAzuriraj_Click(object sender, EventArgs e)
+        {
+           
+
+
+
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnObrisi_Click_1(object sender, EventArgs e)
         {
 
             int id = Convert.ToInt32(txtSifra.Text);
@@ -66,7 +84,7 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnAzuriraj_Click(object sender, EventArgs e)
+        private void btnAzuriraj_Click_1(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtSifra.Text);
             model_vozila model = db.model_vozila.First(i => i.id_model_vozila == id);
@@ -78,9 +96,6 @@ namespace DriveIT
             MessageBox.Show("Model vozila uspješno ažuriran !");
             System.Threading.Thread.Sleep(700);
             this.Close();
-
-
-
         }
 
        

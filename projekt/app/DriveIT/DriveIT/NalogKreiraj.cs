@@ -29,13 +29,20 @@ namespace DriveIT
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void fillForm(string i){
+            
+            txtVozilo.Text = i; ;
+            
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnKreirajNalog_Click(object sender, EventArgs e)
         {
+
             T33_DBEntities db = new T33_DBEntities();
             nalog_za_servis nalogServis = new nalog_za_servis();
 
@@ -65,13 +72,6 @@ namespace DriveIT
                 }
 
             }
-
-        }
-
-        public void fillForm(string i){
-            
-            txtVozilo.Text = i; ;
-            
         }
 
 

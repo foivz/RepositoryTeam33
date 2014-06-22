@@ -44,9 +44,18 @@ namespace DriveIT
             prikaziModeleVozila();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
+            
+        }
+
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void btnOsvjezi_Click(object sender, EventArgs e)
@@ -54,18 +63,10 @@ namespace DriveIT
             prikaziModeleVozila();
         }
 
-        private void btnDodajVrstuVozila_Click(object sender, EventArgs e)
+        private void btnDodajVozilo_Click(object sender, EventArgs e)
         {
             frmModeliVozilaDodaj modeli_vozila = new frmModeliVozilaDodaj();
             modeli_vozila.Show();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            prikaziDetalje(i);
-            
         }
     }
 }
