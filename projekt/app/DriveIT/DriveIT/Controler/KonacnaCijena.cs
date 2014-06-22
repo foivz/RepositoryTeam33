@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 
 namespace DriveIT.Controler
 {
+    /// <summary>
+    /// Klasa koja računa cijenu vozila kojeg joj proslijedimo
+    /// </summary>
     class KonacnaCijena
     {
+        /// <summary>
+        /// Metoda u kojoj se računaju cijene vozila s porezima,maržama.
+        /// Bazira se na datašnjem datumu te ovisno o stajanju na skladištu računa maržu
+        /// </summary>
+        /// <param name="vozilo"></param>
+        /// <returns>vozilo s unesenim izračunatim vrijednostima cijene</returns>
+
+
         public  vozilo Izracun(vozilo vozilo)
         {
 

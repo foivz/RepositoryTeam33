@@ -35,6 +35,7 @@
             this.lblLozinka = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lozinka = new System.Windows.Forms.TextBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,11 +130,19 @@
             this.Lozinka.TabIndex = 2;
             this.Lozinka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lozinka_KeyDown);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(124, 476);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 101;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 511);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Lozinka);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLozinka);
@@ -160,6 +169,7 @@
         private MetroFramework.Controls.MetroLabel lblLozinka;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Lozinka;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
