@@ -111,6 +111,8 @@
             // 
             // lblVrsteVozila
             // 
+            this.lblVrsteVozila.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVrsteVozila.AutoSize = true;
             this.lblVrsteVozila.CustomBackground = true;
             this.lblVrsteVozila.CustomForeColor = false;
@@ -129,6 +131,7 @@
             // 
             // btnOsvjezi
             // 
+            this.btnOsvjezi.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnOsvjezi.Highlight = false;
             this.btnOsvjezi.Location = new System.Drawing.Point(375, 150);
             this.btnOsvjezi.Name = "btnOsvjezi";
@@ -142,6 +145,7 @@
             // 
             // btnDodajVozilo
             // 
+            this.btnDodajVozilo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDodajVozilo.Highlight = false;
             this.btnDodajVozilo.Location = new System.Drawing.Point(59, 150);
             this.btnDodajVozilo.Name = "btnDodajVozilo";
@@ -155,6 +159,7 @@
             // 
             // btnIzlaz
             // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzlaz.Highlight = false;
             this.btnIzlaz.Location = new System.Drawing.Point(654, 591);
             this.btnIzlaz.Name = "btnIzlaz";
@@ -168,6 +173,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 607);
             this.pictureBox1.Name = "pictureBox1";
@@ -188,7 +194,7 @@
             this.Controls.Add(this.lblVrsteVozila);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmModeliVozila";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modeli";
             this.Load += new System.EventHandler(this.frmModeli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

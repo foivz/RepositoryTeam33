@@ -76,7 +76,7 @@
             // 
             // lblTip
             // 
-            this.lblTip.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTip.AutoSize = true;
             this.lblTip.CustomBackground = true;
             this.lblTip.CustomForeColor = false;
@@ -231,6 +231,7 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
             this.txtId.CustomForeColor = false;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.txtId.Location = new System.Drawing.Point(195, 105);
@@ -246,9 +247,10 @@
             // 
             // txtTipKupca
             // 
-            this.txtTipKupca.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtTipKupca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipKupca.CustomBackground = false;
             this.txtTipKupca.CustomForeColor = false;
+            this.txtTipKupca.Enabled = false;
             this.txtTipKupca.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtTipKupca.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.txtTipKupca.Location = new System.Drawing.Point(362, 107);
@@ -491,6 +493,7 @@
             this.Controls.Add(this.lblTip);
             this.Controls.Add(this.lblId);
             this.Name = "frmKupciDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KupciDetalji";
             this.Load += new System.EventHandler(this.frmKupciDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

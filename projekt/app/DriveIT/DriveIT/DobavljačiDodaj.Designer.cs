@@ -395,7 +395,7 @@
             this.Controls.Add(this.lblPrezime);
             this.Controls.Add(this.lblIme);
             this.Name = "frmDobavljaciDodaj";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj dobavljača";
             this.Load += new System.EventHandler(this.DobavljačiDodaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

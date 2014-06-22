@@ -36,7 +36,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
             this.Name = "frmDijeloviServis";
-            this.Text = "DijeloviServis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dijelovi za servis";
             this.ResumeLayout(false);
 
         }

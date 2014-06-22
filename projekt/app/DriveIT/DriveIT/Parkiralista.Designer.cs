@@ -31,25 +31,26 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParkiralista));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idparkingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kapacitetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parkingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblParkiralista = new MetroFramework.Controls.MetroLabel();
             this.btnIzlaz = new MetroFramework.Controls.MetroButton();
             this.btnDodaj = new MetroFramework.Controls.MetroButton();
             this.btnOsvjezi = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.idparkingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kapacitetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parkingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -69,6 +70,79 @@
             this.dataGridView1.CellContextMenuStripChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // lblParkiralista
+            // 
+            this.lblParkiralista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblParkiralista.AutoSize = true;
+            this.lblParkiralista.CustomBackground = true;
+            this.lblParkiralista.CustomForeColor = false;
+            this.lblParkiralista.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblParkiralista.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblParkiralista.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblParkiralista.Location = new System.Drawing.Point(371, 33);
+            this.lblParkiralista.Name = "lblParkiralista";
+            this.lblParkiralista.Size = new System.Drawing.Size(143, 25);
+            this.lblParkiralista.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblParkiralista.StyleManager = null;
+            this.lblParkiralista.TabIndex = 5;
+            this.lblParkiralista.Text = "Prikaz parkirališta";
+            this.lblParkiralista.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblParkiralista.UseStyleColors = false;
+            // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIzlaz.Highlight = false;
+            this.btnIzlaz.Location = new System.Drawing.Point(649, 604);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
+            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnIzlaz.StyleManager = null;
+            this.btnIzlaz.TabIndex = 6;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
+            // btnDodaj
+            // 
+            this.btnDodaj.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDodaj.Highlight = false;
+            this.btnDodaj.Location = new System.Drawing.Point(34, 121);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(280, 80);
+            this.btnDodaj.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnDodaj.StyleManager = null;
+            this.btnDodaj.TabIndex = 7;
+            this.btnDodaj.Text = "Dodaj parkiralište";
+            this.btnDodaj.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
+            // btnOsvjezi
+            // 
+            this.btnOsvjezi.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnOsvjezi.Highlight = false;
+            this.btnOsvjezi.Location = new System.Drawing.Point(354, 121);
+            this.btnOsvjezi.Name = "btnOsvjezi";
+            this.btnOsvjezi.Size = new System.Drawing.Size(280, 80);
+            this.btnOsvjezi.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnOsvjezi.StyleManager = null;
+            this.btnOsvjezi.TabIndex = 8;
+            this.btnOsvjezi.Text = "Osvježi";
+            this.btnOsvjezi.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(34, 617);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(434, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // idparkingDataGridViewTextBoxColumn
             // 
@@ -104,73 +178,6 @@
             // 
             this.parkingBindingSource.DataSource = typeof(DriveIT.Database.parking);
             // 
-            // lblParkiralista
-            // 
-            this.lblParkiralista.AutoSize = true;
-            this.lblParkiralista.CustomBackground = true;
-            this.lblParkiralista.CustomForeColor = false;
-            this.lblParkiralista.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblParkiralista.FontWeight = MetroFramework.MetroLabelWeight.Light;
-            this.lblParkiralista.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblParkiralista.Location = new System.Drawing.Point(371, 33);
-            this.lblParkiralista.Name = "lblParkiralista";
-            this.lblParkiralista.Size = new System.Drawing.Size(143, 25);
-            this.lblParkiralista.Style = MetroFramework.MetroColorStyle.Blue;
-            this.lblParkiralista.StyleManager = null;
-            this.lblParkiralista.TabIndex = 5;
-            this.lblParkiralista.Text = "Prikaz parkirališta";
-            this.lblParkiralista.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblParkiralista.UseStyleColors = false;
-            // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.Highlight = false;
-            this.btnIzlaz.Location = new System.Drawing.Point(649, 604);
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(280, 80);
-            this.btnIzlaz.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnIzlaz.StyleManager = null;
-            this.btnIzlaz.TabIndex = 6;
-            this.btnIzlaz.Text = "Izlaz";
-            this.btnIzlaz.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.Highlight = false;
-            this.btnDodaj.Location = new System.Drawing.Point(34, 121);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(280, 80);
-            this.btnDodaj.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnDodaj.StyleManager = null;
-            this.btnDodaj.TabIndex = 7;
-            this.btnDodaj.Text = "Dodaj parkiralište";
-            this.btnDodaj.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Highlight = false;
-            this.btnOsvjezi.Location = new System.Drawing.Point(354, 121);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(280, 80);
-            this.btnOsvjezi.Style = MetroFramework.MetroColorStyle.Blue;
-            this.btnOsvjezi.StyleManager = null;
-            this.btnOsvjezi.TabIndex = 8;
-            this.btnOsvjezi.Text = "Osvježi";
-            this.btnOsvjezi.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 617);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(434, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmParkiralista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,12 +190,12 @@
             this.Controls.Add(this.lblParkiralista);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmParkiralista";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Parkiralista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Parkirališta";
             this.Load += new System.EventHandler(this.frmParkiralista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parkingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

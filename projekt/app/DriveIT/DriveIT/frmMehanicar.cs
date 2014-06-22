@@ -34,8 +34,18 @@ namespace DriveIT
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            db.SaveChanges();
-            MessageBox.Show("Ako nije izbacilo grešku, Spremljeno");
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("Spremljeno");
+            }
+            catch 
+            {
+
+                MessageBox.Show("Greška");
+            }
+            
+            
            
         }
 

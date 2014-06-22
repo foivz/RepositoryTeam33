@@ -45,6 +45,7 @@
             // 
             // lblSifra
             // 
+            this.lblSifra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSifra.AutoSize = true;
             this.lblSifra.CustomBackground = true;
             this.lblSifra.CustomForeColor = false;
@@ -63,6 +64,7 @@
             // 
             // lblNaziv
             // 
+            this.lblNaziv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNaziv.AutoSize = true;
             this.lblNaziv.CustomBackground = true;
             this.lblNaziv.CustomForeColor = false;
@@ -81,6 +83,7 @@
             // 
             // lblKapacitet
             // 
+            this.lblKapacitet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKapacitet.AutoSize = true;
             this.lblKapacitet.CustomBackground = true;
             this.lblKapacitet.CustomForeColor = false;
@@ -99,8 +102,10 @@
             // 
             // txtId
             // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
-            this.txtId.CustomForeColor = false;
+            this.txtId.CustomForeColor = true;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.txtId.Location = new System.Drawing.Point(210, 171);
@@ -116,6 +121,7 @@
             // 
             // txtNaziv
             // 
+            this.txtNaziv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNaziv.CustomBackground = false;
             this.txtNaziv.CustomForeColor = false;
             this.txtNaziv.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -133,6 +139,7 @@
             // 
             // txtKapacitet
             // 
+            this.txtKapacitet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKapacitet.CustomBackground = false;
             this.txtKapacitet.CustomForeColor = false;
             this.txtKapacitet.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -150,6 +157,8 @@
             // 
             // lblAzurirajParkiraliste
             // 
+            this.lblAzurirajParkiraliste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAzurirajParkiraliste.AutoSize = true;
             this.lblAzurirajParkiraliste.CustomBackground = true;
             this.lblAzurirajParkiraliste.CustomForeColor = false;
@@ -168,6 +177,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 575);
             this.pictureBox1.Name = "pictureBox1";
@@ -178,6 +189,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(634, 463);
             this.btnOdustani.Name = "btnOdustani";
@@ -191,6 +203,7 @@
             // 
             // btnObrisi
             // 
+            this.btnObrisi.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnObrisi.Highlight = false;
             this.btnObrisi.Location = new System.Drawing.Point(623, 171);
             this.btnObrisi.Name = "btnObrisi";
@@ -204,6 +217,7 @@
             // 
             // btnAzuriraj
             // 
+            this.btnAzuriraj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAzuriraj.Highlight = false;
             this.btnAzuriraj.Location = new System.Drawing.Point(210, 463);
             this.btnAzuriraj.Name = "btnAzuriraj";
@@ -232,8 +246,8 @@
             this.Controls.Add(this.lblNaziv);
             this.Controls.Add(this.lblSifra);
             this.Name = "frmParkiralistaDetalji";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ParkiralistaDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalji o parkiralištima";
             this.Load += new System.EventHandler(this.ParkiralistaDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

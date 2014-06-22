@@ -25,11 +25,6 @@ namespace DriveIT
 
         }
 
-        private void frmModeliVozilaDetalji_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void getDetails(string i)
         {
 

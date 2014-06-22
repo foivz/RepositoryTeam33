@@ -125,6 +125,7 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
             this.txtId.CustomForeColor = false;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.txtId.Location = new System.Drawing.Point(332, 157);
@@ -244,7 +245,8 @@
             this.Controls.Add(this.lblNaziv);
             this.Controls.Add(this.lblSifra);
             this.Name = "frmMarkeVozilaDetalji";
-            this.Text = "MarkeVozilaDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalji o marki vozila";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

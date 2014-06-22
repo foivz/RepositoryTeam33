@@ -45,11 +45,14 @@
             // 
             // notifikacijeGrid
             // 
+            this.notifikacijeGrid.AllowUserToAddRows = false;
+            this.notifikacijeGrid.AllowUserToDeleteRows = false;
             this.notifikacijeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.notifikacijeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.notifikacijeGrid.Location = new System.Drawing.Point(420, 145);
             this.notifikacijeGrid.Name = "notifikacijeGrid";
+            this.notifikacijeGrid.ReadOnly = true;
             this.notifikacijeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.notifikacijeGrid.Size = new System.Drawing.Size(543, 331);
             this.notifikacijeGrid.TabIndex = 0;
@@ -64,7 +67,7 @@
             this.saveBtn.Style = MetroFramework.MetroColorStyle.Blue;
             this.saveBtn.StyleManager = null;
             this.saveBtn.TabIndex = 1;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Spremi";
             this.saveBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
@@ -103,12 +106,15 @@
             // 
             // nalogGrid
             // 
+            this.nalogGrid.AllowUserToAddRows = false;
+            this.nalogGrid.AllowUserToDeleteRows = false;
             this.nalogGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.nalogGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.nalogGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.nalogGrid.Location = new System.Drawing.Point(24, 145);
             this.nalogGrid.Name = "nalogGrid";
+            this.nalogGrid.ReadOnly = true;
             this.nalogGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.nalogGrid.Size = new System.Drawing.Size(361, 331);
             this.nalogGrid.TabIndex = 5;
@@ -162,6 +168,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(24, 618);
             this.pictureBox1.Name = "pictureBox1";
@@ -185,7 +192,8 @@
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.notifikacijeGrid);
             this.Name = "frmMehanicar";
-            this.Text = "frmMehanicar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Mehaničar";
             this.Load += new System.EventHandler(this.frmMehanicar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.notifikacijeGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nalogGrid)).EndInit();

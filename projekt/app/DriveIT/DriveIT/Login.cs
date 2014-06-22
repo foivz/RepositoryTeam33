@@ -25,14 +25,12 @@ namespace DriveIT
         private void frmDriveIT_Load(object sender, EventArgs e)
         {
             Lozinka.PasswordChar = '*';
-            //progressBar1.Hide();
-            progressBar1.Value = 0;
+           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //progressBar1.Show();
-            progressBar1.Value = 50;
+            
             Ulaz();
             
         }
@@ -103,8 +101,7 @@ namespace DriveIT
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //progressBar1.Show();
-                progressBar1.Value = 50;
+               
                 Ulaz();
             }
         }

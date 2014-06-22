@@ -63,7 +63,9 @@ namespace DriveIT
            
             kupac kupac = db.kupac.First(x => x.id_kupac == id);
 
-            kupac.tip_kupca = Convert.ToInt32(txtTipKupca.Text);
+            MessageBox.Show(kupac.tip_kupca.ToString());
+
+            
             kupac.ime = txtTipKupca.Text;
             kupac.prezime = txtPrezime.Text;
             kupac.tvrtka = txtTvrtka.Text;
