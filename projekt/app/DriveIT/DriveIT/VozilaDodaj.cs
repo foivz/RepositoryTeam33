@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using DriveIT.Controler;
 
 namespace DriveIT
 {
@@ -97,8 +98,17 @@ namespace DriveIT
             ugovor_prvi_kupoprodajni.datum = DateTime.Now.Date;
             ugovor_prvi_kupoprodajni.dobavljac_iddobavljac = Convert.ToInt32(cbDobavljac.SelectedValue);
 
+            dobavljac Dobavljac = db.dobavljac.First(i => i.id_dobavljac == ugovor_prvi_kupoprodajni.dobavljac_iddobavljac);
+
+
             db.ugovor.Add(ugovor_prvi_kupoprodajni);
             db.SaveChanges();
+
+            PdfUgovor.KupoprodajniUgovorOdDobavljaca(vozilo_uneseno, Dobavljac, ugovor_prvi_kupoprodajni);
+
+            
+
+            
 
         }
 
@@ -196,6 +206,7 @@ namespace DriveIT
                 db.SaveChanges();
 
                 SpremiSlike();
+
 
                 MessageBox.Show("Vozilo je uspješno dodano !");
                 System.Threading.Thread.Sleep(700);
