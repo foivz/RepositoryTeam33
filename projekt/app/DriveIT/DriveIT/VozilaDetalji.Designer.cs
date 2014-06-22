@@ -81,6 +81,7 @@
             // 
             // dtPickerNabavka
             // 
+            this.dtPickerNabavka.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dtPickerNabavka.Location = new System.Drawing.Point(231, 304);
             this.dtPickerNabavka.Name = "dtPickerNabavka";
             this.dtPickerNabavka.Size = new System.Drawing.Size(148, 20);
@@ -88,6 +89,7 @@
             // 
             // dtPickerPrvaRegistracija
             // 
+            this.dtPickerPrvaRegistracija.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dtPickerPrvaRegistracija.Location = new System.Drawing.Point(231, 156);
             this.dtPickerPrvaRegistracija.Name = "dtPickerPrvaRegistracija";
             this.dtPickerPrvaRegistracija.Size = new System.Drawing.Size(148, 20);
@@ -95,6 +97,7 @@
             // 
             // prodajBtn
             // 
+            this.prodajBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.prodajBtn.Highlight = false;
             this.prodajBtn.Location = new System.Drawing.Point(765, 418);
             this.prodajBtn.Name = "prodajBtn";
@@ -110,6 +113,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -212,6 +216,7 @@
             // 
             // metroButton1
             // 
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButton1.Highlight = false;
             this.metroButton1.Location = new System.Drawing.Point(765, 57);
             this.metroButton1.Name = "metroButton1";
@@ -225,6 +230,7 @@
             // 
             // btnDodajOpremu
             // 
+            this.btnDodajOpremu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDodajOpremu.Highlight = false;
             this.btnDodajOpremu.Location = new System.Drawing.Point(765, 175);
             this.btnDodajOpremu.Name = "btnDodajOpremu";
@@ -274,6 +280,7 @@
             // 
             // lblSjedista
             // 
+            this.lblSjedista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSjedista.AutoSize = true;
             this.lblSjedista.CustomBackground = true;
             this.lblSjedista.CustomForeColor = false;
@@ -346,6 +353,7 @@
             // 
             // lblSnaga
             // 
+            this.lblSnaga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSnaga.AutoSize = true;
             this.lblSnaga.CustomBackground = true;
             this.lblSnaga.CustomForeColor = false;
@@ -450,6 +458,7 @@
             // 
             // txtSnaga
             // 
+            this.txtSnaga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSnaga.CustomBackground = false;
             this.txtSnaga.CustomForeColor = false;
             this.txtSnaga.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -467,6 +476,7 @@
             // 
             // txtSjedista
             // 
+            this.txtSjedista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSjedista.CustomBackground = false;
             this.txtSjedista.CustomForeColor = false;
             this.txtSjedista.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -484,6 +494,7 @@
             // 
             // lblNosivost
             // 
+            this.lblNosivost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNosivost.AutoSize = true;
             this.lblNosivost.CustomBackground = true;
             this.lblNosivost.CustomForeColor = false;
@@ -502,6 +513,7 @@
             // 
             // lblRegistracija
             // 
+            this.lblRegistracija.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegistracija.AutoSize = true;
             this.lblRegistracija.CustomBackground = true;
             this.lblRegistracija.CustomForeColor = false;
@@ -520,6 +532,7 @@
             // 
             // lblPrometna
             // 
+            this.lblPrometna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrometna.AutoSize = true;
             this.lblPrometna.CustomBackground = true;
             this.lblPrometna.CustomForeColor = false;
@@ -538,6 +551,7 @@
             // 
             // lblServisna
             // 
+            this.lblServisna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblServisna.AutoSize = true;
             this.lblServisna.CustomBackground = true;
             this.lblServisna.CustomForeColor = false;
@@ -556,6 +570,7 @@
             // 
             // lblKilometri
             // 
+            this.lblKilometri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKilometri.AutoSize = true;
             this.lblKilometri.CustomBackground = true;
             this.lblKilometri.CustomForeColor = false;
@@ -574,6 +589,7 @@
             // 
             // lblDodatna
             // 
+            this.lblDodatna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDodatna.AutoSize = true;
             this.lblDodatna.CustomBackground = true;
             this.lblDodatna.CustomForeColor = false;
@@ -592,6 +608,7 @@
             // 
             // txtNosivost
             // 
+            this.txtNosivost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNosivost.CustomBackground = false;
             this.txtNosivost.CustomForeColor = false;
             this.txtNosivost.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -609,6 +626,7 @@
             // 
             // txtRegistracija
             // 
+            this.txtRegistracija.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRegistracija.CustomBackground = false;
             this.txtRegistracija.CustomForeColor = false;
             this.txtRegistracija.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -626,6 +644,7 @@
             // 
             // txtPrometna
             // 
+            this.txtPrometna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrometna.CustomBackground = false;
             this.txtPrometna.CustomForeColor = false;
             this.txtPrometna.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -643,6 +662,7 @@
             // 
             // txtServisna
             // 
+            this.txtServisna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtServisna.CustomBackground = false;
             this.txtServisna.CustomForeColor = false;
             this.txtServisna.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -660,6 +680,7 @@
             // 
             // txtKilometraza
             // 
+            this.txtKilometraza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKilometraza.CustomBackground = false;
             this.txtKilometraza.CustomForeColor = false;
             this.txtKilometraza.FontSize = MetroFramework.MetroTextBoxSize.Small;
@@ -690,6 +711,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(765, 604);
             this.btnOdustani.Name = "btnOdustani";
@@ -703,6 +725,7 @@
             // 
             // btnAzurirajVozilo
             // 
+            this.btnAzurirajVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAzurirajVozilo.Highlight = false;
             this.btnAzurirajVozilo.Location = new System.Drawing.Point(52, 604);
             this.btnAzurirajVozilo.Name = "btnAzurirajVozilo";
@@ -716,6 +739,7 @@
             // 
             // btnNalog
             // 
+            this.btnNalog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNalog.Highlight = false;
             this.btnNalog.Location = new System.Drawing.Point(765, 299);
             this.btnNalog.Name = "btnNalog";

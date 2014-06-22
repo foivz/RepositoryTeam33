@@ -38,7 +38,6 @@
             this.lblCijena = new MetroFramework.Controls.MetroLabel();
             this.lblRaspolozivo = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
-            this.cbDobavljac = new MetroFramework.Controls.MetroComboBox();
             this.txtNaziv = new MetroFramework.Controls.MetroTextBox();
             this.txtModel = new MetroFramework.Controls.MetroTextBox();
             this.txtBoja = new MetroFramework.Controls.MetroTextBox();
@@ -50,6 +49,7 @@
             this.btnDodaj = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDodajDodanuOpremu = new MetroFramework.Controls.MetroLabel();
+            this.cbDobavljac = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,35 +210,19 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
             this.txtId.CustomForeColor = false;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtId.Location = new System.Drawing.Point(224, 130);
+            this.txtId.Location = new System.Drawing.Point(224, 136);
             this.txtId.Multiline = false;
             this.txtId.Name = "txtId";
             this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(280, 29);
+            this.txtId.Size = new System.Drawing.Size(280, 23);
             this.txtId.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtId.StyleManager = null;
             this.txtId.TabIndex = 46;
             this.txtId.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtId.UseStyleColors = false;
-            // 
-            // cbDobavljac
-            // 
-            this.cbDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDobavljac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDobavljac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDobavljac.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbDobavljac.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbDobavljac.FormattingEnabled = true;
-            this.cbDobavljac.ItemHeight = 23;
-            this.cbDobavljac.Location = new System.Drawing.Point(224, 171);
-            this.cbDobavljac.Name = "cbDobavljac";
-            this.cbDobavljac.Size = new System.Drawing.Size(280, 29);
-            this.cbDobavljac.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbDobavljac.StyleManager = null;
-            this.cbDobavljac.TabIndex = 47;
-            this.cbDobavljac.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // txtNaziv
             // 
@@ -247,11 +231,11 @@
             this.txtNaziv.CustomForeColor = false;
             this.txtNaziv.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtNaziv.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtNaziv.Location = new System.Drawing.Point(224, 217);
+            this.txtNaziv.Location = new System.Drawing.Point(224, 223);
             this.txtNaziv.Multiline = false;
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.SelectedText = "";
-            this.txtNaziv.Size = new System.Drawing.Size(280, 29);
+            this.txtNaziv.Size = new System.Drawing.Size(280, 23);
             this.txtNaziv.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtNaziv.StyleManager = null;
             this.txtNaziv.TabIndex = 48;
@@ -265,11 +249,11 @@
             this.txtModel.CustomForeColor = false;
             this.txtModel.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtModel.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtModel.Location = new System.Drawing.Point(224, 263);
+            this.txtModel.Location = new System.Drawing.Point(224, 269);
             this.txtModel.Multiline = false;
             this.txtModel.Name = "txtModel";
             this.txtModel.SelectedText = "";
-            this.txtModel.Size = new System.Drawing.Size(280, 29);
+            this.txtModel.Size = new System.Drawing.Size(280, 23);
             this.txtModel.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtModel.StyleManager = null;
             this.txtModel.TabIndex = 49;
@@ -283,11 +267,11 @@
             this.txtBoja.CustomForeColor = false;
             this.txtBoja.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtBoja.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtBoja.Location = new System.Drawing.Point(224, 314);
+            this.txtBoja.Location = new System.Drawing.Point(224, 320);
             this.txtBoja.Multiline = false;
             this.txtBoja.Name = "txtBoja";
             this.txtBoja.SelectedText = "";
-            this.txtBoja.Size = new System.Drawing.Size(280, 29);
+            this.txtBoja.Size = new System.Drawing.Size(280, 23);
             this.txtBoja.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtBoja.StyleManager = null;
             this.txtBoja.TabIndex = 50;
@@ -301,11 +285,11 @@
             this.txtKolicina.CustomForeColor = false;
             this.txtKolicina.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtKolicina.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtKolicina.Location = new System.Drawing.Point(224, 365);
+            this.txtKolicina.Location = new System.Drawing.Point(224, 371);
             this.txtKolicina.Multiline = false;
             this.txtKolicina.Name = "txtKolicina";
             this.txtKolicina.SelectedText = "";
-            this.txtKolicina.Size = new System.Drawing.Size(280, 29);
+            this.txtKolicina.Size = new System.Drawing.Size(280, 23);
             this.txtKolicina.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtKolicina.StyleManager = null;
             this.txtKolicina.TabIndex = 51;
@@ -319,11 +303,11 @@
             this.txtCijena.CustomForeColor = false;
             this.txtCijena.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtCijena.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtCijena.Location = new System.Drawing.Point(224, 419);
+            this.txtCijena.Location = new System.Drawing.Point(224, 425);
             this.txtCijena.Multiline = false;
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.SelectedText = "";
-            this.txtCijena.Size = new System.Drawing.Size(280, 29);
+            this.txtCijena.Size = new System.Drawing.Size(280, 23);
             this.txtCijena.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCijena.StyleManager = null;
             this.txtCijena.TabIndex = 52;
@@ -337,11 +321,11 @@
             this.txtRaspolozivo.CustomForeColor = false;
             this.txtRaspolozivo.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtRaspolozivo.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtRaspolozivo.Location = new System.Drawing.Point(224, 477);
+            this.txtRaspolozivo.Location = new System.Drawing.Point(224, 483);
             this.txtRaspolozivo.Multiline = false;
             this.txtRaspolozivo.Name = "txtRaspolozivo";
             this.txtRaspolozivo.SelectedText = "";
-            this.txtRaspolozivo.Size = new System.Drawing.Size(280, 29);
+            this.txtRaspolozivo.Size = new System.Drawing.Size(280, 23);
             this.txtRaspolozivo.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtRaspolozivo.StyleManager = null;
             this.txtRaspolozivo.TabIndex = 53;
@@ -422,11 +406,22 @@
             this.lblDodajDodanuOpremu.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblDodajDodanuOpremu.UseStyleColors = false;
             // 
+            // cbDobavljac
+            // 
+            this.cbDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbDobavljac.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbDobavljac.FormattingEnabled = true;
+            this.cbDobavljac.Location = new System.Drawing.Point(224, 179);
+            this.cbDobavljac.Name = "cbDobavljac";
+            this.cbDobavljac.Size = new System.Drawing.Size(279, 21);
+            this.cbDobavljac.TabIndex = 59;
+            // 
             // frmDodatnaOpremaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.cbDobavljac);
             this.Controls.Add(this.lblDodajDodanuOpremu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDodaj);
@@ -438,7 +433,6 @@
             this.Controls.Add(this.txtBoja);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtNaziv);
-            this.Controls.Add(this.cbDobavljac);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblRaspolozivo);
             this.Controls.Add(this.lblCijena);
@@ -449,7 +443,7 @@
             this.Controls.Add(this.lblDobavljac);
             this.Controls.Add(this.lblId);
             this.Name = "frmDodatnaOpremaDetalji";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalji o dodatnoj opremi";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -468,7 +462,6 @@
         private MetroFramework.Controls.MetroLabel lblCijena;
         private MetroFramework.Controls.MetroLabel lblRaspolozivo;
         private MetroFramework.Controls.MetroTextBox txtId;
-        private MetroFramework.Controls.MetroComboBox cbDobavljac;
         private MetroFramework.Controls.MetroTextBox txtNaziv;
         private MetroFramework.Controls.MetroTextBox txtModel;
         private MetroFramework.Controls.MetroTextBox txtBoja;
@@ -480,5 +473,6 @@
         private MetroFramework.Controls.MetroButton btnDodaj;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblDodajDodanuOpremu;
+        private System.Windows.Forms.ComboBox cbDobavljac;
     }
 }

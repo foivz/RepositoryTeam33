@@ -58,5 +58,10 @@ namespace DriveIT
         {
             prikaziNaloge();
         }
+
+        private void btnIzlaz_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

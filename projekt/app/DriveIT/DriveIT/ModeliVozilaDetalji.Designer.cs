@@ -35,16 +35,18 @@
             this.lblMarka = new MetroFramework.Controls.MetroLabel();
             this.txtSifra = new MetroFramework.Controls.MetroTextBox();
             this.txtNaziv = new MetroFramework.Controls.MetroTextBox();
-            this.cbMarka = new MetroFramework.Controls.MetroComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOdustani = new MetroFramework.Controls.MetroButton();
             this.btnObrisi = new MetroFramework.Controls.MetroButton();
             this.btnAzuriraj = new MetroFramework.Controls.MetroButton();
+            this.cbMarka = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAzurirajModelVozila
             // 
+            this.lblAzurirajModelVozila.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAzurirajModelVozila.AutoSize = true;
             this.lblAzurirajModelVozila.CustomBackground = true;
             this.lblAzurirajModelVozila.CustomForeColor = false;
@@ -53,16 +55,17 @@
             this.lblAzurirajModelVozila.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.lblAzurirajModelVozila.Location = new System.Drawing.Point(355, 56);
             this.lblAzurirajModelVozila.Name = "lblAzurirajModelVozila";
-            this.lblAzurirajModelVozila.Size = new System.Drawing.Size(171, 25);
+            this.lblAzurirajModelVozila.Size = new System.Drawing.Size(190, 25);
             this.lblAzurirajModelVozila.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblAzurirajModelVozila.StyleManager = null;
             this.lblAzurirajModelVozila.TabIndex = 10;
-            this.lblAzurirajModelVozila.Text = "Ažuriraj model vozila";
+            this.lblAzurirajModelVozila.Text = "Detalji o  modelu vozila";
             this.lblAzurirajModelVozila.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblAzurirajModelVozila.UseStyleColors = false;
             // 
             // lblSifra
             // 
+            this.lblSifra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSifra.AutoSize = true;
             this.lblSifra.CustomBackground = true;
             this.lblSifra.CustomForeColor = false;
@@ -81,6 +84,7 @@
             // 
             // loblNaziv
             // 
+            this.loblNaziv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.loblNaziv.AutoSize = true;
             this.loblNaziv.CustomBackground = true;
             this.loblNaziv.CustomForeColor = false;
@@ -99,6 +103,7 @@
             // 
             // lblMarka
             // 
+            this.lblMarka.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMarka.AutoSize = true;
             this.lblMarka.CustomBackground = true;
             this.lblMarka.CustomForeColor = false;
@@ -117,15 +122,16 @@
             // 
             // txtSifra
             // 
+            this.txtSifra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSifra.CustomBackground = false;
             this.txtSifra.CustomForeColor = false;
             this.txtSifra.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtSifra.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtSifra.Location = new System.Drawing.Point(336, 173);
+            this.txtSifra.Location = new System.Drawing.Point(336, 179);
             this.txtSifra.Multiline = false;
             this.txtSifra.Name = "txtSifra";
             this.txtSifra.SelectedText = "";
-            this.txtSifra.Size = new System.Drawing.Size(280, 29);
+            this.txtSifra.Size = new System.Drawing.Size(280, 23);
             this.txtSifra.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtSifra.StyleManager = null;
             this.txtSifra.TabIndex = 14;
@@ -134,39 +140,26 @@
             // 
             // txtNaziv
             // 
+            this.txtNaziv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNaziv.CustomBackground = true;
             this.txtNaziv.CustomForeColor = false;
             this.txtNaziv.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtNaziv.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtNaziv.Location = new System.Drawing.Point(336, 234);
+            this.txtNaziv.Location = new System.Drawing.Point(336, 240);
             this.txtNaziv.Multiline = false;
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.SelectedText = "";
-            this.txtNaziv.Size = new System.Drawing.Size(280, 29);
+            this.txtNaziv.Size = new System.Drawing.Size(280, 23);
             this.txtNaziv.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtNaziv.StyleManager = null;
             this.txtNaziv.TabIndex = 15;
             this.txtNaziv.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNaziv.UseStyleColors = false;
             // 
-            // cbMarka
-            // 
-            this.cbMarka.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMarka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMarka.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbMarka.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbMarka.FormattingEnabled = true;
-            this.cbMarka.ItemHeight = 23;
-            this.cbMarka.Location = new System.Drawing.Point(336, 297);
-            this.cbMarka.Name = "cbMarka";
-            this.cbMarka.Size = new System.Drawing.Size(280, 29);
-            this.cbMarka.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbMarka.StyleManager = null;
-            this.cbMarka.TabIndex = 16;
-            this.cbMarka.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 575);
             this.pictureBox1.Name = "pictureBox1";
@@ -177,6 +170,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(675, 456);
             this.btnOdustani.Name = "btnOdustani";
@@ -190,6 +184,7 @@
             // 
             // btnObrisi
             // 
+            this.btnObrisi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnObrisi.Highlight = false;
             this.btnObrisi.Location = new System.Drawing.Point(372, 456);
             this.btnObrisi.Name = "btnObrisi";
@@ -203,6 +198,7 @@
             // 
             // btnAzuriraj
             // 
+            this.btnAzuriraj.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAzuriraj.Highlight = false;
             this.btnAzuriraj.Location = new System.Drawing.Point(63, 456);
             this.btnAzuriraj.Name = "btnAzuriraj";
@@ -214,16 +210,25 @@
             this.btnAzuriraj.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click_1);
             // 
+            // cbMarka
+            // 
+            this.cbMarka.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbMarka.FormattingEnabled = true;
+            this.cbMarka.Location = new System.Drawing.Point(336, 304);
+            this.cbMarka.Name = "cbMarka";
+            this.cbMarka.Size = new System.Drawing.Size(280, 21);
+            this.cbMarka.TabIndex = 21;
+            // 
             // frmModeliVozilaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.cbMarka);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.cbMarka);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.txtSifra);
             this.Controls.Add(this.lblMarka);
@@ -231,9 +236,8 @@
             this.Controls.Add(this.lblSifra);
             this.Controls.Add(this.lblAzurirajModelVozila);
             this.Name = "frmModeliVozilaDetalji";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ModeliVozilaDetalji";
-            this.Load += new System.EventHandler(this.frmModeliVozilaDetalji_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalji od modelima vozila";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,10 +252,10 @@
         private MetroFramework.Controls.MetroLabel lblMarka;
         private MetroFramework.Controls.MetroTextBox txtSifra;
         private MetroFramework.Controls.MetroTextBox txtNaziv;
-        private MetroFramework.Controls.MetroComboBox cbMarka;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton btnOdustani;
         private MetroFramework.Controls.MetroButton btnObrisi;
         private MetroFramework.Controls.MetroButton btnAzuriraj;
+        private System.Windows.Forms.ComboBox cbMarka;
     }
 }

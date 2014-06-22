@@ -32,13 +32,13 @@
             this.txtOpis = new System.Windows.Forms.RichTextBox();
             this.lblKreirajnalog = new MetroFramework.Controls.MetroLabel();
             this.lblVozilo = new MetroFramework.Controls.MetroLabel();
-            this.cbKorisnik = new MetroFramework.Controls.MetroComboBox();
             this.lblKorisnik = new MetroFramework.Controls.MetroLabel();
             this.txtVozilo = new MetroFramework.Controls.MetroTextBox();
             this.lblOpis = new MetroFramework.Controls.MetroLabel();
             this.btnKreirajNalog = new MetroFramework.Controls.MetroButton();
             this.btnOdustani = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbKorisnik = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,23 +90,6 @@
             this.lblVozilo.Theme = MetroFramework.MetroThemeStyle.Light;
             this.lblVozilo.UseStyleColors = false;
             // 
-            // cbKorisnik
-            // 
-            this.cbKorisnik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbKorisnik.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbKorisnik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKorisnik.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.cbKorisnik.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.cbKorisnik.FormattingEnabled = true;
-            this.cbKorisnik.ItemHeight = 23;
-            this.cbKorisnik.Location = new System.Drawing.Point(226, 207);
-            this.cbKorisnik.Name = "cbKorisnik";
-            this.cbKorisnik.Size = new System.Drawing.Size(280, 29);
-            this.cbKorisnik.Style = MetroFramework.MetroColorStyle.Blue;
-            this.cbKorisnik.StyleManager = null;
-            this.cbKorisnik.TabIndex = 11;
-            this.cbKorisnik.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // lblKorisnik
             // 
             this.lblKorisnik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -131,13 +114,14 @@
             this.txtVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVozilo.CustomBackground = false;
             this.txtVozilo.CustomForeColor = false;
+            this.txtVozilo.Enabled = false;
             this.txtVozilo.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.txtVozilo.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtVozilo.Location = new System.Drawing.Point(226, 129);
+            this.txtVozilo.Location = new System.Drawing.Point(226, 135);
             this.txtVozilo.Multiline = false;
             this.txtVozilo.Name = "txtVozilo";
             this.txtVozilo.SelectedText = "";
-            this.txtVozilo.Size = new System.Drawing.Size(280, 29);
+            this.txtVozilo.Size = new System.Drawing.Size(280, 23);
             this.txtVozilo.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtVozilo.StyleManager = null;
             this.txtVozilo.TabIndex = 13;
@@ -203,24 +187,34 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // cbKorisnik
+            // 
+            this.cbKorisnik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbKorisnik.BackColor = System.Drawing.Color.Gainsboro;
+            this.cbKorisnik.FormattingEnabled = true;
+            this.cbKorisnik.Location = new System.Drawing.Point(226, 211);
+            this.cbKorisnik.Name = "cbKorisnik";
+            this.cbKorisnik.Size = new System.Drawing.Size(280, 21);
+            this.cbKorisnik.TabIndex = 18;
+            // 
             // frmNalogZaPopravak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.cbKorisnik);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnKreirajNalog);
             this.Controls.Add(this.lblOpis);
             this.Controls.Add(this.txtVozilo);
             this.Controls.Add(this.lblKorisnik);
-            this.Controls.Add(this.cbKorisnik);
             this.Controls.Add(this.lblVozilo);
             this.Controls.Add(this.lblKreirajnalog);
             this.Controls.Add(this.txtOpis);
             this.Name = "frmNalogZaPopravak";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "NalogKreiraj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Kreiraj nalog";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,12 +226,12 @@
         private System.Windows.Forms.RichTextBox txtOpis;
         private MetroFramework.Controls.MetroLabel lblKreirajnalog;
         private MetroFramework.Controls.MetroLabel lblVozilo;
-        private MetroFramework.Controls.MetroComboBox cbKorisnik;
         private MetroFramework.Controls.MetroLabel lblKorisnik;
         private MetroFramework.Controls.MetroTextBox txtVozilo;
         private MetroFramework.Controls.MetroLabel lblOpis;
         private MetroFramework.Controls.MetroButton btnKreirajNalog;
         private MetroFramework.Controls.MetroButton btnOdustani;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbKorisnik;
     }
 }

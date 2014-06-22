@@ -179,7 +179,7 @@
             this.Controls.Add(this.lblNaziv);
             this.Name = "frmParkiralistaDodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ParkiralistaDodaj";
+            this.Text = "Dodaj parkiralište";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

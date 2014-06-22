@@ -21,10 +21,12 @@ namespace DriveIT
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda za učitavanje dodatne opreme preko slabog entiteta,sadrži implementaciju upita M:N
+        /// </summary>
         private void ucitajDodatnuOpremu() {
 
             BindingSource upit = new BindingSource();
-
 
             int id;
             bool park = Int32.TryParse(txtIdVozilo.Text, out id);
@@ -38,9 +40,13 @@ namespace DriveIT
             
         }
 
+        /// <summary>
+        /// Metoda koja učitava detalje o pojedinom vozilu na temelju stringa koji primi odnosno id-a
+        /// Radi upit koji vraća objekt koji odgovara odabarnom elementu te popunjava textboxove vrijednostima
+        /// </summary>
+        /// <param name="i"></param>
         public void getDetails(string i){
-            
-            
+ 
             int b = int.Parse(i);
             this.idVozila = b;
 
@@ -66,6 +72,12 @@ namespace DriveIT
 
         }
 
+
+        /// <summary>
+        /// Metoda koja poziva formu za prodaju vozila te poziva metodu pomoću koje toj formi proslijeđuje id vozila
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void prodajBtn_Click(object sender, EventArgs e)
         {
             frmProdaja prodaja = new frmProdaja(idVozila);
@@ -77,12 +89,23 @@ namespace DriveIT
             
         }
 
+
+        /// <summary>
+        /// Metoda koja otvara formu za učitavanje slika, odnosno objekt preglednik slika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
 
             PreglednikSlika.Ucitaj_sliku(txtIdVozilo.Text);
         }
 
+        /// <summary>
+        /// Metoda koja poziva metodu za dodavanje nove dodatne opreme za pojedini automobil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDodajOpremu_Click(object sender, EventArgs e)
         {
             frmDodajOpremuAutomobilu oprema = new frmDodajOpremuAutomobilu();
@@ -90,9 +113,15 @@ namespace DriveIT
             oprema.Show();
         }
 
+
+        /// <summary>
+        /// Metoda koja pretražuje objekte u entity-u i traži onu s odgovrajućim id-em
+        /// nakon toga briše objekt i sprema ga u bazu,odnosno briše ili javlja grešku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnObrisiVozilo_Click(object sender, EventArgs e)
         {
-
             int id = Convert.ToInt32(txtIdVozilo.Text);
 
             vozilo vozilo = db.vozilo.Where<vozilo>(x => x.id_vozilo == id).First<vozilo>();
@@ -104,11 +133,25 @@ namespace DriveIT
             this.Close();
         }
 
+
+        /// <summary>
+        /// Metoda koja zatvara formu detalja o vozilu na odabir gumba odustani
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        /// <summary>
+        /// Metoda koja pretražuje objekte u entity frameworku te nalazi objekt s odgovarajućim id-em
+        /// popunjava vrijednosti u objektu s vrijednostima iz textboxova 
+        /// Nakon popunjavanja vrijednosti ih sprema u bazu ili javlja grešku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAzurirajVozilo_Click(object sender, EventArgs e)
         {
             //vozilo vozilo = db.vozilo.Where<vozilo>(x => x.id_vozilo == b).First<vozilo>();
@@ -140,6 +183,11 @@ namespace DriveIT
             this.Close();
         }
 
+        /// <summary>
+        /// Metoda koja otvara formu za izradu novog naloga za popravak
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNalog_Click(object sender, EventArgs e)
         {
             frmNalogZaPopravak popravak = new frmNalogZaPopravak();

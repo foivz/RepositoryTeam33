@@ -48,6 +48,8 @@
             // 
             // dtPickerDatum
             // 
+            this.dtPickerDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtPickerDatum.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
             this.dtPickerDatum.Location = new System.Drawing.Point(202, 356);
             this.dtPickerDatum.Name = "dtPickerDatum";
             this.dtPickerDatum.Size = new System.Drawing.Size(280, 20);
@@ -55,6 +57,7 @@
             // 
             // lblSifra
             // 
+            this.lblSifra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSifra.AutoSize = true;
             this.lblSifra.CustomBackground = true;
             this.lblSifra.CustomForeColor = false;
@@ -73,6 +76,7 @@
             // 
             // lblKupac
             // 
+            this.lblKupac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKupac.AutoSize = true;
             this.lblKupac.CustomBackground = true;
             this.lblKupac.CustomForeColor = false;
@@ -91,6 +95,7 @@
             // 
             // lblVozilo
             // 
+            this.lblVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVozilo.AutoSize = true;
             this.lblVozilo.CustomBackground = true;
             this.lblVozilo.CustomForeColor = false;
@@ -109,6 +114,7 @@
             // 
             // lblDobavljac
             // 
+            this.lblDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDobavljac.AutoSize = true;
             this.lblDobavljac.CustomBackground = true;
             this.lblDobavljac.CustomForeColor = false;
@@ -127,6 +133,7 @@
             // 
             // lblDatum
             // 
+            this.lblDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatum.AutoSize = true;
             this.lblDatum.CustomBackground = true;
             this.lblDatum.CustomForeColor = false;
@@ -145,11 +152,13 @@
             // 
             // txtId
             // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.CustomBackground = false;
             this.txtId.CustomForeColor = false;
+            this.txtId.Enabled = false;
             this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.txtId.Location = new System.Drawing.Point(202, 175);
+            this.txtId.Location = new System.Drawing.Point(203, 175);
             this.txtId.Multiline = false;
             this.txtId.Name = "txtId";
             this.txtId.SelectedText = "";
@@ -162,6 +171,7 @@
             // 
             // txtKupac
             // 
+            this.txtKupac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKupac.CustomBackground = false;
             this.txtKupac.CustomForeColor = false;
             this.txtKupac.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -179,6 +189,7 @@
             // 
             // txtVozilo
             // 
+            this.txtVozilo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVozilo.CustomBackground = false;
             this.txtVozilo.CustomForeColor = false;
             this.txtVozilo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -196,6 +207,7 @@
             // 
             // txtDobavljac
             // 
+            this.txtDobavljac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDobavljac.CustomBackground = false;
             this.txtDobavljac.CustomForeColor = false;
             this.txtDobavljac.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -213,6 +225,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 575);
             this.pictureBox1.Name = "pictureBox1";
@@ -223,6 +237,7 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.Highlight = false;
             this.btnOdustani.Location = new System.Drawing.Point(562, 374);
             this.btnOdustani.Name = "btnOdustani";
@@ -236,6 +251,7 @@
             // 
             // btnAzuriraj
             // 
+            this.btnAzuriraj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAzuriraj.Highlight = false;
             this.btnAzuriraj.Location = new System.Drawing.Point(562, 173);
             this.btnAzuriraj.Name = "btnAzuriraj";
@@ -249,6 +265,7 @@
             // 
             // btnObrisi
             // 
+            this.btnObrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnObrisi.Highlight = false;
             this.btnObrisi.Location = new System.Drawing.Point(562, 274);
             this.btnObrisi.Name = "btnObrisi";
@@ -280,8 +297,8 @@
             this.Controls.Add(this.lblSifra);
             this.Controls.Add(this.dtPickerDatum);
             this.Name = "frmUgovoriDetalji";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "UgovoriDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalji o ugovorima";
             this.Load += new System.EventHandler(this.frmUgovoriDetalji_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

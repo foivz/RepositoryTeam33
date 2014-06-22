@@ -38,13 +38,14 @@
             this.option3txt = new MetroFramework.Controls.MetroTextBox();
             this.option3lbl = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // odustaniBtn
             // 
+            this.odustaniBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.odustaniBtn.Highlight = false;
             this.odustaniBtn.Location = new System.Drawing.Point(526, 412);
             this.odustaniBtn.Name = "odustaniBtn";
@@ -58,6 +59,7 @@
             // 
             // option1Lbl
             // 
+            this.option1Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.option1Lbl.AutoSize = true;
             this.option1Lbl.BackColor = System.Drawing.SystemColors.Control;
             this.option1Lbl.CustomBackground = true;
@@ -77,6 +79,7 @@
             // 
             // option2Lbl
             // 
+            this.option2Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.option2Lbl.AutoSize = true;
             this.option2Lbl.BackColor = System.Drawing.SystemColors.Control;
             this.option2Lbl.CustomBackground = true;
@@ -96,6 +99,7 @@
             // 
             // option1txt
             // 
+            this.option1txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.option1txt.CustomBackground = false;
             this.option1txt.CustomForeColor = false;
             this.option1txt.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -113,6 +117,7 @@
             // 
             // option2txt
             // 
+            this.option2txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.option2txt.CustomBackground = false;
             this.option2txt.CustomForeColor = false;
             this.option2txt.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -130,6 +135,7 @@
             // 
             // metroButton1
             // 
+            this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroButton1.Highlight = false;
             this.metroButton1.Location = new System.Drawing.Point(135, 412);
             this.metroButton1.Name = "metroButton1";
@@ -144,6 +150,7 @@
             // option3txt
             // 
             this.option3txt.AccessibleName = "txtCijenaVozila";
+            this.option3txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.option3txt.CustomBackground = false;
             this.option3txt.CustomForeColor = false;
             this.option3txt.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -162,6 +169,7 @@
             // option3lbl
             // 
             this.option3lbl.AccessibleName = "txtCijenaVozila";
+            this.option3lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.option3lbl.AutoSize = true;
             this.option3lbl.BackColor = System.Drawing.SystemColors.Control;
             this.option3lbl.CustomBackground = true;
@@ -181,6 +189,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 575);
             this.pictureBox1.Name = "pictureBox1";
@@ -189,33 +199,18 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.metroComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metroComboBox1.FontSize = MetroFramework.MetroLinkSize.Medium;
-            this.metroComboBox1.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(409, 113);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(280, 29);
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroComboBox1.StyleManager = null;
-            this.metroComboBox1.TabIndex = 14;
-            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // metroLabel1
             // 
+            this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.CustomBackground = false;
+            this.metroLabel1.CustomBackground = true;
             this.metroLabel1.CustomForeColor = false;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel1.Location = new System.Drawing.Point(312, 113);
+            this.metroLabel1.Location = new System.Drawing.Point(340, 98);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(58, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 15;
@@ -223,13 +218,23 @@
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel1.UseStyleColors = false;
             // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroComboBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.Location = new System.Drawing.Point(409, 101);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(280, 21);
+            this.metroComboBox1.TabIndex = 16;
+            // 
             // frmProdaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.option3txt);
             this.Controls.Add(this.option3lbl);
@@ -260,7 +265,7 @@
         private MetroFramework.Controls.MetroTextBox option3txt;
         private MetroFramework.Controls.MetroLabel option3lbl;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.ComboBox metroComboBox1;
     }
 }

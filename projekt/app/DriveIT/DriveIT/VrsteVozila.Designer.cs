@@ -190,7 +190,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmVrsteVozila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "VrsteVozila";
+            this.Text = "Vrste vozila";
             this.Load += new System.EventHandler(this.frmVrsteVozila_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipvozilaBindingSource)).EndInit();
