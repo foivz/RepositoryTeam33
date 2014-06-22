@@ -45,7 +45,7 @@ namespace DriveIT
         
         private void frmUgovoriDodaj_Load(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
         private void btnNapraviKupoprodajni_Click(object sender, EventArgs e)
@@ -87,6 +87,16 @@ namespace DriveIT
                 }
 
             }
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnKreirajProdajni_Click(object sender, EventArgs e)
+        {
+
         }
 
         

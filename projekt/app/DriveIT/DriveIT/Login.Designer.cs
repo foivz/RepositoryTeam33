@@ -127,6 +127,7 @@
             this.Lozinka.Name = "Lozinka";
             this.Lozinka.Size = new System.Drawing.Size(207, 30);
             this.Lozinka.TabIndex = 2;
+            this.Lozinka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lozinka_KeyDown);
             // 
             // frmLogin
             // 

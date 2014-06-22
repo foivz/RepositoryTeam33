@@ -208,6 +208,11 @@ namespace DriveIT
             }
         }
 
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
     }
 }
