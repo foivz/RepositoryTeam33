@@ -56,12 +56,9 @@
             this.cbParkiralista = new System.Windows.Forms.ComboBox();
             this.lblParking = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
             this.lblTime = new System.Windows.Forms.Label();
             this.satTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-=======
->>>>>>> 6843666f653191b33a6e80b876b3a597d6c42ece
             this.idvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sasijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumprveregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,8 +85,6 @@
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTime = new System.Windows.Forms.Label();
-            this.satTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -331,12 +326,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-<<<<<<< HEAD
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-=======
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
->>>>>>> 6843666f653191b33a6e80b876b3a597d6c42ece
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -373,7 +364,6 @@
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-<<<<<<< HEAD
             // lblTime
             // 
             this.lblTime.AutoSize = true;
@@ -401,8 +391,6 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-=======
->>>>>>> 6843666f653191b33a6e80b876b3a597d6c42ece
             // idvoziloDataGridViewTextBoxColumn
             // 
             this.idvoziloDataGridViewTextBoxColumn.DataPropertyName = "id_vozilo";
@@ -600,20 +588,6 @@
             // voziloBindingSource
             // 
             this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(62, 43);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(0, 13);
-            this.lblTime.TabIndex = 16;
-            // 
-            // satTimer
-            // 
-            this.satTimer.Enabled = true;
-            this.satTimer.Interval = 1000;
-            this.satTimer.Tick += new System.EventHandler(this.satTimer_Tick);
             // 
             // frmAplikacija
             // 
