@@ -184,6 +184,12 @@
     <Compile Include="DobavljačiDodaj.Designer.cs">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajOpremuAutomobilu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajOpremuAutomobilu.Designer.cs">
+      <DependentUpon>DodajOpremuAutomobilu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodatnaOprema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +405,9 @@
     <EmbeddedResource Include="DobavljačiDodaj.resx">
       <DependentUpon>DobavljačiDodaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DodajOpremuAutomobilu.resx">
+      <DependentUpon>DodajOpremuAutomobilu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DodatnaOprema.resx">
       <DependentUpon>DodatnaOprema.cs</DependentUpon>
     </EmbeddedResource>
@@ -523,6 +532,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DriveIT.Database.dobavljac.datasource" />
+    <None Include="Properties\DataSources\DriveIT.Database.dodatna_oprema1.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.kupac.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.nalog_za_servis.datasource" />
     <None Include="Properties\DataSources\DriveIT.Database.ugovor.datasource" />

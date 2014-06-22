@@ -16,14 +16,9 @@ namespace DriveIT
         private int idVozila;
         T33_DBEntities db = new T33_DBEntities();
 
-        
-
-
         public frmVozilaDetalji()
         {
             InitializeComponent();
-            
-
         }
 
         private void ucitajDodatnuOpremu() {
@@ -33,7 +28,6 @@ namespace DriveIT
 
             int id;
             bool park = Int32.TryParse(txtIdVozilo.Text, out id);
- 
             dataGridView1.DataSource = db.vozilo.Where(x => x.id_vozilo == id).First().dodatna_oprema.ToList();
 
                 
@@ -147,6 +141,13 @@ namespace DriveIT
         {
 
             PreglednikSlika.Ucitaj_sliku(txtIdVozilo.Text);
+        }
+
+        private void btnDodajOpremu_Click(object sender, EventArgs e)
+        {
+            frmDodajOpremuAutomobilu oprema = new frmDodajOpremuAutomobilu();
+            oprema.getId(idVozila);
+            oprema.Show();
         }
 
     }
