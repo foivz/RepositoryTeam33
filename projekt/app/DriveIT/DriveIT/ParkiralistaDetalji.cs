@@ -23,11 +23,6 @@ namespace DriveIT
 
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         public void getDetails(string i)
         {
             T33_DBEntities db = new T33_DBEntities();
@@ -38,7 +33,12 @@ namespace DriveIT
             txtId.Text = Convert.ToString(parkiraliste.id_parking);
             txtNaziv.Text = parkiraliste.naziv;
             txtKapacitet.Text = Convert.ToString(parkiraliste.kapacitet);
-            
+
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
@@ -57,9 +57,8 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnAzurirajParking_Click(object sender, EventArgs e)
+        private void btnAzuriraj_Click(object sender, EventArgs e)
         {
-
             T33_DBEntities db = new T33_DBEntities();
 
             int id = Convert.ToInt32(txtId.Text);
@@ -67,8 +66,8 @@ namespace DriveIT
 
             parking.naziv = txtNaziv.Text;
             parking.kapacitet = Convert.ToInt32(txtKapacitet.Text);
-            
-            
+
+
             db.SaveChanges();
             MessageBox.Show("Parking uspješno ažuriran");
             System.Threading.Thread.Sleep(700);

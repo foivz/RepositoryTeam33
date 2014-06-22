@@ -271,6 +271,7 @@
             this.Controls.Add(this.cbKupac);
             this.Controls.Add(this.lblDodajUgovor);
             this.Name = "frmUgovoriDodaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UgovoriDodaj";
             this.Load += new System.EventHandler(this.frmUgovoriDodaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

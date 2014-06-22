@@ -28,126 +28,214 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOdustani = new System.Windows.Forms.Button();
-            this.btnAzurirajParking = new System.Windows.Forms.Button();
-            this.lblAžurirajjParkiraliste = new System.Windows.Forms.Label();
-            this.lblNaziv = new System.Windows.Forms.Label();
-            this.txtNaziv = new System.Windows.Forms.TextBox();
-            this.lblKapacitet = new System.Windows.Forms.Label();
-            this.txtKapacitet = new System.Windows.Forms.TextBox();
-            this.lblSifra = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.btnObrisi = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParkiralistaDetalji));
+            this.lblSifra = new MetroFramework.Controls.MetroLabel();
+            this.lblNaziv = new MetroFramework.Controls.MetroLabel();
+            this.lblKapacitet = new MetroFramework.Controls.MetroLabel();
+            this.txtId = new MetroFramework.Controls.MetroTextBox();
+            this.txtNaziv = new MetroFramework.Controls.MetroTextBox();
+            this.txtKapacitet = new MetroFramework.Controls.MetroTextBox();
+            this.lblAzurirajParkiraliste = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOdustani = new MetroFramework.Controls.MetroButton();
+            this.btnObrisi = new MetroFramework.Controls.MetroButton();
+            this.btnAzuriraj = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnOdustani
-            // 
-            this.btnOdustani.Location = new System.Drawing.Point(247, 204);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
-            this.btnOdustani.TabIndex = 50;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
-            // 
-            // btnAzurirajParking
-            // 
-            this.btnAzurirajParking.Location = new System.Drawing.Point(153, 204);
-            this.btnAzurirajParking.Name = "btnAzurirajParking";
-            this.btnAzurirajParking.Size = new System.Drawing.Size(75, 23);
-            this.btnAzurirajParking.TabIndex = 49;
-            this.btnAzurirajParking.Text = "Ažuriraj";
-            this.btnAzurirajParking.UseVisualStyleBackColor = true;
-            this.btnAzurirajParking.Click += new System.EventHandler(this.btnAzurirajParking_Click);
-            // 
-            // lblAžurirajjParkiraliste
-            // 
-            this.lblAžurirajjParkiraliste.AutoSize = true;
-            this.lblAžurirajjParkiraliste.Location = new System.Drawing.Point(150, 19);
-            this.lblAžurirajjParkiraliste.Name = "lblAžurirajjParkiraliste";
-            this.lblAžurirajjParkiraliste.Size = new System.Drawing.Size(95, 13);
-            this.lblAžurirajjParkiraliste.TabIndex = 48;
-            this.lblAžurirajjParkiraliste.Text = "Ažuriraj Parkiralište";
-            // 
-            // lblNaziv
-            // 
-            this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(12, 101);
-            this.lblNaziv.Name = "lblNaziv";
-            this.lblNaziv.Size = new System.Drawing.Size(34, 13);
-            this.lblNaziv.TabIndex = 47;
-            this.lblNaziv.Text = "Naziv";
-            // 
-            // txtNaziv
-            // 
-            this.txtNaziv.Location = new System.Drawing.Point(154, 101);
-            this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(250, 20);
-            this.txtNaziv.TabIndex = 46;
-            // 
-            // lblKapacitet
-            // 
-            this.lblKapacitet.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.lblKapacitet.AutoSize = true;
-            this.lblKapacitet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblKapacitet.Location = new System.Drawing.Point(12, 146);
-            this.lblKapacitet.Name = "lblKapacitet";
-            this.lblKapacitet.Size = new System.Drawing.Size(52, 13);
-            this.lblKapacitet.TabIndex = 45;
-            this.lblKapacitet.Text = "Kapacitet";
-            // 
-            // txtKapacitet
-            // 
-            this.txtKapacitet.Location = new System.Drawing.Point(154, 146);
-            this.txtKapacitet.Name = "txtKapacitet";
-            this.txtKapacitet.Size = new System.Drawing.Size(250, 20);
-            this.txtKapacitet.TabIndex = 44;
             // 
             // lblSifra
             // 
             this.lblSifra.AutoSize = true;
-            this.lblSifra.Location = new System.Drawing.Point(11, 59);
+            this.lblSifra.CustomBackground = true;
+            this.lblSifra.CustomForeColor = false;
+            this.lblSifra.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblSifra.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblSifra.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblSifra.Location = new System.Drawing.Point(159, 169);
             this.lblSifra.Name = "lblSifra";
-            this.lblSifra.Size = new System.Drawing.Size(28, 13);
-            this.lblSifra.TabIndex = 52;
+            this.lblSifra.Size = new System.Drawing.Size(45, 25);
+            this.lblSifra.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblSifra.StyleManager = null;
+            this.lblSifra.TabIndex = 54;
             this.lblSifra.Text = "Šifra";
+            this.lblSifra.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblSifra.UseStyleColors = false;
+            // 
+            // lblNaziv
+            // 
+            this.lblNaziv.AutoSize = true;
+            this.lblNaziv.CustomBackground = true;
+            this.lblNaziv.CustomForeColor = false;
+            this.lblNaziv.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblNaziv.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblNaziv.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblNaziv.Location = new System.Drawing.Point(150, 226);
+            this.lblNaziv.Name = "lblNaziv";
+            this.lblNaziv.Size = new System.Drawing.Size(54, 25);
+            this.lblNaziv.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblNaziv.StyleManager = null;
+            this.lblNaziv.TabIndex = 55;
+            this.lblNaziv.Text = "Naziv";
+            this.lblNaziv.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblNaziv.UseStyleColors = false;
+            // 
+            // lblKapacitet
+            // 
+            this.lblKapacitet.AutoSize = true;
+            this.lblKapacitet.CustomBackground = true;
+            this.lblKapacitet.CustomForeColor = false;
+            this.lblKapacitet.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblKapacitet.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblKapacitet.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblKapacitet.Location = new System.Drawing.Point(124, 290);
+            this.lblKapacitet.Name = "lblKapacitet";
+            this.lblKapacitet.Size = new System.Drawing.Size(80, 25);
+            this.lblKapacitet.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblKapacitet.StyleManager = null;
+            this.lblKapacitet.TabIndex = 56;
+            this.lblKapacitet.Text = "Kapacitet";
+            this.lblKapacitet.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblKapacitet.UseStyleColors = false;
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(153, 59);
+            this.txtId.CustomBackground = false;
+            this.txtId.CustomForeColor = false;
+            this.txtId.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtId.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtId.Location = new System.Drawing.Point(210, 171);
+            this.txtId.Multiline = false;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(250, 20);
-            this.txtId.TabIndex = 51;
+            this.txtId.SelectedText = "";
+            this.txtId.Size = new System.Drawing.Size(280, 23);
+            this.txtId.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtId.StyleManager = null;
+            this.txtId.TabIndex = 57;
+            this.txtId.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtId.UseStyleColors = false;
+            // 
+            // txtNaziv
+            // 
+            this.txtNaziv.CustomBackground = false;
+            this.txtNaziv.CustomForeColor = false;
+            this.txtNaziv.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtNaziv.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtNaziv.Location = new System.Drawing.Point(210, 228);
+            this.txtNaziv.Multiline = false;
+            this.txtNaziv.Name = "txtNaziv";
+            this.txtNaziv.SelectedText = "";
+            this.txtNaziv.Size = new System.Drawing.Size(280, 23);
+            this.txtNaziv.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNaziv.StyleManager = null;
+            this.txtNaziv.TabIndex = 58;
+            this.txtNaziv.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNaziv.UseStyleColors = false;
+            // 
+            // txtKapacitet
+            // 
+            this.txtKapacitet.CustomBackground = false;
+            this.txtKapacitet.CustomForeColor = false;
+            this.txtKapacitet.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.txtKapacitet.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.txtKapacitet.Location = new System.Drawing.Point(210, 292);
+            this.txtKapacitet.Multiline = false;
+            this.txtKapacitet.Name = "txtKapacitet";
+            this.txtKapacitet.SelectedText = "";
+            this.txtKapacitet.Size = new System.Drawing.Size(280, 23);
+            this.txtKapacitet.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtKapacitet.StyleManager = null;
+            this.txtKapacitet.TabIndex = 59;
+            this.txtKapacitet.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtKapacitet.UseStyleColors = false;
+            // 
+            // lblAzurirajParkiraliste
+            // 
+            this.lblAzurirajParkiraliste.AutoSize = true;
+            this.lblAzurirajParkiraliste.CustomBackground = true;
+            this.lblAzurirajParkiraliste.CustomForeColor = false;
+            this.lblAzurirajParkiraliste.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblAzurirajParkiraliste.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblAzurirajParkiraliste.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblAzurirajParkiraliste.Location = new System.Drawing.Point(362, 43);
+            this.lblAzurirajParkiraliste.Name = "lblAzurirajParkiraliste";
+            this.lblAzurirajParkiraliste.Size = new System.Drawing.Size(161, 25);
+            this.lblAzurirajParkiraliste.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblAzurirajParkiraliste.StyleManager = null;
+            this.lblAzurirajParkiraliste.TabIndex = 60;
+            this.lblAzurirajParkiraliste.Text = "Detalji o parkiralištu";
+            this.lblAzurirajParkiraliste.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblAzurirajParkiraliste.UseStyleColors = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(124, 575);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(682, 226);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 61;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Highlight = false;
+            this.btnOdustani.Location = new System.Drawing.Point(634, 463);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(280, 80);
+            this.btnOdustani.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnOdustani.StyleManager = null;
+            this.btnOdustani.TabIndex = 62;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnObrisi
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(340, 204);
+            this.btnObrisi.Highlight = false;
+            this.btnObrisi.Location = new System.Drawing.Point(623, 171);
             this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
-            this.btnObrisi.TabIndex = 53;
+            this.btnObrisi.Size = new System.Drawing.Size(280, 80);
+            this.btnObrisi.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnObrisi.StyleManager = null;
+            this.btnObrisi.TabIndex = 63;
             this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // btnAzuriraj
+            // 
+            this.btnAzuriraj.Highlight = false;
+            this.btnAzuriraj.Location = new System.Drawing.Point(210, 463);
+            this.btnAzuriraj.Name = "btnAzuriraj";
+            this.btnAzuriraj.Size = new System.Drawing.Size(280, 80);
+            this.btnAzuriraj.Style = MetroFramework.MetroColorStyle.Blue;
+            this.btnAzuriraj.StyleManager = null;
+            this.btnAzuriraj.TabIndex = 64;
+            this.btnAzuriraj.Text = "Ažuriraj parkiralište";
+            this.btnAzuriraj.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
             // frmParkiralistaDetalji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.btnObrisi);
-            this.Controls.Add(this.lblSifra);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.btnAzurirajParking);
-            this.Controls.Add(this.lblAžurirajjParkiraliste);
-            this.Controls.Add(this.lblNaziv);
-            this.Controls.Add(this.txtNaziv);
-            this.Controls.Add(this.lblKapacitet);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblAzurirajParkiraliste);
             this.Controls.Add(this.txtKapacitet);
+            this.Controls.Add(this.txtNaziv);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblKapacitet);
+            this.Controls.Add(this.lblNaziv);
+            this.Controls.Add(this.lblSifra);
             this.Name = "frmParkiralistaDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ParkiralistaDetalji";
             this.Load += new System.EventHandler(this.ParkiralistaDetalji_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,15 +243,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnOdustani;
-        private System.Windows.Forms.Button btnAzurirajParking;
-        private System.Windows.Forms.Label lblAžurirajjParkiraliste;
-        private System.Windows.Forms.Label lblNaziv;
-        private System.Windows.Forms.TextBox txtNaziv;
-        private System.Windows.Forms.Label lblKapacitet;
-        private System.Windows.Forms.TextBox txtKapacitet;
-        private System.Windows.Forms.Label lblSifra;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Button btnObrisi;
+        private MetroFramework.Controls.MetroLabel lblSifra;
+        private MetroFramework.Controls.MetroLabel lblNaziv;
+        private MetroFramework.Controls.MetroLabel lblKapacitet;
+        private MetroFramework.Controls.MetroTextBox txtId;
+        private MetroFramework.Controls.MetroTextBox txtNaziv;
+        private MetroFramework.Controls.MetroTextBox txtKapacitet;
+        private MetroFramework.Controls.MetroLabel lblAzurirajParkiraliste;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroButton btnOdustani;
+        private MetroFramework.Controls.MetroButton btnObrisi;
+        private MetroFramework.Controls.MetroButton btnAzuriraj;
     }
 }
