@@ -9,7 +9,7 @@ namespace DriveIT
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Ulazna točka u aplikaciju
         /// </summary>
         [STAThread]
         static void Main()
