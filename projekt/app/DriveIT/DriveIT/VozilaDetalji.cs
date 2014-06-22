@@ -33,32 +33,9 @@ namespace DriveIT
 
             int id;
             bool park = Int32.TryParse(txtIdVozilo.Text, out id);
-    
-            //upit.DataSource = db.dodatna_oprema.Where(x=> x.id_dodatna_oprema == id ).First().vozilo.ToList();
-
-            //upit.DataSource = db.vozilo.Where(x => x.id_vozilo == id).First().dodatna_oprema.ToList();
-
+ 
             dataGridView1.DataSource = db.vozilo.Where(x => x.id_vozilo == id).First().dodatna_oprema.ToList();
 
-
-           /* upit.DataSource =
-                    (from t3 in db.dodatna_oprema
-                    from t2 in t3.vozilo.Where(x => x.id_vozilo == id )
-                    select{t3.naziv 
-                        }).ToList();
-                        
-            
-            
-            (from o in db.dodatna_oprema
-                         where o.vozilo.Any(x => x.id_vozilo == id )
-                         select new
-                         {
-                             o.naziv,
-                             o.cijena,
-                         }).ToList();
-            
-            dodatnaopremaBindingSource.DataSource = upit;
-            */
                 
         }
 
@@ -158,6 +135,10 @@ namespace DriveIT
         private void prodajBtn_Click(object sender, EventArgs e)
         {
             frmProdaja prodaja = new frmProdaja(idVozila);
+
+            int id = Convert.ToInt32(txtIdVozilo.Text);
+
+            prodaja.getId(id);
             prodaja.Show();
             
         }

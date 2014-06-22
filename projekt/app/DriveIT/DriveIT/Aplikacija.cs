@@ -195,6 +195,19 @@ namespace DriveIT
             prikaziDetalje(i);
         }
 
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*
+            frmHelp help = new frmHelp();
+            help.Show();*/
+            //System.Diagnostics.Process.Start("C:/Users/Toplomjer/Documents/RepositoryTeam33/projekt/app/DriveIT/DriveIT/Help/CUDNOVATE_ZGODE_SEGRTA_HLAPICA.pdf");
+            //System.Diagnostics.Process.Start("../Help/CUDNOVATE_ZGODE_SEGRTA_HLAPICA.pdf");
+            
+            //Zasada ovako radi pa ...
+            //System.Diagnostics.Process.Start("http://os-gorican.skole.hr/upload/os-gorican/images/static3/721/File/CUDNOVATE_ZGODE_SEGRTA_HLAPICA.pdf");
+
+        }
+
       
     }
 }

@@ -9,7 +9,7 @@ namespace DriveIT.Controler
 {
     class KonacnaCijena
     {
-        public static vozilo Izracun(vozilo vozilo)
+        public  vozilo Izracun(vozilo vozilo)
         {
 
             int razilka = ((DateTime.Now.Year - vozilo.datum_nabavke.Value.Year) * 12) + DateTime.Now.Year - vozilo.datum_nabavke.Value.Month;
