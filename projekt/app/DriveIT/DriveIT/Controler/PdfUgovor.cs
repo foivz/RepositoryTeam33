@@ -31,12 +31,20 @@ namespace DriveIT.Controler
 
             Tvrtka tvrtka = new Tvrtka();
 
-            bool isExists = System.IO.Directory.Exists("./KupciUgovori");
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            string[] polje = userName.Split('\\');
+            userName = polje[1];
+
+            string FolderMjesto = @"C:/Users/" + userName + "/DriveIT/KupciUgovori";
+
+            bool isExists = System.IO.Directory.Exists(FolderMjesto);
             if (!isExists)
-                System.IO.Directory.CreateDirectory("./KupciUgovori");
+                System.IO.Directory.CreateDirectory(FolderMjesto);
+
+            
 
             Document dokument = new Document(iTextSharp.text.PageSize.A4);
-            string parameter = "KupciUgovori/Ugovor_" + ugovor.id_ugovor.ToString() + "_" + kupac.tvrtka.ToString() + "_" + kupac.ime.ToString() + ".pdf";
+            string parameter = FolderMjesto+"/Ugovor_" + ugovor.id_ugovor.ToString() + "_" + kupac.tvrtka.ToString() + "_" + kupac.ime.ToString() + ".pdf";
             PdfWriter wri = PdfWriter.GetInstance(dokument, new FileStream(parameter, FileMode.Create));
 
             dokument.Open();
@@ -195,12 +203,21 @@ namespace DriveIT.Controler
 
             Tvrtka tvrtka = new Tvrtka();
 
-            bool isExists = System.IO.Directory.Exists("./DobavljaciUgovori");
+
+
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
+            string[] polje = userName.Split('\\');
+            userName = polje[1];
+
+            string FolderMjesto = @"C:/Users/" + userName + "/DriveIT/DobavljaciUgovori";
+
+            bool isExists = System.IO.Directory.Exists(FolderMjesto);
             if (!isExists)
-                System.IO.Directory.CreateDirectory("./DobavljaciUgovori");
+                System.IO.Directory.CreateDirectory(FolderMjesto);
 
             Document dokument = new Document(iTextSharp.text.PageSize.A4);
-            string parameter = "DobavljaciUgovori/Ugovor_" + ugovor.id_ugovor.ToString() + "_" + dobavljac.tvrtka.ToString() + "_" + dobavljac.ime.ToString() + ".pdf";
+            string parameter = FolderMjesto+"/Ugovor_" + ugovor.id_ugovor.ToString() + "_" + dobavljac.tvrtka.ToString() + "_" + dobavljac.ime.ToString() + ".pdf";
             PdfWriter wri = PdfWriter.GetInstance(dokument, new FileStream(parameter, FileMode.Create));
 
             dokument.Open();
@@ -361,12 +378,19 @@ namespace DriveIT.Controler
 
             Tvrtka tvrtka = new Tvrtka();
 
-            bool isExists = System.IO.Directory.Exists("./Racini");
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
+            string[] polje = userName.Split('\\');
+            userName = polje[1];
+
+            string FolderMjesto = @"C:/Users/" + userName + "/DriveIT/Racuni";
+
+            bool isExists = System.IO.Directory.Exists(FolderMjesto);
             if (!isExists)
-                System.IO.Directory.CreateDirectory("./Racuni");
+                System.IO.Directory.CreateDirectory(FolderMjesto);
 
             Document dokument = new Document(iTextSharp.text.PageSize.A4);
-            string parameter = "Racuni/Racun_" + vozilo.id_vozilo.ToString() + "_" + kupac.tvrtka.ToString() + "_" + kupac.ime.ToString() + ".pdf";
+            string parameter = FolderMjesto+"/Racun_" + vozilo.id_vozilo.ToString() + "_" + kupac.tvrtka.ToString() + "_" + kupac.ime.ToString() + ".pdf";
             PdfWriter wri = PdfWriter.GetInstance(dokument, new FileStream(parameter, FileMode.Create));
 
             dokument.Open();

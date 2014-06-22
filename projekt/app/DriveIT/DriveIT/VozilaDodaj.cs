@@ -82,8 +82,8 @@ namespace DriveIT
             //MessageBox.Show(Convert.ToString(vozilo_uneseno.id_vozilo));
 
             cijena_vozila.vozilo = vozilo_uneseno.id_vozilo;
-            cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text);
-            cijena_vozila.nabavna_sa_pdv = 0;
+            cijena_vozila.nabavna_bez_pdv = Convert.ToDecimal(txtCijena.Text)/1.25m;
+            cijena_vozila.nabavna_sa_pdv = Convert.ToDecimal(txtCijena.Text);
             cijena_vozila.popravci_ekterni = 0;
             cijena_vozila.porez = 0;
             cijena_vozila.popravci_interni = 0;
@@ -155,9 +155,16 @@ namespace DriveIT
         private void SpremiSlike()
         {
             vozilo vozilo_uneseno = vratiZadnjeUneseno();
-            bool isExists = System.IO.Directory.Exists("./Slike");
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
+            string[] polje = userName.Split('\\');
+            userName = polje[1];
+
+            string FolderMjesto = @"C:/Users/" + userName + "/DriveIT/Slike";
+
+            bool isExists = System.IO.Directory.Exists(FolderMjesto);
             if (!isExists)
-                System.IO.Directory.CreateDirectory("./Slike");
+                System.IO.Directory.CreateDirectory(FolderMjesto);
 
             int brojac = 1;
 
@@ -170,17 +177,10 @@ namespace DriveIT
                     Image loadedImage = Image.FromFile(file);
 
                     var bitovi = File.ReadAllBytes(file);
-                    File.WriteAllBytes("./Slike/" + vozilo_uneseno.id_vozilo + "_" + brojac.ToString() + ".jpg", bitovi);
+                    File.WriteAllBytes(FolderMjesto+"/" + vozilo_uneseno.id_vozilo + "_" + brojac.ToString() + ".jpg", bitovi);
                     //File.WriteAllBytes("./Slike/" + "111" + "_" + brojac.ToString() + ".jpg", bitovi);
 
-                    slika_vozilo slika = new slika_vozilo();
-                    slika.path = "./Slike/" + vozilo_uneseno.id_vozilo + "_" + brojac.ToString() + ".jpg";
-                    //slika.path = "./Slike/" + "111" + "_" + brojac.ToString() + ".jpg";
-                    //slika.vozilo = 11;
-                    slika.vozilo = vozilo_uneseno.id_vozilo;
-
-                    db.slika_vozilo.Add(slika);
-                    db.SaveChanges();
+                    
 
                     brojac++;
 
