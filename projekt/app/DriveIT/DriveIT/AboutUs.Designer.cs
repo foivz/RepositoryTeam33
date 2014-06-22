@@ -171,6 +171,7 @@
             this.Controls.Add(this.lblPrvi);
             this.Controls.Add(this.lblTeam);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "frmAboutUs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "O nama";
