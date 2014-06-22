@@ -41,7 +41,7 @@
             // odustaniBtn
             // 
             this.odustaniBtn.Highlight = false;
-            this.odustaniBtn.Location = new System.Drawing.Point(293, 12);
+            this.odustaniBtn.Location = new System.Drawing.Point(733, 47);
             this.odustaniBtn.Name = "odustaniBtn";
             this.odustaniBtn.Size = new System.Drawing.Size(75, 23);
             this.odustaniBtn.Style = MetroFramework.MetroColorStyle.Blue;
@@ -134,9 +134,11 @@
             this.metroButton1.TabIndex = 10;
             this.metroButton1.Text = "Prodaj";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // option3txt
             // 
+            this.option3txt.AccessibleName = "txtCijenaVozila";
             this.option3txt.CustomBackground = false;
             this.option3txt.CustomForeColor = false;
             this.option3txt.FontSize = MetroFramework.MetroTextBoxSize.Medium;
@@ -154,6 +156,7 @@
             // 
             // option3lbl
             // 
+            this.option3lbl.AccessibleName = "txtCijenaVozila";
             this.option3lbl.AutoSize = true;
             this.option3lbl.BackColor = System.Drawing.SystemColors.Control;
             this.option3lbl.CustomBackground = true;
@@ -163,11 +166,11 @@
             this.option3lbl.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.option3lbl.Location = new System.Drawing.Point(29, 158);
             this.option3lbl.Name = "option3lbl";
-            this.option3lbl.Size = new System.Drawing.Size(82, 19);
+            this.option3lbl.Size = new System.Drawing.Size(215, 19);
             this.option3lbl.Style = MetroFramework.MetroColorStyle.Blue;
             this.option3lbl.StyleManager = null;
             this.option3lbl.TabIndex = 11;
-            this.option3lbl.Text = "Cijena vozila";
+            this.option3lbl.Text = "Preporučena prodajna cijena vozila";
             this.option3lbl.Theme = MetroFramework.MetroThemeStyle.Light;
             this.option3lbl.UseStyleColors = false;
             // 
@@ -175,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 696);
+            this.ClientSize = new System.Drawing.Size(837, 678);
             this.Controls.Add(this.option3txt);
             this.Controls.Add(this.option3lbl);
             this.Controls.Add(this.metroButton1);

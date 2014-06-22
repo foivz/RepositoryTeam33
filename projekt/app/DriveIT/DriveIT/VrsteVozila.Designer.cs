@@ -33,12 +33,12 @@
             this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnDodajVrstuVozila = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tipvozilaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblVrsteVozila = new System.Windows.Forms.Label();
             this.idtipvozilaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.podtipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipvozilaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblVrsteVozila = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipvozilaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -85,37 +87,13 @@
             this.dataGridView1.DataSource = this.tipvozilaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(78, 117);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(430, 220);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idtipvozilaDataGridViewTextBoxColumn
-            // 
-            this.idtipvozilaDataGridViewTextBoxColumn.DataPropertyName = "id_tip_vozila";
-            this.idtipvozilaDataGridViewTextBoxColumn.HeaderText = "id_tip_vozila";
-            this.idtipvozilaDataGridViewTextBoxColumn.Name = "idtipvozilaDataGridViewTextBoxColumn";
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            // 
-            // podtipDataGridViewTextBoxColumn
-            // 
-            this.podtipDataGridViewTextBoxColumn.DataPropertyName = "podtip";
-            this.podtipDataGridViewTextBoxColumn.HeaderText = "podtip";
-            this.podtipDataGridViewTextBoxColumn.Name = "podtipDataGridViewTextBoxColumn";
-            // 
-            // voziloDataGridViewTextBoxColumn
-            // 
-            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
-            this.voziloDataGridViewTextBoxColumn.Visible = false;
             // 
             // tipvozilaBindingSource
             // 
@@ -129,6 +107,36 @@
             this.lblVrsteVozila.Size = new System.Drawing.Size(61, 13);
             this.lblVrsteVozila.TabIndex = 5;
             this.lblVrsteVozila.Text = "Vrste vozila";
+            // 
+            // idtipvozilaDataGridViewTextBoxColumn
+            // 
+            this.idtipvozilaDataGridViewTextBoxColumn.DataPropertyName = "id_tip_vozila";
+            this.idtipvozilaDataGridViewTextBoxColumn.HeaderText = "šifra";
+            this.idtipvozilaDataGridViewTextBoxColumn.Name = "idtipvozilaDataGridViewTextBoxColumn";
+            this.idtipvozilaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idtipvozilaDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // podtipDataGridViewTextBoxColumn
+            // 
+            this.podtipDataGridViewTextBoxColumn.DataPropertyName = "podtip";
+            this.podtipDataGridViewTextBoxColumn.HeaderText = "podtip";
+            this.podtipDataGridViewTextBoxColumn.Name = "podtipDataGridViewTextBoxColumn";
+            this.podtipDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // voziloDataGridViewTextBoxColumn
+            // 
+            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
+            this.voziloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.voziloDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmVrsteVozila
             // 
@@ -157,10 +165,10 @@
         private System.Windows.Forms.Button btnDodajVrstuVozila;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblVrsteVozila;
+        private System.Windows.Forms.BindingSource tipvozilaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idtipvozilaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn podtipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn voziloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tipvozilaBindingSource;
     }
 }

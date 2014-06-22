@@ -10,15 +10,13 @@ using System.Windows.Forms;
 
 namespace DriveIT
 {
-    public partial class frmAboutUs : Form
+    public partial class frmHelp : Form
     {
-        public frmAboutUs()
+        public frmHelp()
         {
             InitializeComponent();
         }
 
-     
-
-       
+        
     }
 }

@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.lblParkiralista = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idparkingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kapacitetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parkingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDodajParking = new System.Windows.Forms.Button();
             this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnIzlaz = new System.Windows.Forms.Button();
+            this.idparkingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kapacitetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkingBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -64,6 +66,7 @@
             this.dataGridView1.DataSource = this.parkingBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(83, 133);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(343, 250);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -72,31 +75,6 @@
             this.dataGridView1.CellContextMenuStripChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idparkingDataGridViewTextBoxColumn
-            // 
-            this.idparkingDataGridViewTextBoxColumn.DataPropertyName = "id_parking";
-            this.idparkingDataGridViewTextBoxColumn.HeaderText = "id_parking";
-            this.idparkingDataGridViewTextBoxColumn.Name = "idparkingDataGridViewTextBoxColumn";
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            // 
-            // kapacitetDataGridViewTextBoxColumn
-            // 
-            this.kapacitetDataGridViewTextBoxColumn.DataPropertyName = "kapacitet";
-            this.kapacitetDataGridViewTextBoxColumn.HeaderText = "kapacitet";
-            this.kapacitetDataGridViewTextBoxColumn.Name = "kapacitetDataGridViewTextBoxColumn";
-            // 
-            // voziloDataGridViewTextBoxColumn
-            // 
-            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
-            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
-            this.voziloDataGridViewTextBoxColumn.Visible = false;
             // 
             // parkingBindingSource
             // 
@@ -131,6 +109,36 @@
             this.btnIzlaz.Text = "Izlaz";
             this.btnIzlaz.UseVisualStyleBackColor = true;
             this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
+            // idparkingDataGridViewTextBoxColumn
+            // 
+            this.idparkingDataGridViewTextBoxColumn.DataPropertyName = "id_parking";
+            this.idparkingDataGridViewTextBoxColumn.HeaderText = "šifra";
+            this.idparkingDataGridViewTextBoxColumn.Name = "idparkingDataGridViewTextBoxColumn";
+            this.idparkingDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idparkingDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kapacitetDataGridViewTextBoxColumn
+            // 
+            this.kapacitetDataGridViewTextBoxColumn.DataPropertyName = "kapacitet";
+            this.kapacitetDataGridViewTextBoxColumn.HeaderText = "kapacitet";
+            this.kapacitetDataGridViewTextBoxColumn.Name = "kapacitetDataGridViewTextBoxColumn";
+            this.kapacitetDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // voziloDataGridViewTextBoxColumn
+            // 
+            this.voziloDataGridViewTextBoxColumn.DataPropertyName = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.HeaderText = "vozilo";
+            this.voziloDataGridViewTextBoxColumn.Name = "voziloDataGridViewTextBoxColumn";
+            this.voziloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.voziloDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmParkiralista
             // 

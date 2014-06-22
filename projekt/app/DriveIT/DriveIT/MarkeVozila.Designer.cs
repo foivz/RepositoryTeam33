@@ -33,12 +33,12 @@
             this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnDodajVrstuVozila = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblVrsteVozila = new System.Windows.Forms.Label();
+            this.markavozilaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idmarkavozilaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drzavaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelvozilaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markavozilaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblVrsteVozila = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.markavozilaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -85,38 +87,10 @@
             this.dataGridView1.DataSource = this.markavozilaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(66, 144);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(347, 220);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idmarkavozilaDataGridViewTextBoxColumn
-            // 
-            this.idmarkavozilaDataGridViewTextBoxColumn.DataPropertyName = "id_marka_vozila";
-            this.idmarkavozilaDataGridViewTextBoxColumn.HeaderText = "id_marka_vozila";
-            this.idmarkavozilaDataGridViewTextBoxColumn.Name = "idmarkavozilaDataGridViewTextBoxColumn";
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            // 
-            // drzavaDataGridViewTextBoxColumn
-            // 
-            this.drzavaDataGridViewTextBoxColumn.DataPropertyName = "drzava";
-            this.drzavaDataGridViewTextBoxColumn.HeaderText = "drzava";
-            this.drzavaDataGridViewTextBoxColumn.Name = "drzavaDataGridViewTextBoxColumn";
-            // 
-            // modelvozilaDataGridViewTextBoxColumn
-            // 
-            this.modelvozilaDataGridViewTextBoxColumn.DataPropertyName = "model_vozila";
-            this.modelvozilaDataGridViewTextBoxColumn.HeaderText = "model_vozila";
-            this.modelvozilaDataGridViewTextBoxColumn.Name = "modelvozilaDataGridViewTextBoxColumn";
-            this.modelvozilaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // markavozilaBindingSource
-            // 
-            this.markavozilaBindingSource.DataSource = typeof(DriveIT.Database.marka_vozila);
             // 
             // lblVrsteVozila
             // 
@@ -126,6 +100,41 @@
             this.lblVrsteVozila.Size = new System.Drawing.Size(61, 13);
             this.lblVrsteVozila.TabIndex = 10;
             this.lblVrsteVozila.Text = "Vrste vozila";
+            // 
+            // markavozilaBindingSource
+            // 
+            this.markavozilaBindingSource.DataSource = typeof(DriveIT.Database.marka_vozila);
+            // 
+            // idmarkavozilaDataGridViewTextBoxColumn
+            // 
+            this.idmarkavozilaDataGridViewTextBoxColumn.DataPropertyName = "id_marka_vozila";
+            this.idmarkavozilaDataGridViewTextBoxColumn.FillWeight = 30F;
+            this.idmarkavozilaDataGridViewTextBoxColumn.HeaderText = "šifra";
+            this.idmarkavozilaDataGridViewTextBoxColumn.Name = "idmarkavozilaDataGridViewTextBoxColumn";
+            this.idmarkavozilaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idmarkavozilaDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // drzavaDataGridViewTextBoxColumn
+            // 
+            this.drzavaDataGridViewTextBoxColumn.DataPropertyName = "drzava";
+            this.drzavaDataGridViewTextBoxColumn.HeaderText = "drzava";
+            this.drzavaDataGridViewTextBoxColumn.Name = "drzavaDataGridViewTextBoxColumn";
+            this.drzavaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelvozilaDataGridViewTextBoxColumn
+            // 
+            this.modelvozilaDataGridViewTextBoxColumn.DataPropertyName = "model_vozila";
+            this.modelvozilaDataGridViewTextBoxColumn.HeaderText = "model_vozila";
+            this.modelvozilaDataGridViewTextBoxColumn.Name = "modelvozilaDataGridViewTextBoxColumn";
+            this.modelvozilaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelvozilaDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmMarkeVozila
             // 
@@ -154,10 +163,10 @@
         private System.Windows.Forms.Button btnDodajVrstuVozila;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblVrsteVozila;
+        private System.Windows.Forms.BindingSource markavozilaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmarkavozilaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn drzavaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelvozilaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource markavozilaBindingSource;
     }
 }
