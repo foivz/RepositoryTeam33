@@ -60,6 +60,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -76,6 +77,7 @@
             this.ugovorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dobavljacBindingSource;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -84,62 +86,73 @@
             // iddobavljacDataGridViewTextBoxColumn
             // 
             this.iddobavljacDataGridViewTextBoxColumn.DataPropertyName = "id_dobavljac";
+            this.iddobavljacDataGridViewTextBoxColumn.FillWeight = 30F;
             resources.ApplyResources(this.iddobavljacDataGridViewTextBoxColumn, "iddobavljacDataGridViewTextBoxColumn");
             this.iddobavljacDataGridViewTextBoxColumn.Name = "iddobavljacDataGridViewTextBoxColumn";
+            this.iddobavljacDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imeDataGridViewTextBoxColumn
             // 
             this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
             resources.ApplyResources(this.imeDataGridViewTextBoxColumn, "imeDataGridViewTextBoxColumn");
             this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            this.imeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prezimeDataGridViewTextBoxColumn
             // 
             this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
             resources.ApplyResources(this.prezimeDataGridViewTextBoxColumn, "prezimeDataGridViewTextBoxColumn");
             this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tvrtkaDataGridViewTextBoxColumn
             // 
             this.tvrtkaDataGridViewTextBoxColumn.DataPropertyName = "tvrtka";
             resources.ApplyResources(this.tvrtkaDataGridViewTextBoxColumn, "tvrtkaDataGridViewTextBoxColumn");
             this.tvrtkaDataGridViewTextBoxColumn.Name = "tvrtkaDataGridViewTextBoxColumn";
+            this.tvrtkaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // adresaDataGridViewTextBoxColumn
             // 
             this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
             resources.ApplyResources(this.adresaDataGridViewTextBoxColumn, "adresaDataGridViewTextBoxColumn");
             this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonDataGridViewTextBoxColumn
             // 
             this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
             resources.ApplyResources(this.telefonDataGridViewTextBoxColumn, "telefonDataGridViewTextBoxColumn");
             this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            this.telefonDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // faksDataGridViewTextBoxColumn
             // 
             this.faksDataGridViewTextBoxColumn.DataPropertyName = "faks";
             resources.ApplyResources(this.faksDataGridViewTextBoxColumn, "faksDataGridViewTextBoxColumn");
             this.faksDataGridViewTextBoxColumn.Name = "faksDataGridViewTextBoxColumn";
+            this.faksDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             resources.ApplyResources(this.emailDataGridViewTextBoxColumn, "emailDataGridViewTextBoxColumn");
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dodatnaopremaDataGridViewTextBoxColumn
             // 
             this.dodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "dodatna_oprema";
             resources.ApplyResources(this.dodatnaopremaDataGridViewTextBoxColumn, "dodatnaopremaDataGridViewTextBoxColumn");
             this.dodatnaopremaDataGridViewTextBoxColumn.Name = "dodatnaopremaDataGridViewTextBoxColumn";
+            this.dodatnaopremaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ugovorDataGridViewTextBoxColumn
             // 
             this.ugovorDataGridViewTextBoxColumn.DataPropertyName = "ugovor";
             resources.ApplyResources(this.ugovorDataGridViewTextBoxColumn, "ugovorDataGridViewTextBoxColumn");
             this.ugovorDataGridViewTextBoxColumn.Name = "ugovorDataGridViewTextBoxColumn";
+            this.ugovorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dobavljacBindingSource
             // 
@@ -260,6 +273,7 @@
         private MetroFramework.Controls.MetroButton btnDodajDobavljaca;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton btnOsvjezi;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddobavljacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
@@ -270,6 +284,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dodatnaopremaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ugovorDataGridViewTextBoxColumn;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }

@@ -99,9 +99,10 @@
             // idnalogzaservisDataGridViewTextBoxColumn
             // 
             this.idnalogzaservisDataGridViewTextBoxColumn.DataPropertyName = "id_nalog_za_servis";
-            this.idnalogzaservisDataGridViewTextBoxColumn.HeaderText = "id_nalog_za_servis";
+            this.idnalogzaservisDataGridViewTextBoxColumn.HeaderText = "šifra";
             this.idnalogzaservisDataGridViewTextBoxColumn.Name = "idnalogzaservisDataGridViewTextBoxColumn";
             this.idnalogzaservisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idnalogzaservisDataGridViewTextBoxColumn.Width = 30;
             // 
             // opisDataGridViewTextBoxColumn
             // 

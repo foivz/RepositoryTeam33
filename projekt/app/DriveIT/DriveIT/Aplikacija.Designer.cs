@@ -40,6 +40,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postavkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parkiralištaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeliVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +55,7 @@
             this.cbParkiralista = new System.Windows.Forms.ComboBox();
             this.lblParking = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sasijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumprveregistracijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,8 +81,6 @@
             this.tipvozila1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugovorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
@@ -190,6 +190,13 @@
             this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
             this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomoćToolStripMenuItem.Text = "Pomoć";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // postavkeToolStripMenuItem
             // 
@@ -345,25 +352,29 @@
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // voziloBindingSource
+            // 
+            this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
+            // 
             // idvoziloDataGridViewTextBoxColumn
             // 
             this.idvoziloDataGridViewTextBoxColumn.DataPropertyName = "id_vozilo";
-            this.idvoziloDataGridViewTextBoxColumn.HeaderText = "id_vozilo";
+            this.idvoziloDataGridViewTextBoxColumn.HeaderText = "šifra";
             this.idvoziloDataGridViewTextBoxColumn.Name = "idvoziloDataGridViewTextBoxColumn";
             this.idvoziloDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idvoziloDataGridViewTextBoxColumn.Width = 50;
+            this.idvoziloDataGridViewTextBoxColumn.Width = 30;
             // 
             // sasijaDataGridViewTextBoxColumn
             // 
             this.sasijaDataGridViewTextBoxColumn.DataPropertyName = "sasija";
-            this.sasijaDataGridViewTextBoxColumn.HeaderText = "sasija";
+            this.sasijaDataGridViewTextBoxColumn.HeaderText = "šasija";
             this.sasijaDataGridViewTextBoxColumn.Name = "sasijaDataGridViewTextBoxColumn";
             this.sasijaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datumprveregistracijeDataGridViewTextBoxColumn
             // 
             this.datumprveregistracijeDataGridViewTextBoxColumn.DataPropertyName = "datum_prve_registracije";
-            this.datumprveregistracijeDataGridViewTextBoxColumn.HeaderText = "datum_prve_registracije";
+            this.datumprveregistracijeDataGridViewTextBoxColumn.HeaderText = "prva registracija";
             this.datumprveregistracijeDataGridViewTextBoxColumn.Name = "datumprveregistracijeDataGridViewTextBoxColumn";
             this.datumprveregistracijeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -378,7 +389,7 @@
             // godinaproizvodnjeDataGridViewTextBoxColumn
             // 
             this.godinaproizvodnjeDataGridViewTextBoxColumn.DataPropertyName = "godina_proizvodnje";
-            this.godinaproizvodnjeDataGridViewTextBoxColumn.HeaderText = "godina_proizvodnje";
+            this.godinaproizvodnjeDataGridViewTextBoxColumn.HeaderText = "godina";
             this.godinaproizvodnjeDataGridViewTextBoxColumn.Name = "godinaproizvodnjeDataGridViewTextBoxColumn";
             this.godinaproizvodnjeDataGridViewTextBoxColumn.ReadOnly = true;
             this.godinaproizvodnjeDataGridViewTextBoxColumn.Visible = false;
@@ -393,7 +404,7 @@
             // snagakwDataGridViewTextBoxColumn
             // 
             this.snagakwDataGridViewTextBoxColumn.DataPropertyName = "snaga_kw";
-            this.snagakwDataGridViewTextBoxColumn.HeaderText = "snaga_kw";
+            this.snagakwDataGridViewTextBoxColumn.HeaderText = "snaga (KW)";
             this.snagakwDataGridViewTextBoxColumn.Name = "snagakwDataGridViewTextBoxColumn";
             this.snagakwDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -448,14 +459,14 @@
             // tipvozilaDataGridViewTextBoxColumn
             // 
             this.tipvozilaDataGridViewTextBoxColumn.DataPropertyName = "tip_vozila";
-            this.tipvozilaDataGridViewTextBoxColumn.HeaderText = "tip_vozila";
+            this.tipvozilaDataGridViewTextBoxColumn.HeaderText = "tip vozila";
             this.tipvozilaDataGridViewTextBoxColumn.Name = "tipvozilaDataGridViewTextBoxColumn";
             this.tipvozilaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // modelvozilaDataGridViewTextBoxColumn
             // 
             this.modelvozilaDataGridViewTextBoxColumn.DataPropertyName = "model_vozila";
-            this.modelvozilaDataGridViewTextBoxColumn.HeaderText = "model_vozila";
+            this.modelvozilaDataGridViewTextBoxColumn.HeaderText = "model";
             this.modelvozilaDataGridViewTextBoxColumn.Name = "modelvozilaDataGridViewTextBoxColumn";
             this.modelvozilaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -539,17 +550,6 @@
             this.dodatnaopremaDataGridViewTextBoxColumn.ReadOnly = true;
             this.dodatnaopremaDataGridViewTextBoxColumn.Visible = false;
             // 
-            // voziloBindingSource
-            // 
-            this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
             // frmAplikacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,6 +606,7 @@
         private System.Windows.Forms.Label lblParking;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource voziloBindingSource;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn idvoziloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sasijaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumprveregistracijeDataGridViewTextBoxColumn;
@@ -631,6 +632,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipvozila1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ugovorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dodatnaopremaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

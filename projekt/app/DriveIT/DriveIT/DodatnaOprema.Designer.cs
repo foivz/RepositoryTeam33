@@ -33,8 +33,8 @@
             this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnDodajDodatnuOpremu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblVrsteVozila = new System.Windows.Forms.Label();
             this.dodatnaopremaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblVrsteVozila = new System.Windows.Forms.Label();
             this.iddodatnaopremaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobavljaciddobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,6 +104,10 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // dodatnaopremaBindingSource
+            // 
+            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
+            // 
             // lblVrsteVozila
             // 
             this.lblVrsteVozila.AutoSize = true;
@@ -113,22 +117,19 @@
             this.lblVrsteVozila.TabIndex = 10;
             this.lblVrsteVozila.Text = "Vrste vozila";
             // 
-            // dodatnaopremaBindingSource
-            // 
-            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
-            // 
             // iddodatnaopremaDataGridViewTextBoxColumn
             // 
             this.iddodatnaopremaDataGridViewTextBoxColumn.DataPropertyName = "id_dodatna_oprema";
-            this.iddodatnaopremaDataGridViewTextBoxColumn.HeaderText = "id_dodatna_oprema";
+            this.iddodatnaopremaDataGridViewTextBoxColumn.HeaderText = "šifra";
             this.iddodatnaopremaDataGridViewTextBoxColumn.MinimumWidth = 3;
             this.iddodatnaopremaDataGridViewTextBoxColumn.Name = "iddodatnaopremaDataGridViewTextBoxColumn";
             this.iddodatnaopremaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iddodatnaopremaDataGridViewTextBoxColumn.Width = 30;
             // 
             // dobavljaciddobavljacDataGridViewTextBoxColumn
             // 
             this.dobavljaciddobavljacDataGridViewTextBoxColumn.DataPropertyName = "dobavljac_iddobavljac";
-            this.dobavljaciddobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljac_iddobavljac";
+            this.dobavljaciddobavljacDataGridViewTextBoxColumn.HeaderText = "dobavljač";
             this.dobavljaciddobavljacDataGridViewTextBoxColumn.Name = "dobavljaciddobavljacDataGridViewTextBoxColumn";
             this.dobavljaciddobavljacDataGridViewTextBoxColumn.ReadOnly = true;
             // 
