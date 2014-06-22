@@ -11,7 +11,7 @@ namespace DriveIT.Controler
         public static string getCurrentTime() {
             string time;
 
-            time = DateTime.Now.ToString("MM/dd/yyyy  H:mm:ss");
+            time = DateTime.Now.ToString("dd/MM/yyyy  H:mm:ss");
 
              return time;
         }
