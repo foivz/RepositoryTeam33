@@ -12,6 +12,9 @@ namespace DriveIT
 {
     public partial class frmDijeloviServis : Form
     {
+        /// <summary>
+        /// [TODO] CRUD metode za servis i dijelove
+        /// </summary>
         public frmDijeloviServis()
         {
             InitializeComponent();

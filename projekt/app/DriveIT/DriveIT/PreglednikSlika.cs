@@ -17,6 +17,10 @@ namespace DriveIT
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda koja učitava sliku vozila spremljenu u folder slika i smješta ga u picturebox
+        /// </summary>
+        /// <param name="id_vozila"></param>
         public static void Ucitaj_sliku(string id_vozila)
         {
             PreglednikSlika preglednik = new PreglednikSlika();
@@ -26,6 +30,11 @@ namespace DriveIT
             preglednik.Show();
         }
 
+        /// <summary>
+        /// Metoda koja na odabir gumba za sljedeću sliku učitava iduću sliku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton2_Click(object sender, EventArgs e)
         {
             string[] putanja = pictureBox1.ImageLocation.Split('_');
@@ -52,6 +61,12 @@ namespace DriveIT
 
         }
 
+
+        /// <summary>
+        /// Metoda koja na odabir gumba za prethodnu sliku pokazuje prethodnu sliku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
             string[] putanja = pictureBox1.ImageLocation.Split('_');

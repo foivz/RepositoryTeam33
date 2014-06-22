@@ -28,13 +28,15 @@ namespace DriveIT
                 metroComboBox1.DataSource = db.kupac.ToList();
                 metroComboBox1.ValueMember = "id_kupac";
                 metroComboBox1.DisplayMember = "email";
-                
-
             }
-           
-
         }
 
+
+        /// <summary>
+        /// Metoda koja poziva metodu iz kontrolera za konačni izračun cijene vozila na temelju parametara
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmProdaja_Load(object sender, EventArgs e)
         {
             /*Prijedlog cijene vozila*/
@@ -45,6 +47,11 @@ namespace DriveIT
             option3txt.Text = Convert.ToString(vozilo.cijena.prodajna_sa_pdv);
             
         }
+
+        /// <summary>
+        /// Metoda za učitavanje podataka o cijeni vozila
+        /// </summary>
+        /// <param name="id"></param>
         private void loadData(int id)
         {
 
@@ -73,17 +80,31 @@ namespace DriveIT
 
         }
         
-
+        /// <summary>
+        /// Metoda za zatvaranje forme Prodaje
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void odustaniBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Metoda koja nam služi kao getter i u property klase spremamo id vozila koje se prodaje
+        /// </summary>
+        /// <param name="id"></param>
         public void getId(int id) {
             identifikator = id;
         }
 
 
+        /// <summary>
+        /// Metoda koja se pokreće na odabit gumba za prodaju vozila
+        /// Spremamo unesene vrijednosti u objekt i generiramo pdf 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
             vozilo vozilo = db.vozilo.First(i => i.id_vozilo == identifikator);
