@@ -13,6 +13,9 @@ namespace DriveIT
 {
     public partial class frmDodatnaOprema : Form
     {
+
+        T33_DBEntities db = new T33_DBEntities();
+
         public frmDodatnaOprema()
         {
             InitializeComponent();
@@ -20,9 +23,18 @@ namespace DriveIT
 
         private void prikaziDodatnuOpremu()
         {
-            T33_DBEntities db = new T33_DBEntities();
-            var dodatna_oprema = db.dodatna_oprema.ToList<dodatna_oprema>();
-            dodatnaopremaBindingSource.DataSource = dodatna_oprema;
+            
+
+           BindingSource dodatna_oprema = new BindingSource();
+
+
+           dodatna_oprema.DataSource = (from l in db.dodatna_oprema
+                                        join d in db.dobavljac on l.dobavljac_iddobavljac equals d.id_dobavljac
+                                        select new {
+                                            l.id_dodatna_oprema,dobavljac_iddobavljac = d.tvrtka,l.naziv,l.model,l.boja,l.kolicina,l.cijena,l.raspoloživo 
+                                        }).ToList();
+           dodatnaopremaBindingSource.DataSource = dodatna_oprema;     
+
         }
 
         private void prikaziDetalje(string i)

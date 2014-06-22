@@ -27,8 +27,39 @@ namespace DriveIT
             //BindingList<vozilo> listaVozila = null;
             //var vozila = db.vozilo.Where<vozilo>(x => x.id_vozilo == 2).First<vozilo>();
             //var vozila = db.vozilo.Where<vozilo>;
-            var vozila = db.vozilo.ToList<vozilo>();
-            voziloBindingSource.DataSource = vozila;
+
+
+            BindingSource upit = new BindingSource();
+            upit.DataSource =
+                        (from v in db.vozilo
+                         join p in db.parking on v.parking equals p.id_parking
+                         join t in db.tip_vozila on v.tip_vozila equals t.id_tip_vozila
+                         join m in db.model_vozila on v.model_vozila equals m.id_model_vozila
+                         join r in db.marka_vozila on m.marka_vozila equals r.id_marka_vozila
+                         select new
+                         {
+                             v.id_vozilo,
+                             v.sasija,
+                             v.datum_prve_registracije,
+                             v.boja,
+                             v.godina_proizvodnje,
+                             v.sjedista,
+                             v.nosivost,
+                             v.snaga_kw,
+                             v.datum_nabavke,
+                             v.registracija,
+                             v.prometna,
+                             v.servisna,
+                             v.kilometri,
+                             tip_vozila = t.naziv,
+                             model_vozila = r.naziv + " " + m.naziv,
+                             parking = p.naziv,
+                             v.zadnje_paljenje
+                         }).ToList();
+            voziloBindingSource.DataSource = upit;
+
+            //var vozila = db.vozilo.ToList<vozilo>();
+            voziloBindingSource.DataSource = upit;
 
         }
 
@@ -71,7 +102,7 @@ namespace DriveIT
             novo_vozilo.ShowDialog();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnoOsvjezi_Click(object sender, EventArgs e)
         {
             PrikaziVozila();
         }

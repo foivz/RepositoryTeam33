@@ -35,6 +35,17 @@ namespace DriveIT
             InitializeComponent();
         }
 
+        private void frmParkiralista_Load(object sender, EventArgs e)
+        {
+            prikaziParkiralista();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            prikaziDetalje(i);
+        }
+
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -45,21 +56,16 @@ namespace DriveIT
             prikaziParkiralista();
         }
 
-        private void frmParkiralista_Load(object sender, EventArgs e)
-        {
-            prikaziParkiralista();
-        }
-
-        private void btnDodajParking_Click(object sender, EventArgs e)
+        private void metroButton2_Click(object sender, EventArgs e)
         {
             frmParkiralistaDodaj parkiraliste_dodaj = new frmParkiralistaDodaj();
             parkiraliste_dodaj.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnDodaj_Click(object sender, EventArgs e)
         {
-            string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            prikaziDetalje(i);
+            frmParkiralistaDodaj parkiraliste_dodaj = new frmParkiralistaDodaj();
+            parkiraliste_dodaj.Show();
         }
     }
 }

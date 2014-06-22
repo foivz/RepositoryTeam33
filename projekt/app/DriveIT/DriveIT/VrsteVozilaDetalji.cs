@@ -21,10 +21,7 @@ namespace DriveIT
             InitializeComponent();
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
 
         public void getDetails(string i)
@@ -36,7 +33,28 @@ namespace DriveIT
             txtId.Text = i;
             txtNaziv.Text = vrsta_vozila.naziv;
             txtPodtip.Text = vrsta_vozila.podtip;
-        
+
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAzuriraj_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
+            tip_vozila vrsta_vozila = db.tip_vozila.First(i => i.id_tip_vozila == id);
+
+            vrsta_vozila.id_tip_vozila = id;
+            vrsta_vozila.naziv = txtNaziv.Text;
+            vrsta_vozila.podtip = txtPodtip.Text;
+
+            db.SaveChanges();
+
+            MessageBox.Show("Vrsta vozila uspješno ažurirana");
+            System.Threading.Thread.Sleep(700);
+            this.Close();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
@@ -49,23 +67,6 @@ namespace DriveIT
 
 
             MessageBox.Show("Vrsta vozila uspješno obrisana");
-            System.Threading.Thread.Sleep(700);
-            this.Close();
-
-        }
-
-        private void btnAzurirajjModelVozila_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(txtId.Text);
-            tip_vozila vrsta_vozila = db.tip_vozila.First(i => i.id_tip_vozila == id);
-
-            vrsta_vozila.id_tip_vozila = id;
-            vrsta_vozila.naziv = txtNaziv.Text;
-            vrsta_vozila.podtip = txtPodtip.Text;
-
-            db.SaveChanges();
-
-            MessageBox.Show("Vrsta vozila uspješno ažurirana");
             System.Threading.Thread.Sleep(700);
             this.Close();
 

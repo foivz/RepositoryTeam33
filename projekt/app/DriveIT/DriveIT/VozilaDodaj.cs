@@ -48,55 +48,9 @@ namespace DriveIT
 
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
-        private void btnDodajDobavljac_Click(object sender, EventArgs e)
-        {
-
-            vozilo vozilo = new vozilo();
-
-            /*Dodavanje u tablicu vozila*/
-            vozilo.sasija = txtBrSasije.Text;
-            vozilo.datum_prve_registracije = dtPickerPrvaRegistracija.Value;
-            vozilo.boja = txtBoja.Text;
-            vozilo.godina_proizvodnje = Convert.ToInt32(txtGodinaProizvodnje.Text);
-            vozilo.datum_nabavke = dtPickerNabavka.Value;
-            vozilo.snaga_kw = Convert.ToInt32(txtSnaga.Text);
-            vozilo.sjedista = Convert.ToInt32(txtSjedista.Text);
-            vozilo.nosivost = Convert.ToInt32(txtNosivost.Text);
-            vozilo.registracija = txtRegistracija.Text;
-            vozilo.prometna = txtPrometna.Text;
-            vozilo.servisna = txtServisna.Text;
-            vozilo.kilometri = Convert.ToInt32(txtKilometraza.Text);
-            vozilo.tip_vozila = Convert.ToInt32(txtTipVozila.SelectedValue);
-            vozilo.model_vozila = Convert.ToInt32(txtModel.SelectedValue);
-            vozilo.parking = Convert.ToInt32(txtParking.SelectedValue);
-
-
-            try
-            {
-                db.vozilo.Add(vozilo);
-                db.SaveChanges();
-
-                spremiCijene();
-                spremiUgovore();
-                db.SaveChanges();
-
-                SpremiSlike();
-
-                MessageBox.Show("Vozilo je uspješno dodano !");
-                System.Threading.Thread.Sleep(700);
-                this.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Greška pri unosu vozila!");
-                this.Close();
-            }
-        }
+        
 
         private vozilo vratiZadnjeUneseno()
         {
@@ -208,6 +162,50 @@ namespace DriveIT
         private void metroButton2_Click(object sender, EventArgs e)
         {
             SpremiSlike();
+        }
+
+        private void btnDodajVozilo_Click(object sender, EventArgs e)
+        {
+            vozilo vozilo = new vozilo();
+
+            /*Dodavanje u tablicu vozila*/
+            vozilo.sasija = txtBrSasije.Text;
+            vozilo.datum_prve_registracije = dtPickerPrvaRegistracija.Value;
+            vozilo.boja = txtBoja.Text;
+            vozilo.godina_proizvodnje = Convert.ToInt32(txtGodinaProizvodnje.Text);
+            vozilo.datum_nabavke = dtPickerNabavka.Value;
+            vozilo.snaga_kw = Convert.ToInt32(txtSnaga.Text);
+            vozilo.sjedista = Convert.ToInt32(txtSjedista.Text);
+            vozilo.nosivost = Convert.ToInt32(txtNosivost.Text);
+            vozilo.registracija = txtRegistracija.Text;
+            vozilo.prometna = txtPrometna.Text;
+            vozilo.servisna = txtServisna.Text;
+            vozilo.kilometri = Convert.ToInt32(txtKilometraza.Text);
+            vozilo.tip_vozila = Convert.ToInt32(txtTipVozila.SelectedValue);
+            vozilo.model_vozila = Convert.ToInt32(txtModel.SelectedValue);
+            vozilo.parking = Convert.ToInt32(txtParking.SelectedValue);
+
+
+            try
+            {
+                db.vozilo.Add(vozilo);
+                db.SaveChanges();
+
+                spremiCijene();
+                spremiUgovore();
+                db.SaveChanges();
+
+                SpremiSlike();
+
+                MessageBox.Show("Vozilo je uspješno dodano !");
+                System.Threading.Thread.Sleep(700);
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Greška pri unosu vozila!");
+                this.Close();
+            }
         }
 
 

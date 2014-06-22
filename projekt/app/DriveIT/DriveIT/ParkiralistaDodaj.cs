@@ -25,9 +25,8 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnDodajParking_Click(object sender, EventArgs e)
+        private void btnDodajParkiraliste_Click(object sender, EventArgs e)
         {
-
             T33_DBEntities db = new T33_DBEntities();
             parking parkiraliste = new parking();
 
@@ -47,11 +46,10 @@ namespace DriveIT
 
 
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Greška !");
             }
-
         }
     }
 }

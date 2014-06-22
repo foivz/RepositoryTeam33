@@ -31,19 +31,7 @@ namespace DriveIT
             frmVrsteVozilaDetalji vrste_vozila_detalji = new frmVrsteVozilaDetalji();
             vrste_vozila_detalji.getDetails(i);
             vrste_vozila_detalji.ShowDialog();
-        
-        }
 
-     
-
-        private void btnIzlaz_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnOsvjezi_Click(object sender, EventArgs e)
-        {
-            prikaziVrsteVozila();
         }
 
         private void frmVrsteVozila_Load(object sender, EventArgs e)
@@ -51,16 +39,30 @@ namespace DriveIT
             prikaziVrsteVozila();
         }
 
-        private void btnDodajVrstuVozila_Click(object sender, EventArgs e)
-        {
-            frmVrsteVozilaDodaj vrsta_vozila = new frmVrsteVozilaDodaj();
-            vrsta_vozila.ShowDialog();
-        }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             prikaziDetalje(i);
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void btnOsvjezi_Click(object sender, EventArgs e)
+        {
+            prikaziVrsteVozila();
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+
+            frmVrsteVozilaDodaj vrsta_vozila = new frmVrsteVozilaDodaj();
+            vrsta_vozila.ShowDialog();
         }
     }
 }
