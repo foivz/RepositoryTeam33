@@ -58,13 +58,13 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnDodajDodatnuOpremu_Click(object sender, EventArgs e)
+        private void btnDodaj_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtId.Text);
 
             dodatna_oprema oprema = db.dodatna_oprema.First(i => i.id_dodatna_oprema == id);
 
-            oprema.dobavljac_iddobavljac =(int)cbDobavljac.SelectedValue;
+            oprema.dobavljac_iddobavljac = (int)cbDobavljac.SelectedValue;
             oprema.naziv = txtNaziv.Text;
             oprema.model = txtModel.Text;
             oprema.boja = txtBoja.Text;

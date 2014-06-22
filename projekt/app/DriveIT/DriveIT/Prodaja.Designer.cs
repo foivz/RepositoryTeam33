@@ -38,6 +38,8 @@
             this.option3txt = new MetroFramework.Controls.MetroTextBox();
             this.option3lbl = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,11 +189,47 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroComboBox1.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.metroComboBox1.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(409, 113);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(280, 29);
+            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox1.StyleManager = null;
+            this.metroComboBox1.TabIndex = 14;
+            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.CustomBackground = false;
+            this.metroLabel1.CustomForeColor = false;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel1.Location = new System.Drawing.Point(312, 113);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel1.StyleManager = null;
+            this.metroLabel1.TabIndex = 15;
+            this.metroLabel1.Text = "Kupac";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel1.UseStyleColors = false;
+            // 
             // frmProdaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 696);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.option3txt);
             this.Controls.Add(this.option3lbl);
@@ -222,5 +260,7 @@
         private MetroFramework.Controls.MetroTextBox option3txt;
         private MetroFramework.Controls.MetroLabel option3lbl;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

@@ -308,8 +308,8 @@ namespace DriveIT.Controler
 
             dokument.Add(tablica1);
 
-            //Paragraph cijena = new Paragraph("2. Prodajna cijena ugovorena je u uznosu od " + vozilo.cijena.prodajna_sa_pdv.ToString() + " kn\nOd toga je poreza na dodatnu vrijednost (PDV): " + vozilo.cijena.porez.ToString()+" kn\n");
-            Paragraph cijena = new Paragraph("2. Prodajna cijena ugovorena je u uznosu od " + "12545" + " kn\nOd toga je poreza na dodatnu vrijednost (PDV): " + "2500" + " kn\n");
+            Paragraph cijena = new Paragraph("2. Prodajna cijena ugovorena je u uznosu od " + vozilo.cijena.prodajna_sa_pdv.ToString() + " kn\nOd toga je poreza na dodatnu vrijednost (PDV): " + vozilo.cijena.porez.ToString()+" kn\n");
+            //Paragraph cijena = new Paragraph("2. Prodajna cijena ugovorena je u uznosu od " + "12545" + " kn\nOd toga je poreza na dodatnu vrijednost (PDV): " + "2500" + " kn\n");
             dokument.Add(cijena);
 
             Paragraph ostatak = new Paragraph("3. Prodavatelj jamči da je vozilo njegovo vlasništvo, a kupac nakon što je pregledao vozilo nema prigovora u svezi kvalitete i prodajne cijene.\n\n4. Porez i ostale troškove snosi KUPAC\n\n5. Prodavatelj i kupac prihvaćaju prava i obveze ovog ugovora, a za slučaj spora nadležan je sud u Ljubuškom.\n6.Napomena..................................................................................................\n\n", f);

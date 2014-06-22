@@ -30,7 +30,7 @@ namespace DriveIT
             this.Close();
         }
 
-        private void btnDodajDodatnuOpremu_Click(object sender, EventArgs e)
+        private void bntDodaj_Click(object sender, EventArgs e)
         {
             dodatna_oprema dodatna = new dodatna_oprema();
 
@@ -53,7 +53,8 @@ namespace DriveIT
                 this.Close();
 
             }
-            catch {
+            catch
+            {
                 MessageBox.Show("Greška pri dodavanju dodatne opreme");
             }
         }
