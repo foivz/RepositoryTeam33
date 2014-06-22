@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DriveIT.Controler;
 
 namespace DriveIT
 {
@@ -206,6 +207,11 @@ namespace DriveIT
             //Zasada ovako radi pa ...
             //System.Diagnostics.Process.Start("http://os-gorican.skole.hr/upload/os-gorican/images/static3/721/File/CUDNOVATE_ZGODE_SEGRTA_HLAPICA.pdf");
 
+        }
+
+        private void satTimer_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = Sat.getCurrentTime();
         }
 
       
