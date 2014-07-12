@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveIT", "DriveIT\DriveIT.csproj", "{A993C19D-03F2-4B0B-8C74-42B40CE0E035}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testiranje", "Testiranje\Testiranje.csproj", "{BE1AE5BD-8786-49C5-AD4C-D68C3A1C7B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,10 @@ Global
 		{A993C19D-03F2-4B0B-8C74-42B40CE0E035}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A993C19D-03F2-4B0B-8C74-42B40CE0E035}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A993C19D-03F2-4B0B-8C74-42B40CE0E035}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BE1AE5BD-8786-49C5-AD4C-D68C3A1C7B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1AE5BD-8786-49C5-AD4C-D68C3A1C7B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1AE5BD-8786-49C5-AD4C-D68C3A1C7B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1AE5BD-8786-49C5-AD4C-D68C3A1C7B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

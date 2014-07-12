@@ -587,7 +587,7 @@
             // 
             // voziloBindingSource
             // 
-            this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
+            //this.voziloBindingSource.DataSource = typeof(DriveIT.Database.vozilo);
             // 
             // frmAplikacija
             // 

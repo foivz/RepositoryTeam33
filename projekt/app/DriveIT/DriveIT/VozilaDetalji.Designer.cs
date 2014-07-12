@@ -212,7 +212,7 @@
             // 
             // dodatnaopremaBindingSource
             // 
-            this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
+    //        this.dodatnaopremaBindingSource.DataSource = typeof(DriveIT.Database.dodatna_oprema);
             // 
             // metroButton1
             // 
