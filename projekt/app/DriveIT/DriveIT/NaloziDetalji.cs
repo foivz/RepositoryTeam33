@@ -73,7 +73,7 @@ namespace DriveIT
             txtSati.Text = nalog.sati_rada.ToString();
             txtCijena.Text = ukupnaCijena.ToString();
 
-            if((int)nalog.obavljen==0 || nalog.obavljen==null)
+            if(nalog.obavljen==0 || nalog.obavljen==null)
                 comboxObavljeno.SelectedIndex = 0 ;
             else
                 comboxObavljeno.SelectedIndex = 1;

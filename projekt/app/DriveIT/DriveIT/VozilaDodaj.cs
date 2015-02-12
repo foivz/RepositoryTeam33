@@ -300,7 +300,7 @@ namespace DriveIT
                 db.SaveChanges();
 
                 spremiCijene();
-               // spremiUgovore();
+                spremiUgovore();
                 db.SaveChanges();
 
                 SpremiSlikeArka();
