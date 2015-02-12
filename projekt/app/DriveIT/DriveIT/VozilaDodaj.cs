@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using DriveIT.Controler;
+using WinSCP;
 
 namespace DriveIT
 {
@@ -19,6 +20,7 @@ namespace DriveIT
     {
         T33_DBEntities db = new T33_DBEntities();
 
+        string broj_sasije;
 
         /// <summary>
         /// Konstruktor forme koji sadrži kod za popunjavanje comboboxova prilikom inicijalizacije forme
@@ -152,6 +154,65 @@ namespace DriveIT
         /// Metoda koja služi za spremanje slika vozila u direktorij na disku kojeg kreira ukoliko ne postoji
         /// ili koristi postojeći ako postoji
         /// </summary>
+        /// 
+
+        private void SpremiSlikeArka()
+        {
+
+            int brojac = 1;
+
+            SessionOptions sessionOptions = new SessionOptions
+            {
+                Protocol = Protocol.Sftp,
+                HostName = "arka.foi.hr",
+                UserName = "mboras",
+                Password = "BJRGybmH",
+
+                GiveUpSecurityAndAcceptAnySshHostKey = true
+
+            };
+            if (openFileDialog1.FileNames.Length != 0)
+            {
+
+
+                using (Session session = new Session())
+                {
+                    // Connect
+
+                    session.Open(sessionOptions);
+
+                    // Upload files
+                    TransferOptions transferOptions = new TransferOptions();
+                    transferOptions.TransferMode = TransferMode.Binary;
+
+
+                    foreach (String file in openFileDialog1.FileNames)
+                    {
+                        String[] fileNameArray = file.Split('\\');
+
+                        Environment.CurrentDirectory = file.Substring(0,(file.Length-fileNameArray[fileNameArray.Length-1].Length));
+
+                        System.IO.File.Move(fileNameArray[fileNameArray.Length - 1], broj_sasije + "_" + brojac+".jpg");
+                        fileNameArray[fileNameArray.Length - 1] = broj_sasije + "_" + brojac+".jpg";
+
+                        TransferOperationResult transferResult;
+
+
+                        string newFilePath = String.Join("\\",fileNameArray);
+                        transferResult = session.PutFiles(newFilePath, "/home/is2011/m/mboras/public_html/pi_projekt/", false, transferOptions);
+
+                        // Throw on any error
+                        transferResult.Check();
+                        foreach (TransferEventArgs transfer in transferResult.Transfers)
+                        {
+                            Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
+                        }
+                    }
+
+              
+                }
+            }
+        }
         private void SpremiSlike()
         {
             vozilo vozilo_uneseno = vratiZadnjeUneseno();
@@ -214,6 +275,7 @@ namespace DriveIT
 
             /*Dodavanje u tablicu vozila*/
             vozilo.sasija = txtBrSasije.Text;
+            broj_sasije = txtBrSasije.Text;
             vozilo.datum_prve_registracije = dtPickerPrvaRegistracija.Value;
             vozilo.boja = txtBoja.Text;
             vozilo.godina_proizvodnje = Convert.ToInt32(txtGodinaProizvodnje.Text);
@@ -236,10 +298,10 @@ namespace DriveIT
                 db.SaveChanges();
 
                 spremiCijene();
-                spremiUgovore();
+               // spremiUgovore();
                 db.SaveChanges();
 
-                SpremiSlike();
+                SpremiSlikeArka();
 
 
                 MessageBox.Show("Vozilo je uspješno dodano !");

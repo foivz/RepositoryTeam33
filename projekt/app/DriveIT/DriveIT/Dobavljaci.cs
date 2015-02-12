@@ -22,7 +22,7 @@ namespace DriveIT
             T33_DBEntities db = new T33_DBEntities();
             var dobavljaci = db.dobavljac.ToList<dobavljac>();
             dobavljacBindingSource.DataSource = dobavljaci;
-           
+            
         }
 
         /// <summary>
@@ -104,6 +104,8 @@ namespace DriveIT
             string i = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             prikaziDetalje(i);
         }
+
+        
 
         
        

@@ -85,6 +85,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinSCPnet">
+      <HintPath>..\packages\WinSCP.5.5.6\lib\WinSCPnet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutUs.cs">
@@ -591,6 +594,9 @@
     <Content Include="PDF\itextsharp.pdfa.dll" />
     <Content Include="PDF\iTextSharp.xml" />
     <Content Include="PDF\itextsharp.xtra.dll" />
+    <Content Include="WinSCP.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Testiranje\" />

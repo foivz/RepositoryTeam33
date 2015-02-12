@@ -13,6 +13,9 @@ namespace DriveIT
 {
     public partial class PreglednikSlika : Form
     {
+
+        static string urlPocetak = "http://arka.foi.hr/~mboras/pi_projekt/";
+
         public PreglednikSlika()
         {
             InitializeComponent();
@@ -38,11 +41,11 @@ namespace DriveIT
 
            
             string url = FolderMjesto+"/" + id_vozila + "_1.jpg";
-            if (File.Exists(url))
-            {
-                preglednik.pictureBox1.Load(url);
+
+
+            preglednik.pictureBox1.Load(urlPocetak + id_vozila + "_" + 1 + ".jpg");
                 
-            }
+            
             preglednik.Show();
         }
 

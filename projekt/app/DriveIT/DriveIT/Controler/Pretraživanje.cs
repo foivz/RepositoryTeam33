@@ -13,5 +13,17 @@ namespace DriveIT.Controler
     /// </summary>
     class Pretraživanje
     {
+        private string prezime;
+        public Pretraživanje(string prezime1)
+        {
+            prezime = prezime1;
+
+
+        }
+        public void pretraziPrezime() 
+        { 
+
+        }
+
     }
 }
