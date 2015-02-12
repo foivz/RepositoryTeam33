@@ -20,7 +20,7 @@ namespace DriveIT
     {
         T33_DBEntities db = new T33_DBEntities();
 
-        string broj_sasije;
+        string oznaka;
 
         /// <summary>
         /// Konstruktor forme koji sadrži kod za popunjavanje comboboxova prilikom inicijalizacije forme
@@ -158,6 +158,8 @@ namespace DriveIT
 
         private void SpremiSlikeArka()
         {
+            vozilo vozilo_uneseno = vratiZadnjeUneseno();
+            this.oznaka = vozilo_uneseno.id_vozilo.ToString();
 
             int brojac = 1;
 
@@ -192,14 +194,14 @@ namespace DriveIT
 
                         Environment.CurrentDirectory = file.Substring(0,(file.Length-fileNameArray[fileNameArray.Length-1].Length));
 
-                        System.IO.File.Move(fileNameArray[fileNameArray.Length - 1], broj_sasije + "_" + brojac+".jpg");
-                        fileNameArray[fileNameArray.Length - 1] = broj_sasije + "_" + brojac+".jpg";
+                        System.IO.File.Move(fileNameArray[fileNameArray.Length - 1], oznaka + "_" + brojac+".jpg");
+                        fileNameArray[fileNameArray.Length - 1] = oznaka + "_" + brojac+".jpg";
 
                         TransferOperationResult transferResult;
 
 
                         string newFilePath = String.Join("\\",fileNameArray);
-                        transferResult = session.PutFiles(newFilePath, "/home/is2011/m/mboras/public_html/pi_projekt/", false, transferOptions);
+                        transferResult = session.PutFiles(newFilePath, "/home/is2011/m/mboras/public_html/piprojekt/", false, transferOptions);
 
                         // Throw on any error
                         transferResult.Check();
@@ -207,6 +209,7 @@ namespace DriveIT
                         {
                             Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
                         }
+                        brojac++;
                     }
 
               
@@ -275,7 +278,6 @@ namespace DriveIT
 
             /*Dodavanje u tablicu vozila*/
             vozilo.sasija = txtBrSasije.Text;
-            broj_sasije = txtBrSasije.Text;
             vozilo.datum_prve_registracije = dtPickerPrvaRegistracija.Value;
             vozilo.boja = txtBoja.Text;
             vozilo.godina_proizvodnje = Convert.ToInt32(txtGodinaProizvodnje.Text);

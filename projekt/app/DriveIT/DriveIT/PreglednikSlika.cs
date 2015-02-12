@@ -14,7 +14,7 @@ namespace DriveIT
     public partial class PreglednikSlika : Form
     {
 
-        static string urlPocetak = "http://arka.foi.hr/~mboras/pi_projekt/";
+        static string urlPocetak = "http://arka.foi.hr/~mboras/piprojekt/";
 
         public PreglednikSlika()
         {
@@ -29,7 +29,8 @@ namespace DriveIT
         {
             PreglednikSlika preglednik = new PreglednikSlika();
             preglednik.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            preglednik.pictureBox1.Load("./Slike/nema_slike.jpg");
+
+            preglednik.pictureBox1.Load(urlPocetak + "nema_slike.jpg");
            
 
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
@@ -49,6 +50,26 @@ namespace DriveIT
             preglednik.Show();
         }
 
+        public static void UcitajSlikuSInterneta(string id_vozila)
+        {
+            PreglednikSlika preglednik = new PreglednikSlika();
+            preglednik.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+           
+
+            try
+            {
+                preglednik.pictureBox1.Load(urlPocetak + id_vozila + "_" + 1 + ".jpg");
+
+            }
+            catch
+            {
+                preglednik.pictureBox1.Load(urlPocetak + "nema_slike.jpg");
+            }
+
+
+            preglednik.Show();
+        }
+
         /// <summary>
         /// Metoda koja na odabir gumba za sljedeću sliku učitava iduću sliku
         /// </summary>
@@ -57,7 +78,7 @@ namespace DriveIT
         private void metroButton2_Click(object sender, EventArgs e)
         {
             
-            if(pictureBox1.ImageLocation!= "./Slike/nema_slike.jpg")
+            if(pictureBox1.ImageLocation!= urlPocetak + "nema_slike.jpg")
             { 
             string[] putanja = pictureBox1.ImageLocation.Split('_');
 

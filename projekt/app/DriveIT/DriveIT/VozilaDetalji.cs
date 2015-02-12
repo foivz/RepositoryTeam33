@@ -98,7 +98,7 @@ namespace DriveIT
         private void metroButton1_Click(object sender, EventArgs e)
         {
 
-            PreglednikSlika.Ucitaj_sliku(txtIdVozilo.Text);
+            PreglednikSlika.UcitajSlikuSInterneta(txtIdVozilo.Text);
         }
 
         /// <summary>
